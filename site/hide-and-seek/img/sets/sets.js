@@ -1,0 +1,1 @@
+window.SETS = {"room": [{"name": "wall", "k": 0.92, "box": [-250, -250, 1400, 1360], "soft": true}, {"name": "floor", "k": 1, "box": [-250, 1060, 1400, 790], "soft": true, "stage": true}], "reverse": [{"name": "back", "k": 0.7, "box": [-250, -250, 1400, 2100], "soft": true}], "under": [{"name": "dark", "k": 1, "box": [-250, -250, 1400, 2100], "soft": true, "stage": true}]};

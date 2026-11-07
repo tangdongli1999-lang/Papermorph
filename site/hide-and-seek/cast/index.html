@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-stage="portrait">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hide and Seek: cast sheet</title>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<!-- A scratch page, not part of the film: every puppet at rest and in key poses from the storyboard, for the user to
+     approve before the scenes are built. -->
+<script src="../lib/engine.js"></script>
+<script src="../img/puppets/baked.js" onerror="0"></script>
+<script src="../lib/paper.js"></script>
+<script src="../lib/cast.js"></script>
+<script src="../lib/hide.js"></script>
+<script>
+'use strict';
+const CHAPTER = { number: 0, title: 'Cast sheet', minutes: 1, language: 'en', film: true, questionKeys: false };
+const TIMINGS = {};
+function castSheet(p, D) {
+  const g = mk('g', {}, p);
+  g.innerHTML = `<defs><linearGradient id="csBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${HS.night}"/><stop offset="1" stop-color="#151d33"/></linearGradient></defs>
+    <rect width="900" height="1600" fill="url(#csBg)"/>
+    ${[660, 1080].map(y => `<rect x="40" y="${y}" width="820" height="3" fill="${HS.nightHi}"/>`).join('')}`;
+  const lamp = moonLamp(g);
+  const txt = (x, y, s, size = 26, fill = '#c9cfe0', anchor = 'start') => mk('text', { x, y, fill, 'font-size': size, 'font-family': 'Georgia, serif', 'letter-spacing': 3, 'text-anchor': anchor }, g).textContent = s;
+  txt(450, 92, 'HIDE AND SEEK — CAST', 34, '#e8e2d2', 'middle');
+  txt(60, 160, 'SAM'); txt(60, 700, 'LEO'); txt(60, 1130, 'THE OTHER', 26, HS.red);
+  const notes = [[150, 'at rest'], [450, 'counting'], [740, '9:58 pm'], [150, 'at rest', 1], [450, '“shh”', 1], [740, 'bouncing', 1]];
+  notes.forEach(([x, s, r]) => txt(x, r ? 1060 : 640, s, 20, '#8790a8', 'middle'));
+  txt(250, 1540, 'hand, out and curling', 20, '#8790a8', 'middle'); txt(650, 1540, 'eye in the crack', 20, '#8790a8', 'middle');
+
+  const S = 1.15, L = .82, gyS = 620, gyL = 1040;
+  const sam = [samPuppet(g), samPuppet(g), samPuppet(g)], leo = [leoPuppet(g), leoPuppet(g), leoPuppet(g)];
+  const hands = [otherHand(g), otherHand(g)], eye = otherEye(g);
+  const crack = mk('g', {}, g);   // a sliver of wardrobe door for the hand and eye to sit against
+  // the wardrobe: a door face to the left of its edge (x 330), the dark gap behind; the hands' palms are hidden by the gap's frame
+  crack.innerHTML = `<rect x="130" y="1170" width="200" height="330" fill="#2a2119"/><rect x="130" y="1170" width="200" height="330" fill="url(#csWood)" opacity=".5"/>
+    <rect x="330" y="1170" width="34" height="330" fill="#05060a"/>
+    <rect x="560" y="1300" width="180" height="140" fill="#05060a"/>`;
+  g.insertAdjacentHTML('afterbegin', '<defs><pattern id="csWood" width="40" height="330" patternUnits="userSpaceOnUse"><path d="M10,0 C14,100 6,200 12,330 M28,0 C24,120 32,220 26,330" stroke="#3a2e22" stroke-width="2" fill="none"/></pattern></defs>');
+  const jamb = mk('rect', { x: 364, y: 1170, width: 60, height: 330, fill: '#1f1812' }, g);   // the cabinet's side, over the palms
+  g.insertBefore(hands[0].g, jamb); g.insertBefore(hands[1].g, jamb); g.appendChild(eye.g);
+
+  stopClock(D, (q, f) => {
+    lamp.pose({ x: 820, y: 640, s: .9, on: 1 }, f);
+    // Sam: at rest facing us; counting at the wall, hands over her eyes; checking her phone in profile
+    sam[0].pose({ x: 150, y: hipOn(gyS, S), s: S, head: 'F', turn: 0, rua: 8, lua: -8, mouth: 'X', brow: 0 }, f);
+    sam[1].pose({ x: 450, y: hipOn(gyS, S), s: S, head: 'F', turn: 0, rua: -151, rfa: -98, lua: 151, lfa: 98, rFront: true, lFront: true, nod: 4, mouth: 'C' }, f);
+    sam[2].pose({ x: 720, y: hipOn(gyS, S), s: S, turn: 1, ua: -22, fa: -92, hold: 'phone', nod: 10, look: .4, tail: 6, mouth: 'X', shut: false }, f);
+    // Leo: at rest; a finger to his lips; bouncing, glancing back at the wardrobe
+    leo[0].pose({ x: 150, y: hipOn(gyL, L), s: L, head: 'F', turn: 0, rua: 6, lua: -6 }, f);
+    leo[1].pose({ x: 450, y: hipOn(gyL, L), s: L, head: 'F', turn: 0, rua: 91, rfa: 118, rFront: true, lua: -6, brow: .6, look: -.4 }, f);
+    leo[2].pose({ x: 740, y: hipOn(gyL, L) - 46, s: L, head: 'F', turn: 0, rua: -135, rfa: -20, lua: 135, lfa: 20, headR: 6, mouth: 'D' }, f);
+    // the Other: the hand coming out of the gap and curling; the eye in the dark crack
+    hands[0].pose({ x: 330, y: 1245, s: 1.05, out: .5, curl: 0 }, f);
+    hands[1].pose({ x: 330, y: 1415, s: 1.05, out: 1, curl: 1 }, f);
+    eye.pose({ x: 650, y: 1370, s: .95, open: .85, look: -.3 }, f);
+  });
+}
+const BEATS = [{ id: 'cast', title: 'Cast', run: (m, D) => castSheet(panel(0), D), lead: false, dur: 3 }];
+boot();
+</script>
+</body>
+</html>

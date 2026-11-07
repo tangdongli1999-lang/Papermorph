@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-stage="portrait">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hide and Seek</title>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+<style>#bCC { display: none; }   /* the captions are burned into the picture (hsCaptions), as a Short's are */</style>
+</head>
+<body>
+<!-- Hide and Seek, an upright horror Short: five scenes, one beat each. Order: engine, sets and baked pieces, kit,
+     cast and props (hide.js), the audio data (timings, mouths, shots), shared helpers, then the scenes. -->
+<script src="../lib/engine.js"></script>
+<script src="../img/sets/sets.js"></script>
+<script src="../img/puppets/baked.js" onerror="0"></script>
+<script src="../lib/paper.js"></script>
+<script src="../lib/cast.js"></script>
+<script src="../lib/hide.js"></script>
+<script src="audio/en/timings.js"></script>
+<script src="audio/en/mouths.js"></script>
+<script src="audio/en/shots.js"></script>
+<script src="../lib/shared.js"></script>
+<script src="scene1.js"></script>
+<script src="scene2.js"></script>
+<script src="scene3.js"></script>
+<script src="scene4.js"></script>
+<script src="scene5.js"></script>
+<script>
+'use strict';
+const CHAPTER = { number: 1, title: 'Hide and Seek', minutes: 1, language: 'en', film: true, questionKeys: false };
+// The captions are drawn on the stage by each scene (hsCaptions: white for Sam and Leo, red for the Other), so the
+// player's own captions stay off; the Other's count is added to the cues so the exported .srt carries it too.
+setCaptions(false, false);
+TIMINGS.scene2.cues = [...TIMINGS.scene2.cues, ...OTHER_COUNT.map(([t0, text, t1]) => [t0 - PRE2, text, t1 - PRE2])].sort((a, b) => a[0] - b[0]);
+
+const BEATS = [
+  ['scene1', 'One more game', (m, D) => scene1(panel(0), D, m), { lead: false, pre: PRE1 }],
+  ['scene2', 'The count', (m, D) => scene2(panel(0), D, m), { lead: false, pre: PRE2 }],
+  ['scene3', 'Ready or not', (m, D) => scene3(panel(0), D, m), { lead: false, pre: PRE3 }],
+  ['scene4', 'Under the bed', (m, D) => scene4(panel(0), D, m), { lead: false, pre: PRE4 }],
+  ['scene5', 'The wardrobe', (m, D) => scene5(panel(0), D, m), { lead: false, pre: PRE5 }],
+].map(([id, title, run, extra]) => ({ id, title, run, ...extra }));
+
+// Build every puppet and prop once at load, off screen, so their bitmaps are ready before the first beat needs them.
+paperWarm(g => { samPuppet(g); leoPuppet(g); otherHand(g); moonLamp(g); wardrobe(g); bedBack(g); bedFront(g); nightstand(g);
+  curtain(g); samArm(g); dinoFoot(g); });
+boot();
+</script>
+</body>
+</html>
