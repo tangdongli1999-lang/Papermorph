@@ -24,7 +24,7 @@ const HS = {
   pale: '#cfd6d2', paleShade: '#a9b3b0', nail: '#8e9893',
 };
 
-const REST_HS = { ...REST_FIGURE, hat: false, tail: 0, rFront: false, lFront: false, back: false };
+const REST_HS = { ...REST_FIGURE, hat: false, tail: 0, rFront: false, lFront: false, back: false, stepF: 0 };
 function hsFigure(parent, { skin = '#f1c9a8', coat, coatFar, legs, legsFar, shoe, hair, hairFar = hair, cheek = '#e79a86',
   headS = 1, eyeK = 1, pony = false, back = '', chest = '', chestF = '', top = null, holds = {}, skirt = false,
   hairBackP = '', hairBackF = '', hairTopP = '', hairTopF = '', mouthK = 1, faceP = '', faceF = '' } = {}) {
@@ -59,8 +59,8 @@ function hsFigure(parent, { skin = '#f1c9a8', coat, coatFar, legs, legsFar, shoe
         <g data-p="fore"><g filter="url(#paper)"><rect x="8.5" y="-80" width="12" height="54" rx="6" fill="${skin}"/><circle cx="14.5" cy="-26" r="9" fill="${skin}"/></g>
           ${held('N', 14.5, -26)}${pinAt(14.5, -76)}</g>${pinAt(14.5, -128)}</g></g></g>
   <g data-p="bodyF">
-    <g filter="url(#paper)"><rect x="-21" y="${skirt ? 46 : 0}" width="16" height="${skirt ? 114 : 160}" rx="7" fill="${legs}"/><rect x="5" y="${skirt ? 46 : 0}" width="16" height="${skirt ? 114 : 160}" rx="7" fill="${legs}"/>
-      <ellipse cx="-13" cy="164" rx="12" ry="7" fill="${shoe}"/><ellipse cx="13" cy="164" rx="12" ry="7" fill="${shoe}"/></g>
+    <g data-p="legFL"><g filter="url(#paper)"><rect x="-21" y="${skirt ? 46 : 0}" width="16" height="${skirt ? 114 : 160}" rx="7" fill="${legs}"/><ellipse cx="-13" cy="164" rx="12" ry="7" fill="${shoe}"/></g></g>
+    <g data-p="legFR"><g filter="url(#paper)"><rect x="5" y="${skirt ? 46 : 0}" width="16" height="${skirt ? 114 : 160}" rx="7" fill="${legs}"/><ellipse cx="13" cy="164" rx="12" ry="7" fill="${shoe}"/></g></g>
     <g filter="url(#paper)"><path d="${lowerF}" fill="${coat}"/></g>
     <g filter="url(#paper)"><path d="M-30,-128 L30,-128 L38,-42 L-38,-42 Z" fill="${coat}"/>${top ? `<path d="M-9,-128 L9,-128 L12,-42 L-12,-42 Z" fill="${top}"/>` : ''}<rect x="-8" y="-150" width="16" height="28" fill="${skin}"/>
       <path d="M-32,-132 Q0,-144 32,-132 L30,-120 Q0,-130 -30,-120 Z" fill="${coatFar}"/>${chestF}</g>
@@ -97,6 +97,9 @@ function hsFigure(parent, { skin = '#f1c9a8', coat, coatFar, legs, legsFar, shoe
     // a front hand at the face (over the eyes, a finger to the lips) is drawn in front of the head: rFront / lFront
     for (const [k, on] of [['rArm', o.rFront], ['lArm', o.lFront]]) { const home = on ? P.armsTop : P.bodyF; if (P[k].parentNode !== home) home.appendChild(P[k]); }
     vis(P.armsTop, front); vis(P.backF, front && o.back);
+    // walking towards or away from us (front or back view): stepF -1…1 lifts one foot and then the other
+    const lf = Math.max(0, o.stepF), rf = Math.max(0, -o.stepF);
+    tf(P.legFL, `translate(0,${(-12 * lf).toFixed(1)}) scale(1,${(1 - .07 * lf).toFixed(3)})`); tf(P.legFR, `translate(0,${(-12 * rf).toFixed(1)}) scale(1,${(1 - .07 * rf).toFixed(3)})`);
     tf(P.lookP, `translate(${(3 * o.look).toFixed(1)},0)`); tf(P.lookF, `translate(${(4 * o.look).toFixed(1)},0)`);
     for (const k of ['browP', 'browL', 'browR']) vis(P[k], o.brow !== 0);
     tf(P.browP, `rotate(${(-16 * o.brow).toFixed(1)},26,-209)`);
@@ -191,6 +194,10 @@ const CEREAL = `<g transform="translate(0,-18)"><rect x="-16" y="-24" width="32"
 // a wet mop held at the handle, its head on the floor (the hand is about hip height)
 const MOP_HELD = `<g><rect x="-3" y="-150" width="6" height="335" rx="3" fill="#c9b48a"/><rect x="-8" y="176" width="16" height="10" fill="#8a8f93"/>
   <path d="M-44,184 h88 l8,24 h-104 Z" fill="#e3dccb"/>${Array.from({ length: 9 }, (_, i) => `<path d="M${-40 + i * 10},206 l${(i % 3) - 1},12" stroke="#cfc6b2" stroke-width="4" stroke-linecap="round"/>`).join('')}</g>`;
+// a cardboard case of cereal boxes, carried in front at the hip
+const CASE_HELD = `<g transform="translate(-30,-30)"><g filter="url(#paper)"><rect x="-44" y="-36" width="88" height="62" fill="#c49a62"/><rect x="-44" y="-36" width="88" height="12" fill="#a97f4a"/>
+  ${[-34, -12, 10].map(x => `<rect x="${x}" y="-56" width="20" height="24" fill="#d9822b"/><rect x="${x}" y="-56" width="20" height="6" fill="#b8341f"/>`).join('')}</g>
+  <text x="0" y="8" text-anchor="middle" font-family="Arial Black, Arial" font-size="12" fill="#6a4a24">CEREAL</text></g>`;
 const DANI_COL = { skin: '#e8b48f', hair: '#3a2416', hairFar: '#2a1a10' };
 
 // Dani: 19, the night clerk. A green store vest over a grey long-sleeve, black jeans, a dark ponytail, her name badge.
@@ -203,7 +210,7 @@ function daniPuppet(parent, { other = false } = {}) {
       <path d="M24,-176 Q44,-160 54,-178 Q42,-168 24,-176 Z" fill="#1a0b0b"/></g>`;
   return hsFigure(parent, { skin: DANI_COL.skin, coat: RULES.vest, coatFar: RULES.vestFar, top: '#a9a69e', legs: '#1d1f26', legsFar: '#15171c',
     shoe: '#e4e1d8', hair: DANI_COL.hair, hairFar: DANI_COL.hairFar, cheek: '#d98c78', pony: true, headS: .92, eyeK: 1.05,
-    faceF: other ? grinF : '', faceP: other ? grinP : '', holds: { phone: PHONE_HELD, receiver: RECEIVER, cereal: CEREAL, mop: MOP_HELD, peaches: `<g transform="translate(0,-16) scale(.32)">${PEACH_CAN}</g>` } });
+    faceF: other ? grinF : '', faceP: other ? grinP : '', holds: { phone: PHONE_HELD, receiver: RECEIVER, cereal: CEREAL, mop: MOP_HELD, case: CASE_HELD, peaches: `<g transform="translate(0,-16) scale(.32)">${PEACH_CAN}</g>` } });
 }
 
 // Mr. Okafor: the manager, 50s. A pale blue shirt and a dark red tie, grey trousers, grey close-cut hair, glasses.
