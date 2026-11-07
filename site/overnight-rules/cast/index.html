@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Overnight Rules: cast and sets</title>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<!-- A scratch page, not part of the film: the cast, the two sets and the props, for approval. -->
+<script src="../lib/engine.js"></script>
+<script src="../img/sets/sets.js"></script>
+<script src="../img/puppets/baked.js" onerror="0"></script>
+<script src="../lib/paper.js"></script>
+<script src="../lib/cast.js"></script>
+<script src="../lib/rules.js"></script>
+<script>
+'use strict';
+const CHAPTER = { number: 0, title: 'Cast sheet', minutes: 1, language: 'en', film: true, questionKeys: false };
+const TIMINGS = {};
+const label = (g, x, y, s, size = 22, fill = '#c9d3cc', anchor = 'middle') => { const t = mk('text', { x, y, fill, 'font-size': size, 'font-family': 'Georgia, serif', 'letter-spacing': 2, 'text-anchor': anchor }, g); t.textContent = s; return t; };
+
+function castSheet(p, D) {
+  const g = mk('g', {}, p);
+  g.innerHTML = `<defs><linearGradient id="csBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14201b"/><stop offset="1" stop-color="#1d2b25"/></linearGradient></defs>
+    <rect width="1600" height="900" fill="url(#csBg)"/><rect x="40" y="800" width="1520" height="3" fill="#2f4038"/>`;
+  label(g, 800, 64, 'THE OVERNIGHT RULES — CAST', 34, '#ece6d6');
+  const X = [130, 350, 570, 800, 1040, 1260, 1460], gy = 800;
+  const names = [['DANI', 'the night clerk'], ['DANI', 'on the phone'], ['OTHER-DANI', 'red captions'], ['MR. OKAFOR', 'the manager'],
+    ['THE RAINCOAT MAN', '13 coins'], ['THE GIRL', '“can I use your bathroom?”'], ['THEO', 'the new hire']];
+  names.forEach(([n, d], i) => { label(g, X[i], 850, n, 20, i === 2 ? '#e0453f' : '#e6e0d0'); label(g, X[i], 878, d, 16, '#8fa096'); });
+  label(g, 1560, 110, 'MARCUS — heard only, on the phone', 18, '#8fa096', 'end');
+  const dani = daniPuppet(g), daniPh = daniPuppet(g), other = daniPuppet(g, { other: true }), ok = okaforPuppet(g), rain = raincoatPuppet(g), girl = girlPuppet(g), theo = theoPuppet(g);
+  stopClock(D, (q, f) => {
+    const S = .92;
+    dani.pose({ x: X[0], y: hipOn(gy, S), s: S, head: 'F', turn: 0, rua: 6, lua: -6, mouth: 'X' }, f);
+    const d1 = { x: X[1], y: hipOn(gy, S), s: S, head: 'F', turn: 0 }, rc = frontReach(d1, 'R', [d1.x + 40 * S, d1.y - 150 * S]);
+    daniPh.pose({ ...d1, rua: rc.rua, rfa: rc.rfa, rFront: true, hold: 'receiver', lua: -6, brow: .7, look: .2, mouth: 'A' }, f);
+    other.pose({ x: X[2], y: hipOn(gy, S), s: S, head: 'F', turn: 0, rua: 4, lua: -4 }, f);
+    const o1 = { x: X[3], y: hipOn(gy, .98), s: .98, head: 'F', turn: 0 }, cf = frontReach(o1, 'R', [o1.x + 40, o1.y - 60]);
+    ok.pose({ ...o1, rua: cf.rua, rfa: cf.rfa, hold: 'coffee', lua: -6, mouth: 'B' }, f);
+    rain.pose({ x: X[4], y: hipOn(gy, 1.1), s: 1.1, head: 'F', turn: 0, rua: 14, lua: -4, nod: 6 }, f);
+    girl.pose({ x: X[5], y: hipOn(gy, .66), s: .66, head: 'F', turn: 0, rua: 4, lua: -4, look: 0 }, f);
+    theo.pose({ x: X[6], y: hipOn(gy, .94), s: .94, head: 'F', turn: 0, rua: 6, lua: -6, brow: .4 }, f);
+  });
+}
+
+function setStore(p, D) {
+  const cam = paperCam(p, 'store', { x: 1150, y: 450, z: .6 }, { stages: ['counter'] });
+  const dani = daniPuppet(cam.stage), rain = raincoatPuppet(cam.stageAt.counter), girl = girlPuppet(cam.stage);
+  // the counter's front draws over the stage: put Dani and the Raincoat Man's lower halves behind it
+  const phone = wallPhone(mk('g', { transform: 'translate(2150,330) scale(.8)' }, cam.stage));
+  const g = mk('g', {}, p); mk('rect', { x: 0, y: 0, width: 1600, height: 70, fill: '#0d1411', opacity: .75 }, g);
+  label(g, 800, 46, 'SET 1 — BRIGHTWAY 24: doors · aisles 2, 3, 4 · freezers · counter', 24, '#ece6d6');
+  stopClock(D, (q, f) => {
+    cam.apply(q, f);
+    dani.pose({ x: 2360, y: hipOn(720, .85), s: .85, head: 'F', turn: 0, rua: 6, lua: -6, look: -.3 }, f);
+    rain.pose({ x: 1780, y: hipOn(860, 1.0), s: 1.0, turn: 1, ua: -40, fa: -50, nod: 6 }, f);
+    girl.pose({ x: 1560, y: hipOn(700, .62), s: .62, head: 'F', turn: 0, rua: 4, lua: -4 }, f);
+    phone.pose({ off: 0 }, f);
+  });
+}
+
+function setAisle(p, D) {
+  const cam = paperCam(p, 'aisle', { x: 800, y: 450, z: 1 });
+  const dani = daniPuppet(cam.stage);
+  const g = mk('g', {}, p); mk('rect', { x: 0, y: 0, width: 1600, height: 70, fill: '#0d1411', opacity: .75 }, g);
+  label(g, 800, 46, 'SET 2 — AISLE FOUR, looking back to the counter', 24, '#ece6d6');
+  stopClock(D, (q, f) => { cam.apply(q, f); dani.pose({ x: 800, y: hipOn(1000, 1.05), s: 1.05, head: 'F', turn: 0, back: true, rua: 8, lua: -8, hold: 'cereal' }, f); });
+}
+
+function props(p, D) {
+  const g = mk('g', {}, p);
+  g.innerHTML = `<rect width="1600" height="900" fill="#1d2b25"/>`;
+  label(g, 800, 56, 'PROPS — the monitor · the list · the wall phone', 28, '#ece6d6');
+  const mon = securityMonitor(mk('g', { transform: 'translate(60,150) scale(1.0)' }, g));
+  const clip = mk('clipPath', { id: 'feed4' }, mk('defs', {}, g)); mk('rect', { x: 60 + mon.feed4.x, y: 150 + mon.feed4.y, width: mon.feed4.w, height: mon.feed4.h }, clip);
+  const otherG = mk('g', { transform: `translate(${60 + mon.feed4.x + 160},${150 + mon.feed4.y + 150}) scale(.2)` }, mk('g', { 'clip-path': 'url(#feed4)', opacity: .8 }, g)), od = daniPuppet(otherG);
+  const list = theList(mk('g', { transform: 'translate(830,120) scale(.92)' }, g));
+  const phone = wallPhone(mk('g', { transform: 'translate(1530,700) scale(.9)' }, g));
+  label(g, 410, 640, 'CAM 4: Dani, where she isn’t', 18, '#8fa096');
+  label(g, 1105, 870, 'with Dani’s Rule Nine added (Ch. 6)', 16, '#8fa096');
+  stopClock(D, (q, f) => { mon.pose({ t: '04:51:07' }); od.pose({ x: 0, y: 0, s: 1, head: 'F', turn: 0, rua: -150, rfa: -10, lua: -6 }, f); list.pose({ nine: 1, faint: 1 }); phone.pose({}, f); });
+}
+
+const BEATS = [
+  { id: 'cast', title: 'Cast', run: (m, D) => castSheet(panel(0), D), lead: false, dur: 2 },
+  { id: 'store', title: 'Store', run: (m, D) => setStore(panel(0), D), lead: false, dur: 2 },
+  { id: 'aisle', title: 'Aisle', run: (m, D) => setAisle(panel(0), D), lead: false, dur: 2 },
+  { id: 'props', title: 'Props', run: (m, D) => props(panel(0), D), lead: false, dur: 2 },
+];
+boot();
+</script>
+</body>
+</html>
