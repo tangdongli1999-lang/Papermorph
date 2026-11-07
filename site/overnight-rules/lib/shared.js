@@ -47,3 +47,11 @@ function checkout(p, v0 = {}) {
   return { cam, front: cam.stageAt.counter };
 }
 function entrance(p, v0 = {}, dawn = false) { return { cam: paperCam(p, dawn ? 'dawn' : 'entrance', v0) }; }
+// The list, taped under the counter, as an insert: view(listX, listY, zoom) puts a point of the list at the frame's centre.
+function listInsert(p) {
+  const g = mk('g', {}, p), z = mk('g', {}, g);
+  z.innerHTML = `<rect x="-400" y="-300" width="2400" height="1600" fill="#2c2621"/>${Array.from({ length: 22 }, (_, i) => `<path d="M-400,${-300 + i * 75 + (i % 3) * 9} h2400" stroke="#352e28" stroke-width="${3 + (i % 4)}"/>`).join('')}`;
+  const L = theList(mk('g', { transform: 'translate(500,70)' }, z));
+  g.insertAdjacentHTML('beforeend', `<defs><radialGradient id="liV" cx="50%" cy="48%" r="70%"><stop offset=".55" stop-color="#05080a" stop-opacity="0"/><stop offset="1" stop-color="#05080a" stop-opacity=".7"/></radialGradient></defs><rect width="1600" height="900" fill="url(#liV)"/>`);
+  return { g, L, view(cx, cy, k) { tf(z, `translate(800,450) scale(${k.toFixed(3)}) translate(${-(500 + cx)},${-(70 + cy)})`); } };
+}

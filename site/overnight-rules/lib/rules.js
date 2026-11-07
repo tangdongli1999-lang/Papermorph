@@ -200,7 +200,7 @@ function daniPuppet(parent, { other = false } = {}) {
       <path d="M24,-176 Q44,-160 54,-178 Q42,-168 24,-176 Z" fill="#1a0b0b"/></g>`;
   return hsFigure(parent, { skin: DANI_COL.skin, coat: RULES.vest, coatFar: RULES.vestFar, top: '#a9a69e', legs: '#1d1f26', legsFar: '#15171c',
     shoe: '#e4e1d8', hair: DANI_COL.hair, hairFar: DANI_COL.hairFar, cheek: '#d98c78', pony: true, headS: .92, eyeK: 1.05,
-    faceF: other ? grinF : '', faceP: other ? grinP : '', holds: { phone: PHONE_HELD, receiver: RECEIVER, cereal: CEREAL } });
+    faceF: other ? grinF : '', faceP: other ? grinP : '', holds: { phone: PHONE_HELD, receiver: RECEIVER, cereal: CEREAL, peaches: `<g transform="translate(0,-16) scale(.32)">${PEACH_CAN}</g>` } });
 }
 
 // Mr. Okafor: the manager, 50s. A pale blue shirt and a dark red tie, grey trousers, grey close-cut hair, glasses.
@@ -218,7 +218,7 @@ function okaforPuppet(parent) {
 function raincoatPuppet(parent) {
   const hoodF = `<path d="M-58,-170 C-70,-262 70,-262 58,-170 L54,-130 L-54,-130 Z" fill="#c9a524"/>`;
   const hoodTop = `<path d="M-50,-168 C-60,-246 60,-246 50,-168 Q48,-150 40,-140 L-40,-140 Q-48,-150 -50,-168 Z" fill="none" stroke="#a88a1c" stroke-width="5"/>`;
-  const faceF = `<g filter="url(#paper)"><ellipse cx="0" cy="-184" rx="40" ry="46" fill="#121512"/></g>
+  const faceF = `<g filter="url(#paper)"><ellipse cx="0" cy="-190" rx="39" ry="39" fill="#121512"/></g>
     <circle cx="-13" cy="-192" r="2.6" fill="#d9dccf"/><circle cx="13" cy="-192" r="2.6" fill="#d9dccf"/>`;
   const faceP = `<g filter="url(#paper)"><path d="M-10,-236 C40,-250 64,-210 58,-170 L50,-140 L-6,-140 Z" fill="#c9a524"/><ellipse cx="30" cy="-188" rx="22" ry="38" fill="#121512"/></g>
     <circle cx="40" cy="-196" r="2.4" fill="#d9dccf"/>`;
@@ -258,8 +258,8 @@ const RULE_LINES = ['1. Don’t leave the counter between 2:00 and 2:15.', '2. I
   '8. At 4:44 the lights flicker. Stay behind the counter until they stop.'];
 function theList(parent) {
   const g = mk('g', {}, parent), wrapAt = (t, n) => { const w = t.split(' '), out = ['']; for (const x of w) { if ((out.at(-1) + ' ' + x).length > n) out.push(x); else out[out.length - 1] = (out.at(-1) + ' ' + x).trim(); } return out; };
-  let y = 96, rows = '';
-  RULE_LINES.forEach((t, i) => { const tilt = i * .35, ls = wrapAt(t, 46);
+  let y = 96, rows = ''; const ruleY = [];
+  RULE_LINES.forEach((t, i) => { const tilt = i * .35, ls = wrapAt(t, 46); ruleY.push(y - 20);
     ls.forEach((l, k) => { rows += `<text x="${34 + (k ? 22 : 0)}" y="${y}" transform="rotate(${tilt.toFixed(2)},300,${y})" font-size="${21 - i * .2}">${l.replace(/&/g, '&amp;')}</text>`; y += 27; });
     if (i === 5) { rows += `<text data-p="faint" x="70" y="${y - 2}" font-size="16" fill="#5d6a80" opacity="0" font-style="italic">don’t listen to me</text>`; y += 14; }
     y += 9; });
@@ -271,7 +271,7 @@ function theList(parent) {
     <text x="300" y="${y + 14}" text-anchor="middle" font-family="'Comic Sans MS',cursive" font-size="19" fill="#1d2433">Follow all of them. Don’t ask why.  — M.</text>
     <g data-p="nine" opacity="0"><text x="34" y="${y + 66}" font-family="'Segoe Print','Bradley Hand',cursive" font-size="24" fill="#7a1c1c" transform="rotate(-1.5,300,${y + 66})">9. If Dani is working with you… she isn’t.</text></g>`;
   const nine = g.querySelector('[data-p=nine]'), faint = g.querySelector('[data-p=faint]');
-  return { g, h: y + 120, pose({ nine: n = 0, faint: f = 0 } = {}) { nine.setAttribute('opacity', n); faint.setAttribute('opacity', (f * .8).toFixed(2)); } };
+  return { g, h: y + 120, ruleY, pose({ nine: n = 0, faint: f = 0 } = {}) { nine.setAttribute('opacity', n); faint.setAttribute('opacity', (f * .8).toFixed(2)); } };
 }
 
 // The security monitor: four grainy feeds (1 REGISTER, 2 DOORS, 3 FREEZERS, 4 AISLE 4), a timestamp; feed four has a slot
@@ -334,3 +334,39 @@ function cctv(parent) {
 // a clock time n seconds after hh:mm:ss, for the CCTV stamp
 const clockAt = (base, n) => { const [h, m, s] = base.split(':').map(Number), t = h * 3600 + m * 60 + s + Math.floor(n);
   return [Math.floor(t / 3600) % 24, Math.floor(t / 60) % 60, t % 60].map(v => String(v).padStart(2, '0')).join(':'); };
+
+/* ---------- chapter 2's props ---------- */
+// The can of peaches: a squat tin with an orange label, a peach and the word PEACHES (about 100 x 120, base at y 0).
+const PEACH_CAN = `<g filter="url(#paper)"><rect x="-50" y="-120" width="100" height="120" rx="6" fill="#b9bfc2"/><rect x="-50" y="-104" width="100" height="88" fill="#e88a3a"/>
+  <rect x="18" y="-104" width="32" height="88" fill="#c96e26"/><ellipse cx="0" cy="-120" rx="50" ry="9" fill="#d6dadc"/><ellipse cx="0" cy="-120" rx="40" ry="6" fill="none" stroke="#9aa0a3" stroke-width="2"/>
+  <circle cx="-8" cy="-66" r="20" fill="#f6b072"/><path d="M-8,-86 q6,-10 14,-6" stroke="#4f7a3a" stroke-width="4" fill="none"/>
+  <text x="0" y="-26" text-anchor="middle" font-family="Arial Black, Arial" font-size="15" fill="#fff4e0">PEACHES</text></g>`;
+// Coins on a counter: up to 13 in a row, sliding in (pose({ n: how many, take: how many taken back, slide 0…1 for the last })).
+function coinRow(parent, x, y, gap = 34, r = 13) {
+  const coins = Array.from({ length: 13 }, (_, i) => prop(parent, `<g filter="url(#paper)"><ellipse cx="0" cy="0" rx="${r}" ry="${r * .55}" fill="#a39b80"/><ellipse cx="0" cy="-2" rx="${r}" ry="${r * .55}" fill="#d2c9a6"/>
+    <ellipse cx="0" cy="-2" rx="${r * .62}" ry="${r * .32}" fill="none" stroke="#b5ac8b" stroke-width="1.5"/></g>`));
+  return { pose({ n = 0, take = 0, drop = 1 } = {}) {
+    coins.forEach((c, i) => { const shown = i < n && i >= take; vis(c, shown); if (!shown) return;
+      const last = i === 12 && n === 13 ? 1 - drop : 0;   // the thirteenth falls in from above
+      tf(c, `translate(${x + i * gap},${y - 160 * last * last})`); }); } };
+}
+// Wet footprints across a floor: a list of [x, y, angle (deg, 0 = pointing up the screen), side ±1]; pose(k) shows the first k.
+function footprints(parent, steps, scale = y => 1) {
+  const fp = steps.map(([x, y, a, side]) => { const s = scale(y);
+    return prop(parent, `<g transform="translate(${x},${y}) rotate(${a}) scale(${(s * .9).toFixed(3)},${(s * .55).toFixed(3)})" opacity=".55">
+      <ellipse cx="${side * 4}" cy="0" rx="11" ry="22" fill="#4f6670"/><ellipse cx="${side * 4}" cy="-6" rx="7" ry="11" fill="#7d98a3" opacity=".5"/>
+      ${[-8, -2, 4, 9].map((tx, i) => `<circle cx="${side * 4 + tx}" cy="${-30 + Math.abs(i - 1.5) * 2}" r="${3.4 - i * .4}" fill="#4f6670"/>`).join('')}</g>`); });
+  return { pose(k) { fp.forEach((g, i) => vis(g, i < k)); } };
+}
+// Cold mist spilling from an open fridge door across the floor: soft wisps that drift and grow (pose(q, k 0…1)).
+function fridgeMist(parent, x, y) {
+  const g = mk('g', { 'pointer-events': 'none' }, parent), wisps = Array.from({ length: 9 }, (_, i) => mk('ellipse', { fill: '#e8f3fa', opacity: 0 }, g));
+  return { pose(q, k = 1) { wisps.forEach((w, i) => { const u = ((q * .12 + i / 9) % 1), xx = x + 30 + u * 420 + 20 * Math.sin(q + i), yy = y - 10 + 18 * Math.sin(i * 2.1) - 30 * (1 - u);
+      w.setAttribute('cx', xx.toFixed(1)); w.setAttribute('cy', yy.toFixed(1)); w.setAttribute('rx', (60 + 140 * u * k).toFixed(1)); w.setAttribute('ry', (14 + 26 * u).toFixed(1));
+      w.setAttribute('opacity', (k * .32 * Math.sin(Math.PI * u)).toFixed(3)); }); } };
+}
+// Water pooling on a counter top (pose(k 0…1)).
+function puddle(parent, x, y, w = 160) {
+  const e = mk('ellipse', { cx: x, cy: y, fill: '#6f8f9c', opacity: .55 }, parent), hi = mk('ellipse', { cx: x - w * .15, cy: y - 3, fill: '#d6eaf2', opacity: .5 }, parent);
+  return { pose(k) { e.setAttribute('rx', (w / 2 * k).toFixed(1)); e.setAttribute('ry', (w * .09 * k).toFixed(1)); hi.setAttribute('rx', (w * .18 * k).toFixed(1)); hi.setAttribute('ry', (w * .025 * k).toFixed(1)); vis(e, k > .01); vis(hi, k > .01); } };
+}
