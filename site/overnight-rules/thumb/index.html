@@ -51,9 +51,25 @@ function thumb(p, D, variant, plain = false) {
     face.pose({ x: 1290, y: 1560, s: 5.0, head: 'F', turn: 0, rua: 4, lua: -4, look: -1, brow: 1, mouth: 'X', nod: -4 }, f);
   });
 }
+// just the camera: camera four, full frame, the other Dani standing in the middle of the aisle, waving; REC and the time
+function camOnly(p, D) {
+  const gridG = mk('g', { style: 'filter:contrast(1.25) brightness(1.05)' }, p), grid = cctv(gridG), other = daniPuppet(grid.slot4, { other: true });
+  tf(gridG, `translate(800,450) scale(1.06) translate(-800,-450) ${grid.zoomTo(4, 1)}`);
+  gridG.querySelectorAll('text, circle').forEach(e => e.setAttribute('display', 'none'));   // the feed's own small labels: ours replace them
+  const top = mk('g', {}, p);
+  top.innerHTML = `<defs><radialGradient id="cV" cx="50%" cy="50%" r="72%"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".6"/></radialGradient></defs>
+    <rect width="1600" height="900" fill="url(#cV)"/>
+    <g font-family="monospace" font-size="78" font-weight="700" paint-order="stroke" stroke="#000" stroke-width="8"><circle cx="70" cy="84" r="25" fill="#ff2a1f"/><text x="112" y="110" fill="#fff">REC CAM 4</text>
+      <text x="1550" y="850" text-anchor="end" fill="#fff">04:51:07</text></g>`;
+  stopClock(D, (q, f) => {
+    grid.pose({ t: '04:51:07' });
+    other.pose({ x: 400, y: hipOn(450, .74), s: .74, head: 'F', turn: 0, lua: -6, rua: -96, rfa: -78, nod: -2 }, f);
+  });
+}
 const BEATS = [
   { id: 'notme', title: 'That\'s not me', run: (m, D) => thumb(panel(0), D, 0), lead: false, dur: 2 },
   { id: 'rule6', title: 'Rule 6', run: (m, D) => thumb(panel(0), D, 1), lead: false, dur: 2 },
+  { id: 'cam', title: 'Camera only', run: (m, D) => camOnly(panel(0), D), lead: false, dur: 2 },
   { id: 'notmeP', title: 'That\'s not me, plain', run: (m, D) => thumb(panel(0), D, 0, true), lead: false, dur: 2 },
   { id: 'rule6P', title: 'Rule 6, plain', run: (m, D) => thumb(panel(0), D, 1, true), lead: false, dur: 2 },
 ];
