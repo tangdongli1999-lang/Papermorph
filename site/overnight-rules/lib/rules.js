@@ -208,9 +208,13 @@ function daniPuppet(parent, { other = false } = {}) {
       <path d="M-26,-172 Q0,-148 26,-172 Q0,-160 -26,-172 Z" fill="#1a0b0b"/><path d="M-22,-170 Q0,-158 22,-170" fill="none" stroke="#f1ece0" stroke-width="2.4"/></g>`;
   const grinP = `<g filter="url(#paper)"><ellipse cx="34" cy="-198" rx="6.5" ry="9" fill="#050506"/><ellipse cx="41" cy="-172" rx="10" ry="7" fill="${DANI_COL.skin}"/>
       <path d="M24,-176 Q44,-160 54,-178 Q42,-168 24,-176 Z" fill="#1a0b0b"/></g>`;
+  // { other: 'smile' }: Other-Dani by day, the eyes her own, only the smile too wide and too still
+  const smileF = `<g filter="url(#paper)"><ellipse cx="0" cy="-166" rx="20" ry="9" fill="${DANI_COL.skin}"/>
+      <path d="M-24,-171 Q0,-150 24,-171 Q0,-161 -24,-171 Z" fill="#3a1418"/><path d="M-20,-169 Q0,-160 20,-169" fill="none" stroke="#f6f2e8" stroke-width="2.4"/></g>`;
+  const smileP = `<g filter="url(#paper)"><ellipse cx="41" cy="-172" rx="10" ry="7" fill="${DANI_COL.skin}"/><path d="M26,-176 Q44,-162 52,-178 Q42,-169 26,-176 Z" fill="#3a1418"/></g>`;
   return hsFigure(parent, { skin: DANI_COL.skin, coat: RULES.vest, coatFar: RULES.vestFar, top: '#a9a69e', legs: '#1d1f26', legsFar: '#15171c',
     shoe: '#e4e1d8', hair: DANI_COL.hair, hairFar: DANI_COL.hairFar, cheek: '#d98c78', pony: true, headS: .92, eyeK: 1.05,
-    faceF: other ? grinF : '', faceP: other ? grinP : '', holds: { phone: PHONE_HELD, receiver: RECEIVER, cereal: CEREAL, mop: MOP_HELD, case: CASE_HELD, peaches: `<g transform="translate(0,-16) scale(.32)">${PEACH_CAN}</g>` } });
+    faceF: other === 'smile' ? smileF : other ? grinF : '', faceP: other === 'smile' ? smileP : other ? grinP : '', holds: { phone: PHONE_HELD, receiver: RECEIVER, cereal: CEREAL, mop: MOP_HELD, case: CASE_HELD, peaches: `<g transform="translate(0,-16) scale(.32)">${PEACH_CAN}</g>` } });
 }
 
 // Mr. Okafor: the manager, 50s. A pale blue shirt and a dark red tie, grey trousers, grey close-cut hair, glasses.

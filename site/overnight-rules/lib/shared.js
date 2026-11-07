@@ -31,10 +31,12 @@ function nightGrade(p, k = 1) {
 }
 // The counter close-up (counter set): Dani behind it between the monitor and the register; the monitor's screen
 // shows the cameras (a cctv() scaled onto it). World px of the painted picture (1600 x 900).
-const CTR = { top: 675, screen: [188, 507, 200, 125], phone: [1193, 368], dani: [800, 700] };
+const CTR = { top: 675, screen: [184, 502, 208, 118], phone: [1193, 368], dani: [800, 700] };
 function counterShot(p, v0 = {}) {
   const cam = paperCam(p, 'counter', v0);
-  const scr = mk('g', { transform: `translate(${CTR.screen[0]},${CTR.screen[1]}) scale(${CTR.screen[2] / 1600},${CTR.screen[3] / 900})` }, cam.layer('bg'));
+  const scrId = 'scr' + Math.random().toString(36).slice(2, 7), scrBox = mk('g', { 'clip-path': `url(#${scrId})` }, cam.layer('front'));
+  cam.layer('front').insertAdjacentHTML('afterbegin', `<defs><clipPath id="${scrId}"><rect x="${CTR.screen[0]}" y="${CTR.screen[1]}" width="${CTR.screen[2]}" height="${CTR.screen[3]}"/></clipPath></defs>`);   // over the painted monitor's dark screen (the monitor is on the front layer)
+  const scr = mk('g', { transform: `translate(${CTR.screen[0]},${CTR.screen[1]}) scale(${CTR.screen[2] / 1600},${CTR.screen[3] / 900})` }, scrBox);
   const tv = cctv(scr);
   const dani = daniPuppet(cam.stage);
   return { cam, tv, dani };
