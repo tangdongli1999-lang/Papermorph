@@ -50,7 +50,7 @@ function scene1(p, D, m) {
     const look = q < T_GLANCE ? -.2 : q < T_ASK - .2 ? 1 : .8;
     R.leo.pose({ ...lo, rua: 6 - 141 * arms, rfa: -4 - 16 * arms, lua: -6 + 141 * arms, lfa: 4 + 16 * arms,
       look, brow: q > T_GLANCE ? .55 : 0, headR: q > T_GLANCE ? tween(q, T_GLANCE, .5, 0, 5) : 2 * Math.sin(q * 5),
-      mouth: lips(q, 'scene1', PRE1, 'l01', 'l03'), crouch: hop < -30 ? 0 : bouncing && q > 1 ? .12 : 0,
+      mouth: q > T_GLANCE && lips(q, 'scene1', PRE1, 'l03') === 'X' ? 'A' : lips(q, 'scene1', PRE1, 'l01', 'l03'), crouch: hop < -30 ? 0 : bouncing && q > 1 ? .12 : 0,
       shut: blinking(q, [1.3, 4.9, T_ASK + 1.4]) }, f);
 
     // Sam: tired, a smile for Leo; checks her phone; rolls her eyes and plays along
@@ -63,6 +63,7 @@ function scene1(p, D, m) {
       headR: rollEyes ? -6 * Math.sin(Math.PI * (q - T_SAM2 - .1) / .9) : q > T_SAM2 ? -3 : 0,
       tail: 3 * Math.sin(q * 1.7), mouth: lips(q, 'scene1', PRE1, 'l02', 'l04'),
       shut: blinking(q, [2.1, T_SAM + .9, T_SAM2 + 1.6]) || (rollEyes && q > T_SAM2 + .35 && q < T_SAM2 + .55) }, f);
+    vis(R.sam.g, shot !== 'ward');   // the insert is the wardrobe alone
     cap(q);
   });
 }

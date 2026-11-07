@@ -151,7 +151,7 @@ function otherHand(parent) {
   const F = [[-33, 92, 16], [-12, 104, 17], [9, 99, 16.5], [29, 80, 15]];   // y on the edge, length, width
   const seg = (L, w, k) => `<path d="M0,${-w / 2} L${-L},${-w / 2 + k} Q${-L - w / 2},0 ${-L},${w / 2 - k} L0,${w / 2} Z" fill="${HS.pale}"/>`;
   g.innerHTML = `<g data-p="hand">
-    <g filter="url(#paper)"><path d="M60,-50 C26,-52 10,-46 6,-36 L6,42 C14,52 34,56 60,54 Z" fill="#59625f"/><path d="M6,-36 L6,42" stroke="#7d8784" stroke-width="5"/></g>
+    <g filter="url(#paper)"><path d="M14,-46 C8,-44 4,-38 4,-30 L4,40 C6,48 10,50 14,50 Z" fill="#3d4442"/></g>
     ${F.map(([y, L, w], i) => { const a = L * .42, b = L * .32, c = L * .26;
       return `<g data-p="f${i}" transform="translate(4,${y})"><g filter="url(#paper)">${seg(a + 3, w, .5)}
         <path d="M${-a + 4},${-w / 2 + 2} q-2,${w / 2 - 2} 0,${w - 4}" fill="none" stroke="${HS.paleShade}" stroke-width="1.6"/></g>
@@ -184,7 +184,7 @@ function otherEye(parent) {
     <g clip-path="url(#hsEyeClip)"><path d="M-60,0 Q0,-34 60,0 Q0,34 -60,0 Z" fill="#c9c2b4"/>
       <path d="M-60,0 Q0,-34 60,0" fill="none" stroke="#8e8577" stroke-width="10" opacity=".55"/>
       <g data-p="iris"><circle r="21" fill="${HS.red}"/><circle r="21" fill="none" stroke="#5e0508" stroke-width="3"/><circle r="9" fill="#120203"/><circle cx="6" cy="-7" r="3.4" fill="#ffd9b0" opacity=".85"/></g></g>
-    <path data-p="lidT" d="M-66,0 Q0,-40 66,0 L66,-60 L-66,-60 Z" fill="#141720"/><path data-p="lidB" d="M-66,0 Q0,40 66,0 L66,60 L-66,60 Z" fill="#141720"/>
+    <path data-p="lidT" d="M-66,0 Q0,-40 66,0 L66,-60 L-66,-60 Z" fill="#030406"/><path data-p="lidB" d="M-66,0 Q0,40 66,0 L66,60 L-66,60 Z" fill="#030406"/>
     <path d="M-62,0 Q0,-36 62,0 Q0,36 -62,0 Z" fill="none" stroke="#06070b" stroke-width="3"/>`;
   const P = pieces(g);
   return { g, pose({ x = 0, y = 0, s = 1, open = 1, look = 0, glow = 1 } = {}, f = 0) {
@@ -285,15 +285,15 @@ function nightstand(parent) {
       <rect x="-50" y="-120" width="100" height="112" fill="#2e2119"/><rect x="-40" y="-104" width="80" height="40" fill="none" stroke="#45332a" stroke-width="4"/>
       <circle cy="-84" r="4" fill="#8a7a5a"/><rect x="-48" y="-10" width="10" height="10" fill="#2e2119"/><rect x="38" y="-10" width="10" height="10" fill="#2e2119"/></g>`);
 }
-// The long curtain on the window's right: pose({ pull: 0…1 }) gathers it toward the window frame (Sam looks behind it).
-function curtain(parent, x = 352, top = 206, bottom = 1062) {
-  const g = mk('g', {}, parent);
-  const c = prop(g, `<g filter="url(#paperBig)"><path d="M${x},${top} L${x + 70},${top} Q${x + 78},${(top + bottom) / 2} ${x + 74},${bottom} L${x - 4},${bottom} Q${x + 6},${(top + bottom) / 2} ${x},${top} Z" fill="#3b2c4d"/>
-      ${[16, 36, 54].map(d => `<path d="M${x + d},${top + 10} Q${x + d + 6},${(top + bottom) / 2} ${x + d + 2},${bottom - 6}" fill="none" stroke="#2c2139" stroke-width="5"/>`).join('')}</g>`);
-  const L = prop(g, `<g filter="url(#paperBig)"><path d="M40,${top} L102,${top} Q96,${(top + bottom) / 2} 104,${bottom} L36,${bottom} Q44,${(top + bottom) / 2} 40,${top} Z" fill="#3b2c4d"/>
-      ${[56, 76].map(d => `<path d="M${d},${top + 10} Q${d - 4},${(top + bottom) / 2} ${d + 2},${bottom - 6}" fill="none" stroke="#2c2139" stroke-width="5"/>`).join('')}</g>`);
-  return { g, pose({ pull = 0, sway = 0 } = {}, f = 0) {
-    tf(c, `translate(${x + 74},${top}) skewX(${(-10 * pull + sway).toFixed(2)}) scale(${(1 - .55 * pull).toFixed(3)},1) translate(${-(x + 74)},${-top})`);
+// The long curtain on the window's right: pose({ pull: 0…1 }) gathers it to its right edge, toward Sam (she looks behind it).
+function curtain(parent, x = 330, top = 206, bottom = 1062, W = 104) {
+  const g = mk('g', {}, parent), mid = (top + bottom) / 2;
+  const c = prop(g, `<g filter="url(#paperBig)"><path d="M${x},${top} L${x + W},${top} Q${x + W + 8},${mid} ${x + W + 4},${bottom} L${x - 4},${bottom} Q${x + 6},${mid} ${x},${top} Z" fill="#3b2c4d"/>
+      ${[.18, .38, .58, .8].map(d => `<path d="M${x + d * W},${top + 10} Q${x + d * W + 6},${mid} ${x + d * W + 2},${bottom - 6}" fill="none" stroke="#2c2139" stroke-width="5"/>`).join('')}</g>`);
+  const L = prop(g, `<g filter="url(#paperBig)"><path d="M40,${top} L102,${top} Q96,${mid} 104,${bottom} L36,${bottom} Q44,${mid} 40,${top} Z" fill="#3b2c4d"/>
+      ${[56, 76].map(d => `<path d="M${d},${top + 10} Q${d - 4},${mid} ${d + 2},${bottom - 6}" fill="none" stroke="#2c2139" stroke-width="5"/>`).join('')}</g>`);
+  return { g, edge: x, pose({ pull = 0, sway = 0 } = {}, f = 0) {
+    tf(c, `translate(${x + W},${top}) skewX(${(sway * (1 - pull)).toFixed(2)}) scale(${(1 - .5 * pull).toFixed(3)},1) translate(${-(x + W)},${-top})`);   // gathered toward its right edge
   } };
 }
 // Rain running down the window glass (x0, y0, w, h): streaks on a fixed lattice that fall on twos; the clip never moves.
@@ -318,8 +318,11 @@ function nightLight(parent, [lx, ly] = NIGHTSTAND.lamp) {
 // at (0, 0) and the hand beyond it; pose({ x, y, s, r (degrees, the arm's direction: 0 points down), open }).
 function samArm(parent) {
   const g = mk('g', {}, parent);
-  const a = prop(g, `<g filter="url(#paper)"><rect x="-22" y="-330" width="44" height="300" rx="20" fill="#b89a6c"/><rect x="-17" y="-40" width="34" height="56" rx="14" fill="#efc6a4"/>
-      <ellipse cx="0" cy="34" rx="25" ry="30" fill="#efc6a4"/><rect x="-24" y="-44" width="48" height="14" rx="6" fill="#97805a"/></g>`);
+  prop(g, `<g filter="url(#paper)"><path d="M-46,-360 L46,-360 L40,-46 L-40,-46 Z" fill="#b89a6c"/><path d="M-20,-350 l6,290" stroke="#97805a" stroke-width="5"/>
+      <rect x="-44" y="-58" width="88" height="22" rx="9" fill="#97805a"/><rect x="-24" y="-40" width="48" height="44" rx="16" fill="#efc6a4"/>
+      <path d="M-30,0 Q-34,46 -10,62 Q12,72 30,52 Q38,30 30,0 Z" fill="#efc6a4"/>
+      ${[-18, -4, 10, 22].map((x, i) => `<rect x="${x - 6}" y="44" width="12" height="${34 - Math.abs(i - 1.5) * 5}" rx="6" fill="#efc6a4"/>`).join('')}
+      <path d="M-30,12 Q-48,30 -40,48" fill="none" stroke="#efc6a4" stroke-width="13" stroke-linecap="round"/></g>`);
   return { g, pose({ x = 0, y = 0, s = 1, r = 0 } = {}, f = 0) { tf(g, `translate(${(x + jit(f, 1) * .4).toFixed(1)},${(y + jit(f, 2) * .4).toFixed(1)}) rotate(${r.toFixed(2)}) scale(${s})`); } };
 }
 // Leo's small hand gripping (a close-up piece): a fist around something at (0, 0).
@@ -339,13 +342,13 @@ function dinoFoot(parent) {
    off): white with a dark edge for Sam and Leo, red for the Other, in the platforms' safe area (x 50–810, the line
    above y 1290). hsCaptions(p, scene, pre, { red: [clip, …], extra: [[t0, text, t1], …] }) shows the scene's cues
    (join.py's, with their ends) on the scene clock, a cue in red when it falls in one of the `red` clips; `extra` are
-   red lines of its own (the Other's count, half a beat behind Sam's). Returns pose(q). */
+   red lines of its own (the Other's count, half a beat behind Sam's), drawn faint. Returns pose(q). */
 const CAP = { x: 430, y: 1262, size: 46, lineH: 54, maxW: 700, font: "'Helvetica Neue', Arial, sans-serif" };
 function hsCaptions(p, scene, pre, { red = [], extra = [] } = {}) {
   const T = TIMINGS[scene], parts = Object.entries(T.parts).sort((a, b) => a[1] - b[1]);
   const owner = t => { let c = null; for (const [k, at] of parts) if (at <= t + 1e-6) c = k; return c; };
   const cues = T.cues.map(([t0, text, t1], i) => ({ t0: pre + t0, t1: pre + (t1 ?? (T.cues[i + 1]?.[0] ?? T.dur)), text, red: red.includes(owner(t0)) }));
-  const reds = extra.map(([t0, text, t1]) => ({ t0, t1, text, red: true }));
+  const reds = extra.map(([t0, text, t1]) => ({ t0, t1, text, red: true, faint: true }));   // the count's echo: faint red
   const g = mk('g', { 'pointer-events': 'none', 'font-family': CAP.font, 'font-weight': 700, 'text-anchor': 'middle' }, p);
   const wrap = text => { const words = text.split(' '), lines = ['']; for (const w of words) { const t = (lines.at(-1) + ' ' + w).trim(); if (t.length * CAP.size * .55 > CAP.maxW && lines.at(-1)) lines.push(w); else lines[lines.length - 1] = t; } return lines; };
   const line = (fill) => mk('text', { x: CAP.x, 'font-size': CAP.size, fill, stroke: '#05060a', 'stroke-width': 9, 'paint-order': 'stroke', 'stroke-linejoin': 'round' }, g);
@@ -355,7 +358,7 @@ function hsCaptions(p, scene, pre, { red = [], extra = [] } = {}) {
     const w = cues.filter(c => !c.red && q >= c.t0 && q < c.t1).at(-1), r = [...cues.filter(c => c.red), ...reds].filter(c => q >= c.t0 && q < c.t1).at(-1);
     const both = w && r;
     set(white, w?.text || '', both ? CAP.y - CAP.lineH - 6 : CAP.y);
-    set(redL, r?.text || '', CAP.y);
+    set(redL, r?.text || '', CAP.y); redL.forEach(e => { const o = r?.faint ? '.8' : '1'; if (e._o !== o) e.setAttribute('opacity', e._o = o); });
   };
 }
 // The title in the dark: HIDE AND SEEK in cut-paper capitals, each letter a little crooked; pose({ o }).

@@ -272,7 +272,7 @@ window.TIMINGS = {
   ]
  },
  "l07": {
-  "dur": 2.67,
+  "dur": 2.57,
   "marks": {},
   "cues": [
    [
@@ -280,7 +280,7 @@ window.TIMINGS = {
     "Shh."
    ],
    [
-    0.956,
+    0.91,
     "Don't find the other one."
    ]
   ]

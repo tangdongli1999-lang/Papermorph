@@ -15,8 +15,9 @@ const breath = (q, ph = 0, a = 1.2) => a * Math.sin((q + ph) * 2.4);
 
 // Where people stand in the room (world px of the 'room' set; feet y)
 const SPOT = {
-  samWall: [480, 1086], samFront: [640, 1446], samCurtain: [450, 1100], samBed: [330, 1540],
-  leoBed: [262, 1230], leoFloor: [480, 1452], foot: [396, 1424],
+  // Leo hopping down lands on the rug in front of the bed's foot, clear of the nightstand
+  samWall: [480, 1086], samFront: [640, 1446], samCurtain: [478, 1100], samBed: [330, 1540],
+  leoBed: [262, 1230], leoFloor: [452, 1530], foot: [236, 1428],
 };
 const SAM_S = { wall: 1.02, front: 1.22, bed: 1.18 }, LEO_S = .8;
 
@@ -27,10 +28,22 @@ function bedroom(p, v0 = {}) {
   const cam = paperCam(p, 'room', v0, { stages: ['wall'] });
   const rain = rainGlass(cam.stageAt.wall), curt = curtain(cam.stageAt.wall);
   const ward = wardrobe(cam.stage), bedB = bedBack(cam.stage);
-  const leoW = mk('g', {}, cam.stage), leo = leoPuppet(leoW);
+  const leoBack = mk('g', {}, cam.stage), leoW = mk('g', {}, leoBack), leo = leoPuppet(leoW);
   const footG = mk('g', {}, cam.stage), foot = dinoFoot(footG);
   const bedF = bedFront(cam.stage), stand = nightstand(cam.stage), lamp = moonLamp(cam.stage);
+  const leoFront = mk('g', {}, cam.stage);   // a slot in front of the bed and nightstand, for Leo out on the floor
   const sam = samPuppet(cam.stage);
   const night = nightLight(cam.stage);
-  return { cam, rain, curt, ward, bedB, leoW, leo, footG, foot, bedF, stand, lamp, sam, night };
+  return { cam, rain, curt, ward, bedB, leoBack, leoW, leo, leoFront, footG, foot, bedF, stand, lamp, sam, night };
+}
+// Put a puppet's group in a slot (a layer of the room) if it is not there already: draw order follows the action.
+const slotIn = (g, slot) => { if (g.parentNode !== slot) slot.appendChild(g); };
+// Leo lying flat under the bed, as scene 2 leaves him (head to screen left, in the dark behind the cover).
+const LEO_UNDER = { dx: -250, dy: -168, rot: -88 };
+function leoUnderBed(R, q, f) {
+  const [x1, y1] = SPOT.leoFloor;
+  slotIn(R.leoW, R.leoBack);
+  R.leo.pose({ x: x1, y: hipOn(y1, LEO_S), s: LEO_S, head: 'F', turn: 0, rua: -150, lua: 150, look: -1, shut: blinking(q, [1.7, 5.2]) }, f);
+  tf(R.leoW, `translate(${LEO_UNDER.dx},${LEO_UNDER.dy}) rotate(${LEO_UNDER.rot},${x1},${y1})`);
+  vis(R.leo.g, true);
 }
