@@ -32,6 +32,7 @@ const CHAPTER = { number: 1, title: 'Hide and Seek', minutes: 1, language: 'en',
 // The captions are drawn on the stage by each scene (hsCaptions: white for Sam and Leo, red for the Other), so the
 // player's own captions stay off; the Other's count is added to the cues so the exported .srt carries it too.
 setCaptions(false, false);
+TIMINGS.scene2.ownCues = TIMINGS.scene2.cues;   // the on-screen captions keep the scene's own cues (hsCaptions)
 TIMINGS.scene2.cues = [...TIMINGS.scene2.cues, ...OTHER_COUNT.map(([t0, text, t1]) => [t0 - PRE2, text, t1 - PRE2])].sort((a, b) => a[0] - b[0]);
 
 const BEATS = [

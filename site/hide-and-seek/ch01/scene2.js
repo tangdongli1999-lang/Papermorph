@@ -7,7 +7,7 @@
 const PRE2 = .3;
 const NUM_WORDS = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
 // When Sam says number k (beat clock): her clip's start, plus the hole before four and seven, plus the word's own lead.
-const samSays = k => clipAt('scene2', PRE2, 'n' + k, (k === 4 || k === 7 ? 1.1 : 0) + .22);
+const samSays = k => clipAt('scene2', PRE2, 'n' + k, (k === 4 || k === 7 ? 1.1 : 0) + .06);   // each number's clip starts 0.06 s before the word
 const OTHER_COUNT = [4, 5, 6, 7, 8, 9].map(k => [samSays(k) + .30, NUM_WORDS[k] + '…', samSays(k) + 1.15]);
 
 function scene2(p, D, m) {

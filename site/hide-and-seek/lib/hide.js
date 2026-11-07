@@ -347,7 +347,8 @@ const CAP = { x: 430, y: 1262, size: 46, lineH: 54, maxW: 700, font: "'Helvetica
 function hsCaptions(p, scene, pre, { red = [], extra = [] } = {}) {
   const T = TIMINGS[scene], parts = Object.entries(T.parts).sort((a, b) => a[1] - b[1]);
   const owner = t => { let c = null; for (const [k, at] of parts) if (at <= t + 1e-6) c = k; return c; };
-  const cues = T.cues.map(([t0, text, t1], i) => ({ t0: pre + t0, t1: pre + (t1 ?? (T.cues[i + 1]?.[0] ?? T.dur)), text, red: red.includes(owner(t0)) }));
+  const own = T.ownCues || T.cues;   // a page that adds lines to cues for the .srt keeps the scene's own here
+  const cues = own.map(([t0, text, t1], i) => ({ t0: pre + t0, t1: pre + (t1 ?? (own[i + 1]?.[0] ?? T.dur)), text, red: red.includes(owner(t0)) }));
   const reds = extra.map(([t0, text, t1]) => ({ t0, t1, text, red: true, faint: true }));   // the count's echo: faint red
   const g = mk('g', { 'pointer-events': 'none', 'font-family': CAP.font, 'font-weight': 700, 'text-anchor': 'middle' }, p);
   const wrap = text => { const words = text.split(' '), lines = ['']; for (const w of words) { const t = (lines.at(-1) + ' ' + w).trim(); if (t.length * CAP.size * .55 > CAP.maxW && lines.at(-1)) lines.push(w); else lines[lines.length - 1] = t; } return lines; };
