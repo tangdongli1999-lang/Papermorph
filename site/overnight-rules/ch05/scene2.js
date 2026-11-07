@@ -31,7 +31,30 @@ function aisle5(z0, zF, fz0 = 1, run = 0) {
       s += Q4(P3(face, y, z0), P3(face, y, zF), P3(face, y + .03, zF), P3(face, y + .03, z0), '#f7f3ea');
       s += Q4(P3(face, y + .03, z0), P3(face, y + .03, zF), P3(face, y + .036, zF), P3(face, y + .036, z0), '#b9b0a0');
     }
+    s += stock(sd, Math.max(z0, .55), Math.min(zF, 6.2), run);
     for (let z = from(z0, .5); z < zF; z += .5) s += Q4(P3(face, AV.TOP, z), P3(face, AV.TOP, z + .03), P3(face, AV.FLOOR, z + .03), P3(face, AV.FLOOR, z), '#efe8da');
+  }
+  return s;
+}
+
+// the shelves stocked, like the painted ones: rows of cartons and boxes on every board, in the store's colours, each
+// with its near side showing and a pale label band; drawn far to near so the nearer ones overlap
+const STOCK = [['#e98b45', '#c26f30'], ['#9479b8', '#755c97'], ['#5a87c4', '#436aa0'], ['#6fa860', '#558748'], ['#cf5148', '#a83d36'],
+  ['#e9c05a', '#c49d3e'], ['#e7e5dc', '#c3c0b5'], ['#d97b93', '#b15f75']];
+function stock(sd, za, zb, run = 0) {
+  // runs of the same product side by side (as on a real shelf): one colour, one height, a run of 3 to 6 facings
+  const PW = .07, face = sd * (AV.W + .015), deepX = sd * (AV.W + .05);
+  let s = '';
+  const first = Math.ceil((za + run) / PW), last = Math.floor((zb + run) / PW);
+  for (const [k, yb] of BOARDS.slice(1).map((y, k) => [k, y])) {
+    for (let n = last; n >= first; n--) {
+      const g = Math.floor((n + k * 3) / (3 + ((k * 7 + Math.floor((n + k * 3) / 5)) % 4))), id = ((g * 5 + k * 3) % 8 + 8) % 8;
+      if (((g * 11 + k * 7) % 37 + 37) % 37 === 0) continue;   // now and then an empty run, where something sold out
+      const z = n * PW - run, h = [.105, .12, .09, .125, .1, .115, .095, .11][id], [c, cs] = STOCK[id], gap = .008, y0 = yb - h;
+      s += Q4(P3(face, y0, z + gap), P3(deepX, y0, z + gap), P3(deepX, yb, z + gap), P3(face, yb, z + gap), cs);
+      s += Q4(P3(face, y0, z + gap), P3(face, y0, z + PW), P3(face, yb, z + PW), P3(face, yb, z + gap), c);
+      s += Q4(P3(face, yb - h * .58, z + gap + .014), P3(face, yb - h * .58, z + PW - .014), P3(face, yb - h * .4, z + PW - .014), P3(face, yb - h * .4, z + gap + .014), '#fbf8ef', ' opacity=".55"');
+    }
   }
   return s;
 }
@@ -56,7 +79,7 @@ function scene2(p, D, m) {
     <image href="../img/sets/checkout/bg.webp" x="-60" y="-34" width="1720" height="968" preserveAspectRatio="none" clip-path="url(#${uid})"/>`;
   const farCounter = mk('g', {}, farG), otherFar = daniPuppet(farCounter, { other: true });
   farG.insertAdjacentHTML('beforeend', `<image href="../img/sets/checkout/counter.webp" x="-60" y="-34" width="1720" height="968" preserveAspectRatio="none" clip-path="url(#${uid})"/>`);
-  const runner = daniPuppet(R.cam.stage);
+  const runner = daniPuppet(R.cam.stage), runFore = ['rArmf', 'lArmf'].map(k => runner.g.querySelector(`[data-p=${k}]`));
   nightGrade(run, 1);
   const black = mk('rect', { x: -10, y: -10, width: 1620, height: 920, fill: '#000', opacity: 0 }, p);
   const cap = hsCaptions(p, 'scene2', PRE2, { red: ['od1', 'od2', 'od3'] });
@@ -110,13 +133,14 @@ function scene2(p, D, m) {
       vis(R.cam.layer('counter'), false);
       otherFar.pose({ x: CHK.behind[0] - 40, y: hipOn(CHK.behind[1], .7), s: .7, head: 'F', turn: 0, rua: 4, lua: -4, look: 0, mouth: 'X' }, f);
       vis(otherFar.g, shot === 'run');
+      for (const e of runFore) vis(e, shot !== 'run');   // running away from us her forearms are in front of her, out of sight
       if (shot === 'who') {   // Dani, close, facing us, the counter behind her
         runner.pose({ x: 816, y: hipOn(1060, 1.9), s: 1.9, head: 'F', turn: 0, rua: 4, lua: -4, look: .1, brow: .9,
           mouth: worried(lips(q, 'scene2', PRE2, 'd29', 'd30')), shut: (q % 3.2) < .12 }, f);
       } else {                // running away from us, towards the counter, and never getting nearer
         const N = inAisle(-.05, .78), ph = (q - T_RAN) / .27, step = Math.sin(ph * Math.PI);
         runner.pose({ x: N.x, y: hipOn(N.gy, N.s) - 9 * Math.abs(step) * N.s, s: N.s, head: 'F', turn: 0, back: true, stepF: step,
-          rua: 4 + 18 * step, lua: -4 + 18 * step, rfa: 0, lfa: 0, mouth: 'A' }, f);
+          rua: -14 + 8 * step, lua: 14 + 8 * step, rfa: 0, lfa: 0, mouth: 'A' }, f);
       }
     }
     cap(q);
