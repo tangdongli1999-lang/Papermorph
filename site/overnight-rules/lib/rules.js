@@ -246,9 +246,16 @@ function girlPuppet(parent) {
     ${drip(-50, -76)}${drip(46, -74)}${drip(-44, -110, .8)}`;
   const collar = `<path d="M-14,-130 q7,10 14,0 q7,10 14,0 l-2,-4 h-24 Z" fill="#f4f2ec"/><path d="M-36,0 q8,10 14,0 q8,12 16,0 q8,10 14,0 q8,12 16,0 q8,10 12,0 L46,30 L-40,30 Z" fill="#7f97b8" opacity=".55"/>
     ${drip(-20, 46, 1.1)}${drip(6, 52)}${drip(28, 44)}`;
-  return hsFigure(parent, { skin: '#eccdb2', coat: '#a9bcd8', coatFar: '#8ea3c2', legs: '#eccdb2', legsFar: '#dcb9a0', shoe: '#e6c3a8',
-    hair: '#2a1a12', hairFar: '#1a100b', cheek: '#e4a59a', headS: 1.2, eyeK: 1.25, skirt: true, chestF: collar, hairBackF: wetHairF,
+  // the grin (Rule Eight): a wide, too-wide smile drawn over the mouth, grin(k 0…1) widening it from a smile to ear to ear
+  const grinF = `<g data-p="grin" opacity="0"><g data-p="grinS"><path d="M-30,-174 Q0,-150 30,-174 Q0,-158 -30,-174 Z" fill="#3a1418"/>
+    <path d="M-26,-171 Q0,-158 26,-171" fill="none" stroke="#f4efe6" stroke-width="3"/>
+    <path d="M-30,-174 Q0,-146 30,-174" fill="none" stroke="#1a1210" stroke-width="2.6" stroke-linecap="round"/></g></g>`;
+  const fig = hsFigure(parent, { skin: '#eccdb2', coat: '#a9bcd8', coatFar: '#8ea3c2', legs: '#eccdb2', legsFar: '#dcb9a0', shoe: '#e6c3a8',
+    hair: '#2a1a12', hairFar: '#1a100b', cheek: '#e4a59a', headS: 1.2, eyeK: 1.25, skirt: true, chestF: collar, hairBackF: wetHairF, faceF: grinF,
     hairTopF: `<path d="M-44,-196 C-46,-250 46,-250 44,-196 Q20,-214 0,-206 Q-20,-214 -44,-196 Z" fill="#2a1a12"/>${drip(-30, -194, .8)}${drip(22, -196, .8)}` });
+  const gG = fig.g.querySelector('[data-p=grin]'), gS = fig.g.querySelector('[data-p=grinS]');
+  fig.grin = k => { gG.setAttribute('opacity', k > .01 ? 1 : 0); tf(gS, `translate(0,-166) scale(${(.75 + .9 * k).toFixed(3)},${(.8 + .7 * k).toFixed(3)}) translate(0,166)`); };
+  return fig;
 }
 
 // Theo: the new hire. The same green vest over a white tee, short sandy hair; he never speaks.
@@ -393,4 +400,44 @@ function gloveArm(parent) {
     vis(g, on > .01);
     const bx = x + 300, by = y + 520, a = Math.atan2(by - y, bx - x) * 180 / Math.PI;   // from the glove back to off-frame
     tf(arm, `translate(${(x + (bx - x) * (1 - on) * .9).toFixed(1)},${(y + (by - y) * (1 - on) * .9).toFixed(1)}) rotate(${a.toFixed(1)})`); } };
+}
+
+/* ---------- chapter four ---------- */
+// Rain running down a pane of glass (world box x, y, w, h): streaks sliding down, a few beads; pose(q).
+function rainGlass(parent, x, y, w, h) {
+  const id = 'rg' + Math.random().toString(36).slice(2, 7), g = mk('g', { 'pointer-events': 'none' }, parent);
+  g.innerHTML = `<defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs>`;
+  const c = mk('g', { 'clip-path': `url(#${id})` }, g), N = 46, streaks = [];
+  for (let i = 0; i < N; i++) { const sx = x + ((i * 37.3) % w), len = 30 + (i * 13) % 50, sp = 260 + (i * 71) % 220;
+    streaks.push([mk('path', { d: `M${sx.toFixed(1)},0 l${(-2 - i % 3)},${len}`, stroke: '#b8d6e6', 'stroke-width': 1.6 + (i % 3) * .5, opacity: .35 + (i % 4) * .08, 'stroke-linecap': 'round' }, c), sp, (i * 53) % h]); }
+  for (let i = 0; i < 22; i++) mk('circle', { cx: x + (i * 61.7) % w, cy: y + (i * 97.1) % h, r: 2 + i % 3, fill: '#cfe5ef', opacity: .35 }, c);
+  return { g, pose(q) { for (const [e, sp, o] of streaks) tf(e, `translate(0,${(y + ((q * sp + o) % (h + 80)) - 80).toFixed(1)})`); } };
+}
+// The restroom door that was never there: a plain door in the bare wall, a frame, a push plate, a little sign.
+// (x, y) its bottom-left in world px, w x h; pose(k 0…1) shows it.
+function restroomDoor(parent, x, y, w, h) {
+  const g = mk('g', {}, parent);
+  g.innerHTML = `<g filter="url(#paper)"><rect x="${x - 7}" y="${y - h - 7}" width="${w + 14}" height="${h + 7}" fill="#c9cdc3"/>
+    <rect x="${x}" y="${y - h}" width="${w}" height="${h}" fill="#8b9a93"/><rect x="${x + 6}" y="${y - h + 6}" width="${w - 12}" height="${h - 12}" fill="#94a39c"/>
+    <rect x="${x + w - 26}" y="${y - h * .52}" width="10" height="34" rx="3" fill="#d7d9d2"/>
+    <rect x="${x + w / 2 - 34}" y="${y - h * .78}" width="68" height="20" rx="3" fill="#f2efe6"/></g>
+    <text x="${x + w / 2}" y="${y - h * .78 + 14}" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#2d3a40" letter-spacing="1">RESTROOM</text>
+    <rect x="${x}" y="${y - 3}" width="${w}" height="3" fill="#3b4642" opacity=".5"/>`;
+  return { g, pose(k = 1) { g.setAttribute('opacity', k.toFixed(3)); vis(g, k > .01); } };
+}
+// The wall clock behind the counter: a digital clock, red digits; pose('4:43'), with blink of the colon.
+function wallClock(parent, x, y, s = 1) {
+  const g = mk('g', { transform: `translate(${x},${y}) scale(${s})` }, parent);
+  g.innerHTML = `<g filter="url(#paper)"><rect x="-84" y="-34" width="168" height="68" rx="8" fill="#26292a"/><rect x="-74" y="-25" width="148" height="50" rx="4" fill="#120c0c"/></g>
+    <text data-p="t" x="0" y="17" text-anchor="middle" font-family="'Courier New',monospace" font-weight="700" font-size="46" fill="#ff3b30" letter-spacing="2">4:43</text>
+    <rect x="-74" y="-25" width="148" height="50" fill="#ff3b30" opacity=".06"/>`;
+  const t = g.querySelector('[data-p=t]');
+  return { g, pose(s) { if (t.textContent !== s) t.textContent = s; } };
+}
+// A trail of wet prints between two points on a floor: [x, y, angle, side] steps for footprints().
+function printTrail(a, b, n, gap = 14) {
+  const out = [], ang = Math.atan2(b[0] - a[0], -(b[1] - a[1])), r = Math.PI / 180;
+  for (let i = 0; i < n; i++) { const u = i / (n - 1), side = i % 2 ? 1 : -1, x = a[0] + (b[0] - a[0]) * u, y = a[1] + (b[1] - a[1]) * u;
+    out.push([x + Math.cos(ang) * gap * side, y + Math.sin(ang) * gap * side * .4, ang / r, side]); }
+  return out;
 }

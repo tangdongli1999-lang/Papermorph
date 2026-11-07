@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Overnight Rules — 4. Rules Seven and Eight</title>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+<style>#bCC { display: none; }   /* captions are burned into the picture (hsCaptions) */</style>
+</head>
+<body>
+<!-- Chapter 4 of The Overnight Rules: Rule Seven (the girl and the door), Rule Eight (4:44, the lights). -->
+<script src="../lib/engine.js"></script>
+<script src="../img/sets/sets.js"></script>
+<script src="../img/puppets/baked.js" onerror="0"></script>
+<script src="../lib/paper.js"></script>
+<script src="../lib/cast.js"></script>
+<script src="../lib/rules.js"></script>
+<script src="audio/en/timings.js"></script>
+<script src="audio/en/mouths.js"></script>
+<script src="audio/en/shots.js"></script>
+<script src="../lib/shared.js"></script>
+<script src="scene1.js"></script>
+<script src="scene2.js"></script>
+<script>
+'use strict';
+const CHAPTER = { number: 4, title: "Rules Seven and Eight", minutes: 2, language: 'en', film: true, questionKeys: false };
+setCaptions(false, false);
+const BEATS = [
+  ['scene1', 'Rule Seven', (m, D) => scene1(panel(0), D, m), { lead: false, pre: PRE1 }],
+  ['scene2', 'Rule Eight', (m, D) => scene2(panel(0), D, m), { lead: false, pre: PRE2 }],
+].map(([id, title, run, extra]) => ({ id, title, run, ...extra }));
+// the store's hum under the whole chapter (one 90 s bed, never restarted at a cut)
+music('audio/bgm/storebed.mp3', ['scene1', 'scene2'], .5, .05);
+paperWarm(g => { daniPuppet(g); girlPuppet(g); });
+boot();
+</script>
+</body>
+</html>
