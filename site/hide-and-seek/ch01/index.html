@@ -43,6 +43,12 @@ const BEATS = [
   ['scene5', 'The wardrobe', (m, D) => scene5(panel(0), D, m), { lead: false, pre: PRE5 }],
 ].map(([id, title, run, extra]) => ({ id, title, run, ...extra }));
 
+/* ---------- the room bed ----------
+   One 75 s track of rain on the window with the lamp's hum (sfx_recipes.py rainbed), under all five scenes as music,
+   so it runs on through every cut instead of restarting with each scene's effects; it goes when the lamp goes off. */
+music('audio/bgm/rainbed.mp3', ['scene1', 'scene2', 'scene3', 'scene4', 'scene5'], .4, .05);
+window.MUSIC_OFF = { scene5: t => t >= LAMP_OFF5() };
+
 // Build every puppet and prop once at load, off screen, so their bitmaps are ready before the first beat needs them.
 paperWarm(g => { samPuppet(g); leoPuppet(g); otherHand(g); moonLamp(g); wardrobe(g); bedBack(g); bedFront(g); nightstand(g);
   curtain(g); samArm(g); dinoFoot(g); });

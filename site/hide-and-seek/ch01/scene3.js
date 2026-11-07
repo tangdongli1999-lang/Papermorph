@@ -14,8 +14,6 @@ function scene3(p, D, m) {
     .cut({ x: SPOT.foot[0] + 20, y: SPOT.foot[1] - 20, z: 3.6 }, T_FOOT).to({ z: 3.9 }, T_FOOT, 1.2)
     .cut({ x: 320, y: 1300, z: 1.55 }, T_BED);
   const cap = hsCaptions(p, 'scene3', PRE3);
-  sfx('scene3', 0, 'rain', .22, { loop: true });
-  sfx('scene3', 0, 'hum', .12, { loop: true });
   sfx('scene3', T_PULL, 'sash', .25);
   sfx('scene3', T_BED + .1, 'step1', .4);
 

@@ -26,8 +26,6 @@ function scene4(p, D, m) {
     .cut({ x: 450, y: 760, z: 1.18 }, T_LEO).to({ z: 1.32 }, T_LEO + .2, 3);
   rev.cut({ x: 450, y: 720, z: 1.55 }, 0).to({ z: 1.7 }, T_SAM, 2.4);
   const cap = hsCaptions(p, 'scene4', PRE4);
-  sfx('scene4', 0, 'rain', .1, { loop: true });
-  sfx('scene4', 0, 'room', .3, { loop: true });
   sfx('scene4', T_GRAB + .3, 'thud', .18);
 
   // where Sam's wrist is (world px of 'under'): in from the top right, down to Leo's reach

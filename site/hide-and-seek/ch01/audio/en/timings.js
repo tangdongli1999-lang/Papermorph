@@ -22,7 +22,7 @@ window.TIMINGS = {
     "One game."
    ],
    [
-    1.125,
+    1.66,
     "Then bed."
    ]
   ]
@@ -38,7 +38,7 @@ window.TIMINGS = {
   ]
  },
  "l04": {
-  "dur": 3.84,
+  "dur": 2.53,
   "marks": {},
   "cues": [
    [
@@ -46,7 +46,7 @@ window.TIMINGS = {
     "Sure."
    ],
    [
-    0.686,
+    1.04,
     "The more the merrier."
    ]
   ]
@@ -82,7 +82,7 @@ window.TIMINGS = {
   ]
  },
  "n4": {
-  "dur": 1.07,
+  "dur": 0.98,
   "marks": {},
   "cues": [
    [
@@ -98,7 +98,7 @@ window.TIMINGS = {
   ]
  },
  "x4": {
-  "dur": 0.81,
+  "dur": 0.72,
   "marks": {},
   "cues": [
    [
@@ -108,7 +108,7 @@ window.TIMINGS = {
   ]
  },
  "n5": {
-  "dur": 1.03,
+  "dur": 1.04,
   "marks": {},
   "cues": [
    [
@@ -124,7 +124,7 @@ window.TIMINGS = {
   ]
  },
  "x5": {
-  "dur": 0.72,
+  "dur": 0.78,
   "marks": {},
   "cues": [
    [
@@ -134,7 +134,7 @@ window.TIMINGS = {
   ]
  },
  "n6": {
-  "dur": 1.04,
+  "dur": 1.14,
   "marks": {},
   "cues": [
    [
@@ -150,7 +150,7 @@ window.TIMINGS = {
   ]
  },
  "x6": {
-  "dur": 0.78,
+  "dur": 0.87,
   "marks": {},
   "cues": [
    [
@@ -160,7 +160,7 @@ window.TIMINGS = {
   ]
  },
  "n7": {
-  "dur": 1.14,
+  "dur": 1.01,
   "marks": {},
   "cues": [
    [
@@ -176,7 +176,7 @@ window.TIMINGS = {
   ]
  },
  "x7": {
-  "dur": 0.87,
+  "dur": 0.75,
   "marks": {},
   "cues": [
    [
@@ -186,7 +186,7 @@ window.TIMINGS = {
   ]
  },
  "n8": {
-  "dur": 1.01,
+  "dur": 0.92,
   "marks": {},
   "cues": [
    [
@@ -202,7 +202,7 @@ window.TIMINGS = {
   ]
  },
  "x8": {
-  "dur": 0.75,
+  "dur": 0.63,
   "marks": {},
   "cues": [
    [
@@ -246,7 +246,7 @@ window.TIMINGS = {
     "Ten!"
    ],
    [
-    0.456,
+    0.9,
     "Ready or not!"
    ]
   ]
@@ -266,7 +266,7 @@ window.TIMINGS = {
   "marks": {},
   "cues": [
    [
-    0.05,
+    0.63,
     "Found you!"
    ]
   ]

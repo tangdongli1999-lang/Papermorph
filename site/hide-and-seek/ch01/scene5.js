@@ -4,6 +4,8 @@
    the title in the dark. */
 'use strict';
 const PRE5 = .2;
+// When the lamp clicks off (beat clock): the room bed (rain and hum, chapter.html's music()) goes with it.
+const LAMP_OFF5 = () => clipAt('scene5', PRE5, 'hush5') + .5;
 
 function scene5(p, D, m) {
   const R = bedroom(p, { x: 725, y: 700, z: 1.3 }), { cam } = R;
@@ -14,7 +16,7 @@ function scene5(p, D, m) {
   const black = mk('rect', { width: 900, height: 1600, fill: '#000' }, p), title = hsTitle(p);
 
   const at = (clip, t = 0) => clipAt('scene5', PRE5, clip, t);
-  const T_POV = 2.5, T_HAND = 5.0, T_EYE = 6.5, T_SPEAK = at('o5', 7.5) - .25, T_LAMP = at('hush5') + .05, T_OFF = T_LAMP + .45, T_TITLE = T_OFF + .6;
+  const T_POV = 2.5, T_HAND = 5.0, T_EYE = 6.5, T_SPEAK = at('o5', 7.5) - .25, T_LAMP = at('hush5') + .05, T_OFF = LAMP_OFF5(), T_TITLE = T_OFF + .6;
   const SHOTS = [[0, 'sam'], [T_POV, 'pov'], [T_HAND, 'hand'], [T_EYE, 'eye'], [T_SPEAK, 'xcu'], [T_LAMP, 'lamp'], [T_OFF, 'black']];
   const SEAM = [WARD.x, WARD.y];
   cam.cut({ x: 725, y: 690, z: 1.25 }, T_POV).to({ z: 1.95 }, T_POV, 2.5)
@@ -24,7 +26,6 @@ function scene5(p, D, m) {
     .cut({ x: NIGHTSTAND.lamp[0] + 10, y: NIGHTSTAND.lamp[1] - 80, z: 3.2 }, T_LAMP);
   rev.cut({ x: 450, y: 720, z: 1.7 }, 0).to({ z: 1.9 }, 0, 2.5);
   const cap = hsCaptions(p, 'scene5', PRE5, { red: ['o5'] });
-  sfx('scene5', 0, 'rain', .1, { loop: true, to: T_OFF });
   sfx('scene5', 1.1, 'drip', .5);
   sfx('scene5', T_POV + .1, 'rumble', .7);
   sfx('scene5', T_HAND + .05, 'creak', .7);

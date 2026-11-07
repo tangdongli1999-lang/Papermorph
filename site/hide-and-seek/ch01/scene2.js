@@ -27,8 +27,6 @@ function scene2(p, D, m) {
     .cut({ x: 450, y: 1000, z: 1.12 }, T_TEN).to({ z: 1.2 }, T_TEN, 2.5);
 
   const cap = hsCaptions(p, 'scene2', PRE2, { extra: OTHER_COUNT });
-  sfx('scene2', 0, 'rain', .22, { loop: true });
-  sfx('scene2', 0, 'hum', .12, { loop: true });
   sfx('scene2', T_DIVE + .02, 'springs', .22);
   sfx('scene2', T_DIVE + .1, 'patter', .5);
   sfx('scene2', T_DIVE + .42, 'thud', .35);

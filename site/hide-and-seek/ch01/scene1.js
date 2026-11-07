@@ -29,8 +29,6 @@ function scene1(p, D, m) {
     ${[[170, 1010], [205, 1060], [230, 1110]].map(([x, y]) => `<rect x="${x}" y="${y}" width="120" height="44" rx="22" fill="#c9a588"/>`).join('')}`;
   const cap = hsCaptions(p, 'scene1', PRE1);
 
-  sfx('scene1', 0, 'rain', .32, { loop: true });
-  sfx('scene1', 0, 'hum', .16, { loop: true });
   [1.15, 2.8, 4.45, 6.1].forEach(t => sfx('scene1', t, 'springs', .42));
   sfx('scene1', T_GLANCE - .3, 'thud', .25);   // he lands and stops
 
