@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Overnight Rules: thumbnail</title>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<!-- A scratch page, not part of the film: the YouTube thumbnail. -->
+<script src="../lib/engine.js"></script>
+<script src="../img/sets/sets.js"></script>
+<script src="../img/puppets/baked.js" onerror="0"></script>
+<script src="../lib/paper.js"></script>
+<script src="../lib/cast.js"></script>
+<script src="../lib/rules.js"></script>
+<script src="../lib/shared.js"></script>
+<script>
+'use strict';
+const CHAPTER = { number: 0, title: 'Thumbnail', minutes: 1, language: 'en', film: true, questionKeys: false };
+const TIMINGS = {};
+// The thumbnail: camera four, grainy, the other Dani in aisle four waving with her black eyes and too-wide smile; the
+// real Dani's face, huge, at the right, terrified, a red rim of light; big words at the top left; a red ring and arrow
+// on the figure in the feed. variant 0: THAT'S NOT ME / variant 1: RULE 6 / DON'T GO
+function thumb(p, D, variant) {
+  const gridG = mk('g', { style: 'filter:contrast(1.25) brightness(1.05)' }, p), grid = cctv(gridG), other = daniPuppet(grid.slot4, { other: true });
+  tf(gridG, `translate(800,450) scale(1.06) translate(-800,-450) translate(-250,18) ${grid.zoomTo(4, 1)}`);
+  const shade = mk('g', {}, p);
+  shade.innerHTML = `<defs><linearGradient id="tR" x1="0" x2="1"><stop offset=".35" stop-color="#000" stop-opacity="0"/><stop offset=".72" stop-color="#05070a" stop-opacity=".88"/></linearGradient>
+    <radialGradient id="tRim" cx="1700" cy="900" r="700" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff2a1f" stop-opacity=".55"/><stop offset="1" stop-color="#ff2a1f" stop-opacity="0"/></radialGradient>
+    <radialGradient id="tV" cx="45%" cy="50%" r="75%"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".75"/></radialGradient></defs>
+    <rect width="1600" height="900" fill="url(#tR)"/><rect width="1600" height="900" fill="url(#tRim)"/>`;
+  const face = daniPuppet(p);
+  // a scream: an open oval mouth over her own
+  face.g.querySelector('[data-p=headF] > g').insertAdjacentHTML('beforeend', `<ellipse cx="0" cy="-167" rx="11" ry="9" fill="${DANI_COL.skin}"/><ellipse cx="0" cy="-163" rx="8.5" ry="13" fill="#2a0e10"/><ellipse cx="0" cy="-156" rx="5" ry="3.5" fill="#b8525a"/>`);
+  const top = mk('g', {}, p);
+  top.innerHTML = `<rect width="1600" height="900" fill="url(#tV)"/>
+    <g fill="none" stroke="#ff2a1f" stroke-width="12" stroke-linecap="round"><circle cx="345" cy="430" r="132"/>
+      <path d="M810,330 Q630,330 500,392"/><path d="M510,350 L490,396 L540,408"/></g>
+    <g font-family="monospace" font-size="44" font-weight="700"><circle cx="58" cy="64" r="14" fill="#ff2a1f"/><text x="84" y="80" fill="#fff">REC  CAM 4</text></g>
+    <g font-family="'Inter Display Black','Inter Display',Inter,sans-serif" font-weight="900" paint-order="stroke" stroke="#000" stroke-linejoin="round">
+      ${variant ? `<text x="1560" y="180" text-anchor="end" font-size="190" fill="#ffffff" stroke-width="22" letter-spacing="-4">RULE 6</text>
+                   <text x="1560" y="320" text-anchor="end" font-size="122" fill="#ff2a1f" stroke-width="20" letter-spacing="-3">WAS A LIE</text>`
+                : `<text x="1560" y="175" text-anchor="end" font-size="160" fill="#ffffff" stroke-width="22" letter-spacing="-4">THAT'S</text>
+                   <text x="1560" y="320" text-anchor="end" font-size="160" fill="#ff2a1f" stroke-width="22" letter-spacing="-4">NOT ME</text>`}
+    </g>`;
+  stopClock(D, (q, f) => {
+    grid.pose({ t: '04:51:07' });
+    other.pose({ x: 300, y: hipOn(445, .72), s: .72, head: 'F', turn: 0, lua: -6, rua: -96, rfa: -78, nod: -2 }, f);
+    face.pose({ x: 1270, y: 1390, s: 3.7, head: 'F', turn: 0, rua: 4, lua: -4, look: -1, brow: 1, mouth: 'X', nod: -4 }, f);
+  });
+}
+const BEATS = [
+  { id: 'notme', title: 'That\'s not me', run: (m, D) => thumb(panel(0), D, 0), lead: false, dur: 2 },
+  { id: 'rule6', title: 'Rule 6', run: (m, D) => thumb(panel(0), D, 1), lead: false, dur: 2 },
+];
+boot();
+</script>
+</body>
+</html>
