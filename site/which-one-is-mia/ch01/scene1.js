@@ -1,45 +1,38 @@
-/* scene1.js — one scene of the film = one beat: a set, three puppets, a joined voice track, a sound effect, and the
-   things a listen-and-find stop asks for. Copy it for scene2.js … and list them in chapter.html. A scene is a pure
-   function of time: stopClock calls the drawing once per 12 fps frame with q, the beat's clock, so pause, seek and
-   ?beat=N&t=S show exactly the frame a viewer would see.
-   Cut shots with cam.cut(view, t0), move with cam.to(view, t0, dur); a close-up on whoever speaks is a cut, not a zoom.
-   Build the scene's pictures first (outside stopClock), then pose every puppet every frame. */
+/* scene1.js — the voicemail (shots 1–4). The phone buzzing in the dark: Mia's voicemail, "Jess. It's Mia. Don't open
+   the door."; Jess in bed, lit blue by the phone, "…Mia?"; the voicemail again, "Whatever sounds like me tonight… it
+   isn't me."; an insert of Mia's bed across the room, dark, rumpled, held one beat too long (it isn't empty). */
 'use strict';
-const PRE1 = 1.0;   // seconds of picture before the first word (the beat's `pre`)
-let THINGS1 = [];   // what can be tapped in this picture, filled each time the scene builds; the beat's findWords reads it
+const PRE1 = .2;
 
 function scene1(p, D, m) {
-  const cam = paperCam(p, 'room');                       // the set 'room' from img/sets/sets.js; puppets go in cam.stage
-  cam.cut({ x: 800, y: 450, z: 1 }, 0).to({ x: 860, y: 470, z: 1.12 }, 1, 9);   // a slow push-in
-  const kid = kidPuppet(cam.stage, { coat: '#c94a3c', stripe: '#c94a3c' });
-  const dad = kidPuppet(cam.stage, { coat: '#3e7fc4', stripe: '#f4f1ea' });
-  const cat = catPuppet(cam.stage);                      // the four-legged rig (cast.js, section 3)
-  // The listen-and-find stop after the scene (chapter.html's FIND1): every thing a child might tap says its name
-  // (audio/en/w-<word>.mp3), so list the background's people too, not only what is asked for.
-  THINGS1 = [{ g: cat.g, word: 'cat' }, { g: dad.g, word: 'dad' }, { g: kid.g, word: 'kid' }];
-  sfx('scene1', 0, 'room', .4, { loop: true });          // a bed: room tone laid again and again to the scene's end,
-                                                         // through the find stop's wait too (sound.md)
-  sfx('scene1', .3, 'knock');                            // audio/sfx/knock.mp3 (SKILL/scripts/sfx.py)
-  const enter = clipAt('scene1', PRE1, 's02');           // when the kid's first line starts
-  // a word inside a line: m('line.mark') is the beat-clock time of [[mark]] in that line (pre and the line's place in
-  // the joined clip already counted: adding clipAt to it times the action late by the line's start)
-  const come = m('s02b.open');                           // Dad waves the kid in on "Come in"
-  // the kid side-steps in from the left with planted feet (spStep, cast.js): whole steps (2/3 s each) that end at x 580
-  // just before the line; x comes from the distance the steps cover, so the feet never slide
-  const STEP = 2 / 3, steps = Math.max(0, Math.floor((enter - .2) / STEP)), far = spStep(steps * STEP).d;
-  // the cat walks in ahead of the kid and stops at its feet: route gives x and the distance d that plants the paws
-  const CAT = [[0, -160], [Math.max(1, enter - .4), 330]];
+  const R = dormRoom(p, { x: 450, y: 800, z: 1 }), { cam } = R;
+  const vm = voicemailScreen(p);
+  const at = (clip, t = 0) => clipAt('scene1', PRE1, clip, t);
+  const T_JESS = at('j1') - .1, T_VM2 = at('m2') - .1, T_BED = at('hush1') - .05;
+  const SHOTS = [[0, 'vm'], [T_JESS, 'jess'], [T_VM2, 'vm'], [T_BED, 'bed']];
+  cam.cut({ x: 170, y: 1330, z: 2.5 }, T_JESS).to({ z: 2.7 }, T_JESS, 1.6)
+    .cut({ x: 750, y: 1040, z: 2.5 }, T_BED).to({ z: 2.75 }, T_BED, 2.2);
+  const cap = hsCaptions(p, 'scene1', PRE1);
+  sfx('scene1', 0, 'buzz', 1.0);
+  // the voicemail's progress bar: it plays from the first word to the end of the second line
+  const vmA = at('m1'), vmB = at('m2', TIMINGS.m2.dur);
 
   stopClock(D, (q, f) => {
-    cam.apply(q, f);
-    const w = spStep(Math.min(Math.floor(q * 6) / 6, steps * STEP));   // on twos, like everything else
-    kid.pose({ x: 580 - .95 * (far - w.d), y: 800, s: .95, look: .6, mouth: lips(q, 'scene1', PRE1, 's02', 's03'),
-               legL: w.legL, legR: w.legR, bob: w.drop, shut: blinking(q, [2.4, 6.1]) }, f);
-    const r = route(q, CAT, 1.3);
-    cat.pose({ x: r.x, y: 800, s: 1.3, d: r.d, stand: r.stand, tail: 10 * Math.sin(q * 2), look: q > enter ? 1 : 0,
-               shut: blinking(q, [3.0, 7.2]) }, f);
-    dad.pose({ x: 1250, y: 800, s: 1, look: -.6, mouth: lips(q, 'scene1', PRE1, 's02b'), brow: q > enter ? -.3 : 0,
-               armL: tween(q, come, .4, 0, 70) - tween(q, come + 1.2, .5, 0, 70),
-               shut: blinking(q, [3.3]) }, f);
+    const shot = shotAt(q, SHOTS), room = shot !== 'vm';
+    vis(cam.root, room); vis(vm.g, !room);
+    if (room) cam.apply(q, f);
+    vm.pose({ q, progress: span(q, vmA, vmB) * .999, buzz: q < .9 ? 1 : 0 }, f);
+    R.door.pose({ lock: 0, feet: 0, light: .55 }, f);
+    // Mia's bed: a shape under the duvet that breathes (the setup; nobody looks at it yet)
+    R.mia.pose({ x: SPOT.miaInBed[0], y: MIA_HID, s: 1.15, head: 'F', turn: 0, shut: true }, f);
+    R.miaBed.pose({ lump: .16 + .02 * Math.sin(q * 1.7) });
+    // Jess: woken, sitting up against the wall, the phone at her face
+    const jo = { x: SPOT.jessInBed[0], y: SPOT.jessInBed[1], s: .9, head: 'F', turn: 0 };
+    const ph = frontReach(jo, 'R', [jo.x + 6, jo.y - 112 * jo.s]);
+    R.jess.pose({ ...jo, rua: ph.rua, rfa: ph.rfa, hold: 'phone', lua: -10, lfa: 6, nod: 9 + breath(q, 0, 1), brow: .55, look: .1,
+      mouth: worried(lips(q, 'scene1', PRE1, 'j1')), shut: q > T_JESS + 1.1 && q < T_JESS + 1.27 }, f);
+    R.jessBed.pose({ lump: 0 });
+    R.light(...inBed(JESS_BED, [jo.x + 6 * jo.s, jo.y - 112 * jo.s]), 1);
+    cap(q);
   });
 }

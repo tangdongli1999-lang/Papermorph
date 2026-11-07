@@ -165,10 +165,11 @@ function hsCaptions(p, scene, pre, { red = [], extra = [] } = {}) {
   };
 }
 // The title in the dark: HIDE AND SEEK in cut-paper capitals, each letter a little crooked; pose({ o }).
-function hsTitle(p, x = 450, y = 760, text = 'WHICH ONE IS MIA?', size = 70, step = 50) {
-  const g = mk('g', { 'pointer-events': 'none' }, p), word = text.split('');
-  g.innerHTML = word.map((ch, i) => `<text x="${x + (i - (word.length - 1) / 2) * step}" y="${y + ((i * 37) % 11) - 5}" transform="rotate(${((i * 53) % 9) - 4},${x + (i - (word.length - 1) / 2) * step},${y})"
-      font-family="Georgia, 'Times New Roman', serif" font-size="${size}" font-weight="700" fill="#d8d2c2" text-anchor="middle">${ch}</text>`).join('');
+function hsTitle(p, x = 450, y = 760, text = 'WHICH ONE IS MIA?', size = 70, track = 6) {
+  const g = mk('g', { 'pointer-events': 'none' }, p), ch = [...text];
+  const rot = ch.map((_, i) => ((i * 53) % 9) - 4).join(' '), dy = ch.map((_, i) => (i ? (((i * 37) % 11) - ((i - 1) * 37 % 11)) * .6 : 0).toFixed(1)).join(' ');
+  g.innerHTML = `<text x="${x}" y="${y}" rotate="${rot}" dy="${dy}" letter-spacing="${track}" font-family="Georgia, 'Times New Roman', serif"
+      font-size="${size}" font-weight="700" fill="#d8d2c2" text-anchor="middle">${ch.join('')}</text>`;
   return { g, pose({ o = 1 } = {}) { g.setAttribute('opacity', o.toFixed(3)); } };
 }
 
@@ -247,28 +248,28 @@ function voicemailScreen(p) {
    the hall's warm light with the shadows of two feet. pose({ lock 0…1 (the thumb-turn's quarter turn), feet 0…1
    (the shadows' darkness), shift (px, the feet moving), shake (px, the door rattling), light }). Built at its floor
    centre (x, y). */
-const DOOR = { x: 470, y: 1110, w: 300, h: 760 };
+const DOOR = { x: 450, y: 1110, w: 200, h: 470 };   // a person at the back wall stands about 400 px tall
 function dormDoor(parent) {
   const { w, h } = DOOR, g = mk('g', { transform: `translate(${DOOR.x},${DOOR.y})` }, parent);
   prop(g, `<g filter="url(#paperBig)"><rect x="${-w / 2 - 26}" y="${-h - 26}" width="${w + 52}" height="${h + 26}" fill="#2a3047"/>
       <rect x="${-w / 2}" y="${-h}" width="${w}" height="${h - 10}" fill="#3a405c"/>
-      <rect x="${-w / 2 + 34}" y="${-h + 50}" width="${w - 68}" height="${h * .36}" fill="none" stroke="#2f354f" stroke-width="7"/>
-      <rect x="${-w / 2 + 34}" y="${-h * .5 + 10}" width="${w - 68}" height="${h * .36}" fill="none" stroke="#2f354f" stroke-width="7"/>
+      <rect x="${-w / 2 + 24}" y="${-h + 36}" width="${w - 48}" height="${h * .36}" fill="none" stroke="#2f354f" stroke-width="7"/>
+      <rect x="${-w / 2 + 24}" y="${-h * .5 + 10}" width="${w - 48}" height="${h * .36}" fill="none" stroke="#2f354f" stroke-width="7"/>
       <rect x="${w / 2 - 70}" y="${-h * .47}" width="42" height="12" rx="6" fill="#9a9384"/><circle cx="${w / 2 - 50}" cy="${-h * .47 + 6}" r="13" fill="#b3ab98"/>
       <rect x="${w / 2 - 66}" y="${-h * .58 - 22}" width="34" height="44" rx="8" fill="#8c8576"/>
-      <rect x="-60" y="${-h + 120}" width="120" height="70" rx="6" fill="#d9d2c0" opacity=".9" transform="rotate(-3,0,${-h + 155})"/>
-      <text x="0" y="${-h + 164}" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="#5a5243" transform="rotate(-3,0,${-h + 155})">J &amp; M</text></g>`);
+      <rect x="-40" y="${-h + 80}" width="80" height="46" rx="5" fill="#d9d2c0" opacity=".9" transform="rotate(-3,0,${-h + 103})"/>
+      <text x="0" y="${-h + 110}" text-anchor="middle" font-family="Georgia, serif" font-size="21" fill="#5a5243" transform="rotate(-3,0,${-h + 103})">J &amp; M</text></g>`);
   const turn = mk('g', { transform: `translate(${w / 2 - 49},${-h * .58})` }, g);
   mk('rect', { x: -5, y: -15, width: 10, height: 30, rx: 4, fill: '#d6cfbd' }, turn);
   const light = mk('rect', { x: -w / 2, y: -12, width: w, height: 12, fill: '#ffcf86' }, g);
   const glow = mk('rect', { x: -w / 2 - 60, y: -2, width: w + 120, height: 70, fill: 'url(#doorGlow)' }, g);
   g.insertAdjacentHTML('afterbegin', `<defs><linearGradient id="doorGlow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffcf86" stop-opacity=".38"/><stop offset="1" stop-color="#ffcf86" stop-opacity="0"/></linearGradient></defs>`);
-  const feet = [mk('rect', { x: -70, y: -12, width: 52, height: 12, fill: '#0b0a0c' }, g), mk('rect', { x: 18, y: -12, width: 52, height: 12, fill: '#0b0a0c' }, g)];
+  const feet = [mk('rect', { x: -50, y: -12, width: 36, height: 12, fill: '#0b0a0c' }, g), mk('rect', { x: 14, y: -12, width: 36, height: 12, fill: '#0b0a0c' }, g)];
   return { g, pose({ lock = 0, feet: fo = 1, shift = 0, shake = 0, light: lo = 1 } = {}, f = 0) {
     tf(g, `translate(${(DOOR.x + (shake ? jit(f, 4) * shake : 0)).toFixed(1)},${DOOR.y})`);
     tf(turn, `translate(${w / 2 - 49},${-h * .58}) rotate(${(90 * lock).toFixed(1)})`);
     light.setAttribute('opacity', lo.toFixed(2)); glow.setAttribute('opacity', lo.toFixed(2));
-    feet.forEach((e, i) => { e.setAttribute('opacity', (fo * lo).toFixed(2)); e.setAttribute('x', (i ? 18 : -70) + shift + (i ? 1 : -1) * 4 * Math.sin(f * .7 + i)); });
+    feet.forEach((e, i) => { e.setAttribute('opacity', (fo * lo).toFixed(2)); e.setAttribute('x', (i ? 14 : -50) + shift + (i ? 1 : -1) * 4 * Math.sin(f * .7 + i)); });
   } };
 }
 
