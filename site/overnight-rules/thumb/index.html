@@ -37,18 +37,18 @@ function thumb(p, D, variant) {
   const top = mk('g', {}, p);
   top.innerHTML = `<rect width="1600" height="900" fill="url(#tV)"/>
     <g fill="none" stroke="#ff2a1f" stroke-width="12" stroke-linecap="round"><circle cx="345" cy="430" r="132"/>
-      <path d="M810,330 Q630,330 500,392"/><path d="M510,350 L490,396 L540,408"/></g>
+      <path d="M745,345 Q610,335 500,392"/><path d="M510,350 L490,396 L540,408"/></g>
     <g font-family="monospace" font-size="44" font-weight="700"><circle cx="58" cy="64" r="14" fill="#ff2a1f"/><text x="84" y="80" fill="#fff">REC  CAM 4</text></g>
     <g font-family="'Inter Display Black','Inter Display',Inter,sans-serif" font-weight="900" paint-order="stroke" stroke="#000" stroke-linejoin="round">
-      ${variant ? `<text x="1560" y="180" text-anchor="end" font-size="190" fill="#ffffff" stroke-width="22" letter-spacing="-4">RULE 6</text>
-                   <text x="1560" y="320" text-anchor="end" font-size="122" fill="#ff2a1f" stroke-width="20" letter-spacing="-3">WAS A LIE</text>`
-                : `<text x="1560" y="175" text-anchor="end" font-size="160" fill="#ffffff" stroke-width="22" letter-spacing="-4">THAT'S</text>
-                   <text x="1560" y="320" text-anchor="end" font-size="160" fill="#ff2a1f" stroke-width="22" letter-spacing="-4">NOT ME</text>`}
+      ${variant ? `<text x="1575" y="215" text-anchor="end" font-size="245" fill="#ffffff" stroke-width="26" letter-spacing="-6">RULE 6</text>
+                   <text x="1575" y="375" text-anchor="end" font-size="165" fill="#ff2a1f" stroke-width="24" letter-spacing="-5">WAS A LIE</text>`
+                : `<text x="1575" y="205" text-anchor="end" font-size="215" fill="#ffffff" stroke-width="26" letter-spacing="-6">THAT'S</text>
+                   <text x="1575" y="390" text-anchor="end" font-size="215" fill="#ff2a1f" stroke-width="26" letter-spacing="-6">NOT ME</text>`}
     </g>`;
   stopClock(D, (q, f) => {
     grid.pose({ t: '04:51:07' });
     other.pose({ x: 300, y: hipOn(445, .72), s: .72, head: 'F', turn: 0, lua: -6, rua: -96, rfa: -78, nod: -2 }, f);
-    face.pose({ x: 1270, y: 1390, s: 3.7, head: 'F', turn: 0, rua: 4, lua: -4, look: -1, brow: 1, mouth: 'X', nod: -4 }, f);
+    face.pose({ x: 1290, y: 1560, s: 5.0, head: 'F', turn: 0, rua: 4, lua: -4, look: -1, brow: 1, mouth: 'X', nod: -4 }, f);
   });
 }
 const BEATS = [
