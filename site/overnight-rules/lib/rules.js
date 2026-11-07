@@ -188,6 +188,9 @@ const RECEIVER = `<g transform="translate(-2,-8) rotate(-10)"><rect x="-6" y="-2
   <rect x="-9" y="-30" width="18" height="12" rx="5" fill="#cfc3a8"/><rect x="-9" y="18" width="18" height="12" rx="5" fill="#cfc3a8"/></g>`;
 const CEREAL = `<g transform="translate(0,-18)"><rect x="-16" y="-24" width="32" height="44" fill="#d9822b"/><rect x="-16" y="-24" width="32" height="10" fill="#b8341f"/>
   <circle cx="0" cy="2" r="8" fill="#f2d05a"/></g>`;
+// a wet mop held at the handle, its head on the floor (the hand is about hip height)
+const MOP_HELD = `<g><rect x="-3" y="-150" width="6" height="335" rx="3" fill="#c9b48a"/><rect x="-8" y="176" width="16" height="10" fill="#8a8f93"/>
+  <path d="M-44,184 h88 l8,24 h-104 Z" fill="#e3dccb"/>${Array.from({ length: 9 }, (_, i) => `<path d="M${-40 + i * 10},206 l${(i % 3) - 1},12" stroke="#cfc6b2" stroke-width="4" stroke-linecap="round"/>`).join('')}</g>`;
 const DANI_COL = { skin: '#e8b48f', hair: '#3a2416', hairFar: '#2a1a10' };
 
 // Dani: 19, the night clerk. A green store vest over a grey long-sleeve, black jeans, a dark ponytail, her name badge.
@@ -200,7 +203,7 @@ function daniPuppet(parent, { other = false } = {}) {
       <path d="M24,-176 Q44,-160 54,-178 Q42,-168 24,-176 Z" fill="#1a0b0b"/></g>`;
   return hsFigure(parent, { skin: DANI_COL.skin, coat: RULES.vest, coatFar: RULES.vestFar, top: '#a9a69e', legs: '#1d1f26', legsFar: '#15171c',
     shoe: '#e4e1d8', hair: DANI_COL.hair, hairFar: DANI_COL.hairFar, cheek: '#d98c78', pony: true, headS: .92, eyeK: 1.05,
-    faceF: other ? grinF : '', faceP: other ? grinP : '', holds: { phone: PHONE_HELD, receiver: RECEIVER, cereal: CEREAL, peaches: `<g transform="translate(0,-16) scale(.32)">${PEACH_CAN}</g>` } });
+    faceF: other ? grinF : '', faceP: other ? grinP : '', holds: { phone: PHONE_HELD, receiver: RECEIVER, cereal: CEREAL, mop: MOP_HELD, peaches: `<g transform="translate(0,-16) scale(.32)">${PEACH_CAN}</g>` } });
 }
 
 // Mr. Okafor: the manager, 50s. A pale blue shirt and a dark red tie, grey trousers, grey close-cut hair, glasses.
@@ -348,7 +351,7 @@ function coinRow(parent, x, y, gap = 34, r = 13) {
   return { pose({ n = 0, take = 0, drop = 1 } = {}) {
     coins.forEach((c, i) => { const shown = i < n && i >= take; vis(c, shown); if (!shown) return;
       const last = i === 12 && n === 13 ? 1 - drop : 0;   // the thirteenth falls in from above
-      tf(c, `translate(${x + i * gap},${y - 160 * last * last})`); }); } };
+      tf(c, `translate(${x + i * gap},${y - 120 * last * last})`); }); } };
 }
 // Wet footprints across a floor: a list of [x, y, angle (deg, 0 = pointing up the screen), side ±1]; pose(k) shows the first k.
 function footprints(parent, steps, scale = y => 1) {
@@ -356,7 +359,7 @@ function footprints(parent, steps, scale = y => 1) {
     return prop(parent, `<g transform="translate(${x},${y}) rotate(${a}) scale(${(s * .9).toFixed(3)},${(s * .55).toFixed(3)})" opacity=".55">
       <ellipse cx="${side * 4}" cy="0" rx="11" ry="22" fill="#4f6670"/><ellipse cx="${side * 4}" cy="-6" rx="7" ry="11" fill="#7d98a3" opacity=".5"/>
       ${[-8, -2, 4, 9].map((tx, i) => `<circle cx="${side * 4 + tx}" cy="${-30 + Math.abs(i - 1.5) * 2}" r="${3.4 - i * .4}" fill="#4f6670"/>`).join('')}</g>`); });
-  return { pose(k) { fp.forEach((g, i) => vis(g, i < k)); } };
+  return { pose(k, from = 0) { fp.forEach((g, i) => vis(g, i < k && i >= from)); } };
 }
 // Cold mist spilling from an open fridge door across the floor: soft wisps that drift and grow (pose(q, k 0…1)).
 function fridgeMist(parent, x, y) {
@@ -369,4 +372,18 @@ function fridgeMist(parent, x, y) {
 function puddle(parent, x, y, w = 160) {
   const e = mk('ellipse', { cx: x, cy: y, fill: '#6f8f9c', opacity: .55 }, parent), hi = mk('ellipse', { cx: x - w * .15, cy: y - 3, fill: '#d6eaf2', opacity: .5 }, parent);
   return { pose(k) { e.setAttribute('rx', (w / 2 * k).toFixed(1)); e.setAttribute('ry', (w * .09 * k).toFixed(1)); hi.setAttribute('rx', (w * .18 * k).toFixed(1)); hi.setAttribute('ry', (w * .025 * k).toFixed(1)); vis(e, k > .01); vis(hi, k > .01); } };
+}
+
+// The Raincoat Man's arm reaching in from below the frame (the counter close-up is from his side): a dripping yellow
+// sleeve and a dark glove; pose({ x, y (the glove), on }).
+function gloveArm(parent) {
+  const g = mk('g', {}, parent), arm = mk('g', {}, g);
+  arm.innerHTML = `<g filter="url(#paper)"><rect x="0" y="-30" width="520" height="60" rx="28" fill="#d9b52a"/><rect x="0" y="12" width="520" height="18" rx="9" fill="#b3921d"/>
+    <rect x="-6" y="-34" width="34" height="68" rx="12" fill="#c9a524"/><ellipse cx="-24" cy="0" rx="30" ry="22" fill="#2b2d28"/>
+    ${[-20, -8, 4, 16].map((y, i) => `<rect x="-58" y="${y - 5}" width="${30 - i * 2}" height="11" rx="5" fill="#2b2d28"/>`).join('')}</g>
+    <path d="M60,32 q3,12 0,16 q-3,-4 0,-16 Z" fill="#9fc3d6"/>`;
+  return { pose({ x = 0, y = 0, on = 1 } = {}) {
+    vis(g, on > .01);
+    const bx = x + 300, by = y + 520, a = Math.atan2(by - y, bx - x) * 180 / Math.PI;   // from the glove back to off-frame
+    tf(arm, `translate(${(x + (bx - x) * (1 - on) * .9).toFixed(1)},${(y + (by - y) * (1 - on) * .9).toFixed(1)}) rotate(${a.toFixed(1)})`); } };
 }

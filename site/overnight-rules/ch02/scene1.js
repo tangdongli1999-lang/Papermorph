@@ -25,12 +25,16 @@ function scene1(p, D, m) {
   const sc = t => PRE1 + t;   // a time in the joined scene clip (narration.en.words.txt)
   const T_EASY = sc(5.55), T_DOOR = sc(8.4), T_STEPS = sc(14.3), T_STILL = sc(20.7), T_DOOR2 = sc(22.35), T_MORN = sc(25.6);
   const SHOTS = [[0, 'list'], [T_EASY, 'bored'], [T_DOOR, 'door'], [T_STEPS, 'steps'], [T_STILL, 'still'], [T_DOOR2, 'door'], [T_MORN, 'morning']];
-  const STEP_T = TRAIL.map((_, i) => T_STEPS + .2 + i * (5.8 / TRAIL.length));
-  STEP_T.forEach((t, i) => sfx('scene1', t, 'squelch', .25 + .02 * i));
+  const T_STOP = sc(18.17), STEP_T = TRAIL.map((_, i) => sc(14.45) + i * (T_STOP - sc(14.45)) / (TRAIL.length - 1));
+  STEP_T.forEach((t, i) => sfx('scene1', t, 'wetstep', .55 + .03 * i));   // one step per print; the last lands on "stopped"
+  // the morning: Dani mops along the trail from the aisle end; the prints go under the mop, the last ones are left
+  const T_MOP = T_MORN + .2, T_MOP_END = sc(29.6), MOPPED = 10;
+  for (let t = T_MOP + .3; t < T_MOP_END; t += 1.1) sfx('scene1', t, 'mop', .5);
+  const daniMop = daniPuppet(C.cam.stage);
   sfx('scene1', sc(10.0), 'chime', .9); sfx('scene1', sc(24.3), 'chime', .9);
   C.cam.cut({ x: 1100, y: 470, z: 1.9 }, T_EASY).to({ z: 2.0 }, T_EASY, 3)
     .cut({ x: 760, y: 560, z: 1.05 }, T_STEPS).to({ x: 880, y: 600, z: 1.3 }, T_STEPS, 6)
-    .cut({ x: 760, y: 560, z: 1.05 }, T_MORN).to({ x: 1000, y: 640, z: 1.5 }, T_MORN + 1, 6.5);
+    .cut({ x: 700, y: 580, z: 1.15 }, T_MORN).to({ x: 760, y: 590, z: 1.2 }, T_MORN, 4).cut({ x: 1010, y: 640, z: 1.6 }, T_MOP_END).to({ z: 1.85 }, T_MOP_END, 3.5);
   E.cam.cut({ x: 760, y: 470, z: 1.15 }, T_DOOR).to({ z: 1.3 }, T_DOOR, 4).cut({ x: 760, y: 470, z: 1.3 }, T_DOOR2).to({ z: 1.45 }, T_DOOR2, 3.4);
   K.cam.to({ z: 2.45 }, T_STILL, 1.6);
 
@@ -42,7 +46,16 @@ function scene1(p, D, m) {
     if (['bored', 'steps', 'morning'].includes(shot)) {
       C.cam.apply(q, f);
       const k = shot === 'bored' ? 0 : shot === 'morning' ? TRAIL.length : STEP_T.filter(t => q >= t).length;
-      prints.pose(k);
+      const u = span(q, T_MOP, T_MOP_END), done = shot === 'morning' ? Math.floor(u * MOPPED) : 0;
+      prints.pose(k, done);
+      // Dani with the mop, a step behind the print she is wiping, the mop swinging side to side over it
+      vis(daniMop.g, shot === 'morning' && q < T_MOP_END);
+      if (shot === 'morning' && q < T_MOP_END) {
+        const i = Math.min(TRAIL.length - 1, Math.floor(u * MOPPED)), [px, py] = TRAIL[i], s2 = .62 + (py + 40 - 627) / 273 * .6;
+        const sw = Math.sin(q * 5.7) * (u < 1 ? 1 : 0);
+        daniMop.pose({ x: px + 60 + 14 * sw, y: hipOn(py + 40, s2), s: s2, head: 'F', turn: 0, rua: 14 + 10 * sw, rfa: -6, hold: 'mop', lua: -6,
+          look: -.3, nod: 10, mouth: 'A', shut: (q % 3.3) < .13 }, f);
+      }
       const dj = { x: CHK.behind[0], y: hipOn(CHK.behind[1], .7), s: .7, head: 'F', turn: 0 };
       danic.pose({ ...dj, lua: -6, rua: 6, look: shot === 'steps' ? -.6 : .2, brow: shot === 'steps' ? .9 : 0, nod: shot === 'bored' ? 6 : 0,
         mouth: shot === 'steps' ? 'A' : 'X', shut: shot === 'bored' && (q % 2.7) < .14 }, f);
