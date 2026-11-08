@@ -10,6 +10,9 @@ function scene1(p, D, m) {
   const sc = t => PRE1 + t;   // a time in the joined scene clip (content/two-legs/ch01/narration.en.words.txt)
   const grp = () => mk('g', {}, p);
 
+  // 0. the hook: Biscuit on the counter in the dark, standing, staring at us
+  const hookG = grp(), KH = paperCam(hookG, 'kitchen', { x: 1030, y: 430, z: 1.3 }), bHook = sprite(KH.stage, 'biscuit_stand_front_stare');
+  const U = 196;   // Biscuit's standing height in the kitchen sets (catH() keeps his other pictures to the same head size)
   // 1. the post on the glowing phone (the screen is a slanted quad in the picture)
   const bedG = grp(), PB = paperCam(bedG, 'phoneBed', { x: 800, y: 450, z: 1 });
   const scr = mk('g', { transform: 'matrix(1,.287,-.742,.666,907,247)' }, PB.stage), post1 = postCard(scr, 300, 620, { y0: 40 });
@@ -33,10 +36,7 @@ function scene1(p, D, m) {
   mk('text', { x: SW * .18, y: crow.last.y + crow.last.r.h - 4, 'font-family': 'Helvetica Neue, Arial', 'font-size': 14, fill: '#9aa3ad' }, rows).textContent = '0 replies';
   // 3. 3:07 on the bedside phone, and June getting up
   const bedrG = grp(), BR = paperCam(bedrG, 'bedroom', { x: 800, y: 450, z: 1 });
-  const clock = mk('g', {}, BR.stage);
-  clock.innerHTML = `<ellipse cx="186" cy="634" rx="60" ry="18" fill="#bfe6ff" opacity=".45"/><path d="M160,628 L210,626 L216,640 L156,642 Z" fill="#dff2ff"/>
-    <text x="186" y="637" text-anchor="middle" font-family="Helvetica Neue, Arial" font-weight="600" font-size="11" fill="#1d2b3a" transform="translate(186,635) scale(1,.55) translate(-186,-635)">3:07</text>
-    <text x="186" y="606" text-anchor="middle" font-family="Helvetica Neue, Arial" font-weight="300" font-size="30" fill="#e8f4ff" stroke="#0b1020" stroke-width="4" paint-order="stroke" opacity=".95">3:07 AM</text>`;
+  const alarm = alarmClock(BR.stage, 205, 642, 96), clock = alarm.g; alarm.set('3:07');
   const juneB = sprite(BR.stage, 'june_pyjamas_front');
   // the title in the dark
   const title = legTitle(p);
@@ -74,28 +74,30 @@ function scene1(p, D, m) {
     T_BIS = sc(27.15), T_DAY = sc(28.1), T_NIGHT = sc(32.65), T_CLOSE = sc(34.95), T_JUNE = sc(39.4), T_GLASS = sc(45.25), T_TURN = sc(47.45),
     T_ME = sc(54.0), T_UP = sc(58.6), T_BREATH = sc(62.0), T_DROP = sc(63.7), T_FLOOR = sc(65.95), T_MORN = sc(68.55), T_MUG = sc(71.65),
     T_LEFT = sc(74.95), T_NOBODY = sc(77.05), T_POST = sc(78.75), T_C1 = sc(83.05), T_C2 = sc(84.25), T_C3 = sc(86.15), T_SCROLL = sc(88.4), T_LAST = sc(92.3), T_END = sc(94.6);
-  const SHOTS = [[0, 'bed'], [T_LUNCH, 'lunch'], [T_307, '307'], [T_BLACK, 'title'], [T_WAKE, 'wake'], [T_HALL, 'hall'], [T_BIS, 'kitchen'], [T_DAY, 'day'],
+  const T_HOOK = sc(3.3);
+  const SHOTS = [[0, 'hook'], [T_HOOK, 'bed'], [T_LUNCH, 'lunch'], [T_307, '307'], [T_BLACK, 'title'], [T_WAKE, 'wake'], [T_HALL, 'hall'], [T_BIS, 'kitchen'], [T_DAY, 'day'],
     [T_NIGHT, 'kitchen'], [T_CLOSE, 'close'], [T_JUNE, 'face'], [T_GLASS, 'glass'], [T_TURN, 'turn'], [T_ME, 'stare'], [T_UP, 'eyes'], [T_BREATH, 'face2'],
     [T_DROP, 'drop'], [T_FLOOR, 'floor'], [T_MORN, 'morning'], [T_MUG, 'mug'], [T_POST, 'comments'], [T_END, 'black']];
-  const groups = { bed: bedG, lunch: handG, '307': bedrG, wake: bedrG, hall: hallG, kitchen: kitG, drop: kitG, day: dayG, close: ctrG, turn: ctrG, stare: ctrG, eyes: ctrG,
+  const groups = { hook: hookG, bed: bedG, lunch: handG, '307': bedrG, wake: bedrG, hall: hallG, kitchen: kitG, drop: kitG, day: dayG, close: ctrG, turn: ctrG, stare: ctrG, eyes: ctrG,
     face: doorG, glass: doorG, face2: doorG, floor: flG, morning: mornG, mug: mugG, comments: handG };
 
   // cameras
-  PB.to({ x: 830, y: 470, z: 1.35 }, 0, T_LUNCH);
+  KH.to({ x: 1030, y: 400, z: 2.7 }, 0, T_HOOK);
+  PB.cut({ x: 800, y: 450, z: 1.05 }, T_HOOK).to({ x: 830, y: 470, z: 1.35 }, T_HOOK, T_LUNCH - T_HOOK);
   PH.cut({ x: 800, y: 380, z: 1.05 }, T_LUNCH).to({ z: 1.15 }, T_LUNCH, 4).cut({ x: 800, y: 380, z: 1.12 }, T_POST).to({ x: 800, y: 380, z: 1.32 }, T_POST, T_END - T_POST);
-  BR.cut({ x: 230, y: 610, z: 2.6 }, T_307).to({ z: 3.0 }, T_307, 3.6).cut({ x: 800, y: 450, z: 1.04 }, T_WAKE).to({ x: 1000, y: 430, z: 1.18 }, T_WAKE + 2, 4);
+  BR.cut({ x: 205, y: 612, z: 3.0 }, T_307).to({ z: 3.5 }, T_307, 3.6).cut({ x: 800, y: 450, z: 1.04 }, T_WAKE).to({ x: 1000, y: 430, z: 1.18 }, T_WAKE + 2, 4);
   HL.to({ x: 780, y: 360, z: 2.1 }, T_HALL, T_BIS - T_HALL + .3);
   K.cut({ x: 980, y: 430, z: 1.05 }, T_BIS).to({ x: 1020, y: 440, z: 1.35 }, T_BIS, 1.0).cut({ x: 1030, y: 430, z: 1.4 }, T_NIGHT).to({ x: 1030, y: 420, z: 1.9 }, T_NIGHT, 2.2)
     .cut({ x: 1000, y: 480, z: 1.25 }, T_DROP);
   KD.to({ z: 1.4 }, T_DAY, 3.2);
-  CT.cut({ x: 800, y: 470, z: 1.0 }, T_CLOSE).to({ z: 1.12 }, T_CLOSE, 5).cut({ x: 800, y: 380, z: 1.15 }, T_TURN).to({ x: 800, y: 300, z: 1.55 }, T_TURN + 3.5, 3)
-    .cut({ x: 800, y: 260, z: 2.2 }, T_ME).to({ z: 2.5 }, T_ME, 4).cut({ x: 800, y: 222, z: 4.0 }, T_UP).to({ z: 4.4 }, T_UP, 3.6);
+  CT.cut({ x: 800, y: 500, z: 1.1 }, T_CLOSE).to({ x: 800, y: 480, z: 1.3 }, T_CLOSE, 5).cut({ x: 800, y: 440, z: 1.35 }, T_TURN).to({ x: 800, y: 400, z: 1.9 }, T_TURN + 2.5, 4)
+    .cut({ x: 800, y: 385, z: 2.9 }, T_ME).to({ z: 3.3 }, T_ME, 4).cut({ x: 800, y: 372, z: 5.0 }, T_UP).to({ z: 5.4 }, T_UP, 3.6);
   FL.to({ x: 820, y: 470, z: 1.05 }, T_FLOOR, 2.6);
   KM.cut({ x: 800, y: 450, z: 1.0 }, T_MORN).to({ x: 930, y: 470, z: 1.45 }, T_MORN + .4, 2.9);
   MG.to({ x: 760, y: 520, z: 1.35 }, T_MUG, 3.6).to({ x: 640, y: 480, z: 1.9 }, T_LEFT - .2, 1.0).to({ x: 760, y: 520, z: 1.25 }, T_NOBODY, .9);
 
   // sound
-  sfx('scene1', .2, 'buzz', .5);
+  sfx('scene1', .05, 'heart', 1.0); sfx('scene1', .95, 'heart', 1.0); sfx('scene1', sc(2.36), 'hit', .9); sfx('scene1', T_HOOK + .05, 'buzz', .5);
   for (let i = 0; i < 6; i++) sfx('scene1', T_LUNCH + .4 + i * .18, 'tick', .12);
   sfx('scene1', T_SWIPE, 'swipe', .7); sfx('scene1', T_307 + .1, 'buzz', .45);
   sfx('scene1', T_TITLE, 'hit', 1.0);
@@ -118,6 +120,7 @@ function scene1(p, D, m) {
     flash.setAttribute('opacity', (Math.max(0, 1 - Math.abs(q - T_DAY) / .18) * .85 + Math.max(0, 1 - Math.abs(q - T_NIGHT) / .12) * .5).toFixed(3));
     const breathe = Math.sin(q * 2.2);
 
+    if (shot === 'hook') { KH.apply(q, f); bHook.pose({ x: 1030, y: 514, h: U, sy: 1 + .004 * breathe }); }
     if (shot === 'bed') { PB.apply(q, f); post1.shares(Math.round(399000 * span(q, sc(3.4), sc(6.7)) ** .5 + 1000 * (q > 1))); }
     if (shot === 'lunch' || shot === 'comments') {
       PH.apply(q, f);
@@ -143,21 +146,21 @@ function scene1(p, D, m) {
     if (shot === 'hall') HL.apply(q, f);
     if (shot === 'kitchen' || shot === 'drop') {
       K.apply(q, f);
-      if (shot === 'kitchen') { vis(bStand.g, true); vis(bWalkK.g, false); bStand.pose({ x: 1030, y: 514, h: 196, sy: 1 + .004 * breathe }); }
+      if (shot === 'kitchen') { vis(bStand.g, true); vis(bWalkK.g, false); bStand.pose({ x: 1030, y: 514, h: U, sy: 1 + .004 * breathe }); }
       else {   // he drops onto four legs, walks to the edge and hops down
         const down = q > T_DROP + .25, u = span(q, T_DROP + 1.3, T_DROP + 1.75);
         vis(bStand.g, !down); vis(bWalkK.g, down);
-        bStand.pose({ x: 1030, y: 514, h: 196 - 30 * span(q, T_DROP, T_DROP + .25) });
+        bStand.pose({ x: 1030, y: 514, h: U - 30 * span(q, T_DROP, T_DROP + .25) });
         const xw = lerp(1030, 1250, span(q, T_DROP + .3, T_DROP + 1.3)), hopY = u > 0 ? lerp(514, 878, u) - 140 * Math.sin(Math.PI * u) : 514;
-        bWalkK.pose({ x: u > 0 ? lerp(1250, 1360, u) : xw, y: hopY - (u === 0 && q > T_DROP + .3 ? 3 * Math.abs(Math.sin(q * 9)) : 0), h: 120, rot: u > 0 && u < 1 ? lerp(-12, 18, u) : 0 });
+        bWalkK.pose({ x: u > 0 ? lerp(1250, 1360, u) : xw, y: hopY - (u === 0 && q > T_DROP + .3 ? 3 * Math.abs(Math.sin(q * 9)) : 0), h: catH(U, 'walk'), rot: u > 0 && u < 1 ? lerp(-12, 18, u) : 0 });
       }
     }
-    if (shot === 'day') { KD.apply(q, f); bSit.pose({ x: 1030, y: 520, h: 150, sy: 1 + .01 * breathe }); }
+    if (shot === 'day') { KD.apply(q, f); bSit.pose({ x: 1030, y: 520, h: catH(U, 'sit'), sy: 1 + .01 * breathe }); }
     if (shot === 'close' || shot === 'turn' || shot === 'stare' || shot === 'eyes') {
       CT.apply(q, f);
       const turn = shot === 'close' ? 0 : span(q, T_TURN + .9, T_ME - .5);
       const shake0 = 0, shake = turn > .05 && turn < .95 ? 1.2 * jit(f, 5) : 0;
-      turner.pose({ x: 800, y: 786, h: 660, turn, tilt: shot === 'close' ? 0 : lerp(0, -9, Math.sin(Math.PI * turn)) + shake, bob: 0 });
+      turner.pose({ x: 800, y: 762, h: U * 2.25, turn, tilt: shot === 'close' ? 0 : lerp(0, -9, Math.sin(Math.PI * turn)) + shake, bob: 0 });
       // the eyes: still, then up … and down (the way a person looks you over)
       const dy = shot === 'eyes' ? (q < sc(59.45) ? -span(q, T_UP, T_UP + .35) : lerp(-1, 1, span(q, sc(59.45), sc(59.95)))) : 0;
       turner.eyes.look(0, dy);
@@ -177,7 +180,7 @@ function scene1(p, D, m) {
       FL.apply(q, f);
       feet.pose({ x: 1270, y: 925, h: 2400, sy: 1 + .003 * breathe });
       const u = span(q, T_FLOOR + .1, T_MORN - .2), step = Math.abs(Math.sin((q - T_FLOOR) * 7));
-      bWalkF.pose({ x: lerp(-260, 1820, u), y: 905 - 6 * step, h: 360, rot: 1.5 * Math.sin((q - T_FLOOR) * 7) });
+      bWalkF.pose({ x: lerp(-360, 1900, u), y: 905 - 6 * step, h: catH(2400 * .31, 'walk'), rot: 1.5 * Math.sin((q - T_FLOOR) * 7) });
     }
     if (shot === 'morning') KM.apply(q, f);
     if (shot === 'mug') MG.apply(q, f);

@@ -29,22 +29,58 @@ function stareEyes(parent, pts, { r = 25, pr = 10.5 } = {}) {
   return { g, look(dx = 0, dy = 0) { pupils.forEach((p, i) => tf(p, `translate(${(dx * 11).toFixed(1)},${(dy * 12).toFixed(1)})`)); } };
 }
 
-// Biscuit upright from behind, his head able to turn round to face us: turn(u) 0 back of the head … 1 his face.
-// Pieces share one 1024 x 1536 canvas; his feet are at canvas (509, 1528).
+// Biscuit upright from behind, his head able to turn all the way round: turn(u) 0 the back of his head, 0.5 his
+// profile (from the walking picture), 1 his face. Pieces share one 1024 x 1536 canvas; his feet are at canvas (509, 1528).
+// One cat, one size: BISCUIT.stand is his standing height for a given world scale; the other pictures are scaled
+// so his head is the same size in every one of them (head heights measured on each picture).
+const BISCUIT = { head: 340 / 1507, sit: 1488 / 440, walk: 959 / 325 };
+const catH = (U, pose) => pose === 'stand' ? U : U * BISCUIT.head * BISCUIT[pose];
 function biscuitTurner(parent) {
   const g = mk('g', {}, parent), img = (n, p) => mk('image', { href: `../img/cast/${n}.webp`, x: -509, y: -1528, width: 1024, height: 1536 }, p);
   img('biscuit_body_back', g);
-  const hb = mk('g', {}, g), hf = mk('g', {}, g); img('biscuit_headB', hb); img('biscuit_headF', hf);
+  const hb = mk('g', {}, g), hp = mk('g', {}, g), hf = mk('g', {}, g); img('biscuit_headB', hb); img('biscuit_headP', hp); img('biscuit_headF', hf);
   const eyes = stareEyes(hf, [[448.5 - 509, 211.5 - 1528], [577.5 - 509, 212.5 - 1528]], { r: 24, pr: 10 });
-  const HC = [509 - 509, 200 - 1528];   // the head's centre
+  const peye = stareEyes(hp, [[651 - 509, 207 - 1528]], { r: 19, pr: 8 }); peye.look(.7, 0);
+  const HC = [0, 190 - 1528];   // the head's centre (neck pivot)
+  // the head's phases: [which, squash x, shift x, tilt] at a turn u
+  const phase = u => {
+    if (u < .1) { const a = span(u, 0, .1); return ['b', 1 - .03 * a, 0, -4 * a]; }
+    if (u < .42) { const a = span(u, .1, .42); return ['b', 1 - .42 * a, 55 * a, -4 + 2 * a]; }
+    if (u < .5) { const a = span(u, .42, .5); return ['p', .72 + .28 * a, 22 * (1 - a), -2]; }
+    if (u < .62) return ['p', 1, 0, -2 - 2 * span(u, .5, .62)];
+    if (u < .78) { const a = span(u, .62, .78); return ['p', 1 - .38 * a, -40 * a, -4 + 2 * a]; }
+    const a = span(u, .78, 1); return ['f', .7 + .3 * a + .04 * Math.sin(Math.PI * a), -30 * (1 - a), -2 * (1 - a)];
+  };
   return { g, eyes,
-    pose({ x, y, h = 600, turn = 0, tilt = 0, bob = 0 }) {
-      const k = h / 1507; tf(g, `translate(${x.toFixed(1)},${y.toFixed(1)}) scale(${k.toFixed(4)})`);
-      // the head squashes towards one side as it goes round, swaps to the face at the middle and opens out from the other
-      const a = turn < .5 ? 1 - turn * 2 : (turn - .5) * 2, sx = .32 + .68 * a, dx = (turn < .5 ? 1 : -1) * 120 * (1 - a);
-      const t = `translate(${HC[0] + dx},${HC[1] + bob}) rotate(${tilt.toFixed(2)}) scale(${sx.toFixed(3)},1) translate(${-HC[0]},${-HC[1]})`;
-      vis(hb, turn < .5); vis(hf, turn >= .5); tf(hb, t); tf(hf, t);
+    pose({ x, y, h = 600, turn = 0, tilt = 0, bob = 0, breathe = 0 }) {
+      const k = h / 1507; tf(g, `translate(${x.toFixed(1)},${y.toFixed(1)}) scale(${k.toFixed(4)},${(k * (1 + breathe)).toFixed(4)})`);
+      const [w, sx, dx, t0] = phase(Math.max(0, Math.min(1, turn)));
+      const t = `translate(${(HC[0] + dx).toFixed(1)},${(HC[1] + bob).toFixed(1)}) rotate(${(t0 + tilt).toFixed(2)}) scale(${sx.toFixed(3)},1) translate(${-HC[0]},${-HC[1]})`;
+      vis(hb, w === 'b'); vis(hp, w === 'p'); vis(hf, w === 'f'); tf(hb, t); tf(hp, t); tf(hf, t);
     } };
+}
+// A small digital alarm clock (red digits) at (x, y) = the middle of its base, w wide: { g, set('3:07') }.
+function alarmClock(parent, x, y, w = 110) {
+  const g = mk('g', {}, parent), h = w * .52, X = x - w / 2, Y = y - h;
+  const SEG = { 0: 'abcdef', 1: 'bc', 2: 'abged', 3: 'abgcd', 4: 'fgbc', 5: 'afgcd', 6: 'afgedc', 7: 'abc', 8: 'abcdefg', 9: 'abcdfg' };
+  const dw = w * .13, dh = w * .25, th = w * .028;
+  const digit = (d, dx, dy) => (SEG[d] || '').split('').map(s => {
+    const r = { a: [dx, dy, dw, th], g: [dx, dy + dh / 2 - th / 2, dw, th], d: [dx, dy + dh - th, dw, th], f: [dx, dy, th, dh / 2], b: [dx + dw - th, dy, th, dh / 2],
+      e: [dx, dy + dh / 2, th, dh / 2], c: [dx + dw - th, dy + dh / 2, th, dh / 2] }[s];
+    return `<rect x="${r[0].toFixed(1)}" y="${r[1].toFixed(1)}" width="${r[2].toFixed(1)}" height="${r[3].toFixed(1)}" rx="${(th / 2).toFixed(1)}"/>`; }).join('');
+  g.innerHTML = `<defs><filter id="ledGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="${(w * .02).toFixed(1)}" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      <radialGradient id="clkGlow"><stop offset="0" stop-color="#ff3b2f" stop-opacity=".35"/><stop offset="1" stop-color="#ff3b2f" stop-opacity="0"/></radialGradient></defs>
+    <ellipse cx="${x}" cy="${y - h * .4}" rx="${w * 1.3}" ry="${h * 1.4}" fill="url(#clkGlow)"/>
+    <rect x="${X + w * .1}" y="${y - 3}" width="${w * .14}" height="5" rx="2" fill="#15161c"/><rect x="${X + w * .76}" y="${y - 3}" width="${w * .14}" height="5" rx="2" fill="#15161c"/>
+    <path d="M${X},${y - 2} L${X + w * .06},${Y} L${X + w * .94},${Y} L${X + w},${y - 2} Z" fill="#2b2e3a"/>
+    <path d="M${X + w * .06},${Y} L${X + w * .94},${Y} L${X + w * .92},${Y + 4} L${X + w * .08},${Y + 4} Z" fill="#3c4050"/>
+    <rect x="${X + w * .1}" y="${Y + h * .16}" width="${w * .8}" height="${h * .64}" rx="${w * .04}" fill="#0a0b10"/>
+    <rect x="${X + w * .42}" y="${Y - w * .05}" width="${w * .16}" height="${w * .05}" rx="2" fill="#4a4e60"/>
+    <g data-d fill="#ff3b2f" filter="url(#ledGlow)"></g>`;
+  const dg = g.querySelector('[data-d]'), ox = X + w * .17, oy = Y + h * .25;
+  return { g, set(t) { if (dg._t === t) return; dg._t = t; const [hh, mm] = t.split(':');
+    dg.innerHTML = digit(+hh, ox + dw * 1.25, oy) + `<rect x="${ox + dw * 2.55}" y="${oy + dh * .25}" width="${th}" height="${th}"/><rect x="${ox + dw * 2.55}" y="${oy + dh * .65}" width="${th}" height="${th}"/>` +
+      digit(+mm[0], ox + dw * 3.0, oy) + digit(+mm[1], ox + dw * 4.25, oy); } };
 }
 
 /* ---------- captions (burned in, one sentence at a time) and the title ---------- */
