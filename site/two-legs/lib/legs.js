@@ -31,7 +31,7 @@ function stareEyes(parent, pts, { r = 25, pr = 10.5 } = {}) {
 // profile (from the walking picture), 1 his face. Pieces share one 1024 x 1536 canvas; his feet are at canvas (509, 1528).
 // One cat, one size: BISCUIT.stand is his standing height for a given world scale; the other pictures are scaled
 // so his head is the same size in every one of them (head heights measured on each picture).
-const BISCUIT = { head: 340 / 1507, sit: 1488 / 440, walk: 959 / 325 };
+const BISCUIT = { head: 340 / 1507, sit: 1488 / 440, walk: 959 / 325, curl: 1017 / 500 };   // picture height / head height (ears to chin)
 const catH = (U, pose) => pose === 'stand' ? U : U * BISCUIT.head * BISCUIT[pose];
 function biscuitTurner(parent) {
   const g = mk('g', {}, parent), img = (n, p) => mk('image', { href: `../img/cast/${n}.webp`, x: -509, y: -1528, width: 1024, height: 1536 }, p);

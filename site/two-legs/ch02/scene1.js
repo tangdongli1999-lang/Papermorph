@@ -87,7 +87,7 @@ function scene1(p, D, m) {
   BR.to({ z: 3.4 }, T_CLOCK, 4);
   PL.cut({ x: 800, y: 450, z: 1.05 }, T_PIL).to({ z: 1.25 }, T_PIL, 3).cut({ x: 820, y: 430, z: 1.1 }, T_DONT).to({ z: 1.5 }, T_DONT, 3).shake(T_DONT, T_TILT - T_DONT, 2.5);
   FB.cut({ x: 800, y: 470, z: 1.05 }, T_END).to({ x: 800, y: 440, z: 1.35 }, T_END, 2).cut({ x: 800, y: 430, z: 1.5 }, T_TILT).to({ x: 800, y: 400, z: 1.9 }, T_TILT, 4);
-  BM.cut({ x: 330, y: 520, z: 1.5 }, T_MORN).to({ x: 260, y: 500, z: 2.2 }, T_MORN, 3);
+  BM.cut({ x: 340, y: 520, z: 1.5 }, T_MORN).to({ x: 340, y: 500, z: 2.2 }, T_MORN, 3);
   PH.to({ x: 800, y: 300, z: 1.6 }, T_APP + .2, T_CAM - T_APP);
   PC.cut({ x: 800, y: 450, z: 1.0 }, T_CAM).to({ x: 960, y: 380, z: 1.3 }, T_WALK, 2.2).to({ x: 1000, y: 340, z: 1.6 }, T_HUM, T_VOICE - T_HUM);
   ST.to({ x: 800, y: 560, z: 1.9 }, T_VOICE, T_BLACK - T_VOICE);
@@ -153,7 +153,7 @@ function scene1(p, D, m) {
       bStare.pose({ x: 800, y: 700, h: U_BED, rot: lean, sy: 1 + .004 * breathe });
       bTilt.pose({ x: 800, y: 700, h: U_BED, sy: 1 + .004 * breathe });
     }
-    if (shot === 'morning') { BM.apply(q, f); curled.pose({ x: 230, y: 522, h: 118, sy: 1 + .02 * Math.max(0, Math.sin(q * 3.4)) }); }
+    if (shot === 'morning') { BM.apply(q, f); curled.pose({ x: 228, y: 512, h: catH(U_SIDE, 'curl'), sy: 1 + .02 * Math.max(0, Math.sin(q * 3.4)) }); }
     if (shot === 'sit') {
       BM2.apply(q, f); vis(juneSit.g, false);
       const z = lerp(1, 1.15, span(q, T_SIT, T_APP));
