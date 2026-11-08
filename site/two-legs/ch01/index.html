@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Two Legs — 1. Night One</title>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+<style>#bCC { display: none; }   /* captions are burned into the picture (legCaptions) */</style>
+</head>
+<body>
+<!-- Chapter 1 of Two Legs (16:9 long-form, built chapter by chapter and merged): the post, the cat on the counter, the head that turns. -->
+<script src="../lib/engine.js"></script>
+<script src="../img/sets/sets.js"></script>
+<script src="../lib/paper.js"></script>
+<script src="../lib/legs.js"></script>
+<script src="audio/en/timings.js"></script>
+<script src="audio/en/mouths.js"></script>
+<script src="audio/en/shots.js"></script>
+<script src="scene1.js"></script>
+<script>
+'use strict';
+const CHAPTER = { number: 1, title: 'Night One', minutes: 2, language: 'en', film: true, questionKeys: false };
+setCaptions(false, false);
+const BEATS = [
+  ['scene1', 'Night One', (m, D) => scene1(panel(0), D, m), { lead: false, pre: PRE1 }],
+].map(([id, title, run, extra]) => ({ id, title, run, ...extra }));
+music('audio/bgm/flatbed.mp3', ['scene1'], .55, .05);
+boot();
+</script>
+</body>
+</html>
