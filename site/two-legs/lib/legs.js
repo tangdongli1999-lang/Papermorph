@@ -1,7 +1,7 @@
 /* legs.js — Two Legs: the cast as cut-out pictures (img/cast/, cut from the user's art pack by
    tools/two-legs/cutouts.py), the captions, the title and the phone screens every chapter uses. */
 'use strict';
-const CAST = {"biscuit_body_back": [1024, 1536], "biscuit_curled_sleeping": [1264, 1017], "biscuit_headB": [1024, 1536], "biscuit_headF": [1024, 1536], "biscuit_headP": [1024, 1536], "biscuit_head_back_turned": [798, 1504], "biscuit_petcam_look_up": [884, 1254], "biscuit_side_walk": [942, 959], "biscuit_sit_front": [934, 1488], "biscuit_stand_back": [795, 1507], "biscuit_stand_back_hall": [718, 1077], "biscuit_stand_front_stare": [801, 1489], "biscuit_stand_front_tilt": [801, 1503], "biscuit_stand_side_limp": [747, 1488], "biscuit_stand_side_walk": [649, 1476], "biscuit_typing_side": [819, 1490], "cat_bowl": [1066, 584], "clara_after_perfect": [938, 1364], "clara_before_happy": [946, 1404], "door_lever": [1802, 988], "empty_glass": [606, 835], "june_bed_awake": [1894, 712], "june_desk_shock_closeup": [1011, 1493], "june_desk_sitting": [709, 1061], "june_head_closeup": [991, 1077], "june_head_pillow_closeup": [1920, 1070], "june_phone_call": [509, 1496], "june_pyjamas_front": [505, 1487], "june_pyjamas_glass": [503, 1489], "june_sit_phone_morning": [962, 1429], "june_work_front": [508, 1494], "mochi_normal_sit": [558, 1079], "mochi_thin_stare": [532, 1077], "petcam_device": [586, 853]};
+const CAST = {"biscuit_body_back": [1024, 1536], "biscuit_curled_sleeping": [1264, 1017], "biscuit_headB": [1024, 1536], "biscuit_headF": [1024, 1536], "biscuit_headP": [1024, 1536], "biscuit_head_back_turned": [798, 1504], "biscuit_petcam_look_up": [884, 1254], "biscuit_side_walk": [942, 959], "biscuit_sit_front": [934, 1488], "biscuit_stand_back": [795, 1507], "biscuit_stand_back_hall": [718, 1077], "biscuit_stand_front_stare": [801, 1489], "biscuit_stand_front_tilt": [801, 1503], "biscuit_stand_side_limp": [747, 1488], "biscuit_stand_side_walk": [649, 1476], "biscuit_tall_doorway_front": [957, 2047], "biscuit_tall_reach_up": [1012, 2048], "biscuit_tall_walk_front": [1083, 2017], "biscuit_typing_side": [819, 1490], "biscuit_walk_away_back": [1117, 1961], "cat_bowl": [1066, 584], "clara_after_perfect": [938, 1364], "clara_before_happy": [946, 1404], "door_lever": [1802, 988], "empty_glass": [606, 835], "june_bed_awake": [1894, 712], "june_desk_shock_closeup": [1011, 1493], "june_desk_sitting": [709, 1061], "june_face_paw_closeup": [1360, 2045], "june_frozen_front": [738, 2037], "june_head_closeup": [991, 1077], "june_head_pillow_closeup": [1920, 1070], "june_kneel_carrier": [1290, 1753], "june_phone_call": [509, 1496], "june_phone_text_closeup": [1355, 2046], "june_pyjamas_front": [505, 1487], "june_pyjamas_glass": [503, 1489], "june_sit_phone_morning": [962, 1429], "june_work_front": [508, 1494], "june_work_scared_front": [719, 2005], "mochi_normal_sit": [558, 1079], "mochi_thin_stare": [532, 1077], "petcam_device": [586, 853]};
 const shotAt = (q, shots) => { let s = shots[0][1]; for (const [t0, n] of shots) if (q >= t0) s = n; return s; };
 const lerp = (a, b, u) => a + (b - a) * u;
 
@@ -87,14 +87,14 @@ const CAP = { x: 800, y: 836, size: 44, lineH: 54, perLine: 34, font: "'Helvetic
 // yellow: each clip's forced-aligned words (TIMINGS[clip].words) placed by the joined scene's parts.
 function legCaptions(p, scene, pre) {
   const T = TIMINGS[scene], words = [];
-  for (const [clip, at] of Object.entries(T.parts).sort((a, b) => a[1] - b[1])) for (const [a, b, w] of TIMINGS[clip]?.words || []) words.push({ t0: pre + at + a, t1: pre + at + b, w });
+  for (const [clip, at] of Object.entries(T.parts).sort((a, b) => a[1] - b[1])) for (const [a, b, w] of TIMINGS[clip]?.words || []) words.push({ t0: pre + at + a, t1: pre + at + b, w, red: /^t\d/.test(clip) });
   const cues = T.cues.map(([t0, text, t1], i) => ({ t0: pre + t0 - .05, t1: pre + Math.min(t1 ?? T.dur, T.cues[i + 1]?.[0] ?? T.dur), text }));
   for (const c of cues) {   // the cue's own words (by order in the text, their times from the aligned list)
     const n = c.text.split(' ').length, k = words.findIndex(w => w.t0 >= c.t0 - .02); c.words = words.slice(k, k + n);
     const lines = [[]]; let len = 0;
     c.text.split(' ').forEach((w, i) => { if (len + w.length > CAP.perLine && lines.at(-1).length) { lines.push([]); len = 0; } lines.at(-1).push(i); len += w.length + 1; });
     if (lines.length === 2 && lines[1].length < 3 && lines[0].length > 4) lines[1].unshift(lines[0].pop());   // no lone word on a line
-    c.lines = lines;
+    c.lines = lines; c.red = c.words[0]?.red;   // the creature speaks in June's voice: its lines in red
   }
   const g = mk('g', { 'pointer-events': 'none', 'font-family': CAP.font, 'font-weight': 800, 'text-anchor': 'middle', 'font-size': CAP.size }, p);
   let shown = null, spans = [];
@@ -103,7 +103,7 @@ function legCaptions(p, scene, pre) {
     if (!c) return;
     const ws = c.text.split(' ');
     c.lines.forEach((ids, li) => {
-      const t = mk('text', { x: CAP.x, y: CAP.y + (li - c.lines.length + 1) * CAP.lineH, fill: '#f6f2ea', stroke: '#05060a', 'stroke-width': 10, 'paint-order': 'stroke', 'stroke-linejoin': 'round' }, g);
+      const t = mk('text', { x: CAP.x, y: CAP.y + (li - c.lines.length + 1) * CAP.lineH, fill: c.red ? '#ff4b3e' : '#f6f2ea', stroke: '#05060a', 'stroke-width': 10, 'paint-order': 'stroke', 'stroke-linejoin': 'round' }, g);
       ids.forEach((i, j) => { const s = mk('tspan', {}, t); s.textContent = (j ? ' ' : '') + ws[i]; spans[i] = s; });
     });
   };
@@ -112,7 +112,7 @@ function legCaptions(p, scene, pre) {
     if (c !== shown) { build(c); shown = c; }
     if (!c) return;
     let cur = -1; c.words.forEach((w, i) => { if (q >= w.t0 - .03 && q < (c.words[i + 1]?.t0 ?? w.t1 + .15)) cur = i; });
-    spans.forEach((s, i) => { const f = i === cur ? CAP.hi : '#f6f2ea'; if (s._f !== f) s.setAttribute('fill', s._f = f); });
+    spans.forEach((s, i) => { const f = i === cur ? CAP.hi : shown.red ? '#ff4b3e' : '#f6f2ea'; if (s._f !== f) s.setAttribute('fill', s._f = f); });
   };
 }
 // TWO LEGS in cut-paper capitals in the dark, each letter a little crooked; pose({ o, k }) (k: a slow grow).
