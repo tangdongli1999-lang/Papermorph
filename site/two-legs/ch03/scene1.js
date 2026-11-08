@@ -47,7 +47,7 @@ function scene1(p, D, m) {
   // the photos, full frame: a sharp square over a blurred copy of itself
   const phoG = grp(), pz = mk('g', {}, phoG);
   phoG.insertAdjacentHTML('afterbegin', `<defs><filter id="phBlur"><feGaussianBlur stdDeviation="28"/></filter></defs>`);
-  const photo = n => { const g = mk('g', {}, pz); g.innerHTML = `<image href="../img/photos/clara_photo_${n}.webp" x="-200" y="-350" width="2000" height="2000" filter="url(#phBlur)" opacity=".75"/>
+  const photo = n => { const g = mk('g', {}, pz); g.innerHTML = `<image href="../img/photos/clara_photo_${n}-blur.webp" x="-200" y="-350" width="2000" height="2000" opacity=".75"/>
       <rect x="-200" y="-350" width="2000" height="2000" fill="#000" opacity=".35"/><rect x="342" y="-8" width="916" height="916" fill="#fbfaf6"/><image href="../img/photos/clara_photo_${n}.webp" x="350" y="0" width="900" height="900"/>`; return g; };
   const PHOTOS = { b1: photo('before_1'), b2: photo('before_2'), a1: photo('after_1'), a2: photo('after_2'), a3: photo('after_3') };
   phoG.insertAdjacentHTML('beforeend', '<rect width="1600" height="900" fill="url(#vignette)"/>');
