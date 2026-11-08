@@ -48,22 +48,37 @@ function biscuitTurner(parent) {
 }
 
 /* ---------- captions (burned in, one sentence at a time) and the title ---------- */
-const CAP = { x: 800, y: 832, size: 40, lineH: 48, maxW: 1200, font: "'Helvetica Neue', Arial, sans-serif" };
+const CAP = { x: 800, y: 836, size: 44, lineH: 54, perLine: 34, font: "'Helvetica Neue', Arial, sans-serif", hi: '#ffd84a' };
+// Captions burned in, at most ten words at a time (tools/two-legs/eleven_in.py cuts them), the word she is saying in
+// yellow: each clip's forced-aligned words (TIMINGS[clip].words) placed by the joined scene's parts.
 function legCaptions(p, scene, pre) {
-  const T = TIMINGS[scene], cues = [];
-  // a long cue is cut into pieces of about two lines, each shown for its share of the cue's time (by letters)
-  T.cues.forEach(([t0, text, t1], i) => {
-    const end = t1 ?? (T.cues[i + 1]?.[0] ?? T.dur), words = text.split(' '), pieces = [''];
-    for (const w of words) { const t = (pieces.at(-1) + ' ' + w).trim(); if (t.length > 88 && pieces.at(-1)) pieces.push(w); else pieces[pieces.length - 1] = t; }
-    const n = pieces.reduce((a, s) => a + s.length, 0); let at = t0;
-    for (const s of pieces) { const d = (end - t0) * s.length / n; cues.push({ t0: pre + at, t1: pre + at + d, text: s }); at += d; }
-  });
-  const g = mk('g', { 'pointer-events': 'none', 'font-family': CAP.font, 'font-weight': 700, 'text-anchor': 'middle' }, p);
-  const wrap = text => { const lines = ['']; for (const w of text.split(' ')) { const t = (lines.at(-1) + ' ' + w).trim(); if (t.length * CAP.size * .52 > CAP.maxW && lines.at(-1)) lines.push(w); else lines[lines.length - 1] = t; } return lines; };
-  const els = [0, 1, 2].map(() => mk('text', { x: CAP.x, 'font-size': CAP.size, fill: '#f3efe6', stroke: '#05060a', 'stroke-width': 9, 'paint-order': 'stroke', 'stroke-linejoin': 'round' }, g));
+  const T = TIMINGS[scene], words = [];
+  for (const [clip, at] of Object.entries(T.parts).sort((a, b) => a[1] - b[1])) for (const [a, b, w] of TIMINGS[clip]?.words || []) words.push({ t0: pre + at + a, t1: pre + at + b, w });
+  const cues = T.cues.map(([t0, text, t1], i) => ({ t0: pre + t0 - .05, t1: pre + Math.min(t1 ?? T.dur, T.cues[i + 1]?.[0] ?? T.dur), text }));
+  for (const c of cues) {   // the cue's own words (by order in the text, their times from the aligned list)
+    const n = c.text.split(' ').length, k = words.findIndex(w => w.t0 >= c.t0 - .02); c.words = words.slice(k, k + n);
+    const lines = [[]]; let len = 0;
+    c.text.split(' ').forEach((w, i) => { if (len + w.length > CAP.perLine && lines.at(-1).length) { lines.push([]); len = 0; } lines.at(-1).push(i); len += w.length + 1; });
+    if (lines.length === 2 && lines[1].length < 3 && lines[0].length > 4) lines[1].unshift(lines[0].pop());   // no lone word on a line
+    c.lines = lines;
+  }
+  const g = mk('g', { 'pointer-events': 'none', 'font-family': CAP.font, 'font-weight': 800, 'text-anchor': 'middle', 'font-size': CAP.size }, p);
+  let shown = null, spans = [];
+  const build = c => {
+    g.innerHTML = ''; spans = [];
+    if (!c) return;
+    const ws = c.text.split(' ');
+    c.lines.forEach((ids, li) => {
+      const t = mk('text', { x: CAP.x, y: CAP.y + (li - c.lines.length + 1) * CAP.lineH, fill: '#f6f2ea', stroke: '#05060a', 'stroke-width': 10, 'paint-order': 'stroke', 'stroke-linejoin': 'round' }, g);
+      ids.forEach((i, j) => { const s = mk('tspan', {}, t); s.textContent = (j ? ' ' : '') + ws[i]; spans[i] = s; });
+    });
+  };
   return (q, on = true) => {
-    const c = on ? cues.filter(c => q >= c.t0 && q < c.t1).at(-1) : null, ls = c ? wrap(c.text) : [];
-    els.forEach((e, i) => { const t = ls[i] || ''; if (e._s !== t) e.textContent = e._s = t; e.setAttribute('y', CAP.y + (i - ls.length + 1) * CAP.lineH); vis(e, !!t); });
+    const c = on ? cues.find(c => q >= c.t0 && q < c.t1) : null;
+    if (c !== shown) { build(c); shown = c; }
+    if (!c) return;
+    let cur = -1; c.words.forEach((w, i) => { if (q >= w.t0 - .03 && q < (c.words[i + 1]?.t0 ?? w.t1 + .15)) cur = i; });
+    spans.forEach((s, i) => { const f = i === cur ? CAP.hi : '#f6f2ea'; if (s._f !== f) s.setAttribute('fill', s._f = f); });
   };
 }
 // TWO LEGS in cut-paper capitals in the dark, each letter a little crooked; pose({ o, k }) (k: a slow grow).

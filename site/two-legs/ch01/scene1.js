@@ -70,10 +70,10 @@ function scene1(p, D, m) {
   const cap = legCaptions(p, 'scene1', PRE1);
 
   // when things happen (word times from the words file)
-  const T_LUNCH = sc(7.0), T_SWIPE = sc(10.7), T_307 = sc(11.5), T_BLACK = sc(15.2), T_TITLE = sc(16.0), T_WAKE = sc(19.55), T_HALL = sc(25.85),
-    T_BIS = sc(27.9), T_DAY = sc(28.65), T_NIGHT = sc(31.85), T_CLOSE = sc(34.05), T_JUNE = sc(39.15), T_GLASS = sc(43.95), T_TURN = sc(47.2),
-    T_ME = sc(53.6), T_UP = sc(57.85), T_BREATH = sc(61.6), T_DROP = sc(63.4), T_FLOOR = sc(65.55), T_MORN = sc(68.25), T_MUG = sc(71.35),
-    T_LEFT = sc(74.85), T_NOBODY = sc(76.75), T_POST = sc(78.4), T_C1 = sc(83.15), T_C2 = sc(84.35), T_C3 = sc(85.8), T_SCROLL = sc(87.15), T_LAST = sc(91.0), T_END = sc(94.3);
+  const T_LUNCH = sc(6.8), T_SWIPE = sc(10.85), T_307 = sc(11.55), T_BLACK = sc(15.7), T_TITLE = sc(16.05), T_WAKE = sc(19.85), T_HALL = sc(25.95),
+    T_BIS = sc(27.15), T_DAY = sc(28.1), T_NIGHT = sc(32.65), T_CLOSE = sc(34.95), T_JUNE = sc(39.4), T_GLASS = sc(45.25), T_TURN = sc(47.45),
+    T_ME = sc(54.0), T_UP = sc(58.6), T_BREATH = sc(62.0), T_DROP = sc(63.7), T_FLOOR = sc(65.95), T_MORN = sc(68.55), T_MUG = sc(71.65),
+    T_LEFT = sc(74.95), T_NOBODY = sc(77.05), T_POST = sc(78.75), T_C1 = sc(83.05), T_C2 = sc(84.25), T_C3 = sc(86.15), T_SCROLL = sc(88.4), T_LAST = sc(92.3), T_END = sc(94.6);
   const SHOTS = [[0, 'bed'], [T_LUNCH, 'lunch'], [T_307, '307'], [T_BLACK, 'title'], [T_WAKE, 'wake'], [T_HALL, 'hall'], [T_BIS, 'kitchen'], [T_DAY, 'day'],
     [T_NIGHT, 'kitchen'], [T_CLOSE, 'close'], [T_JUNE, 'face'], [T_GLASS, 'glass'], [T_TURN, 'turn'], [T_ME, 'stare'], [T_UP, 'eyes'], [T_BREATH, 'face2'],
     [T_DROP, 'drop'], [T_FLOOR, 'floor'], [T_MORN, 'morning'], [T_MUG, 'mug'], [T_POST, 'comments'], [T_END, 'black']];
@@ -118,7 +118,7 @@ function scene1(p, D, m) {
     flash.setAttribute('opacity', (Math.max(0, 1 - Math.abs(q - T_DAY) / .18) * .85 + Math.max(0, 1 - Math.abs(q - T_NIGHT) / .12) * .5).toFixed(3));
     const breathe = Math.sin(q * 2.2);
 
-    if (shot === 'bed') { PB.apply(q, f); post1.shares(Math.round(399000 * span(q, sc(6.2), sc(8.0)) ** .5 + 1000 * (q > 1))); }
+    if (shot === 'bed') { PB.apply(q, f); post1.shares(Math.round(399000 * span(q, sc(3.4), sc(6.7)) ** .5 + 1000 * (q > 1))); }
     if (shot === 'lunch' || shot === 'comments') {
       PH.apply(q, f);
       if (shot === 'lunch') {   // the post, then flicked away as she laughs
@@ -156,10 +156,10 @@ function scene1(p, D, m) {
     if (shot === 'close' || shot === 'turn' || shot === 'stare' || shot === 'eyes') {
       CT.apply(q, f);
       const turn = shot === 'close' ? 0 : span(q, T_TURN + .9, T_ME - .5);
-      const shake = turn > .05 && turn < .95 ? 1.2 * jit(f, 5) : 0;
+      const shake0 = 0, shake = turn > .05 && turn < .95 ? 1.2 * jit(f, 5) : 0;
       turner.pose({ x: 800, y: 786, h: 660, turn, tilt: shot === 'close' ? 0 : lerp(0, -9, Math.sin(Math.PI * turn)) + shake, bob: 0 });
       // the eyes: still, then up … and down (the way a person looks you over)
-      const dy = shot === 'eyes' ? (q < sc(59.1) ? -span(q, T_UP, T_UP + .5) : lerp(-1, 1, span(q, sc(59.1), sc(59.9)))) : 0;
+      const dy = shot === 'eyes' ? (q < sc(59.45) ? -span(q, T_UP, T_UP + .35) : lerp(-1, 1, span(q, sc(59.45), sc(59.95)))) : 0;
       turner.eyes.look(0, dy);
     }
     if (shot === 'face' || shot === 'glass' || shot === 'face2') {
