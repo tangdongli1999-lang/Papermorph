@@ -105,7 +105,7 @@ function scene1(p, D, m) {
   sfx('scene1', T_MORN + .2, 'purr', .9); sfx('scene1', T_MORN + 3.6, 'purr', .7);
   sfx('scene1', T_APP + .1, 'tick', .4);
   sfx('scene1', T_UP + .2, 'riser', .5);
-  sfx('scene1', T_HUM - .4, 'hum', .9);
+  sfx('scene1', T_HUM - .4, 'humjune', 1.0);   // June's own voice humming (ElevenLabs take, through a small speaker: tools/two-legs/audio.sh)
   sfx('scene1', T_VOICE, 'hit', .9);
 
   stopClock(D, (q, f) => {
