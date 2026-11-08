@@ -1,9 +1,7 @@
 /* legs.js — Two Legs: the cast as cut-out pictures (img/cast/, cut from the user's art pack by
    tools/two-legs/cutouts.py), the captions, the title and the phone screens every chapter uses. */
 'use strict';
-const CAST = {"biscuit_body_back": [1024, 1536], "biscuit_headB": [1024, 1536], "biscuit_headF": [1024, 1536], "biscuit_head_back_turned": [798, 1504],
-  "biscuit_side_walk": [942, 959], "biscuit_sit_front": [934, 1488], "biscuit_stand_back": [795, 1507], "biscuit_stand_front_stare": [801, 1489],
-  "cat_bowl": [1066, 584], "empty_glass": [606, 835], "june_head_closeup": [991, 1077], "june_pyjamas_front": [505, 1487], "june_pyjamas_glass": [503, 1489]};
+const CAST = {"biscuit_body_back": [1024, 1536], "biscuit_curled_sleeping": [1264, 1017], "biscuit_headB": [1024, 1536], "biscuit_headF": [1024, 1536], "biscuit_headP": [1024, 1536], "biscuit_head_back_turned": [798, 1504], "biscuit_petcam_look_up": [884, 1254], "biscuit_side_walk": [942, 959], "biscuit_sit_front": [934, 1488], "biscuit_stand_back": [795, 1507], "biscuit_stand_back_hall": [718, 1077], "biscuit_stand_front_stare": [801, 1489], "biscuit_stand_front_tilt": [801, 1503], "biscuit_stand_side_limp": [747, 1488], "biscuit_stand_side_walk": [649, 1476], "cat_bowl": [1066, 584], "door_lever": [1802, 988], "empty_glass": [606, 835], "june_bed_awake": [1894, 712], "june_head_closeup": [991, 1077], "june_head_pillow_closeup": [1920, 1070], "june_pyjamas_front": [505, 1487], "june_pyjamas_glass": [503, 1489], "june_sit_phone_morning": [962, 1429], "petcam_device": [586, 853]};
 const shotAt = (q, shots) => { let s = shots[0][1]; for (const [t0, n] of shots) if (q >= t0) s = n; return s; };
 const lerp = (a, b, u) => a + (b - a) * u;
 
@@ -153,3 +151,26 @@ function commentRow(parent, W, y, name, words, { hi = false, colour = '#bfd3c6' 
     ${ls.map((l, i) => `<text x="${W * .18}" y="${W * (.11 + .07 * i)}" font-family="Helvetica Neue, Arial" font-size="${W * .056}" fill="#1b2026">${esc(l)}</text>`).join('')}`;
   return { g, h: W * (.2 + .07 * ls.length) };
 }
+
+/* ---------- the pet camera ---------- */
+// Night vision: everything under it in grey-green (put filter="url(#nv)" on a group). Defined once per page.
+document.body.insertAdjacentHTML('afterbegin', `<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <filter id="nv" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values=".2 .45 .1 0 .03  .26 .58 .13 0 .05  .21 .48 .11 0 .04  0 0 0 1 0"/></filter></defs></svg>`);
+// The camera's overlay: REC dot, the camera's name, the time (pose({ t: 'HH:MM:SS', rec })) and a sound meter (level 0…1).
+function camOverlay(p, name = 'HALLWAY CAM') {
+  const g = mk('g', { 'pointer-events': 'none', 'font-family': "'Courier New', monospace", 'font-weight': 700 }, p);
+  g.innerHTML = `<rect x="-10" y="-10" width="1620" height="920" fill="none" stroke="#000" stroke-opacity=".25" stroke-width="40"/>
+    <circle data-r cx="70" cy="66" r="13" fill="#ff3b2f"/><text x="94" y="78" font-size="34" fill="#e9f3e6" stroke="#000" stroke-width="5" paint-order="stroke">REC</text>
+    <text x="1540" y="78" text-anchor="end" font-size="34" fill="#e9f3e6" stroke="#000" stroke-width="5" paint-order="stroke">${name}</text>
+    <text data-t x="1540" y="848" text-anchor="end" font-size="38" fill="#e9f3e6" stroke="#000" stroke-width="5" paint-order="stroke"></text>
+    <g data-m transform="translate(60,770)"><text x="0" y="-14" font-size="24" fill="#e9f3e6" stroke="#000" stroke-width="4" paint-order="stroke">AUDIO</text></g>`;
+  const T = g.querySelector('[data-t]'), R = g.querySelector('[data-r]'), M = g.querySelector('[data-m]'), bars = [];
+  for (let i = 0; i < 28; i++) bars.push(mk('rect', { x: i * 11, y: 0, width: 7, height: 4, fill: '#9cf09a' }, M));
+  return { g, pose({ t = '03:07:00', rec = true, level = 0, q = 0 } = {}) {
+    if (T._t !== t) T.textContent = T._t = t; R.setAttribute('opacity', rec ? '1' : '0');
+    vis(M, level > 0);
+    bars.forEach((b, i) => { const h = 4 + level * 70 * Math.abs(Math.sin(q * 6.3 + i * .9) * Math.sin(q * 2.1 + i * .37)); b.setAttribute('y', (-h).toFixed(1)); b.setAttribute('height', h.toFixed(1)); });
+  } };
+}
+const clockAdd = (base, secs) => { const [h, m, s] = base.split(':').map(Number), t = h * 3600 + m * 60 + s + Math.floor(secs);
+  return [Math.floor(t / 3600) % 24, Math.floor(t / 60) % 60, t % 60].map(n => String(n).padStart(2, '0')).join(':'); };
