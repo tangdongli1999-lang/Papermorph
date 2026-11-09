@@ -29,5 +29,11 @@
   "w": 640,
   "h": 1344,
   "height_m": 1.632
+ },
+ "lift": {
+  "file": "cards/lift.webp",
+  "w": 733,
+  "h": 1407,
+  "height_m": 1.708
  }
 }

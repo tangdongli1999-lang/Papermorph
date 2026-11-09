@@ -1,4 +1,16 @@
 {
+ "clipboard_live": {
+  "file": "cards/clipboard_live.webp",
+  "w": 428,
+  "h": 1089,
+  "height_m": 1.322,
+  "head": {
+   "at": [
+    202.0,
+    14
+   ]
+  }
+ },
  "clipboard": {
   "file": "cards/clipboard.webp",
   "w": 409,

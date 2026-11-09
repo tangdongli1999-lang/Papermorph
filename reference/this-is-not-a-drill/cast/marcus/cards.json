@@ -17,6 +17,18 @@
   "h": 1198,
   "height_m": 1.455
  },
+ "asleep": {
+  "file": "cards/asleep.webp",
+  "w": 487,
+  "h": 857,
+  "height_m": 1.041
+ },
+ "comfort": {
+  "file": "cards/comfort.webp",
+  "w": 652,
+  "h": 897,
+  "height_m": 1.089
+ },
  "sit_floor_knees": {
   "file": "cards/sit_floor_knees.webp",
   "w": 424,

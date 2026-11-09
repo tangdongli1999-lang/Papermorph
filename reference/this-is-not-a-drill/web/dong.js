@@ -485,7 +485,7 @@
           const at = o.at ?? 1, u = clamp((t - at) / (o.dur ?? 1.8)), e = ease(u);
           if (t < at) return { body: { sy: 1.012, x: j(0.0012, 55) }, head: { rz: 0 }, face: { eyes: 'wide', brows: 'worried', mouth: 'flat' } };
           if (u < 1) return { body: { sy: 1.012 - 0.045 * e, y: -0.012 * e }, head: { rz: 7 * e, y: -0.006 * e }, face: { eyes: 'closed', brows: 'worried', mouth: 'O', open: 0.45 * (1 - e) + 0.12 } };
-          return { body: { sy: 0.967 + 0.006 * S(t * 1.4), y: -0.012 }, head: { rz: 7 - 3 * clamp(t - at - (o.dur ?? 1.8)) }, face: { eyes: 'open', brows: 'worried', mouth: 'grin' } }; }
+          return { body: { sy: 0.967 + 0.006 * S(t * 1.4), y: -0.012 }, head: { rz: 7 - 3 * clamp(t - at - (o.dur ?? 1.8)) }, face: { eyes: 'open', brows: 'worried', mouth: o.after || 'grin' } }; }   // o.after: the face once the breath is out (a grin by default; 'flat' when it isn't relief)
         case 'count': {    // eyes stepping along the row, face by face, lips moving on each number
           const n = 7, st = Math.floor(t / (o.step ?? 0.32)) % (2 * n - 2), i = st < n ? st : 2 * n - 2 - st, look = -1 + 2 * i / (n - 1);
           return { body: { x: j(0.0008, 40) }, head: { rz: -5 * look }, face: { eyes: 'open', brows: 'worried', mouth: null, look, open: 0.1 + 0.32 * Math.abs(S(t * 10) * S(t * 2.7)) } }; }

@@ -1629,5 +1629,66 @@
    "/home/claude/lockdown/art/out/bg_kitchen_mom.png"
   ],
   "1536x1024"
+ ],
+ "bg_school_chaos": [
+  "Edit image 1: this is our school. Keep EXACTLY the same building, sign, flagpole, trees, framing and the flat handmade felt and paper cut-out style. Change the time to late afternoon dusk (orange-pink sky, long shadows) and fill the front with CHAOS after a lockdown: several police cars with red and blue lights flashing, a sheriff's SUV, two TV news vans with satellite dishes on their roofs, yellow police tape across the lawn, and a big crowd of worried parents pressed against the tape, some hugging, some on phones. No readable text except the school sign.",
+  [
+   "/home/claude/lockdown/art/out/bg_ext_morning.png"
+  ],
+  "1536x1024"
+ ],
+ "prop_bottle": [
+  "Create a single object on a flat pure green background (#00ff00), nothing else in the picture: a plastic school water bottle lying on its side, blue with a white cap, seen from the side, centred, filling about a third of the image. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of image 1: soft felt texture, simple flat shapes, no outlines, no shadow.",
+  [
+   "/home/claude/dong/ref/style_dani.jpg"
+  ],
+  "1024x1024"
+ ],
+ "district_clipboard_headless": [
+  "Edit image 1. Keep EVERYTHING exactly the same \u2014 the same pose, size, position, body, arms, hands, clipboard, pen, legs, clothes and shoes \u2014 but REMOVE the head, hair and neck completely, so the collar is empty at the top. Nothing above the collar. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/district_clipboard.png"
+  ],
+  "1024x1536"
+ ],
+ "mom_lift_hug": [
+  "Combine image 1 (the mother) and image 2 (her son, the boy in the beanie and school uniform). Show the mother hugging her son so hard that she LIFTS him off the ground: her arms wrapped tightly around him, his feet dangling in the air above the ground, his arms around her neck, both crying with relief, her eyes shut tight. Side-on three-quarter view, full bodies, both characters must look EXACTLY like the references (same faces, hair, clothes, colours, proportions). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/mom.png",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "single_file": [
+  "Combine the characters from the reference images into ONE picture: a line of school kids led by their teacher (image 1, the woman) walking out of a school SINGLE FILE, all seen from the SIDE walking to the right, one behind another, each kid with one hand resting on the shoulder of the person in front of them. Order from right to left: the teacher, then the boy in the beanie (image 2), then the other kids. Heads slightly down, scared tired faces, mid-step. Full bodies, feet on the same ground line. Every character must look EXACTLY like their reference (faces, hair, clothes, colours). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/harlow.png",
+   "/home/claude/lockdown/art/out/dong_uni.png",
+   "/home/claude/lockdown/art/out/tyler.png",
+   "/home/claude/lockdown/art/out/marcus.png",
+   "/home/claude/lockdown/art/out/priya.png"
+  ],
+  "1536x1024"
+ ],
+ "marcus_asleep": [
+  "Edit image 1: keep the same boy, same pose sitting on the floor against the wall, same clothes and size, but he has FALLEN ASLEEP sitting up: eyes closed, head drooping forward and tilted to one side, mouth slightly open, arms slack. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/marcus_sit_floor.png"
+  ],
+  "1024x1536"
+ ],
+ "bg_room208_nobottle": [
+  "Edit image 1: keep EVERYTHING exactly the same (every desk, chair, backpack, book, the open door, windows, clock, board) but REMOVE the water bottle lying on the floor near the bottom right, so that patch of floor is just plain empty floor. Keep EXACTLY the same flat handmade felt and paper cut-out style, the same framing, the same camera and the same colours. No people. ",
+  [
+   "/home/claude/lockdown/art/out/bg_room208.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_hall_five_open": [
+  "Edit image 1: the same dark school hallway with the lights off, same lockers, same GO HAWKS banner, same EXIT sign and stairs at the far end, same felt style. Now there are EXACTLY FIVE classroom doors standing WIDE OPEN along the hallway (three on the left wall, two on the right wall), each open doorway showing an empty classroom inside, every other door shut. The open doors must be clearly countable. Keep each door's room number sign above it. Keep EXACTLY the same flat handmade felt and paper cut-out style, the same framing, the same camera and the same colours. No people. ",
+  [
+   "/home/claude/lockdown/art/out/bg_hallway_dim_open.png"
+  ],
+  "1536x1024"
  ]
 }

@@ -4,106 +4,424 @@
  "shots": [
   {
    "t0": 465.6,
-   "t1": 472.3,
+   "t1": 467.49,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_away_23.png",
+     "fov": 40,
+     "h": 0.92,
+     "pitch": 0,
+     "horizon": 0.83,
+     "holdouts": [
+      {
+       "mask": "masks/door_close_8.png",
+       "base": 0.8535,
+       "u": 0.9451
+      },
+      {
+       "mask": "masks/door_close_9.png",
+       "base": 0.9932,
+       "u": 0.1063
+      }
+     ]
+    },
+    "tint": 8884397,
+    "who": [],
+    "name": "door_close"
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.6,
+     "aim": [
+      0.45,
+      0.8
+     ]
+    },
+    "b": {
+     "zoom": 1.5,
+     "aim": [
+      0.45,
+      0.78
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 467.49,
+   "t1": 469.08,
    "room": "rooms/corner_afternoon.json",
    "who": [
     {
      "opts": {
-      "mood": "still"
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 0.5
      }
     },
     {
      "opts": {
-      "mood": "shiver",
-      "intensity": 0.6
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 0.5
      }
     },
     {
      "opts": {
-      "mood": "asleep"
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 0.5
      }
     },
     {
      "opts": {
-      "mood": "still"
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 0.5
      }
     },
     {
      "opts": {
-      "mood": "rock"
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 0.5
      }
     },
     {
      "opts": {
-      "mood": "still"
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 0.5
      }
     },
     {
      "opts": {
-      "mood": "still"
+      "mood": "shake",
+      "intensity": 0.4
      }
     }
    ],
    "cam": {
     "a": {
-     "zoom": 1.0
+     "zoom": 1.15,
+     "aim": [
+      0.45,
+      0.5
+     ]
     },
     "b": {
-     "zoom": 1.1,
-     "dz": 0.3
+     "zoom": 1.0
     }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 469.08,
+   "t1": 470.41,
+   "room": {
+    "plate": {
+     "img": "art/bg_intercom.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
    },
    "overlays": [
     {
-     "type": "flash",
-     "t0": 465.6,
-     "t1": 466.2,
+     "type": "clock",
+     "t0": 469.08,
+     "t1": 470.41,
+     "h": 12,
+     "m": 0,
+     "h2": 4,
+     "m2": 35,
+     "t2": 469.15,
+     "dur": 1.1,
+     "label": "",
+     "dark": true,
      "fadeIn": 0.01,
-     "fadeOut": 0.6,
-     "alpha": 0.0
+     "fadeOut": 0.01
     }
    ]
   },
   {
-   "t0": 472.3,
-   "t1": 474.4,
+   "t0": 470.41,
+   "t1": 472.5,
    "room": "rooms/corner_afternoon.json",
    "who": [
     {
      "opts": {
-      "mood": "still"
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 0.5
      }
     },
     {
      "opts": {
-      "mood": "shiver",
-      "intensity": 0.6
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 0.5
      }
     },
     {
      "opts": {
-      "mood": "asleep"
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 0.5
      }
     },
     {
      "opts": {
-      "mood": "still"
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 0.5
      }
     },
     {
      "opts": {
-      "mood": "rock"
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 0.5
      }
     },
     {
      "opts": {
-      "mood": "still"
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 0.5
      }
     },
     {
      "opts": {
-      "mood": "still"
+      "mood": "shake",
+      "intensity": 0.4
      }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.7,
+     "aim": [
+      0.2,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 1.7,
+     "aim": [
+      0.6,
+      0.5
+     ]
+    },
+    "ease": "linear"
+   },
+   "overlays": []
+  },
+  {
+   "t0": 472.5,
+   "t1": 474.43,
+   "room": "rooms/corner_afternoon.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.4
+     }
+    }
+   ],
+   "events": [
+    {
+     "t": 473.24,
+     "i": 2,
+     "mood": "asleep"
     }
    ],
    "cam": {
@@ -121,14 +439,15 @@
       0.47
      ]
     }
-   }
+   },
+   "overlays": []
   },
   {
-   "t0": 474.4,
-   "t1": 475.6,
+   "t0": 474.43,
+   "t1": 475.46,
    "room": {
     "plate": {
-     "img": "art/bg_hallway_dim.png",
+     "img": "art/bg_intercom.png",
      "fov": 40,
      "h": 1.0,
      "pitch": 0,
@@ -139,22 +458,239 @@
    "overlays": [
     {
      "type": "clock",
-     "t0": 474.4,
-     "t1": 475.6,
+     "t0": 474.43,
+     "t1": 475.46,
      "h": 4,
      "m": 40,
      "label": "4:40 PM",
+     "dark": true,
      "fadeIn": 0.01,
      "fadeOut": 0.01
     }
    ]
   },
   {
-   "t0": 475.6,
-   "t1": 483.2,
+   "t0": 475.46,
+   "t1": 477.04,
    "room": {
     "plate": {
-     "img": "art/bg_handle_inside.png",
+     "img": "art/plate_door_arrive_start.png",
+     "fov": 40,
+     "h": 0.92,
+     "pitch": 0,
+     "horizon": 0.83,
+     "holdouts": [
+      {
+       "mask": "masks/door_close_8.png",
+       "base": 0.8535,
+       "u": 0.9451
+      },
+      {
+       "mask": "masks/door_close_9.png",
+       "base": 0.9932,
+       "u": 0.1063
+      }
+     ]
+    },
+    "tint": 8884397,
+    "who": [],
+    "name": "door_close"
+   },
+   "events": [
+    {
+     "t": 475.6,
+     "plate": "art/plate_door_arrive_0.png"
+    },
+    {
+     "t": 475.72,
+     "plate": "art/plate_door_arrive_1.png"
+    },
+    {
+     "t": 475.84,
+     "plate": "art/plate_door_arrive_2.png"
+    },
+    {
+     "t": 475.96,
+     "plate": "art/plate_door_arrive_3.png"
+    },
+    {
+     "t": 476.08,
+     "plate": "art/plate_door_arrive_4.png"
+    },
+    {
+     "t": 476.2,
+     "plate": "art/plate_door_arrive_5.png"
+    },
+    {
+     "t": 476.32,
+     "plate": "art/plate_door_arrive_6.png"
+    },
+    {
+     "t": 476.44,
+     "plate": "art/plate_door_arrive_7.png"
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.5,
+     "aim": [
+      0.45,
+      0.78
+     ]
+    },
+    "b": {
+     "zoom": 1.6,
+     "aim": [
+      0.45,
+      0.8
+     ]
+    },
+    "kicks": [
+     475.8,
+     476.2,
+     476.6
+    ],
+    "kick": 0.35
+   },
+   "overlays": []
+  },
+  {
+   "t0": 477.04,
+   "t1": 477.76,
+   "room": "rooms/corner_afternoon.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "lookat",
+      "look": 1
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookat",
+      "look": 1
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookat",
+      "look": 1
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookat",
+      "look": 1
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookat",
+      "look": 1
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookat",
+      "look": 1
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookat",
+      "look": 1
+     }
+    }
+   ],
+   "events": [
+    {
+     "t": 477.1,
+     "flinch": 0.8
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.05
+    },
+    "b": {
+     "zoom": 1.1
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 477.76,
+   "t1": 481.01,
+   "room": "rooms/corner_afternoon.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "lookat",
+      "look": 1
+     }
+    },
+    {
+     "opts": {
+      "mood": "stare",
+      "look": 1,
+      "blank": 1
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookat",
+      "look": 1
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookat",
+      "look": 1
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookat",
+      "look": 1
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookat",
+      "look": 1
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookat",
+      "look": 1
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.6,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 3.0,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 481.01,
+   "t1": 483.26,
+   "room": {
+    "plate": {
+     "img": "art/bg_key_lock.png",
      "fov": 40,
      "h": 1.0,
      "pitch": 0,
@@ -166,38 +702,35 @@
     "a": {
      "zoom": 1.2,
      "aim": [
-      0.55,
-      0.5
+      0.5,
+      0.45
      ]
     },
     "b": {
-     "zoom": 1.8,
+     "zoom": 1.7,
      "aim": [
-      0.53,
-      0.32
+      0.52,
+      0.42
      ]
     },
-    "ease": "linear",
     "kicks": [
-     476.2,
-     476.7,
-     477.2,
-     481.1,
-     481.75
+     481.73
     ],
     "kick": 0.5
-   }
+   },
+   "overlays": []
   },
   {
-   "t0": 483.2,
-   "t1": 487.7,
+   "t0": 483.26,
+   "t1": 487.8,
    "room": "rooms/door_open.json",
    "who": [
     {
      "lip": "c5_24",
      "clip": "idle",
      "face": {
-      "mouth": "flat"
+      "mouth": "flat",
+      "brows": "worried"
      }
     }
    ],
@@ -210,80 +743,177 @@
      ]
     },
     "b": {
-     "zoom": 1.6,
+     "zoom": 1.7,
      "aim": [
       0.69,
-      0.42
+      0.4
      ]
     }
-   }
+   },
+   "overlays": []
   },
   {
-   "t0": 487.7,
-   "t1": 496.8,
-   "room": "rooms/hallway_side.json",
+   "t0": 487.8,
+   "t1": 488.92,
+   "room": {
+    "plate": {
+     "img": "art/bg_key_lock.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.9,
+     "aim": [
+      0.48,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 2.0,
+     "aim": [
+      0.48,
+      0.55
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 488.92,
+   "t1": 490.92,
+   "room": "rooms/door_open.json",
    "who": [
     {
-     "n": "kid_b",
-     "at": [
-      -0.55,
-      0.8
-     ],
-     "opts": {
-      "pace": 0.84
-     }
-    },
-    {
-     "n": "marcus",
-     "at": [
-      -0.34,
-      0.8
-     ],
-     "opts": {
-      "pace": 0.7
-     }
-    },
-    {
-     "n": "priya",
-     "at": [
-      -0.13,
-      0.8
-     ],
-     "opts": {
-      "pace": 0.94
-     }
-    },
-    {
-     "n": "kid_a",
-     "at": [
-      0.08,
-      0.8
-     ],
-     "opts": {
-      "pace": 1.0
-     }
-    },
-    {
-     "n": "tyler",
-     "at": [
-      0.29,
-      0.8
-     ],
-     "opts": {
-      "pace": 0.76
-     }
-    },
-    {
-     "n": "dong",
-     "at": [
-      0.5,
-      0.8
-     ],
-     "opts": {
-      "pace": 0.8
+     "clip": "talk",
+     "face": {
+      "mouth": "flat",
+      "brows": "worried"
      }
     }
    ],
+   "cam": {
+    "a": {
+     "zoom": 1.15,
+     "aim": [
+      0.6,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 1.25,
+     "aim": [
+      0.62,
+      0.5
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 490.92,
+   "t1": 492.75,
+   "room": {
+    "plate": {
+     "img": "art/bg_hallway_side_dim.png",
+     "fov": 40,
+     "h": 0.887,
+     "pitch": 0,
+     "horizon": 0.69
+    },
+    "tint": 16777215,
+    "who": [
+     {
+      "n": "kid_b",
+      "view": "side",
+      "facing": 1,
+      "clip": "walk",
+      "at": [
+       -0.55,
+       0.8
+      ],
+      "opts": {
+       "pace": 0.84
+      },
+      "sideHead": "scared"
+     },
+     {
+      "n": "marcus",
+      "view": "side",
+      "facing": 1,
+      "clip": "walk",
+      "at": [
+       -0.34,
+       0.8
+      ],
+      "opts": {
+       "pace": 0.7
+      },
+      "sideHead": "scared"
+     },
+     {
+      "n": "priya",
+      "view": "side",
+      "facing": 1,
+      "clip": "walk",
+      "at": [
+       -0.13,
+       0.8
+      ],
+      "opts": {
+       "pace": 0.94
+      },
+      "sideHead": "scared"
+     },
+     {
+      "n": "kid_a",
+      "view": "side",
+      "facing": 1,
+      "clip": "walk",
+      "at": [
+       0.08,
+       0.8
+      ],
+      "opts": {
+       "pace": 1.0
+      },
+      "sideHead": "scared"
+     },
+     {
+      "n": "tyler",
+      "view": "side",
+      "facing": 1,
+      "clip": "walk",
+      "at": [
+       0.29,
+       0.8
+      ],
+      "opts": {
+       "pace": 0.76
+      },
+      "sideHead": "scared"
+     },
+     {
+      "n": "dong",
+      "view": "side",
+      "facing": 1,
+      "clip": "walk",
+      "at": [
+       0.5,
+       0.8
+      ],
+      "opts": {
+       "pace": 0.8
+      },
+      "sideHead": "scared"
+     }
+    ],
+    "name": "hallway_side"
+   },
    "cam": {
     "a": {
      "zoom": 1.05,
@@ -300,14 +930,93 @@
      ]
     },
     "ease": "linear"
-   }
+   },
+   "overlays": [
+    {
+     "type": "tube",
+     "glow": 0.0,
+     "stable": 0.88,
+     "alpha": 0.4,
+     "t0": 490.92,
+     "t1": 492.75,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
   },
   {
-   "t0": 496.8,
-   "t1": 506.6,
+   "t0": 492.75,
+   "t1": 495.16,
    "room": {
     "plate": {
-     "img": "art/bg_room208.png",
+     "img": "art/bg_hallway_side_dim.png",
+     "fov": 40,
+     "h": 0.887,
+     "pitch": 0,
+     "horizon": 0.69
+    },
+    "tint": 16777215,
+    "who": [
+     {
+      "n": "harlow",
+      "card": "line",
+      "at": [
+       0.42,
+       0.86
+      ]
+     }
+    ],
+    "name": "hallway_side"
+   },
+   "events": [
+    {
+     "t": 492.8,
+     "i": 0,
+     "slide": [
+      0.5,
+      0
+     ],
+     "dur": 2.3
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.5,
+     "aim": [
+      0.42,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 1.6,
+     "aim": [
+      0.5,
+      0.5
+     ]
+    },
+    "ease": "linear"
+   },
+   "overlays": [
+    {
+     "type": "tube",
+     "glow": 0.0,
+     "stable": 0.88,
+     "alpha": 0.4,
+     "t0": 492.75,
+     "t1": 495.16,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 495.16,
+   "t1": 496.78,
+   "room": {
+    "plate": {
+     "img": "art/bg_hallway_dim_open.png",
      "fov": 40,
      "h": 1.0,
      "pitch": 0,
@@ -317,21 +1026,330 @@
    },
    "cam": {
     "a": {
-     "zoom": 1.0
-    },
-    "b": {
-     "zoom": 1.5,
+     "zoom": 1.0,
      "aim": [
-      0.58,
-      0.75
+      0.5,
+      0.5
      ]
     },
-    "ease": "linear"
-   }
+    "b": {
+     "zoom": 1.3,
+     "aim": [
+      0.45,
+      0.5
+     ]
+    },
+    "ease": "linear",
+    "shake": 0.3
+   },
+   "overlays": [
+    {
+     "type": "tube",
+     "glow": 0.0,
+     "stable": 0.88,
+     "alpha": 0.4,
+     "t0": 495.16,
+     "t1": 496.78,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "pool",
+     "x": 0.5,
+     "y": 0.33,
+     "rx": 6,
+     "ry": 8,
+     "glow": 0.22,
+     "color": "255,70,60",
+     "t0": 495.16,
+     "t1": 496.78,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
   },
   {
-   "t0": 506.6,
-   "t1": 516.3,
+   "t0": 496.78,
+   "t1": 499.02,
+   "room": {
+    "plate": {
+     "img": "art/bg_hall_five_open.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.0,
+     "aim": [
+      0.5,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.0,
+     "aim": [
+      0.12,
+      0.45
+     ]
+    },
+    "shake": 0.3
+   },
+   "overlays": []
+  },
+  {
+   "t0": 499.02,
+   "t1": 500.55,
+   "room": {
+    "plate": {
+     "img": "art/bg_hall_five_open.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 2.4,
+     "aim": [
+      0.1,
+      0.45
+     ]
+    },
+    "b": {
+     "zoom": 2.8,
+     "aim": [
+      0.09,
+      0.45
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 500.55,
+   "t1": 502.8,
+   "room": {
+    "plate": {
+     "img": "art/plate_208_roll_0.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 11974854
+    },
+    "who": []
+   },
+   "cam": {
+    "keys": [
+     [
+      500.55,
+      {
+       "zoom": 2.0,
+       "aim": [
+        0.18,
+        0.62
+       ]
+      }
+     ],
+     [
+      501.35,
+      {
+       "zoom": 2.0,
+       "aim": [
+        0.22,
+        0.5
+       ]
+      }
+     ],
+     [
+      502.2,
+      {
+       "zoom": 2.0,
+       "aim": [
+        0.74,
+        0.5
+       ]
+      }
+     ],
+     [
+      502.8,
+      {
+       "zoom": 1.9,
+       "aim": [
+        0.74,
+        0.52
+       ]
+      }
+     ]
+    ]
+   },
+   "overlays": []
+  },
+  {
+   "t0": 502.8,
+   "t1": 505.62,
+   "room": {
+    "plate": {
+     "img": "art/plate_208_roll_0.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 11974854
+    },
+    "who": []
+   },
+   "events": [
+    {
+     "t": 502.955,
+     "plate": "art/plate_208_roll_1.png"
+    },
+    {
+     "t": 503.07,
+     "plate": "art/plate_208_roll_2.png"
+    },
+    {
+     "t": 503.185,
+     "plate": "art/plate_208_roll_3.png"
+    },
+    {
+     "t": 503.3,
+     "plate": "art/plate_208_roll_4.png"
+    },
+    {
+     "t": 503.415,
+     "plate": "art/plate_208_roll_5.png"
+    },
+    {
+     "t": 503.53,
+     "plate": "art/plate_208_roll_6.png"
+    },
+    {
+     "t": 503.645,
+     "plate": "art/plate_208_roll_7.png"
+    },
+    {
+     "t": 503.76,
+     "plate": "art/plate_208_roll_8.png"
+    },
+    {
+     "t": 503.875,
+     "plate": "art/plate_208_roll_9.png"
+    },
+    {
+     "t": 503.99,
+     "plate": "art/plate_208_roll_10.png"
+    },
+    {
+     "t": 504.105,
+     "plate": "art/plate_208_roll_11.png"
+    },
+    {
+     "t": 504.22,
+     "plate": "art/plate_208_roll_12.png"
+    },
+    {
+     "t": 504.335,
+     "plate": "art/plate_208_roll_13.png"
+    },
+    {
+     "t": 504.45,
+     "plate": "art/plate_208_roll_14.png"
+    },
+    {
+     "t": 504.565,
+     "plate": "art/plate_208_roll_15.png"
+    },
+    {
+     "t": 504.68,
+     "plate": "art/plate_208_roll_16.png"
+    },
+    {
+     "t": 504.795,
+     "plate": "art/plate_208_roll_17.png"
+    },
+    {
+     "t": 504.91,
+     "plate": "art/plate_208_roll_18.png"
+    },
+    {
+     "t": 505.025,
+     "plate": "art/plate_208_roll_19.png"
+    },
+    {
+     "t": 505.14,
+     "plate": "art/plate_208_roll_20.png"
+    },
+    {
+     "t": 505.255,
+     "plate": "art/plate_208_roll_21.png"
+    },
+    {
+     "t": 505.37,
+     "plate": "art/plate_208_roll_22.png"
+    },
+    {
+     "t": 505.485,
+     "plate": "art/plate_208_roll_23.png"
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.4,
+     "aim": [
+      0.5,
+      0.86
+     ]
+    },
+    "b": {
+     "zoom": 2.3,
+     "aim": [
+      0.55,
+      0.86
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 505.62,
+   "t1": 506.89,
+   "room": {
+    "plate": {
+     "img": "art/plate_208_roll_23.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 11974854
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.3,
+     "aim": [
+      0.5,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 1.0
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 506.89,
+   "t1": 508.28,
    "room": "rooms/stairwell.json",
    "who": [
     {
@@ -345,7 +1363,8 @@
      "at": [
       0.12,
       0.8
-     ]
+     ],
+     "sideHead": "scared"
     },
     {
      "n": "dong",
@@ -353,19 +1372,15 @@
      "facing": -1,
      "clip": "idle",
      "at": [
-      0.8,
+      0.78,
       0.84
      ],
-     "face": {
-      "eyes": "wide",
-      "brows": "worried",
-      "mouth": "flat"
-     }
+     "sideHead": "scared"
     }
    ],
    "events": [
     {
-     "t": 506.7,
+     "t": 506.95,
      "i": 0,
      "runTo": [
       0.45,
@@ -379,20 +1394,21 @@
      "zoom": 1.0
     },
     "b": {
-     "zoom": 1.5,
+     "zoom": 1.4,
      "aim": [
       0.72,
       0.5
      ]
     }
-   }
+   },
+   "overlays": []
   },
   {
-   "t0": 516.3,
-   "t1": 521.1,
+   "t0": 508.28,
+   "t1": 510.67,
    "room": {
     "plate": {
-     "img": "art/bg_hallway_dim_open.png",
+     "img": "art/bg_hall_five_open.png",
      "fov": 40,
      "h": 1.0,
      "pitch": 0,
@@ -400,55 +1416,349 @@
     },
     "who": []
    },
+   "cam": {
+    "keys": [
+     [
+      508.28,
+      {
+       "zoom": 1.0,
+       "aim": [
+        0.5,
+        0.5
+       ]
+      }
+     ],
+     [
+      508.6,
+      {
+       "zoom": 1.6,
+       "aim": [
+        0.28,
+        0.5
+       ]
+      }
+     ],
+     [
+      508.95,
+      {
+       "zoom": 1.6,
+       "aim": [
+        0.67,
+        0.45
+       ]
+      }
+     ],
+     [
+      509.3,
+      {
+       "zoom": 1.6,
+       "aim": [
+        0.72,
+        0.45
+       ]
+      }
+     ],
+     [
+      509.6,
+      {
+       "zoom": 1.6,
+       "aim": [
+        0.93,
+        0.5
+       ]
+      }
+     ],
+     [
+      510.0,
+      {
+       "zoom": 1.05,
+       "aim": [
+        0.5,
+        0.5
+       ]
+      }
+     ],
+     [
+      510.67,
+      {
+       "zoom": 1.08,
+       "aim": [
+        0.5,
+        0.5
+       ]
+      }
+     ]
+    ],
+    "kicks": [
+     508.6,
+     508.95,
+     509.3,
+     509.6,
+     510.0
+    ],
+    "kick": 0.4
+   },
+   "overlays": []
+  },
+  {
+   "t0": 510.67,
+   "t1": 513.08,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_hall_212_lv0.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "filter": "sepia(0.35) saturate(0.8) brightness(1.05) contrast(0.9)",
+   "events": [
+    {
+     "t": 512.0,
+     "plate": "art/plate_door_hall_212_lv6.png"
+    },
+    {
+     "t": 512.15,
+     "plate": "art/plate_door_hall_212_lv12.png"
+    },
+    {
+     "t": 512.3,
+     "plate": "art/plate_door_hall_212_lv18.png"
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.6,
+     "aim": [
+      0.45,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 1.9,
+     "aim": [
+      0.45,
+      0.55
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "flash",
+     "t0": 510.67,
+     "t1": 511.0,
+     "fadeIn": 0.01,
+     "fadeOut": 0.3,
+     "alpha": 0.6
+    }
+   ]
+  },
+  {
+   "t0": 513.08,
+   "t1": 516.4,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_hall_208_open.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "filter": "sepia(0.35) saturate(0.8) brightness(1.05) contrast(0.9)",
+   "cam": {
+    "a": {
+     "zoom": 1.3,
+     "aim": [
+      0.45,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 1.6,
+     "aim": [
+      0.45,
+      0.5
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 516.4,
+   "t1": 518.97,
+   "room": {
+    "plate": {
+     "img": "art/bg_hall_five_open.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.6,
+     "aim": [
+      0.28,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.6,
+     "aim": [
+      0.18,
+      0.55
+     ]
+    },
+    "ease": "in"
+   },
+   "overlays": []
+  },
+  {
+   "t0": 518.97,
+   "t1": 521.32,
+   "room": {
+    "plate": {
+     "img": "art/plate_208_roll_23.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 11974854
+    },
+    "who": []
+   },
+   "events": [
+    {
+     "t": 520.0,
+     "plateTint": 3817036
+    }
+   ],
    "cam": {
     "a": {
      "zoom": 1.0
     },
     "b": {
-     "zoom": 1.4,
-     "aim": [
-      0.5,
-      0.45
-     ]
-    },
-    "ease": "linear"
-   }
-  },
-  {
-   "t0": 521.1,
-   "t1": 524.9,
-   "room": {
-    "plate": {
-     "img": "art/bg_ext_dusk.png",
-     "fov": 40,
-     "h": 1.0,
-     "pitch": 0,
-     "horizon": 0.97
-    },
-    "who": []
-   },
-   "cam": {
-    "a": {
      "zoom": 1.15,
      "aim": [
       0.5,
-      0.6
+      0.55
      ]
     },
-    "b": {
-     "zoom": 1.0
-    },
-    "shake": 0.6
-   }
+    "ease": "linear"
+   },
+   "overlays": []
   },
   {
-   "t0": 524.9,
-   "t1": 527.5,
+   "t0": 521.32,
+   "t1": 524.91,
+   "room": {
+    "plate": {
+     "img": "art/bg_school_chaos.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "cam": {
+    "keys": [
+     [
+      521.32,
+      {
+       "zoom": 1.0,
+       "aim": [
+        0.5,
+        0.5
+       ]
+      }
+     ],
+     [
+      522.4,
+      {
+       "zoom": 1.05,
+       "aim": [
+        0.5,
+        0.5
+       ]
+      }
+     ],
+     [
+      522.87,
+      {
+       "zoom": 1.9,
+       "aim": [
+        0.45,
+        0.85
+       ]
+      }
+     ],
+     [
+      523.45,
+      {
+       "zoom": 1.9,
+       "aim": [
+        0.62,
+        0.66
+       ]
+      }
+     ],
+     [
+      524.02,
+      {
+       "zoom": 1.9,
+       "aim": [
+        0.2,
+        0.6
+       ]
+      }
+     ],
+     [
+      524.91,
+      {
+       "zoom": 2.0,
+       "aim": [
+        0.2,
+        0.6
+       ]
+      }
+     ]
+    ],
+    "shake": 0.6
+   },
+   "overlays": []
+  },
+  {
+   "t0": 524.91,
+   "t1": 527.46,
    "room": "rooms/lawn_close.json",
    "who": [
-    null,
     {
-     "clip": "talk"
+     "clip": "idle",
+     "face": {
+      "brows": "worried",
+      "mouth": "flat"
+     }
+    },
+    {
+     "clip": "talk",
+     "face": {
+      "brows": "worried"
+     }
+    },
+    {
+     "clip": "idle",
+     "face": {
+      "eyes": "wide",
+      "brows": "worried",
+      "mouth": "o"
+     }
     },
     {
      "clip": "idle",
@@ -457,14 +1767,8 @@
       "mouth": "flat"
      }
     },
-    null,
     {
-     "card": null,
-     "clip": "idle",
-     "at": [
-      0.95,
-      0.75
-     ]
+     "hidden": 1
     }
    ],
    "cam": {
@@ -482,11 +1786,12 @@
       0.5
      ]
     }
-   }
+   },
+   "overlays": []
   },
   {
-   "t0": 527.5,
-   "t1": 537.6,
+   "t0": 527.46,
+   "t1": 530.57,
    "room": {
     "plate": {
      "img": "art/bg_hallway_side_dim.png",
@@ -497,145 +1802,1973 @@
     },
     "who": []
    },
-   "filter": "grayscale(1) contrast(1.25) brightness(1.1)",
+   "filter": "grayscale(1) contrast(1.3) brightness(1.15)",
    "cam": {
     "a": {
      "zoom": 1.0
     },
     "b": {
-     "zoom": 1.05
-    },
-    "kicks": [
-     535.0,
-     535.4,
-     535.9,
-     536.4,
-     536.8
-    ],
-    "kick": 0.45
+     "zoom": 1.03
+    }
    },
    "overlays": [
     {
-     "type": "cctv",
-     "t0": 527.5,
-     "t1": 537.6,
+     "type": "tube",
+     "glow": 0.0,
+     "stable": 0.88,
+     "alpha": 0.4,
+     "t0": 527.46,
+     "t1": 530.57,
      "fadeIn": 0.01,
      "fadeOut": 0.01,
-     "clock": 41000
+     "follow": true
+    },
+    {
+     "type": "cctv",
+     "t0": 527.46,
+     "t1": 530.57,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "clock": 36000,
+     "cam": "CAM 07 \u00b7 2F HALLWAY"
     }
    ]
   },
   {
-   "t0": 537.6,
-   "t1": 544.4,
-   "room": "rooms/gym.json",
+   "t0": 530.57,
+   "t1": 532.51,
+   "room": {
+    "plate": {
+     "img": "art/bg_hallway_dim.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "filter": "grayscale(1) contrast(1.3) brightness(1.15)",
    "cam": {
     "a": {
      "zoom": 1.0
     },
     "b": {
-     "zoom": 1.2,
-     "aim": [
-      0.45,
-      0.48
-     ]
+     "zoom": 1.02
     }
-   }
+   },
+   "overlays": [
+    {
+     "type": "tube",
+     "glow": 0.0,
+     "stable": 0.88,
+     "alpha": 0.4,
+     "t0": 530.57,
+     "t1": 532.51,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "pool",
+     "x": 0.5,
+     "y": 0.33,
+     "rx": 6,
+     "ry": 8,
+     "glow": 0.22,
+     "color": "255,70,60",
+     "t0": 530.57,
+     "t1": 532.51,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "cctv",
+     "t0": 530.57,
+     "t1": 532.51,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "clock": 44100,
+     "cam": "CAM 04 \u00b7 2F HALLWAY"
+    }
+   ]
   },
   {
-   "t0": 544.4,
-   "t1": 551.6,
-   "room": "rooms/gym.json",
+   "t0": 532.51,
+   "t1": 533.47,
+   "room": {
+    "plate": {
+     "img": "art/bg_hallway_side_dim.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "filter": "grayscale(1) contrast(1.3) brightness(1.15)",
    "cam": {
     "a": {
-     "zoom": 2.3,
+     "zoom": 1.3,
      "aim": [
-      0.3,
-      0.42
+      0.5,
+      0.7
      ]
     },
     "b": {
-     "zoom": 2.5,
+     "zoom": 1.32,
      "aim": [
-      0.3,
-      0.4
+      0.5,
+      0.7
      ]
     }
-   }
+   },
+   "overlays": [
+    {
+     "type": "tube",
+     "glow": 0.0,
+     "stable": 0.88,
+     "alpha": 0.4,
+     "t0": 532.51,
+     "t1": 533.47,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "cctv",
+     "t0": 532.51,
+     "t1": 533.47,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "clock": 49800,
+     "cam": "CAM 07 \u00b7 2F HALLWAY"
+    }
+   ]
   },
   {
-   "t0": 551.6,
-   "t1": 557.3,
-   "room": "rooms/gym.json",
+   "t0": 533.47,
+   "t1": 534.4,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_hall_210_lv0.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 10133680
+    },
+    "who": []
+   },
+   "filter": "grayscale(1) contrast(1.3) brightness(1.15)",
+   "overlays": [
+    {
+     "type": "cctv",
+     "t0": 533.47,
+     "t1": 534.4,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "clock": 51200,
+     "cam": "CAM 09 \u00b7 RM 210"
+    }
+   ]
+  },
+  {
+   "t0": 534.4,
+   "t1": 534.88,
+   "room": {
+    "plate": {
+     "img": "art/bg_hallway_side_dim.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "filter": "grayscale(1) contrast(1.3) brightness(1.15)",
+   "overlays": [
+    {
+     "type": "tube",
+     "glow": 0.0,
+     "stable": 0.88,
+     "alpha": 0.4,
+     "t0": 534.4,
+     "t1": 534.88,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "cctv",
+     "t0": 534.4,
+     "t1": 534.88,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "clock": 52400,
+     "cam": "CAM 07 \u00b7 2F HALLWAY"
+    }
+   ]
+  },
+  {
+   "t0": 534.88,
+   "t1": 536.02,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_hall_208_lv0.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 10133680
+    },
+    "who": []
+   },
+   "filter": "grayscale(1) contrast(1.3) brightness(1.15)",
+   "events": [
+    {
+     "t": 534.96,
+     "plate": "art/plate_door_hall_208_lv12.png"
+    },
+    {
+     "t": 535.03,
+     "plate": "art/plate_door_hall_208_lv0.png"
+    },
+    {
+     "t": 535.1,
+     "plate": "art/plate_door_hall_208_lv18.png"
+    },
+    {
+     "t": 535.17,
+     "plate": "art/plate_door_hall_208_lv6.png"
+    },
+    {
+     "t": 535.24,
+     "plate": "art/plate_door_hall_208_lv12.png"
+    },
+    {
+     "t": 535.31,
+     "plate": "art/plate_door_hall_208_lv0.png"
+    },
+    {
+     "t": 535.38,
+     "plate": "art/plate_door_hall_208_lv12.png"
+    },
+    {
+     "t": 535.45,
+     "plate": "art/plate_door_hall_208_lv0.png"
+    },
+    {
+     "t": 535.52,
+     "plate": "art/plate_door_hall_208_lv18.png"
+    },
+    {
+     "t": 535.59,
+     "plate": "art/plate_door_hall_208_lv6.png"
+    },
+    {
+     "t": 535.66,
+     "plate": "art/plate_door_hall_208_lv12.png"
+    },
+    {
+     "t": 535.73,
+     "plate": "art/plate_door_hall_208_lv0.png"
+    },
+    {
+     "t": 535.8,
+     "plate": "art/plate_door_hall_208_lv12.png"
+    },
+    {
+     "t": 535.87,
+     "plate": "art/plate_door_hall_208_lv0.png"
+    },
+    {
+     "t": 535.98,
+     "plate": "art/plate_door_hall_208_lv0.png"
+    }
+   ],
    "cam": {
     "a": {
-     "zoom": 1.7,
+     "zoom": 1.15,
      "aim": [
-      0.66,
-      0.42
+      0.42,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 1.2,
+     "aim": [
+      0.42,
+      0.55
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "cctv",
+     "t0": 534.88,
+     "t1": 536.02,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "clock": 53000,
+     "cam": "CAM 08 \u00b7 RM 208"
+    }
+   ]
+  },
+  {
+   "t0": 536.02,
+   "t1": 536.89,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_hall_210_lv0.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 10133680
+    },
+    "who": []
+   },
+   "filter": "grayscale(1) contrast(1.3) brightness(1.15)",
+   "events": [
+    {
+     "t": 536.1,
+     "plate": "art/plate_door_hall_210_lv12.png"
+    },
+    {
+     "t": 536.17,
+     "plate": "art/plate_door_hall_210_lv0.png"
+    },
+    {
+     "t": 536.24,
+     "plate": "art/plate_door_hall_210_lv18.png"
+    },
+    {
+     "t": 536.31,
+     "plate": "art/plate_door_hall_210_lv6.png"
+    },
+    {
+     "t": 536.38,
+     "plate": "art/plate_door_hall_210_lv12.png"
+    },
+    {
+     "t": 536.45,
+     "plate": "art/plate_door_hall_210_lv0.png"
+    },
+    {
+     "t": 536.52,
+     "plate": "art/plate_door_hall_210_lv12.png"
+    },
+    {
+     "t": 536.59,
+     "plate": "art/plate_door_hall_210_lv0.png"
+    },
+    {
+     "t": 536.66,
+     "plate": "art/plate_door_hall_210_lv18.png"
+    },
+    {
+     "t": 536.73,
+     "plate": "art/plate_door_hall_210_lv6.png"
+    },
+    {
+     "t": 536.85,
+     "plate": "art/plate_door_hall_210_lv0.png"
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.15,
+     "aim": [
+      0.42,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 1.2,
+     "aim": [
+      0.42,
+      0.55
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "cctv",
+     "t0": 536.02,
+     "t1": 536.89,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "clock": 53700,
+     "cam": "CAM 09 \u00b7 RM 210"
+    }
+   ]
+  },
+  {
+   "t0": 536.89,
+   "t1": 537.76,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_hall_212_lv0.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 10133680
+    },
+    "who": []
+   },
+   "filter": "grayscale(1) contrast(1.3) brightness(1.15)",
+   "events": [
+    {
+     "t": 536.97,
+     "plate": "art/plate_door_hall_212_lv12.png"
+    },
+    {
+     "t": 537.04,
+     "plate": "art/plate_door_hall_212_lv0.png"
+    },
+    {
+     "t": 537.11,
+     "plate": "art/plate_door_hall_212_lv18.png"
+    },
+    {
+     "t": 537.18,
+     "plate": "art/plate_door_hall_212_lv6.png"
+    },
+    {
+     "t": 537.25,
+     "plate": "art/plate_door_hall_212_lv12.png"
+    },
+    {
+     "t": 537.32,
+     "plate": "art/plate_door_hall_212_lv0.png"
+    },
+    {
+     "t": 537.39,
+     "plate": "art/plate_door_hall_212_lv12.png"
+    },
+    {
+     "t": 537.46,
+     "plate": "art/plate_door_hall_212_lv0.png"
+    },
+    {
+     "t": 537.53,
+     "plate": "art/plate_door_hall_212_lv18.png"
+    },
+    {
+     "t": 537.6,
+     "plate": "art/plate_door_hall_212_lv6.png"
+    },
+    {
+     "t": 537.72,
+     "plate": "art/plate_door_hall_212_lv0.png"
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.15,
+     "aim": [
+      0.42,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 1.2,
+     "aim": [
+      0.42,
+      0.55
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "cctv",
+     "t0": 536.89,
+     "t1": 537.76,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "clock": 54300,
+     "cam": "CAM 10 \u00b7 RM 212"
+    }
+   ]
+  },
+  {
+   "t0": 537.76,
+   "t1": 539.96,
+   "room": "rooms/gym.json",
+   "who": [
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.47,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.6,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.73,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.86,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "clipboard_live",
+     "clip": "huddle",
+     "at": [
+      0.3,
+      0.86
+     ],
+     "opts": {
+      "mood": "still"
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.0
+    },
+    "b": {
+     "zoom": 1.15,
+     "aim": [
+      0.55,
+      0.55
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 539.96,
+   "t1": 542.47,
+   "room": "rooms/gym.json",
+   "who": [
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.47,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.6,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.73,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.86,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "clipboard_live",
+     "clip": "huddle",
+     "at": [
+      0.3,
+      0.86
+     ],
+     "opts": {
+      "mood": "still"
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.5,
+     "aim": [
+      0.5,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 2.2,
+     "aim": [
+      0.3,
+      0.45
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 542.47,
+   "t1": 544.91,
+   "room": "rooms/gym.json",
+   "who": [
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.47,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.6,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.73,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.86,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "clipboard_live",
+     "clip": "huddle",
+     "at": [
+      0.3,
+      0.86
+     ],
+     "opts": {
+      "mood": "still"
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.8,
+     "aim": [
+      0.35,
+      0.5
      ]
     },
     "b": {
      "zoom": 1.8,
      "aim": [
-      0.66,
-      0.42
+      0.75,
+      0.6
      ]
-    }
-   }
+    },
+    "ease": "linear"
+   },
+   "overlays": []
   },
   {
-   "t0": 557.3,
-   "t1": 561.4,
+   "t0": 544.91,
+   "t1": 547.4,
    "room": "rooms/gym.json",
+   "who": [
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.47,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.6,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.73,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.86,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "clipboard_live",
+     "clip": "huddle",
+     "at": [
+      0.3,
+      0.86
+     ],
+     "lip": "c5_25",
+     "lipSpans": [
+      [
+       544.91,
+       546.9
+      ]
+     ],
+     "lipGain": 1.4,
+     "opts": {
+      "mood": "still"
+     }
+    }
+   ],
    "cam": {
     "a": {
      "zoom": 3.0,
      "aim": [
-      0.285,
-      0.43
+      0.3,
+      0.36
      ]
     },
     "b": {
-     "zoom": 3.4,
+     "zoom": 3.2,
      "aim": [
-      0.285,
-      0.43
+      0.3,
+      0.36
      ]
     }
-   }
+   },
+   "overlays": []
   },
   {
-   "t0": 561.4,
-   "t1": 572.9,
+   "t0": 547.4,
+   "t1": 549.12,
+   "room": "rooms/gym.json",
+   "who": [
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.47,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.6,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.73,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.86,
+      0.82
+     ],
+     "opts": {
+      "mood": "sob",
+      "intensity": 0.8
+     }
+    },
+    {
+     "card": "clipboard_live",
+     "clip": "huddle",
+     "at": [
+      0.3,
+      0.86
+     ],
+     "opts": {
+      "mood": "still"
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.8,
+     "aim": [
+      0.86,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 3.0,
+     "aim": [
+      0.86,
+      0.55
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 549.12,
+   "t1": 550.97,
+   "room": "rooms/gym.json",
+   "who": [
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.47,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.6,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.73,
+      0.82
+     ],
+     "opts": {
+      "mood": "stare",
+      "look": -1,
+      "blank": 1
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.86,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "clipboard_live",
+     "clip": "huddle",
+     "at": [
+      0.3,
+      0.86
+     ],
+     "opts": {
+      "mood": "still"
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.8,
+     "aim": [
+      0.73,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 3.0,
+     "aim": [
+      0.73,
+      0.55
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 550.97,
+   "t1": 551.93,
+   "room": "rooms/gym.json",
+   "who": [
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.47,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.6,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.73,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.86,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "clipboard_live",
+     "clip": "huddle",
+     "at": [
+      0.3,
+      0.86
+     ],
+     "opts": {
+      "mood": "stare",
+      "look": 1,
+      "blank": 1
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 3.0,
+     "aim": [
+      0.3,
+      0.36
+     ]
+    },
+    "b": {
+     "zoom": 3.1,
+     "aim": [
+      0.3,
+      0.36
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 551.93,
+   "t1": 554.33,
+   "room": "rooms/gym.json",
+   "who": [
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.47,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.6,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.73,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.86,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "clipboard_live",
+     "clip": "huddle",
+     "at": [
+      0.3,
+      0.86
+     ],
+     "opts": {
+      "mood": "still"
+     }
+    }
+   ],
+   "events": [
+    {
+     "t": 552.2,
+     "i": 0,
+     "mood": "headshake",
+     "intensity": 0.7
+    },
+    {
+     "t": 552.7,
+     "i": 1,
+     "mood": "headshake",
+     "intensity": 0.7
+    },
+    {
+     "t": 553.2,
+     "i": 2,
+     "mood": "headshake",
+     "intensity": 0.7
+    },
+    {
+     "t": 553.57,
+     "i": 3,
+     "mood": "headshake",
+     "intensity": 0.7
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.9,
+     "aim": [
+      0.62,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 1.95,
+     "aim": [
+      0.66,
+      0.55
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 554.33,
+   "t1": 556.19,
+   "room": "rooms/gym.json",
+   "who": [
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.47,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.6,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.73,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.86,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "clipboard_live",
+     "clip": "huddle",
+     "at": [
+      0.3,
+      0.86
+     ],
+     "opts": {
+      "mood": "exhale",
+      "at": 0.5,
+      "dur": 0.9,
+      "after": "flat"
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 3.0,
+     "aim": [
+      0.3,
+      0.36
+     ]
+    },
+    "b": {
+     "zoom": 3.2,
+     "aim": [
+      0.3,
+      0.36
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 556.19,
+   "t1": 557.29,
+   "room": "rooms/gym.json",
+   "who": [
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.47,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.6,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.73,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.86,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "clipboard_live",
+     "clip": "huddle",
+     "at": [
+      0.3,
+      0.86
+     ],
+     "opts": {
+      "mood": "still"
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 3.4,
+     "aim": [
+      0.31,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 3.5,
+     "aim": [
+      0.31,
+      0.5
+     ]
+    },
+    "kicks": [
+     556.4,
+     556.7,
+     557.0
+    ],
+    "kick": 0.12
+   },
+   "overlays": []
+  },
+  {
+   "t0": 557.29,
+   "t1": 558.67,
+   "room": "rooms/gym.json",
+   "who": [
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.47,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.6,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.73,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.86,
+      0.82
+     ],
+     "opts": {
+      "mood": "stare",
+      "look": -1,
+      "blank": 1
+     }
+    },
+    {
+     "card": "clipboard_live",
+     "clip": "huddle",
+     "at": [
+      0.3,
+      0.86
+     ],
+     "opts": {
+      "mood": "still"
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.8,
+     "aim": [
+      0.86,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 3.0,
+     "aim": [
+      0.86,
+      0.55
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 558.67,
+   "t1": 561.54,
+   "room": "rooms/gym.json",
+   "who": [
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.47,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.6,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.73,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "huddle",
+     "clip": "huddle",
+     "at": [
+      0.86,
+      0.82
+     ],
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 0.5
+     }
+    },
+    {
+     "card": "clipboard_live",
+     "clip": "huddle",
+     "at": [
+      0.3,
+      0.86
+     ],
+     "opts": {
+      "mood": "stare",
+      "look": 1,
+      "blank": 1
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.6,
+     "aim": [
+      0.3,
+      0.38
+     ]
+    },
+    "b": {
+     "zoom": 3.6,
+     "aim": [
+      0.3,
+      0.33
+     ]
+    },
+    "ease": "in"
+   },
+   "overlays": []
+  },
+  {
+   "t0": 561.54,
+   "t1": 563.43,
    "room": "rooms/lawn_close.json",
    "who": [
     {
-     "at": [
-      0.1,
-      0.62
-     ]
-    },
-    {
-     "at": [
-      0.26,
-      0.6
-     ]
-    },
-    {
-     "at": [
-      0.4,
-      0.61
-     ],
+     "clip": "idle",
      "face": {
+      "brows": "worried",
       "mouth": "flat"
      }
     },
     {
-     "at": [
-      0.86,
-      0.62
-     ]
+     "clip": "idle"
+    },
+    {
+     "clip": "idle",
+     "face": {
+      "brows": "worried",
+      "mouth": "flat"
+     }
+    },
+    {
+     "clip": "idle",
+     "face": {
+      "brows": "worried",
+      "mouth": "flat"
+     }
     },
     {
      "card": null,
@@ -645,7 +3778,8 @@
      "at": [
       0.02,
       0.73
-     ]
+     ],
+     "sideHead": "scared"
     }
    ],
    "add": [
@@ -657,56 +3791,141 @@
       0.73
      ],
      "face": {
-      "eyes": "open",
-      "mouth": "flat",
+      "eyes": "wide",
+      "mouth": "o",
       "brows": "worried"
      }
     }
    ],
    "events": [
     {
-     "t": 561.5,
+     "t": 561.6,
      "i": 4,
      "runTo": [
       0.55,
       0.73
      ],
      "then": "idle"
-    },
-    {
-     "t": 563.4,
-     "i": 4,
-     "card": "hug"
-    },
-    {
-     "t": 563.4,
-     "i": 5,
-     "hide": true
     }
    ],
    "cam": {
     "a": {
      "zoom": 1.3,
      "aim": [
-      0.45,
+      0.4,
       0.55
      ]
     },
     "b": {
-     "zoom": 1.8,
+     "zoom": 1.6,
      "aim": [
-      0.6,
-      0.52
+      0.55,
+      0.55
      ]
     }
-   }
+   },
+   "overlays": []
   },
   {
-   "t0": 572.9,
-   "t1": 574.3,
+   "t0": 563.43,
+   "t1": 566.52,
+   "room": "rooms/lawn_close.json",
+   "who": [
+    {
+     "clip": "idle"
+    },
+    {
+     "clip": "idle"
+    },
+    {
+     "clip": "idle"
+    },
+    {
+     "clip": "idle"
+    },
+    {
+     "card": "lift",
+     "clip": "idle",
+     "at": [
+      0.58,
+      0.74
+     ]
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.8,
+     "aim": [
+      0.58,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 2.1,
+     "aim": [
+      0.58,
+      0.55
+     ]
+    },
+    "kicks": [
+     563.45
+    ],
+    "kick": 0.6
+   },
+   "overlays": []
+  },
+  {
+   "t0": 566.52,
+   "t1": 569.7,
+   "room": "rooms/lawn_close.json",
+   "who": [
+    {
+     "clip": "idle"
+    },
+    {
+     "clip": "idle"
+    },
+    {
+     "clip": "idle"
+    },
+    {
+     "clip": "idle"
+    },
+    {
+     "card": "lift",
+     "clip": "idle",
+     "at": [
+      0.58,
+      0.74
+     ]
+    }
+   ],
+   "filter": "sepia(0.25) saturate(1.2) brightness(1.04)",
+   "cam": {
+    "a": {
+     "zoom": 2.2,
+     "aim": [
+      0.58,
+      0.45
+     ]
+    },
+    "b": {
+     "zoom": 2.6,
+     "aim": [
+      0.58,
+      0.42
+     ]
+    },
+    "ease": "linear"
+   },
+   "overlays": []
+  },
+  {
+   "t0": 569.7,
+   "t1": 571.62,
    "room": {
     "plate": {
-     "img": "art/bg_ext_dusk.png",
+     "img": "art/bg_school_chaos.png",
      "fov": 40,
      "h": 1.0,
      "pitch": 0,
@@ -714,12 +3933,13 @@
     },
     "who": []
    },
+   "filter": "sepia(0.25) saturate(1.2) brightness(1.04)",
    "cam": {
     "a": {
-     "zoom": 1.25,
+     "zoom": 1.3,
      "aim": [
       0.5,
-      0.55
+      0.5
      ]
     },
     "b": {
@@ -727,12 +3947,58 @@
     },
     "ease": "out"
    },
+   "overlays": []
+  },
+  {
+   "t0": 571.62,
+   "t1": 574.3,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_away_23.png",
+     "fov": 40,
+     "h": 0.92,
+     "pitch": 0,
+     "horizon": 0.83,
+     "holdouts": [
+      {
+       "mask": "masks/door_close_8.png",
+       "base": 0.8535,
+       "u": 0.9451
+      },
+      {
+       "mask": "masks/door_close_9.png",
+       "base": 0.9932,
+       "u": 0.1063
+      }
+     ]
+    },
+    "tint": 8884397,
+    "who": [],
+    "name": "door_close"
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.2,
+     "aim": [
+      0.45,
+      0.48
+     ]
+    },
+    "b": {
+     "zoom": 1.45,
+     "aim": [
+      0.45,
+      0.48
+     ]
+    },
+    "ease": "linear"
+   },
    "overlays": [
     {
      "type": "black",
-     "t0": 573.8,
+     "t0": 573.6,
      "t1": 574.4,
-     "fadeIn": 0.5,
+     "fadeIn": 0.6,
      "fadeOut": 0.01
     }
    ]

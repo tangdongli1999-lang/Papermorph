@@ -11,7 +11,7 @@ MAP = {'birds': 'ambience-ambforst-forestbirds-os-02.mp3', 'birds_loop': 'ambien
        'room_class': 'room_class.wav', 'room_dark': 'room_class.wav', 'dread_bed': 'dread_bed.wav', 'ext_air': 'ext_air.wav', 'rumble': 'synth-rumble.mp3',
        'creepy_whisper': 'voice-voxwhsp-whisperscreepy-os-01.mp3', 'creak': 'foley-woodfric-creakscreepy-os-01.mp3', 'flicker': 'synth-flicker.mp3', 'breath': 'voice-breath.mp3',
        'slam': 'impact-wood-slam-01.mp3', 'sneakers_c': 'el_sneakers_c.wav', 'heels_c': 'el_heels_c.wav', 'boots_c': 'el_boots_c.wav', 'knocks3_c': 'el_knocks3_c.wav', **{f'{k}{i}': f'el_step_{k}{i}.wav' for k in ('sneaker', 'heel', 'boot') for i in (1, 2)},
-       **{k: f'el_{k}_n.wav' for k in ['huddle_cry', 'giggles', 'whispers', 'breath', 'kinder', 'class', 'scramble', 'teeth', 'hall', 'exterior', 'gasp', 'sneakers', 'heels', 'boots', 'rattle', 'handle_down', 'recede', 'relief_cry', 'exhale', 'knocks3', 'buzzbed', 'buzz', 'ringback', 'mombreath', 'weight', 'pound', 'laugh', 'radio_off', 'glitch']}}
+       **{k: f'el_{k}_n.wav' for k in ['huddle_cry', 'giggles', 'whispers', 'breath', 'kinder', 'class', 'scramble', 'teeth', 'hall', 'exterior', 'gasp', 'sneakers', 'heels', 'boots', 'rattle', 'handle_down', 'recede', 'relief_cry', 'exhale', 'knocks3', 'buzzbed', 'buzz', 'ringback', 'mombreath', 'weight', 'pound', 'laugh', 'radio_off', 'glitch', 'squad', 'keyturn', 'gym', 'bottle', 'chaos']}}
 FILT = {'room_dark': 'lowpass=f=700', 'step_far': 'lowpass=f=1500'}
 cache = {}
 def load(name):

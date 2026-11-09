@@ -3,7 +3,6 @@ usage: python3 gen.py job [job ...]   (jobs in jobs.json: {name: [prompt, [ref p
 import base64, json, os, subprocess, sys
 from concurrent.futures import ThreadPoolExecutor
 KEY=os.environ['IMAGE_API_KEY'];   # never stored in the repo
-OUT='/home/claude/lockdown/art/out'; os.makedirs(OUT,exist_ok=True)
 J=json.load(open('/home/claude/lockdown/art/jobs.json'))
 def run(j):
     out=f'{OUT}/{j}.png'

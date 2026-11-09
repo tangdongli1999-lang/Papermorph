@@ -35,6 +35,12 @@
    ]
   }
  },
+ "line": {
+  "file": "cards/line.webp",
+  "w": 1449,
+  "h": 862,
+  "height_m": 1.72
+ },
  "phone": {
   "file": "cards/phone.webp",
   "w": 396,

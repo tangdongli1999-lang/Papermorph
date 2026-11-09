@@ -66,7 +66,9 @@ def gcut(path):
     gness = G - np.maximum(R, B)
     alpha = np.clip(1 - (gness - 25) / 50, 0, 1)                      # >75 above the others: background; <25: subject
     m = alpha > 0.5; lab, n = nd.label(m)
-    if n > 1: m = lab == (1 + int(np.argmax(nd.sum(m, lab, range(1, n + 1)))))
+    if n > 1 and group_m:   # a group picture: keep every figure, drop only specks
+        sz = nd.sum(m, lab, range(1, n + 1)); m = np.isin(lab, 1 + np.where(sz > 0.02 * sz.max())[0])
+    elif n > 1: m = lab == (1 + int(np.argmax(nd.sum(m, lab, range(1, n + 1)))))
     m = nd.binary_fill_holes(m); alpha = np.where(m, np.maximum(alpha, nd.binary_erosion(m, iterations=2)), 0)
     G2 = np.where(gness > 0, np.maximum(R, B) + 0.3 * np.maximum(0, gness) * 0, G)   # despill: green never above red/blue
     out = np.dstack([R, np.minimum(G, np.maximum(R, B) + 6), B, alpha * 255]).astype(np.uint8)
@@ -168,7 +170,9 @@ def head_card(img, cx):
     c = img.crop((int(round(x0)), int(round(y0)), int(round(x0 + 512 * f)), int(round(y0 + 512 * f)))).resize((512, 512), Image.LANCZOS)
     import scipy.ndimage as nd
     a = np.asarray(c).copy(); m = nd.binary_opening(a[..., 3] > 128, iterations=2); lab, n = nd.label(m)
-    if n > 1: m = lab == (1 + int(np.argmax(nd.sum(m, lab, range(1, n + 1)))))
+    if n > 1 and group_m:   # a group picture: keep every figure, drop only specks
+        sz = nd.sum(m, lab, range(1, n + 1)); m = np.isin(lab, 1 + np.where(sz > 0.02 * sz.max())[0])
+    elif n > 1: m = lab == (1 + int(np.argmax(nd.sum(m, lab, range(1, n + 1)))))
     a[..., 3] = np.where(m, a[..., 3], 0); a[466:, :, 3] = 0; a[450:466, :, 3] = (a[450:466, :, 3] * np.linspace(1, 0, 16)[:, None]).astype(np.uint8)
     return rim(Image.fromarray(a))
 
@@ -279,18 +283,20 @@ def headless_card(path, name, d, cards):
     os.makedirs(f'{d}/cards', exist_ok=True); im.save(f'{d}/cards/{name}.webp', quality=92)
     cards[name] = {'file': f'cards/{name}.webp', 'w': im.width, 'h': im.height, 'height_m': round(im.height / 1400 * 1.7, 3), 'head': {'at': [nx, top + 14]}}
 
-def card(path, name, d, cards, target_h=None, ref_w=None):
+def card(path, name, d, cards, target_h=None, ref_w=None, group_m=None):
     """A drawn pose, cut and scaled like Dong's cards (standing poses: frame height; floor poses: beanie/head width)."""
     import scipy.ndimage as nd
     im = cut(path); a = np.asarray(im).copy(); m = nd.binary_opening(a[..., 3] > 128, iterations=3); lab, n = nd.label(m)
-    if n > 1: m = lab == (1 + int(np.argmax(nd.sum(m, lab, range(1, n + 1)))))
+    if n > 1 and group_m:   # a group picture: keep every figure, drop only specks
+        sz = nd.sum(m, lab, range(1, n + 1)); m = np.isin(lab, 1 + np.where(sz > 0.02 * sz.max())[0])
+    elif n > 1: m = lab == (1 + int(np.argmax(nd.sum(m, lab, range(1, n + 1)))))
     a[..., 3] = np.where(m, a[..., 3], 0); im = Image.fromarray(a); im = im.crop(im.getbbox())
     h = target_h or 1400
     if ref_w: k = ref_w
     else: k = h / im.height
     im = im.resize((max(1, round(im.width * k)), max(1, round(im.height * k))), Image.LANCZOS)
     os.makedirs(f'{d}/cards', exist_ok=True); im.save(f'{d}/cards/{name}.webp', quality=92)
-    cards[name] = {'file': f'cards/{name}.webp', 'w': im.width, 'h': im.height, 'height_m': round(im.height / 1400 * 1.7, 3)}
+    cards[name] = {'file': f'cards/{name}.webp', 'w': im.width, 'h': im.height, 'height_m': group_m or round(im.height / 1400 * 1.7, 3)}
 
 CAST = {   # name: (long sleeves?, height in metres)
     'dong': (False, 1.70), 'tyler': (False, 1.76), 'priya': (False, 1.63), 'marcus': (False, 1.84), 'kid_a': (False, 1.62), 'kid_b': (False, 1.72),
@@ -326,22 +332,23 @@ def build(name):
             card(f'{ART}/{f}.png', n, d, cards, ref_w=1.0)
     if os.path.exists(f'{ART}/{src}_sit_floor_headless.png'): headless_card(f'{ART}/{src}_sit_floor_headless.png', 'huddle', d, cards)
     EXTRA = {'dong': [('sit_desk', 'dong_uni_sit_desk', 1.0), ('floor_phone', 'dong_uni_floor_phone', 1.0), ('phone_whisper', 'dong_uni_phone_whisper', 1.0), ('phone_discreet', 'dong_uni_phone_discreet', 1.0), ('crawl', 'dong_uni_crawl', 1 / 1.45)],
-             'tyler': [('sit_desk', 'tyler_sit_desk', 1.0), ('hands_mouth', 'tyler_hands_mouth', 1.0), ('face_knees', 'tyler_face_knees', 1.0)], 'priya': [('sit_desk', 'priya_sit_desk', 1.0), ('grab', 'priya_grab', 1.0)], 'dawes': [('menu', 'dawes_menu', 1.0)], 'marcus': [('sit_desk', 'marcus_sit_desk', 1.0)],
+             'tyler': [('sit_desk', 'tyler_sit_desk', 1.0), ('hands_mouth', 'tyler_hands_mouth', 1.0), ('face_knees', 'tyler_face_knees', 1.0)], 'priya': [('sit_desk', 'priya_sit_desk', 1.0), ('grab', 'priya_grab', 1.0)], 'dawes': [('menu', 'dawes_menu', 1.0)], 'marcus': [('sit_desk', 'marcus_sit_desk', 1.0), ('asleep', 'marcus_asleep', 1.0), ('comfort', 'marcus_comfort', 1.0)],
              'kid_a': [('sit_desk', 'kid_a_sit_desk', 1.0)], 'kid_b': [('sit_desk', 'kid_b_sit_desk', 1.0)],
-             'mom': [('phone_ear', 'mom_phone_ear', 1.0), ('phone_text', 'mom_phone_hold', 1 / 1.34), ('hug', 'mom_hug', 1.0)],
+             'mom': [('phone_ear', 'mom_phone_ear', 1.0), ('phone_text', 'mom_phone_hold', 1 / 1.34), ('hug', 'mom_hug', 1.0), ('lift', 'mom_lift_hug', 1.0)],
              'harlow': [('phone', 'harlow_phone', 1 / 1.17), ('book', 'harlow_book', 1.0), ('shush', 'harlow_shush', 1.0), ('hands', 'harlow_hands', 1.0), ('floor_phone', 'harlow_floor_phone', 1.0), ('confiscate', 'harlow_confiscate', 1.0)], 'district': [('clipboard', 'district_clipboard', 1.0)]}
     # poses with the head taken off, so the live head (blinks, talks, expressions) sits on them
-    for n, f in {'harlow': [('book_live', 'harlow_book_headless'), ('hands_live', 'harlow_hands_headless')], 'dong': [('phone_live', 'dong_uni_phone_whisper_headless')], 'mom': [('phone_live', 'mom_phone_ear_headless')]}.get(name, []):
+    for n, f in {'harlow': [('book_live', 'harlow_book_headless'), ('hands_live', 'harlow_hands_headless')], 'dong': [('phone_live', 'dong_uni_phone_whisper_headless')], 'mom': [('phone_live', 'mom_phone_ear_headless')], 'district': [('clipboard_live', 'district_clipboard_headless')]}.get(name, []):
         if os.path.exists(f'{ART}/{f}.png'): headless_card(f'{ART}/{f}.png', n, d, cards)
         if n == 'phone_live' and n in cards and cards[n].get('head'): cards[n]['head']['behind'] = True   # the phone hand is in front of the face
         if (name, n) in MANUAL_HEAD and n in cards: cards[n]['head']['at'] = MANUAL_HEAD[(name, n)]   # where the neck finder is fooled by hands held up near the face
+    if name == 'harlow' and os.path.exists(f'{ART}/single_file.png'): card(f'{ART}/single_file.png', 'line', d, cards, ref_w=1.0, group_m=1.72)   # the class walking out single file, hand on shoulder (bbox top = Ms. Harlow's bun)
     for n, f, rw in EXTRA.get(name, []):
         if os.path.exists(f'{ART}/{f}.png'): card(f'{ART}/{f}.png', n, d, cards, ref_w=rw)
     for n, f in [('sit_floor_knees', f'{src}_sit_floor')]:
         if name != 'dong' and os.path.exists(f'{ART}/{f}.png'): card(f'{ART}/{f}.png', n, d, cards, ref_w=1.0)
     # floor and crouch cards came out at about the same pixel scale as the standing images: keep their size relative to the 1536 px source
     for n, c in cards.items():
-        if n in ('sit_floor_knees', 'crouch_hide', 'shush', 'hands', 'hands_mouth', 'grab', 'floor_phone', 'phone_whisper', 'phone_discreet', 'face_knees'): c['height_m'] = round(c['h'] / 1400 * 1.7, 3)
+        if n in ('sit_floor_knees', 'crouch_hide', 'shush', 'hands', 'hands_mouth', 'grab', 'floor_phone', 'phone_whisper', 'phone_discreet', 'face_knees', 'asleep', 'comfort'): c['height_m'] = round(c['h'] / 1400 * 1.7, 3)
     for v in R['views'].values():
         for p in v['pieces'].values():
             if not p['file'].startswith('heads/'): p['size'] = list(Image.open(f"{d}/{p['file']}").size)
