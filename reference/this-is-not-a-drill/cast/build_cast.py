@@ -326,7 +326,7 @@ def build(name):
             card(f'{ART}/{f}.png', n, d, cards, ref_w=1.0)
     if os.path.exists(f'{ART}/{src}_sit_floor_headless.png'): headless_card(f'{ART}/{src}_sit_floor_headless.png', 'huddle', d, cards)
     EXTRA = {'dong': [('sit_desk', 'dong_uni_sit_desk', 1.0), ('floor_phone', 'dong_uni_floor_phone', 1.0), ('phone_whisper', 'dong_uni_phone_whisper', 1.0), ('phone_discreet', 'dong_uni_phone_discreet', 1.0), ('crawl', 'dong_uni_crawl', 1 / 1.45)],
-             'tyler': [('sit_desk', 'tyler_sit_desk', 1.0), ('hands_mouth', 'tyler_hands_mouth', 1.0)], 'priya': [('sit_desk', 'priya_sit_desk', 1.0), ('grab', 'priya_grab', 1.0)], 'dawes': [('menu', 'dawes_menu', 1.0)], 'marcus': [('sit_desk', 'marcus_sit_desk', 1.0)],
+             'tyler': [('sit_desk', 'tyler_sit_desk', 1.0), ('hands_mouth', 'tyler_hands_mouth', 1.0), ('face_knees', 'tyler_face_knees', 1.0)], 'priya': [('sit_desk', 'priya_sit_desk', 1.0), ('grab', 'priya_grab', 1.0)], 'dawes': [('menu', 'dawes_menu', 1.0)], 'marcus': [('sit_desk', 'marcus_sit_desk', 1.0)],
              'kid_a': [('sit_desk', 'kid_a_sit_desk', 1.0)], 'kid_b': [('sit_desk', 'kid_b_sit_desk', 1.0)],
              'mom': [('phone_ear', 'mom_phone_ear', 1.0), ('phone_text', 'mom_phone_hold', 1 / 1.34), ('hug', 'mom_hug', 1.0)],
              'harlow': [('phone', 'harlow_phone', 1 / 1.17), ('book', 'harlow_book', 1.0), ('shush', 'harlow_shush', 1.0), ('hands', 'harlow_hands', 1.0), ('floor_phone', 'harlow_floor_phone', 1.0), ('confiscate', 'harlow_confiscate', 1.0)], 'district': [('clipboard', 'district_clipboard', 1.0)]}
@@ -341,7 +341,7 @@ def build(name):
         if name != 'dong' and os.path.exists(f'{ART}/{f}.png'): card(f'{ART}/{f}.png', n, d, cards, ref_w=1.0)
     # floor and crouch cards came out at about the same pixel scale as the standing images: keep their size relative to the 1536 px source
     for n, c in cards.items():
-        if n in ('sit_floor_knees', 'crouch_hide', 'shush', 'hands', 'hands_mouth', 'grab', 'floor_phone', 'phone_whisper', 'phone_discreet'): c['height_m'] = round(c['h'] / 1400 * 1.7, 3)
+        if n in ('sit_floor_knees', 'crouch_hide', 'shush', 'hands', 'hands_mouth', 'grab', 'floor_phone', 'phone_whisper', 'phone_discreet', 'face_knees'): c['height_m'] = round(c['h'] / 1400 * 1.7, 3)
     for v in R['views'].values():
         for p in v['pieces'].values():
             if not p['file'].startswith('heads/'): p['size'] = list(Image.open(f"{d}/{p['file']}").size)

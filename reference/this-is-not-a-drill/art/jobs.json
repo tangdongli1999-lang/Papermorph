@@ -1600,5 +1600,34 @@
    "/home/claude/lockdown/art/out/dong_uni_sit_floor.png"
   ],
   "1024x1536"
+ ],
+ "plate_door_close_peeled": [
+  "Edit image 1. Keep EXACTLY the same picture, camera, framing, door, walls, desk, bookshelf, the warm light strip under the door, colours and felt paper style. Change ONLY the black paper taped over the door's window: its TOP-LEFT corner has come unstuck and peeled down a little, curling forward, so a small TRIANGLE of window glass shows in that corner, with dim grey hallway light coming through the triangle. The rest of the paper still covers the window. Nothing else changes.",
+  [
+   "/home/claude/lockdown/art/out/plate_door_close_covered.png"
+  ],
+  "1536x1024"
+ ],
+ "tyler_face_knees": [
+  "Edit image 1. Keep EXACTLY the same boy (Tyler: curly hair, freckles, school uniform), the same sitting pose on the floor with knees pulled up, the same size and position on the canvas. Change only this: his face is pressed down into his knees, hidden, his arms wrapped tightly around his legs, his shoulders hunched and shaking, crying quietly; we see the top of his curly head, not his face. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/tyler_sit_floor.png"
+  ],
+  "1024x1536"
+ ],
+ "marcus_comfort": [
+  "Edit image 1. ONLY ONE CHARACTER in the picture: this same boy (Marcus), nobody else, no other child. Keep the same sitting pose on the floor with knees up, the same size and the same position on the canvas. Change only his arm on the LEFT side of the picture: it stretches out sideways to the left, low, at about knee height, the hand open and flat as if resting gently on the back of someone sitting next to him (that person is NOT drawn). His other arm stays around his knees. His face is sad and worried, eyes looking down to the left. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/marcus_sit_floor.png"
+  ],
+  "1024x1536"
+ ],
+ "bg_radio": [
+  "Create a new image, wide 16:9. A close-up of an old-fashioned portable radio on a kitchen counter, and a hand turning its knob to switch it OFF; the radio's little dial light just going dark. Dim, quiet, a little eerie. No people's faces. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, slightly muted colours.",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/bg_kitchen_mom.png"
+  ],
+  "1536x1024"
  ]
 }

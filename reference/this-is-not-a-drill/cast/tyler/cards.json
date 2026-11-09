@@ -23,6 +23,12 @@
   "h": 967,
   "height_m": 1.174
  },
+ "face_knees": {
+  "file": "cards/face_knees.webp",
+  "w": 455,
+  "h": 798,
+  "height_m": 0.969
+ },
  "sit_floor_knees": {
   "file": "cards/sit_floor_knees.webp",
   "w": 471,
