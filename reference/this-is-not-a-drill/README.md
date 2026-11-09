@@ -1,6 +1,6 @@
 # This Is Not a Drill: quality reference
 
-A complete, working copy of the paper-puppet horror video *This Is Not a Drill* (11:34, 6 chapters): code, character rigs and art, sets, lighting, camera, sound and voice-over. Use it as the reference for how these videos should look, sound and be built. The director's rules that shaped it are in `docs/` and in the Papermorph project docs (`director-notes.md`, `video-workflow.md`).
+A complete, working copy of the paper-puppet horror video *This Is Not a Drill* (11:34, 6 chapters): code, character rigs and art, sets, lighting, camera, sound and voice-over. Use it as the reference for how these videos should look, sound and be built. **Read `docs/director-notes.md` (every rule the director has given, in their words) and `docs/video-workflow.md` (the working order and what each step needs) before making a video.** `docs/lockdown-shotlist.md` is the shot list for this film.
 
 `sample/this-is-not-a-drill-ch1-excerpt.mp4` is a 47-second finished excerpt of Chapter 1 (0:56–1:44): the lockdown, the huddle, the flashback, and the footsteps at the end.
 
