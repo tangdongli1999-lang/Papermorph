@@ -18,6 +18,19 @@ def feet(n, x0, v=0.80, pace=0.55, tint=SIL, extra=None):
     """legs only: someone walking past in the dim hallway, the camera down at floor level"""
     w = [{'n': n, 'view': 'side', 'facing': 1, 'clip': 'walk', 'opts': {'pace': pace}, 'at': [x0, v]}] + (extra or [])
     return withplate('hallway_side', 'bg_hallway_side_dim', who=w, tint=tint)
+GAIT = dict(stride=0.8, arms=0.6, knee=0.9, lean=0.5, armOut=0, elbow=0.8, bounce=0, head=0)   # one shared walk, so swapped legs match exactly
+def walker(n, at, t0, first, period, scale=1.0, hidden=False, warm=0.8):
+    """a side-view walker whose foot lands at film time `first`, then every `period` s (phase pinned, see dong.js opts.phase)"""
+    ph = (period / 2 - (first - t0 + warm)) % period
+    w = {'n': n, 'view': 'side', 'facing': 1, 'clip': 'walk', 'opts': {**GAIT, 'pace': 1 / (1.8 * period), 'phase': ph}, 'at': at}
+    if scale != 1.0: w['scale'] = scale
+    if hidden: w['hidden'] = 1
+    return w
+def steps(first, period, t1): return [round(first + period * k, 3) for k in range(100) if first + period * k < t1 - 0.05]
+def legs(walkers, tint=SIL): return withplate('hallway_side', 'bg_hallway_side_dim', who=walkers, tint=tint)
+FOLLOW = lambda zoom=2.6, v=0.70: {'a': {'zoom': zoom, 'aim': [0.3, v]}, 'b': {'zoom': zoom, 'aim': [0.3, v]}, 'follow': 0}
+W = json.load(open('/home/claude/lockdown/vo/words.json'))
+def caption(line, t0, t1, size=84, y=0.5, x=0.45): return {'type': 'words', 'words': [[w[0], w[2]] for w in W[line]], 'x': x, 'y': y, 'size': size, 't0': t0, 't1': t1, 'fadeIn': 0.05, 'fadeOut': 0.05}
 def huddle(**m):
     out = moods(**m); h = out[6]
     out[6] = {**(h or {}), **HFRONT}
@@ -27,8 +40,8 @@ LISTEN = dict(tyler=('shake', 1.0), dong=('shiver', 1.1), marcus='lookaround', p
 FROZEN = dict(tyler=('shake', 2.0), dong=('shiver', 1.6), marcus='shock', priya='shock', kid_a='terror', kid_b=('shake', 1.6), harlow={'opts': {'mood': 'shock'}})
 
 # 107.0 "They weren't running." - a dark shape's legs walking slowly past, nowhere near a run
-F.shot(107.0, 107.99, feet('deputy', 0.22, pace=0.5), cam={'a': {'zoom': 2.6, 'aim': [0.3, 0.70]}, 'b': {'zoom': 2.6, 'aim': [0.4, 0.70]}})
-for t in (107.15, 107.75): sfx(t, 'step2', 0.7)
+F.shot(107.0, 107.99, legs([walker('deputy', [0.22, 0.80], 107.0, 107.15, 0.6)]), cam=FOLLOW())
+for t in steps(107.15, 0.6, 107.99): sfx(t, 'boot1', 1.0)
 # 107.99 "That's what scared me." - Dong, terrified
 F.shot(107.99, 109.49, 'rooms/corner_dark.json', who=huddle(**SCARED), cam=close('dong', 2.6, 3.0))
 # 109.49 "In every drill they tell you what to listen for," - everybody listening hard
@@ -36,8 +49,8 @@ F.shot(109.49, 112.02, 'rooms/corner_dark.json', who=huddle(**LISTEN), cam={'a':
 # 112.02 "and nobody ever told us about this." - Dong and Tyler, eyes on the door
 F.shot(112.02, 114.39, 'rooms/corner_dark.json', who=huddle(**{**LISTEN, 'dong': ('shiver', 1.3), 'tyler': ('shake', 1.3)}), cam={'a': {'zoom': 2.2, 'aim': [0.21, 0.5]}, 'b': {'zoom': 2.4, 'aim': [0.21, 0.5]}})
 # 114.39 "Slow." 115.26 "Even." - one step, then the next, each landing on its word
-F.shot(114.39, 115.9, feet('deputy', 0.30, pace=0.45), cam={'a': {'zoom': 3.0, 'aim': [0.36, 0.72]}, 'b': {'zoom': 3.1, 'aim': [0.42, 0.72]}})
-sfx(114.42, 'step1', 1.1); sfx(115.28, 'step3', 1.1)
+F.shot(114.39, 115.9, legs([walker('deputy', [0.28, 0.80], 114.39, 114.42, 0.86)]), cam=FOLLOW(3.0, 0.72))
+sfx(114.42, 'boot1', 1.3); sfx(115.28, 'boot2', 1.3)
 # 115.9 "Like somebody walking to their car on a Sunday." - a dad strolling to his car in the sunshine
 SUN = flatwho('bg_sunday_driveway', [{'n': 'parent_a', 'view': 'side', 'facing': 1, 'clip': 'walk', 'opts': {'pace': 0.6}, 'at': [0.22, 0.86], 'face': {'mouth': 'grin'}}])
 SUN['plate'].update(h=1.5, horizon=0.56)
@@ -46,22 +59,34 @@ sfx(115.9, 'whoosh', 0.5); sfx(117.3, 'keys', 0.5)
 # 118.68 "And there was something else, something I didn't understand until later." - Dong, working it out
 F.shot(118.68, 122.6, 'rooms/corner_dark.json', who=huddle(**{**LISTEN, 'dong': 'glance'}), cam=close('dong', 2.2, 2.9))
 sfx(119.0, 'riser', 0.3)
-# 122.6 "Every few steps, the footsteps changed." - the shape's legs again
-F.shot(122.6, 124.81, feet('deputy', 0.18, pace=0.5), cam={'a': {'zoom': 2.6, 'aim': [0.26, 0.70]}, 'b': {'zoom': 2.6, 'aim': [0.38, 0.70]}})
-for t in (122.9, 123.95): sfx(t, 'step2', 0.8)
-# 124.81 "Sneakers squeaking on the floor." 126.46 "Then heels, clicking." 127.89 "Then heavy work boots." - the same walk, three different pairs of shoes
-for t0, t1, n, snd in [(124.81, 126.46, 'tyler', 'sneakers_c'), (126.46, 127.89, 'district', 'heels_c'), (127.89, 129.2, 'deputy', 'boots_c')]:
-    F.shot(t0, t1, feet(n, 0.30, pace=0.55, tint=0x7a8199), cam={'a': {'zoom': 3.2, 'aim': [0.33, 0.73]}, 'b': {'zoom': 3.2, 'aim': [0.41, 0.73]}})
-    sfx(t0 + 0.02, snd, 1.3)
-# 129.2 "Like whoever it was couldn't decide who they wanted to be." - the legs flicker between the three as it walks
-CYC = feet('tyler', 0.30, pace=0.55, tint=0x7a8199, extra=[{'n': 'district', 'view': 'side', 'facing': 1, 'clip': 'walk', 'opts': {'pace': 0.55}, 'at': [0.30, 0.80], 'hidden': 1},
-                                                          {'n': 'deputy', 'view': 'side', 'facing': 1, 'clip': 'walk', 'opts': {'pace': 0.55}, 'at': [0.30, 0.80], 'hidden': 1}])
-ev = []
-for k, t in enumerate([129.55, 129.85, 130.15, 130.4, 130.62, 130.82]):
-    a, b = k % 3, (k + 1) % 3; ev += [{'t': t, 'i': a, 'hide': 1}, {'t': t, 'i': b, 'show': 1}]
-F.shot(129.2, 131.04, CYC, events=ev, cam={'a': {'zoom': 3.2, 'aim': [0.33, 0.73]}, 'b': {'zoom': 3.2, 'aim': [0.40, 0.73]}})
-for t, s in zip([129.55, 129.85, 130.15, 130.4, 130.62, 130.82], ['heels_c', 'boots_c', 'sneakers_c'] * 2): sfx(t, s, 0.0)   # (picture only; the sound below)
-sfx(129.3, 'step1', 0.7); sfx(129.85, 'step3', 0.7); sfx(130.4, 'step2', 0.7); sfx(130.82, 'step1', 0.7)
+# 122.6 "Every few steps, the footsteps changed." - the shape's legs, centred, each step landing on a footstep
+F.shot(122.6, 124.81, legs([walker('deputy', [0.22, 0.80], 122.6, 122.9, 0.6)]), cam=FOLLOW())
+for t in steps(122.9, 0.6, 124.81): sfx(t, 'boot2', 0.9)
+# 124.81 "Sneakers squeaking on the floor." 126.46 "Then heels, clicking." 127.89 "Then heavy work boots." 129.2 "Like whoever it was couldn't decide who they wanted to be."
+# One walk, three pairs of legs on top of each other in exact step (same gait, same phase, scaled to the same height).
+# Only one shows at a time and the swap happens on the frame a foot lands, so the legs never jump.
+SWAP0, PER = 124.81, 0.715   # 'heels' 126.46 and 'boots' 127.89 are exactly two steps apart
+def stack(t0, first, x, show):
+    ws = [walker('parent_a', [x, 0.80], t0, first, PER), walker('district', [x, 0.80], t0, first, PER, scale=1.80 / 1.65), walker('deputy', [x, 0.80], t0, first, PER, scale=1.80 / 1.83)]
+    for i, w in enumerate(ws):
+        w['opts']['stride'] = 0.42           # a shorter stride keeps the walk inside the hallway
+        if i: w['tie'] = 0
+        if i != show: w['hidden'] = 1
+    return ws
+SWAPS = [(126.46, 1), (127.89, 2), (129.32, 0), (130.035, 1), (130.75, 2)]   # (footfall, who shows): heels on "heels", boots on "boots", then it can't decide
+def swap_events(t0, t1, show):
+    ev, cur_i = [], show
+    for t, i in SWAPS:
+        if t0 < t < t1: ev += [{'t': t, 'i': cur_i, 'hide': 1}, {'t': t, 'i': i, 'show': 1}]; cur_i = i
+    return ev
+F.shot(SWAP0, 129.2, legs(stack(SWAP0, 125.03, 0.03, 0), tint=0x7a8199), events=swap_events(SWAP0, 129.2, 0), cam=FOLLOW(3.0, 0.73))
+F.shot(129.2, 131.04, legs(stack(129.2, 129.32, 0.22, 2), tint=0x7a8199), events=swap_events(129.2, 131.04, 2), cam=FOLLOW(2.8, 0.72))
+SHOE = ['sneaker', 'heel', 'boot']
+for k, t in enumerate(steps(125.03, PER, 131.04)):
+    who = 0
+    for ts, i in SWAPS:
+        if t >= ts - 0.01: who = i
+    sfx(t, f'{SHOE[who]}{1 + k % 2}', 1.5)
 F.shot(131.04, 132.16, 'rooms/corner_dark.json', who=huddle(**{**SCARED, 'dong': ('shiver', 1.6)}), cam=close('dong', 2.8, 3.1))
 # 132.16 "Then the doors." - the hallway, its row of classroom doors
 F.shot(132.16, 133.24, withplate('hallway_side', 'bg_hallway_side_dim', who=[], tint=HALLDIM), cam={'a': {'zoom': 1.0}, 'b': {'zoom': 1.15, 'aim': [0.35, 0.5]}})
@@ -84,12 +109,13 @@ SFX[-1] = [138.86 - 0.4, 'rattle', 1.2]
 door_shot(139.98, 142.17, '212', [140.6], {'a': {'zoom': 1.6, 'aim': [0.63, 0.56]}, 'b': {'zoom': 1.2, 'aim': [0.75, 0.5]}})
 sfx(140.2, 'rattle', 1.5)
 # 142.17 "And then the footsteps stopped right outside ours." - from inside: the strip of light under our door, then two shadows in it
-F.shot(142.17, 144.67, DOOR(), events=[{'t': 143.15, 'plate': 'art/bg_door_close_full.png'}], cam={'a': {'zoom': 1.3, 'aim': [0.45, 0.72]}, 'b': {'zoom': 1.9, 'aim': [0.45, 0.82]}})
-for k, t in enumerate([142.25, 142.7, 143.13]): sfx(t, ['step1', 'step2', 'step3'][k], 1.0 + 0.3 * k)
+ARR = [{'t': round(142.4 + k * 0.094, 3), 'plate': f'art/plate_door_arrive_{k}.png'} for k in range(8)]
+F.shot(142.17, 144.67, DOOR('plate_door_arrive_start'), events=ARR, cam={'a': {'zoom': 1.5, 'aim': [0.45, 0.78]}, 'b': {'zoom': 1.9, 'aim': [0.45, 0.82]}})
+sfx(142.25, 'boot1', 0.9); sfx(142.78, 'boot2', 1.3); sfx(143.15, 'boot1', 1.6)
 sfx(143.2, 'hit', 0.5)
 # 144.67 "The handle went down, slowly, all the way to the lock, and stayed there." - our lever, pressed from outside
-HEV = [{'t': round(145.13 + k * (2.09 / 18), 3), 'plate': f'art/bg_handle_inside_lv{-2 * (k + 1)}.png'} for k in range(18)]
-F.shot(144.67, 148.61, flat('bg_handle_inside_lv0', tint=0x4f566e), plateTint=0x4f566e, events=HEV, cam={'a': {'zoom': 1.3, 'aim': [0.6, 0.6]}, 'b': {'zoom': 1.55, 'aim': [0.62, 0.66]}, 'ease': 'linear'})
+HEV = [{'t': round(145.13 + k * (2.09 / 18), 3), 'plate': f'art/bg_handle_closed_lv{-2 * (k + 1)}.png'} for k in range(18)]
+F.shot(144.67, 148.61, flat('bg_handle_closed_lv0', tint=0x4f566e), plateTint=0x4f566e, events=HEV, cam={'a': {'zoom': 1.3, 'aim': [0.6, 0.6]}, 'b': {'zoom': 1.55, 'aim': [0.62, 0.66]}, 'ease': 'linear'})
 sfx(144.6, 'handle_down', 1.6); sfx(147.25, 'click', 0.7)
 # 148.61 "Nobody breathed." - the whole class frozen
 F.shot(148.61, 149.92, 'rooms/corner_dark.json', who=huddle(**{**FROZEN, 'harlow': {'opts': {'mood': 'still'}}}), cam={'a': {'zoom': 1.02}, 'b': {'zoom': 1.04}})
@@ -99,13 +125,13 @@ F.shot(149.92, 152.13, 'rooms/corner_dark.json', who=[{'card': 'hands_mouth', 'c
 # 152.13 "And then three knocks. Soft. Polite." - knock, knock, knock: one on each word
 F.shot(152.13, 155.8, DOOR('bg_door_close_full'), cam={'a': {'zoom': 1.2, 'aim': [0.45, 0.48]}, 'b': {'zoom': 1.35, 'aim': [0.45, 0.48]}, 'kicks': [152.97, 153.51, 154.1], 'kick': 0.9})
 sfx(152.71, 'knocks3_c', 2.5)
-# 155.8 THING (in Dawes's voice, through the door): "Ms. Harlow? It's Principal Dawes."
-F.shot(155.8, 158.47, DOOR('bg_door_close_full'), cam={'a': {'zoom': 1.35, 'aim': [0.45, 0.45]}, 'b': {'zoom': 1.8, 'aim': [0.45, 0.42]}, 'ease': 'linear'})
-# 158.47 "It's okay. It's over." - faces lift: hope
+# 155.8 THING (in Dawes's voice, through the door): "Ms. Harlow? It's Principal Dawes. It's okay. It's over. You can all come out now." - red words on the door, word by word
+CAP6 = caption('c2_06', 155.7, 161.2, size=84, y=0.56)
+F.shot(155.8, 158.47, DOOR('bg_door_close_full'), cam={'a': {'zoom': 1.2, 'aim': [0.45, 0.46]}, 'b': {'zoom': 1.5, 'aim': [0.45, 0.45]}, 'ease': 'linear'}, overlays=[CAP6])
+F.shot(158.47, 161.2, DOOR('bg_door_close_full'), cam={'a': {'zoom': 1.5, 'aim': [0.45, 0.5]}, 'b': {'zoom': 1.75, 'aim': [0.45, 0.5]}, 'ease': 'linear'}, overlays=[CAP6])
+# 161.2 the faces lift: hope
 HOPE = huddle(tyler='glance', dong={'opts': {'mood': 'calm'}, 'face': {'brows': 'up'}}, marcus='calm', priya='glance', kid_a='calm', kid_b='calm', harlow={'opts': {'mood': 'lookup'}})
-F.shot(158.47, 160.38, 'rooms/corner_dark.json', who=HOPE, cam={'a': {'zoom': 1.1, 'aim': [0.5, 0.5]}, 'b': {'zoom': 1.25, 'aim': [0.55, 0.5]}})
-# 160.38 "You can all come out now."
-F.shot(160.38, 162.68, DOOR('bg_door_close_full'), cam={'a': {'zoom': 1.5, 'aim': [0.45, 0.45]}, 'b': {'zoom': 1.7, 'aim': [0.45, 0.44]}})
+F.shot(161.2, 162.68, 'rooms/corner_dark.json', who=HOPE, cam={'a': {'zoom': 1.1, 'aim': [0.5, 0.5]}, 'b': {'zoom': 1.25, 'aim': [0.55, 0.5]}})
 # 162.68 "It was him." - Dong lets himself breathe
 F.shot(162.68, 163.84, 'rooms/corner_dark.json', who=HOPE, cam=close('dong', 2.6, 2.8))
 # 163.84 "Same voice, same tired, warm, dad voice that reads the lunch menu every morning." - Dawes at his mic, reading the menu (warm memory)
@@ -118,13 +144,13 @@ REL_M = dict(tyler='calm', dong='calm', marcus='calm', priya='calm', kid_a='reli
 F.shot(169.54, 172.94, 'rooms/corner_dark.json', who=REL, cam={'a': {'zoom': 1.6, 'aim': [0.6, 0.5]}, 'b': {'zoom': 1.9, 'aim': [0.61, 0.5]}})
 sfx(169.7, 'relief_cry', 1.1)
 # 172.94 "Ms. Harlow let out this breath like she'd been holding it for six minutes," - her shoulders drop
-F.shot(172.94, 176.48, 'rooms/corner_dark.json', who=REL[:6] + [{'opts': {'mood': 'calm'}, 'face': {'eyes': 'closed'}, **HFRONT}],
-       events=[{'t': 174.6, 'i': 6, 'face': {'eyes': 'open'}}], cam={'a': {'zoom': 2.4, 'aim': [0.79, 0.5]}, 'b': {'zoom': 2.6, 'aim': [0.79, 0.52]}})
+F.shot(172.94, 176.48, 'rooms/corner_dark.json', who=REL[:6] + [{'opts': {'mood': 'exhale', 'at': 173.55 - 172.94 + 0.8, 'dur': 1.9, 'phase': 0}, **HFRONT}],
+       cam={'a': {'zoom': 2.4, 'aim': [0.79, 0.5]}, 'b': {'zoom': 2.6, 'aim': [0.79, 0.52]}})
 sfx(173.55, 'exhale', 1.4)
 # 176.48 "and she stood up, smoothed her skirt like she always does before parent night, and started toward the door."
-STAND = REL[:6] + [{'card': None, 'view': 'side', 'facing': 1, 'clip': 'sit', 'opts': {'dur': 0.01}, **HFRONT}]
+STAND = REL[:6] + [{'card': None, 'view': 'side', 'facing': 1, 'clip': 'crouchdown', 'opts': {'dur': 0.01}, **HFRONT}]
 F.shot(176.48, 182.56, 'rooms/corner_dark.json', who=STAND,
-       events=[{'t': 176.82, 'i': 6, 'play': 'stand'}, {'t': 177.41, 'i': 6, 'play': 'smooth', 'opts': {'dur': 1.6}}, {'t': 179.1, 'i': 6, 'play': 'idle'},
+       events=[{'t': 176.82, 'i': 6, 'play': 'crouchdown', 'opts': {'up': 1, 'dur': 0.55}}, {'t': 177.41, 'i': 6, 'play': 'smooth', 'opts': {'dur': 1.6}}, {'t': 179.1, 'i': 6, 'play': 'idle'},
                {'t': 180.4, 'i': 6, 'view': 'side'}, {'t': 180.4, 'i': 6, 'facing': 1}, {'t': 180.45, 'i': 6, 'play': 'walk', 'opts': {'pace': 0.55}}],
        cam={'a': {'zoom': 1.4, 'aim': [0.78, 0.48]}, 'b': {'zoom': 1.4, 'aim': [0.9, 0.48]}})
 sfx(176.9, 'cloth', 0.6); sfx(177.5, 'cloth', 0.5)
@@ -165,9 +191,10 @@ sfx(200.6, 'breath', 0.6)
 F.shot(202.57, 204.83, 'rooms/corner_dark.json', who=huddle(tyler='lookup', dong='lookup', marcus='lookup', priya='lookup', kid_a='lookup', kid_b='lookup', harlow={'opts': {'mood': 'lookup'}}),
        cam={'a': {'zoom': 1.3, 'aim': [0.5, 0.55]}, 'b': {'zoom': 1.9, 'aim': [0.69, 0.18]}})
 # 204.83 "from the office," - his office; 205.77 "all the way down on the first floor." - down the stairwell, floor by floor
-F.shot(204.83, 205.77, DW(lip=None), cam={'a': {'zoom': 1.0}, 'b': {'zoom': 1.1}})
-F.shot(205.77, 207.81, flat('bg_stairwell', tint=0x3a4054), cam={'a': {'zoom': 1.8, 'aim': [0.5, 0.2]}, 'b': {'zoom': 1.8, 'aim': [0.5, 0.8]}, 'ease': 'inout'})
-sfx(205.8, 'whoosh', 0.4)
+# the whole building cut open: from the speaker in 214, down the wire, out to both floors, in to the office on the first floor
+F.shot(204.83, 207.81, flat('bg_school_cutaway4'), cam={'keys': [[204.83, {'zoom': 2.6, 'aim': [0.42, 0.34]}], [205.45, {'zoom': 2.2, 'aim': [0.42, 0.56]}],
+                                                              [206.55, {'zoom': 1.0, 'aim': [0.5, 0.5]}], [207.45, {'zoom': 2.4, 'aim': [0.17, 0.78]}], [207.81, {'zoom': 2.5, 'aim': [0.17, 0.78]}]]})
+sfx(204.85, 'whoosh', 0.45); sfx(206.6, 'whoosh', 0.35)
 # 207.81 "And then the speaker clicked off," - click
 F.shot(207.81, 209.69, flat('bg_intercom', tint=0x262b3a), cam={'a': {'zoom': 2.0, 'aim': [0.47, 0.47]}, 'b': {'zoom': 2.1, 'aim': [0.47, 0.47]}, 'kicks': [208.97], 'kick': 0.5})
 sfx(208.97, 'pa_off', 1.3)
@@ -177,26 +204,29 @@ F.shot(213.94, 215.92, 'rooms/corner_dark.json', who=huddle(**FROZEN), events=[{
 sfx(214.4, 'gasp', 0.6)
 # 215.92 THING (through the door, slowly): "Including." 217.56 "Me." - the door goes red
 RED = 'saturate(1.3) sepia(0.3) hue-rotate(-25deg) brightness(0.85)'
-F.shot(215.92, 217.56, DOOR('bg_door_close_full'), filter=RED, cam={'a': {'zoom': 1.7, 'aim': [0.45, 0.42]}, 'b': {'zoom': 2.0, 'aim': [0.45, 0.42]}, 'ease': 'linear'})
-F.shot(217.56, 219.17, DOOR('bg_door_close_full'), filter=RED, cam={'a': {'zoom': 2.4, 'aim': [0.45, 0.40]}, 'b': {'zoom': 2.6, 'aim': [0.45, 0.40]}, 'shake': 1.2})
+CAP12 = caption('c2_12', 215.8, 219.17, size=150, y=0.55)
+F.shot(215.92, 217.56, DOOR('bg_door_close_full'), filter=RED, cam={'a': {'zoom': 1.7, 'aim': [0.45, 0.42]}, 'b': {'zoom': 2.0, 'aim': [0.45, 0.42]}, 'ease': 'linear'}, overlays=[CAP12])
+F.shot(217.56, 219.17, DOOR('bg_door_close_full'), filter=RED, cam={'a': {'zoom': 2.4, 'aim': [0.45, 0.40]}, 'b': {'zoom': 2.6, 'aim': [0.45, 0.40]}, 'shake': 1.2}, overlays=[CAP12])
 sfx(215.92, 'boom', 0.8); sfx(217.56, 'hit', 0.8)
 # 219.17 "Then the footsteps walked away." - the shadows under the door step out of the light
-F.shot(219.17, 220.88, DOOR('bg_door_close_full'), events=[{'t': 219.7, 'plate': 'art/plate_door_close_covered.png'}], cam={'a': {'zoom': 1.6, 'aim': [0.45, 0.8]}, 'b': {'zoom': 1.5, 'aim': [0.45, 0.78]}})
-sfx(219.3, 'recede', 1.6)
+AWAY = [{'t': round(219.55 + k * 0.11, 3), 'plate': f'art/plate_door_away_{k}.png'} for k in range(24)]
+F.shot(219.17, 222.18, DOOR('plate_door_shadow_check'), events=AWAY, cam={'a': {'zoom': 1.5, 'aim': [0.45, 0.78]}, 'b': {'zoom': 1.4, 'aim': [0.48, 0.76]}})
+for k in range(6): sfx(219.55 + 0.44 * (k + 1), f'boot{1 + k % 2}', 1.6 - 0.2 * k)
 # 220.88 "Slow. Even. Like it had all the time in the world." - the dark legs stroll off down the hall and out of sight
-F.shot(220.88, 224.3, feet('deputy', 0.40, pace=0.45), cam={'a': {'zoom': 2.4, 'aim': [0.45, 0.70]}, 'b': {'zoom': 2.4, 'aim': [0.72, 0.70]}})
+F.shot(222.18, 224.3, legs([walker('deputy', [0.35, 0.80], 222.18, 222.3, 0.9)]), cam=FOLLOW(2.4))
+for k, t in enumerate(steps(222.3, 0.9, 224.3)): sfx(t, f'boot{1 + k % 2}', 0.5 - 0.12 * k)
 # 224.3 "Ms. Harlow sat back down in front of us, very carefully, like the floor might break." - a slow, slow sit
-SIT = huddle(**FROZEN); SIT[6] = {'card': None, 'view': 'side', 'facing': -1, 'clip': 'idle', 'face': {'eyes': 'wide', 'brows': 'worried', 'mouth': 'flat'}, 'sideHead': 'scared', **HFRONT}
-F.shot(224.3, 228.64, 'rooms/corner_dark.json', who=SIT, events=[{'t': 224.9, 'i': 6, 'play': 'sit', 'opts': {'dur': 2.8}}],
+SIT = huddle(**FROZEN); SIT[6] = {'card': None, 'view': 'side', 'facing': -1, 'clip': 'idle', **HFRONT}
+F.shot(224.3, 228.64, 'rooms/corner_dark.json', who=SIT, events=[{'t': 224.7, 'i': 6, 'play': 'crouchdown', 'opts': {'dur': 2.6}}, {'t': 227.45, 'i': 6, 'card': 'huddle'}, {'t': 227.45, 'i': 6, 'mood': 'still'}],
        cam={'a': {'zoom': 1.5, 'aim': [0.75, 0.45]}, 'b': {'zoom': 1.7, 'aim': [0.78, 0.5]}})
 sfx(225.0, 'cloth', 0.35)
 # 228.64 "She didn't look at us. She just stared at the door," - eyes fixed away from us, on the door
 F.shot(228.64, 230.91, 'rooms/corner_dark.json', who=huddle(**{**FROZEN, 'harlow': {'opts': {'mood': 'stare', 'look': 1, 'blank': 1}}}), cam={'a': {'zoom': 2.4, 'aim': [0.79, 0.5]}, 'b': {'zoom': 2.8, 'aim': [0.79, 0.48]}})
 # 230.91 "and I watched her lips moving," - her lips, moving without a sound
-F.shot(230.91, 233.67, 'rooms/corner_dark.json', who=huddle(**{**FROZEN, 'harlow': {'opts': {'mood': 'whisper'}}}), cam={'a': {'zoom': 3.2, 'aim': [0.79, 0.44]}, 'b': {'zoom': 3.6, 'aim': [0.79, 0.44]}})
+F.shot(230.91, 233.67, 'rooms/corner_dark.json', who=huddle(**{**FROZEN, 'harlow': {'opts': {'mood': 'count'}}}), cam={'a': {'zoom': 3.2, 'aim': [0.79, 0.44]}, 'b': {'zoom': 3.6, 'aim': [0.79, 0.44]}})
 sfx(231.0, 'whispers', 0.25)
 # 232.56 "...she was counting us. Over and over." - her eyes going along the row, face by face
-F.shot(233.67, 235.42, 'rooms/corner_dark.json', who=huddle(**{**FROZEN, 'harlow': {'opts': {'mood': 'whisper'}}}), cam={'a': {'zoom': 1.9, 'aim': [0.7, 0.5]}, 'b': {'zoom': 1.9, 'aim': [0.15, 0.5]}, 'ease': 'linear'})
+F.shot(233.67, 235.42, 'rooms/corner_dark.json', who=huddle(**{**FROZEN, 'harlow': {'opts': {'mood': 'count'}}}), cam={'a': {'zoom': 1.9, 'aim': [0.7, 0.5]}, 'b': {'zoom': 1.9, 'aim': [0.15, 0.5]}, 'ease': 'linear'})
 # 235.42 / 236.24 / 236.9 "Twenty-three." x3 - cuts across the faces, a faint 23 each time
 T23 = lambda t, x, y, s: {'type': 'text', 'cls': 'faint', 'text': '23', 'x': x, 'y': y, 'size': s, 'alpha': 0.35, 't0': t, 't1': 239.0, 'fadeIn': 0.15, 'fadeOut': 0.5}
 F.shot(235.42, 236.24, 'rooms/corner_dark.json', who=huddle(**FROZEN), cam={'a': {'zoom': 2.2, 'aim': [0.21, 0.5]}, 'b': {'zoom': 2.3, 'aim': [0.21, 0.5]}}, overlays=[T23(235.42, 0.3, 0.3, 140)])

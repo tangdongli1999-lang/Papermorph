@@ -256,7 +256,7 @@
       this.time += dt; this.clipT += dt;
       if (this._turn) this._turnStep(dt);
       const c = CLIPS[this.clip], rig = !!this.joints[this.view];
-      const out = c.fn(this.clipT + (c.phased ? this.phase : 0), this.opts || {}, this) || {};
+      const out = c.fn(this.clipT + (c.phased ? ((this.opts && this.opts.phase != null) ? this.opts.phase : this.phase) : 0), this.opts || {}, this) || {};   // opts.phase pins the cycle, so several puppets can step in exact unison
       // blend in from the previous pose over 0.25 s
       const k = this.from ? ease(clamp(this.clipT / (c.blend ?? 0.25))) : 1;
       const prev = this.from && this.from.view === this.view ? this.from.angles : {}, now = out.angles || {}, ang = {};
@@ -376,6 +376,13 @@
         thigh_near: 88 * k, shin_near: -88 * k, thigh_far: 86 * k, shin_far: -86 * k,
         upperarm_near: lerp(3, 12, k) + 20 * S(Math.PI * u), forearm_near: lerp(8, 58, k), upperarm_far: lerp(-3, 10, k) + 20 * S(Math.PI * u), forearm_far: lerp(8, 58, k) } };
     } },
+    // side view: lower all the way down to the floor, slowly, one hand reaching for the floor (o.dur); ends in a low crouch, hips on the heels
+    crouchdown: { view: 'side', fn(t, o) {
+      const k0 = ease(clamp(t / (o.dur || 2.5))), k = o.up ? 1 - k0 : k0;   // o.up: the same move backwards, standing up from the floor
+      return { lock: 'x', lockMode: 'mean', lean: 34 * k, angles: {
+        thigh_near: 128 * k, shin_near: -158 * k, thigh_far: 122 * k, shin_far: -150 * k,
+        upperarm_near: lerp(3, 38, k), forearm_near: lerp(8, 18, k), upperarm_far: lerp(-3, 22, k), forearm_far: lerp(8, 40, k), head: -8 * k } };
+    } },
     stand: { view: 'side', blend: 0.05, fn(t, o) {
       const u = clamp(t / 1.0), k = 1 - ease(u);
       return { lock: 'x', lockMode: 'mean', lean: 26 * S(Math.PI * u) ** 1.2 + 4 * k, angles: {
@@ -472,6 +479,14 @@
         case 'headshake': return { body: { x: j(0.003, 44) }, head: { rz: 10 * I * S(t * 9) }, face: { eyes: 'cry', brows: 'worried', mouth: 'scream', tears: 1, tearT: tear } };
         case 'giggle': { const g = Math.pow(pos(S(t * 3.1)), 2); return { body: { y: 0.006 * g, sy: 1 + 0.012 * g, rz: 1.2 * S(t * 6.2) * g }, head: { rz: 4 * S(t * 1.3) }, face: { eyes: 'happy', mouth: g > 0.25 ? 'laugh' : 'grin' } }; }
         case 'relief': { const h = Math.pow(pos(S(t * 2.6)), 2); return { body: { sy: 1 - 0.018 * h, y: -0.004 * h, rz: 1.5 * S(t * 5.2) * h }, head: { rz: 4 * S(t * 0.8) }, face: { eyes: 'happy', brows: 'worried', mouth: h > 0.3 ? 'laugh' : 'grin', tears: 1, tearT: tear } }; }
+        case 'exhale': {   // holds her breath (o.at s into the clip), then lets it all out over o.dur s: eyes shut, lips pursed and blowing, shoulders sink; then soft relief
+          const at = o.at ?? 1, u = clamp((t - at) / (o.dur ?? 1.8)), e = ease(u);
+          if (t < at) return { body: { sy: 1.012, x: j(0.0012, 55) }, head: { rz: 0 }, face: { eyes: 'wide', brows: 'worried', mouth: 'flat' } };
+          if (u < 1) return { body: { sy: 1.012 - 0.045 * e, y: -0.012 * e }, head: { rz: 7 * e, y: -0.006 * e }, face: { eyes: 'closed', brows: 'worried', mouth: 'O', open: 0.45 * (1 - e) + 0.12 } };
+          return { body: { sy: 0.967 + 0.006 * S(t * 1.4), y: -0.012 }, head: { rz: 7 - 3 * clamp(t - at - (o.dur ?? 1.8)) }, face: { eyes: 'open', brows: 'worried', mouth: 'grin' } }; }
+        case 'count': {    // eyes stepping along the row, face by face, lips moving on each number
+          const n = 7, st = Math.floor(t / (o.step ?? 0.32)) % (2 * n - 2), i = st < n ? st : 2 * n - 2 - st, look = -1 + 2 * i / (n - 1);
+          return { body: { x: j(0.0008, 40) }, head: { rz: -5 * look }, face: { eyes: 'open', brows: 'worried', mouth: null, look, open: 0.1 + 0.32 * Math.abs(S(t * 10) * S(t * 2.7)) } }; }
         case 'calm': return { body: { sy: 1 + 0.008 * S(t * 1.6) }, head: { rz: 2 * S(t * 0.5) }, face: { eyes: 'open', mouth: null, look: 0.4 * S(t * 0.3) } };
         case 'spooky': return { body: { rz: 2 * S(t * 1.4) }, head: { rz: -6 }, face: { eyes: 'creepy', brows: 'up', mouth: 'grin', open: 0.2 + 0.3 * Math.abs(S(t * 9)) } };
         case 'stare': { const lk = o.look ?? -1; return { body: { x: 0.0008 * S(t * 50) }, head: { rz: 4 * lk }, face: { eyes: o.blank ? 'open' : 'angry', brows: o.blank ? 'worried' : 'angry', mouth: 'flat', look: lk } }; }

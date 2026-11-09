@@ -39,11 +39,13 @@
     for (let n = 0; n < 200 && !texReady(); n++) await new Promise(res => setTimeout(res, 25));
     const plates = {}; for (const e of sh.events || []) if (e.plate) plates[e.plate] = await texP(e.plate);
     const ev = (sh.events || []).slice().sort((a, b) => a.t - b.t);
-    cur = { si, sh, scene, set, P, who, ev, T: sh.t0 - (sh.warm ?? 0.8), plates, run: {}, slides: [] };
+    cur = { si, sh, scene, set, P, who, ev, T: sh.t0 - (sh.warm ?? 0.8), plates, run: {}, slides: [] }; window.__cur = cur;
     // warm up so nobody starts from a dead stop
     while (cur.T < sh.t0) await stepTo(cur.T + 1 / FPS);
     await new Promise(res => setTimeout(res, 50));
   }
+  const _va = new THREE.Vector3(), _vb = new THREE.Vector3();
+  function feetX(q) { const J = q.joints && q.joints.side; if (!J || !J.foot_near || !J.foot_far) return q.root.position.x; J.foot_near.getWorldPosition(_va); J.foot_far.getWorldPosition(_vb); return (_va.x + _vb.x) / 2; }
   async function stepTo(t) {
     const c = cur, dt = 1 / FPS;
     while (c.T < t - 1e-6) {
@@ -73,15 +75,30 @@
         if (w.lip) { const L = LINES[w.lip]; let on = L && c.T >= L.start && c.T <= L.end; if (on && w.lipSpans) on = w.lipSpans.some(([a, b]) => c.T >= a && c.T <= b); p.lip = on ? Math.min(1, amp(c.T) * (w.lipGain || 1.4)) : 0; }
         const rn = c.run[i]; if (rn && (p.root.position.x - rn.x) * p.facing >= 0) { p.play(rn.then, rn.thenOpts); delete c.run[i]; }
         p.update(dt);
+        if (w.tie != null && c.P[w.tie]) p.root.position.x += feetX(c.P[w.tie]) - feetX(p);   // stacked walkers: line their FEET up with the leader's, so swapping them never jumps
       });
     }
   }
   function camera(t) {
     const c = cur, sh = c.sh, base = c.set.camera, cam = base.clone(), cm = sh.cam || {};
     const k = (ease[cm.ease || 'inout'])(Math.min(1, Math.max(0, (t - sh.t0) / Math.max(0.001, sh.t1 - sh.t0))));
-    const A = { aim: [0.5, 0.5], zoom: 1, dx: 0, dz: 0, dy: 0, ...(cm.a || {}) }, B = { ...A, ...(cm.b || {}) };
+    let A = { aim: [0.5, 0.5], zoom: 1, dx: 0, dz: 0, dy: 0, ...(cm.a || {}) }, B = { ...A, ...(cm.b || {}) };
+    if (cm.keys) {   // several stops in one move: keys [[t, {aim, zoom}], ...], eased between each pair
+      const K = cm.keys; let i = 0; while (i < K.length - 2 && t >= K[i + 1][0]) i++;
+      A = { ...A, ...K[i][1] }; B = { ...A, ...K[i + 1][1] }; const kk = Math.min(1, Math.max(0, (t - K[i][0]) / Math.max(0.001, K[i + 1][0] - K[i][0])));
+      return finish(A, B, ease.inout(kk));
+    }
+    return finish(A, B, k);
+  }
+  function finish(A, B, k) {
+    const c = cur, sh = c.sh, base = c.set.camera, cam = base.clone(), cm = sh.cam || {}, t = c.T;
     const zoom = lerp(A.zoom, B.zoom, k), m = 0.5 / Math.max(1, zoom) + 0.004;   // never look past the painting's edge
-    const aim = [Math.min(1 - m, Math.max(m, lerp(A.aim[0], B.aim[0], k))), Math.min(1 - m, Math.max(m, lerp(A.aim[1], B.aim[1], k)))];
+    let ax = lerp(A.aim[0], B.aim[0], k);
+    if (cm.follow != null && c.P[cm.follow]) {   // keep a walker in the middle of the frame: aim at where they are on the painting
+      const v = c.P[cm.follow].root.position.clone(); v.y += cm.followY ?? 0.4; v.project(base); ax = (v.x + 1) / 2 + (cm.followDx || 0);
+      c.fx = c.fx == null ? ax : c.fx + (ax - c.fx) * 0.25; ax = c.fx;   // a little smoothing, like a camera operator
+    }
+    const aim = [Math.min(1 - m, Math.max(m, ax)), Math.min(1 - m, Math.max(m, lerp(A.aim[1], B.aim[1], k)))];
     const tv = Math.tan(base.fov * Math.PI / 360), th = tv * base.aspect;
     let yaw = -Math.atan((aim[0] - 0.5) * 2 * th), pitch = base.rotation.x + Math.atan((0.5 - aim[1]) * 2 * tv);
     if (cm.shake) { const s = cm.shake; yaw += s * 0.004 * (Math.sin(t * 1.3) + 0.5 * Math.sin(t * 3.7)); pitch += s * 0.003 * (Math.sin(t * 1.7 + 1) + 0.5 * Math.sin(t * 4.3)); }
@@ -130,6 +147,14 @@
         const hh = x => { const v = Math.sin(x * 127.1 + 311.7) * 43758.5453; return v - Math.floor(v); }, q = hh(Math.floor(t * 18)), dip = q > (o.stable ?? 0.9) ? 0.5 + 0.4 * hh(q * 7) : 0;
         html += `<div class="black" style="opacity:${(a * dip * (o.alpha ?? 0.35)).toFixed(3)}"></div><div class="lite" style="opacity:${a * (1 - dip) * (o.glow ?? 0.18)};background:linear-gradient(180deg, rgba(220,240,255,.9), rgba(220,240,255,0) 45%)"></div>`; }
       if (o.type === 'grade') html += `<div class="lite" style="opacity:${a};background:linear-gradient(180deg, ${o.top || 'rgba(0,0,0,0)'}, ${o.bottom || 'rgba(0,0,0,0)'})${o.blend ? ';mix-blend-mode:' + o.blend : ''}"></div>`;
+      if (o.type === 'words') {   // spoken words appear one by one as they are said (o.words: [[t, word], ...]); a new line every o.max words or after . ? ,
+        const said = o.words.filter(w => t >= w[0]); if (said.length) {
+          const groups = []; let g = [];
+          for (const w of o.words) { g.push(w); if (g.length >= (o.max || 5) || /[.?!]$/.test(w[1])) { groups.push(g); g = []; } } if (g.length) groups.push(g);
+          const cur = groups.find(gr => gr.includes(said[said.length - 1]));
+          const html2 = cur.map(w => t >= w[0] ? `<span style="opacity:${Math.min(1, (t - w[0]) / 0.08)};${w === said[said.length - 1] ? 'color:' + (o.hot || '#ff2a2a') + ';text-shadow:0 0 18px rgba(255,0,0,.75),0 3px 0 #000' : ''}">${w[1]}</span>` : '').join(' ');
+          html += `<div class="words" style="opacity:${a};left:${X(o.x ?? 0.5)};top:${Y(o.y ?? 0.5)};font-size:${o.size || 84}px;color:${o.color || '#c4161c'}">${html2}</div>`;
+        } }
       if (o.type === 'black') html += `<div class="black" style="opacity:${a * (o.alpha ?? 1)}"></div>`;
       if (o.type === 'flash') html += `<div class="flash" style="opacity:${a * (o.alpha ?? 0.8)}"></div>`;
     }

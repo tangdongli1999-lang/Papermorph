@@ -21,7 +21,16 @@
       "facing": 1,
       "clip": "walk",
       "opts": {
-       "pace": 0.5
+       "stride": 0.8,
+       "arms": 0.6,
+       "knee": 0.9,
+       "lean": 0.5,
+       "armOut": 0,
+       "elbow": 0.8,
+       "bounce": 0,
+       "head": 0,
+       "pace": 0.9259259259259258,
+       "phase": 0.5499999999999943
       },
       "at": [
        0.22,
@@ -42,10 +51,11 @@
     "b": {
      "zoom": 2.6,
      "aim": [
-      0.4,
+      0.3,
       0.7
      ]
-    }
+    },
+    "follow": 0
    },
    "overlays": [
     {
@@ -327,10 +337,19 @@
       "facing": 1,
       "clip": "walk",
       "opts": {
-       "pace": 0.45
+       "stride": 0.8,
+       "arms": 0.6,
+       "knee": 0.9,
+       "lean": 0.5,
+       "armOut": 0,
+       "elbow": 0.8,
+       "bounce": 0,
+       "head": 0,
+       "pace": 0.6459948320413437,
+       "phase": 0.4599999999999988
       },
       "at": [
-       0.3,
+       0.28,
        0.8
       ]
      }
@@ -341,17 +360,18 @@
     "a": {
      "zoom": 3.0,
      "aim": [
-      0.36,
+      0.3,
       0.72
      ]
     },
     "b": {
-     "zoom": 3.1,
+     "zoom": 3.0,
      "aim": [
-      0.42,
+      0.3,
       0.72
      ]
-    }
+    },
+    "follow": 0
    },
    "overlays": [
     {
@@ -527,10 +547,19 @@
       "facing": 1,
       "clip": "walk",
       "opts": {
-       "pace": 0.5
+       "stride": 0.8,
+       "arms": 0.6,
+       "knee": 0.9,
+       "lean": 0.5,
+       "armOut": 0,
+       "elbow": 0.8,
+       "bounce": 0,
+       "head": 0,
+       "pace": 0.9259259259259258,
+       "phase": 0.3999999999999886
       },
       "at": [
-       0.18,
+       0.22,
        0.8
       ]
      }
@@ -541,17 +570,18 @@
     "a": {
      "zoom": 2.6,
      "aim": [
-      0.26,
+      0.3,
       0.7
      ]
     },
     "b": {
      "zoom": 2.6,
      "aim": [
-      0.38,
+      0.3,
       0.7
      ]
-    }
+    },
+    "follow": 0
    },
    "overlays": [
     {
@@ -569,124 +599,6 @@
   },
   {
    "t0": 124.81,
-   "t1": 126.46,
-   "room": {
-    "plate": {
-     "img": "art/bg_hallway_side_dim.png",
-     "fov": 40,
-     "h": 0.887,
-     "pitch": 0,
-     "horizon": 0.69
-    },
-    "tint": 8028569,
-    "who": [
-     {
-      "n": "tyler",
-      "view": "side",
-      "facing": 1,
-      "clip": "walk",
-      "opts": {
-       "pace": 0.55
-      },
-      "at": [
-       0.3,
-       0.8
-      ]
-     }
-    ],
-    "name": "hallway_side"
-   },
-   "cam": {
-    "a": {
-     "zoom": 3.2,
-     "aim": [
-      0.33,
-      0.73
-     ]
-    },
-    "b": {
-     "zoom": 3.2,
-     "aim": [
-      0.41,
-      0.73
-     ]
-    }
-   },
-   "overlays": [
-    {
-     "type": "tube",
-     "glow": 0.0,
-     "stable": 0.88,
-     "alpha": 0.4,
-     "t0": 124.81,
-     "t1": 126.46,
-     "fadeIn": 0.01,
-     "fadeOut": 0.01,
-     "follow": true
-    }
-   ]
-  },
-  {
-   "t0": 126.46,
-   "t1": 127.89,
-   "room": {
-    "plate": {
-     "img": "art/bg_hallway_side_dim.png",
-     "fov": 40,
-     "h": 0.887,
-     "pitch": 0,
-     "horizon": 0.69
-    },
-    "tint": 8028569,
-    "who": [
-     {
-      "n": "district",
-      "view": "side",
-      "facing": 1,
-      "clip": "walk",
-      "opts": {
-       "pace": 0.55
-      },
-      "at": [
-       0.3,
-       0.8
-      ]
-     }
-    ],
-    "name": "hallway_side"
-   },
-   "cam": {
-    "a": {
-     "zoom": 3.2,
-     "aim": [
-      0.33,
-      0.73
-     ]
-    },
-    "b": {
-     "zoom": 3.2,
-     "aim": [
-      0.41,
-      0.73
-     ]
-    }
-   },
-   "overlays": [
-    {
-     "type": "tube",
-     "glow": 0.0,
-     "stable": 0.88,
-     "alpha": 0.4,
-     "t0": 126.46,
-     "t1": 127.89,
-     "fadeIn": 0.01,
-     "fadeOut": 0.01,
-     "follow": true
-    }
-   ]
-  },
-  {
-   "t0": 127.89,
    "t1": 129.2,
    "room": {
     "plate": {
@@ -699,36 +611,118 @@
     "tint": 8028569,
     "who": [
      {
+      "n": "parent_a",
+      "view": "side",
+      "facing": 1,
+      "clip": "walk",
+      "opts": {
+       "stride": 0.42,
+       "arms": 0.6,
+       "knee": 0.9,
+       "lean": 0.5,
+       "armOut": 0,
+       "elbow": 0.8,
+       "bounce": 0,
+       "head": 0,
+       "pace": 0.7770007770007771,
+       "phase": 0.05250000000000099
+      },
+      "at": [
+       0.03,
+       0.8
+      ]
+     },
+     {
+      "n": "district",
+      "view": "side",
+      "facing": 1,
+      "clip": "walk",
+      "opts": {
+       "stride": 0.42,
+       "arms": 0.6,
+       "knee": 0.9,
+       "lean": 0.5,
+       "armOut": 0,
+       "elbow": 0.8,
+       "bounce": 0,
+       "head": 0,
+       "pace": 0.7770007770007771,
+       "phase": 0.05250000000000099
+      },
+      "at": [
+       0.03,
+       0.8
+      ],
+      "scale": 1.090909090909091,
+      "tie": 0,
+      "hidden": 1
+     },
+     {
       "n": "deputy",
       "view": "side",
       "facing": 1,
       "clip": "walk",
       "opts": {
-       "pace": 0.55
+       "stride": 0.42,
+       "arms": 0.6,
+       "knee": 0.9,
+       "lean": 0.5,
+       "armOut": 0,
+       "elbow": 0.8,
+       "bounce": 0,
+       "head": 0,
+       "pace": 0.7770007770007771,
+       "phase": 0.05250000000000099
       },
       "at": [
-       0.3,
+       0.03,
        0.8
-      ]
+      ],
+      "scale": 0.9836065573770492,
+      "tie": 0,
+      "hidden": 1
      }
     ],
     "name": "hallway_side"
    },
+   "events": [
+    {
+     "t": 126.46,
+     "i": 0,
+     "hide": 1
+    },
+    {
+     "t": 126.46,
+     "i": 1,
+     "show": 1
+    },
+    {
+     "t": 127.89,
+     "i": 1,
+     "hide": 1
+    },
+    {
+     "t": 127.89,
+     "i": 2,
+     "show": 1
+    }
+   ],
    "cam": {
     "a": {
-     "zoom": 3.2,
+     "zoom": 3.0,
      "aim": [
-      0.33,
+      0.3,
       0.73
      ]
     },
     "b": {
-     "zoom": 3.2,
+     "zoom": 3.0,
      "aim": [
-      0.41,
+      0.3,
       0.73
      ]
-    }
+    },
+    "follow": 0
    },
    "overlays": [
     {
@@ -736,7 +730,7 @@
      "glow": 0.0,
      "stable": 0.88,
      "alpha": 0.4,
-     "t0": 127.89,
+     "t0": 124.81,
      "t1": 129.2,
      "fadeIn": 0.01,
      "fadeOut": 0.01,
@@ -758,17 +752,27 @@
     "tint": 8028569,
     "who": [
      {
-      "n": "tyler",
+      "n": "parent_a",
       "view": "side",
       "facing": 1,
       "clip": "walk",
       "opts": {
-       "pace": 0.55
+       "stride": 0.42,
+       "arms": 0.6,
+       "knee": 0.9,
+       "lean": 0.5,
+       "armOut": 0,
+       "elbow": 0.8,
+       "bounce": 0,
+       "head": 0,
+       "pace": 0.7770007770007771,
+       "phase": 0.1524999999999953
       },
       "at": [
-       0.3,
+       0.22,
        0.8
-      ]
+      ],
+      "hidden": 1
      },
      {
       "n": "district",
@@ -776,12 +780,23 @@
       "facing": 1,
       "clip": "walk",
       "opts": {
-       "pace": 0.55
+       "stride": 0.42,
+       "arms": 0.6,
+       "knee": 0.9,
+       "lean": 0.5,
+       "armOut": 0,
+       "elbow": 0.8,
+       "bounce": 0,
+       "head": 0,
+       "pace": 0.7770007770007771,
+       "phase": 0.1524999999999953
       },
       "at": [
-       0.3,
+       0.22,
        0.8
       ],
+      "scale": 1.090909090909091,
+      "tie": 0,
       "hidden": 1
      },
      {
@@ -790,94 +805,75 @@
       "facing": 1,
       "clip": "walk",
       "opts": {
-       "pace": 0.55
+       "stride": 0.42,
+       "arms": 0.6,
+       "knee": 0.9,
+       "lean": 0.5,
+       "armOut": 0,
+       "elbow": 0.8,
+       "bounce": 0,
+       "head": 0,
+       "pace": 0.7770007770007771,
+       "phase": 0.1524999999999953
       },
       "at": [
-       0.3,
+       0.22,
        0.8
       ],
-      "hidden": 1
+      "scale": 0.9836065573770492,
+      "tie": 0
      }
     ],
     "name": "hallway_side"
    },
    "events": [
     {
-     "t": 129.55,
-     "i": 0,
-     "hide": 1
-    },
-    {
-     "t": 129.55,
-     "i": 1,
-     "show": 1
-    },
-    {
-     "t": 129.85,
-     "i": 1,
-     "hide": 1
-    },
-    {
-     "t": 129.85,
-     "i": 2,
-     "show": 1
-    },
-    {
-     "t": 130.15,
+     "t": 129.32,
      "i": 2,
      "hide": 1
     },
     {
-     "t": 130.15,
+     "t": 129.32,
      "i": 0,
      "show": 1
     },
     {
-     "t": 130.4,
+     "t": 130.035,
      "i": 0,
      "hide": 1
     },
     {
-     "t": 130.4,
+     "t": 130.035,
      "i": 1,
      "show": 1
     },
     {
-     "t": 130.62,
+     "t": 130.75,
      "i": 1,
      "hide": 1
     },
     {
-     "t": 130.62,
+     "t": 130.75,
      "i": 2,
-     "show": 1
-    },
-    {
-     "t": 130.82,
-     "i": 2,
-     "hide": 1
-    },
-    {
-     "t": 130.82,
-     "i": 0,
      "show": 1
     }
    ],
    "cam": {
     "a": {
-     "zoom": 3.2,
+     "zoom": 2.8,
      "aim": [
-      0.33,
-      0.73
+      0.3,
+      0.72
      ]
     },
     "b": {
-     "zoom": 3.2,
+     "zoom": 2.8,
      "aim": [
-      0.4,
-      0.73
+      0.3,
+      0.72
      ]
-    }
+    },
+    "follow": 0
    },
    "overlays": [
     {
@@ -1292,7 +1288,7 @@
    "t1": 144.67,
    "room": {
     "plate": {
-     "img": "art/plate_door_close_covered.png",
+     "img": "art/plate_door_arrive_start.png",
      "fov": 40,
      "h": 0.92,
      "pitch": 0,
@@ -1316,16 +1312,44 @@
    },
    "events": [
     {
-     "t": 143.15,
-     "plate": "art/bg_door_close_full.png"
+     "t": 142.4,
+     "plate": "art/plate_door_arrive_0.png"
+    },
+    {
+     "t": 142.494,
+     "plate": "art/plate_door_arrive_1.png"
+    },
+    {
+     "t": 142.588,
+     "plate": "art/plate_door_arrive_2.png"
+    },
+    {
+     "t": 142.682,
+     "plate": "art/plate_door_arrive_3.png"
+    },
+    {
+     "t": 142.776,
+     "plate": "art/plate_door_arrive_4.png"
+    },
+    {
+     "t": 142.87,
+     "plate": "art/plate_door_arrive_5.png"
+    },
+    {
+     "t": 142.964,
+     "plate": "art/plate_door_arrive_6.png"
+    },
+    {
+     "t": 143.058,
+     "plate": "art/plate_door_arrive_7.png"
     }
    ],
    "cam": {
     "a": {
-     "zoom": 1.3,
+     "zoom": 1.5,
      "aim": [
       0.45,
-      0.72
+      0.78
      ]
     },
     "b": {
@@ -1336,45 +1360,14 @@
      ]
     }
    },
-   "overlays": [
-    {
-     "type": "pool",
-     "x": 0.45,
-     "y": 0.97,
-     "rx": 38,
-     "ry": 14,
-     "glow": 0.18,
-     "color": "255,220,160",
-     "dark": 0.4,
-     "t0": 142.17,
-     "t1": 143.15,
-     "fadeIn": 0.01,
-     "fadeOut": 0.01,
-     "follow": true
-    },
-    {
-     "type": "pool",
-     "x": 0.45,
-     "y": 0.97,
-     "rx": 38,
-     "ry": 14,
-     "glow": 0.18,
-     "color": "255,220,160",
-     "dark": 0.4,
-     "t0": 143.15,
-     "t1": 144.67,
-     "fadeIn": 0.01,
-     "fadeOut": 0.01,
-     "follow": true
-    }
-   ]
+   "overlays": []
   },
   {
    "t0": 144.67,
    "t1": 148.61,
    "room": {
     "plate": {
-     "img": "art/bg_handle_inside_lv0.png",
+     "img": "art/bg_handle_closed_lv0.png",
      "fov": 40,
      "h": 1.0,
      "pitch": 0,
@@ -1387,75 +1380,75 @@
    "events": [
     {
      "t": 145.13,
-     "plate": "art/bg_handle_inside_lv-2.png"
+     "plate": "art/bg_handle_closed_lv-2.png"
     },
     {
      "t": 145.246,
-     "plate": "art/bg_handle_inside_lv-4.png"
+     "plate": "art/bg_handle_closed_lv-4.png"
     },
     {
      "t": 145.362,
-     "plate": "art/bg_handle_inside_lv-6.png"
+     "plate": "art/bg_handle_closed_lv-6.png"
     },
     {
      "t": 145.478,
-     "plate": "art/bg_handle_inside_lv-8.png"
+     "plate": "art/bg_handle_closed_lv-8.png"
     },
     {
      "t": 145.594,
-     "plate": "art/bg_handle_inside_lv-10.png"
+     "plate": "art/bg_handle_closed_lv-10.png"
     },
     {
      "t": 145.711,
-     "plate": "art/bg_handle_inside_lv-12.png"
+     "plate": "art/bg_handle_closed_lv-12.png"
     },
     {
      "t": 145.827,
-     "plate": "art/bg_handle_inside_lv-14.png"
+     "plate": "art/bg_handle_closed_lv-14.png"
     },
     {
      "t": 145.943,
-     "plate": "art/bg_handle_inside_lv-16.png"
+     "plate": "art/bg_handle_closed_lv-16.png"
     },
     {
      "t": 146.059,
-     "plate": "art/bg_handle_inside_lv-18.png"
+     "plate": "art/bg_handle_closed_lv-18.png"
     },
     {
      "t": 146.175,
-     "plate": "art/bg_handle_inside_lv-20.png"
+     "plate": "art/bg_handle_closed_lv-20.png"
     },
     {
      "t": 146.291,
-     "plate": "art/bg_handle_inside_lv-22.png"
+     "plate": "art/bg_handle_closed_lv-22.png"
     },
     {
      "t": 146.407,
-     "plate": "art/bg_handle_inside_lv-24.png"
+     "plate": "art/bg_handle_closed_lv-24.png"
     },
     {
      "t": 146.523,
-     "plate": "art/bg_handle_inside_lv-26.png"
+     "plate": "art/bg_handle_closed_lv-26.png"
     },
     {
      "t": 146.639,
-     "plate": "art/bg_handle_inside_lv-28.png"
+     "plate": "art/bg_handle_closed_lv-28.png"
     },
     {
      "t": 146.756,
-     "plate": "art/bg_handle_inside_lv-30.png"
+     "plate": "art/bg_handle_closed_lv-30.png"
     },
     {
      "t": 146.872,
-     "plate": "art/bg_handle_inside_lv-32.png"
+     "plate": "art/bg_handle_closed_lv-32.png"
     },
     {
      "t": 146.988,
-     "plate": "art/bg_handle_inside_lv-34.png"
+     "plate": "art/bg_handle_closed_lv-34.png"
     },
     {
      "t": 147.104,
-     "plate": "art/bg_handle_inside_lv-36.png"
+     "plate": "art/bg_handle_closed_lv-36.png"
     }
    ],
    "cam": {
@@ -1735,17 +1728,17 @@
    },
    "cam": {
     "a": {
-     "zoom": 1.35,
+     "zoom": 1.2,
      "aim": [
       0.45,
-      0.45
+      0.46
      ]
     },
     "b": {
-     "zoom": 1.8,
+     "zoom": 1.5,
      "aim": [
       0.45,
-      0.42
+      0.45
      ]
     },
     "ease": "linear"
@@ -1765,12 +1758,218 @@
      "fadeIn": 0.01,
      "fadeOut": 0.01,
      "follow": true
+    },
+    {
+     "type": "words",
+     "words": [
+      [
+       155.8,
+       "Ms."
+      ],
+      [
+       155.99,
+       "Harlow?"
+      ],
+      [
+       156.92,
+       "It's"
+      ],
+      [
+       157.09,
+       "Principal"
+      ],
+      [
+       157.53,
+       "Dawes."
+      ],
+      [
+       158.47,
+       "It's"
+      ],
+      [
+       158.66,
+       "okay."
+      ],
+      [
+       159.45,
+       "It's"
+      ],
+      [
+       159.61,
+       "over."
+      ],
+      [
+       160.38,
+       "You"
+      ],
+      [
+       160.5,
+       "can"
+      ],
+      [
+       160.63,
+       "all"
+      ],
+      [
+       160.78,
+       "come"
+      ],
+      [
+       160.96,
+       "out"
+      ],
+      [
+       161.11,
+       "now."
+      ]
+     ],
+     "x": 0.45,
+     "y": 0.56,
+     "size": 84,
+     "t0": 155.7,
+     "t1": 161.2,
+     "fadeIn": 0.05,
+     "fadeOut": 0.05
     }
    ]
   },
   {
    "t0": 158.47,
-   "t1": 160.38,
+   "t1": 161.2,
+   "room": {
+    "plate": {
+     "img": "art/bg_door_close_full.png",
+     "fov": 40,
+     "h": 0.92,
+     "pitch": 0,
+     "horizon": 0.83,
+     "holdouts": [
+      {
+       "mask": "masks/door_close_8.png",
+       "base": 0.8535,
+       "u": 0.9451
+      },
+      {
+       "mask": "masks/door_close_9.png",
+       "base": 0.9932,
+       "u": 0.1063
+      }
+     ]
+    },
+    "tint": 8884397,
+    "who": [],
+    "name": "door_close"
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.5,
+     "aim": [
+      0.45,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 1.75,
+     "aim": [
+      0.45,
+      0.5
+     ]
+    },
+    "ease": "linear"
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.97,
+     "rx": 38,
+     "ry": 14,
+     "glow": 0.18,
+     "color": "255,220,160",
+     "dark": 0.4,
+     "t0": 158.47,
+     "t1": 161.2,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "words",
+     "words": [
+      [
+       155.8,
+       "Ms."
+      ],
+      [
+       155.99,
+       "Harlow?"
+      ],
+      [
+       156.92,
+       "It's"
+      ],
+      [
+       157.09,
+       "Principal"
+      ],
+      [
+       157.53,
+       "Dawes."
+      ],
+      [
+       158.47,
+       "It's"
+      ],
+      [
+       158.66,
+       "okay."
+      ],
+      [
+       159.45,
+       "It's"
+      ],
+      [
+       159.61,
+       "over."
+      ],
+      [
+       160.38,
+       "You"
+      ],
+      [
+       160.5,
+       "can"
+      ],
+      [
+       160.63,
+       "all"
+      ],
+      [
+       160.78,
+       "come"
+      ],
+      [
+       160.96,
+       "out"
+      ],
+      [
+       161.11,
+       "now."
+      ]
+     ],
+     "x": 0.45,
+     "y": 0.56,
+     "size": 84,
+     "t0": 155.7,
+     "t1": 161.2,
+     "fadeIn": 0.05,
+     "fadeOut": 0.05
+    }
+   ]
+  },
+  {
+   "t0": 161.2,
+   "t1": 162.68,
    "room": "rooms/corner_dark.json",
    "who": [
     {
@@ -1844,68 +2043,7 @@
      "glow": 0.0,
      "dark": 0.5,
      "blue": 25,
-     "t0": 158.47,
-     "t1": 160.38,
-     "fadeIn": 0.01,
-     "fadeOut": 0.01,
-     "follow": true
-    }
-   ]
-  },
-  {
-   "t0": 160.38,
-   "t1": 162.68,
-   "room": {
-    "plate": {
-     "img": "art/bg_door_close_full.png",
-     "fov": 40,
-     "h": 0.92,
-     "pitch": 0,
-     "horizon": 0.83,
-     "holdouts": [
-      {
-       "mask": "masks/door_close_8.png",
-       "base": 0.8535,
-       "u": 0.9451
-      },
-      {
-       "mask": "masks/door_close_9.png",
-       "base": 0.9932,
-       "u": 0.1063
-      }
-     ]
-    },
-    "tint": 8884397,
-    "who": [],
-    "name": "door_close"
-   },
-   "cam": {
-    "a": {
-     "zoom": 1.5,
-     "aim": [
-      0.45,
-      0.45
-     ]
-    },
-    "b": {
-     "zoom": 1.7,
-     "aim": [
-      0.45,
-      0.44
-     ]
-    }
-   },
-   "overlays": [
-    {
-     "type": "pool",
-     "x": 0.45,
-     "y": 0.97,
-     "rx": 38,
-     "ry": 14,
-     "glow": 0.18,
-     "color": "255,220,160",
-     "dark": 0.4,
-     "t0": 160.38,
+     "t0": 161.2,
      "t1": 162.68,
      "fadeIn": 0.01,
      "fadeOut": 0.01,
@@ -2186,10 +2324,10 @@
     },
     {
      "opts": {
-      "mood": "calm"
-     },
-     "face": {
-      "eyes": "closed"
+      "mood": "exhale",
+      "at": 1.4100000000000137,
+      "dur": 1.9,
+      "phase": 0
      },
      "pos": [
       1.45,
@@ -2197,15 +2335,6 @@
       0
      ],
      "wall": 1.5
-    }
-   ],
-   "events": [
-    {
-     "t": 174.6,
-     "i": 6,
-     "face": {
-      "eyes": "open"
-     }
     }
    ],
    "cam": {
@@ -2281,7 +2410,7 @@
      "card": null,
      "view": "side",
      "facing": 1,
-     "clip": "sit",
+     "clip": "crouchdown",
      "opts": {
       "dur": 0.01
      },
@@ -2297,7 +2426,11 @@
     {
      "t": 176.82,
      "i": 6,
-     "play": "stand"
+     "play": "crouchdown",
+     "opts": {
+      "up": 1,
+      "dur": 0.55
+     }
     },
     {
      "t": 177.41,
@@ -3126,86 +3259,70 @@
   },
   {
    "t0": 204.83,
-   "t1": 205.77,
-   "room": {
-    "plate": {
-     "img": "art/bg_office.png",
-     "fov": 40,
-     "h": 1.14,
-     "pitch": 0,
-     "horizon": 0.765,
-     "holdouts": [
-      {
-       "mask": "masks/office_3.png",
-       "base": 0.8496,
-       "u": 0.5167
-      }
-     ]
-    },
-    "tint": 16777215,
-    "who": [
-     {
-      "n": "dawes",
-      "at": [
-       0.86,
-       0.87
-      ],
-      "clip": "standScared",
-      "opts": {
-       "mood": "shake",
-       "intensity": 1.6
-      },
-      "lip": null,
-      "lipGain": 2.2,
-      "face": {
-       "eyes": "wide",
-       "brows": "worried",
-       "sweat": 1
-      }
-     }
-    ],
-    "name": "office"
-   },
-   "cam": {
-    "a": {
-     "zoom": 1.0
-    },
-    "b": {
-     "zoom": 1.1
-    }
-   },
-   "overlays": []
-  },
-  {
-   "t0": 205.77,
    "t1": 207.81,
    "room": {
     "plate": {
-     "img": "art/bg_stairwell.png",
+     "img": "art/bg_school_cutaway4.png",
      "fov": 40,
      "h": 1.0,
      "pitch": 0,
-     "horizon": 0.97,
-     "tint": 3817556
+     "horizon": 0.97
     },
     "who": []
    },
    "cam": {
-    "a": {
-     "zoom": 1.8,
-     "aim": [
-      0.5,
-      0.2
+    "keys": [
+     [
+      204.83,
+      {
+       "zoom": 2.6,
+       "aim": [
+        0.42,
+        0.34
+       ]
+      }
+     ],
+     [
+      205.45,
+      {
+       "zoom": 2.2,
+       "aim": [
+        0.42,
+        0.56
+       ]
+      }
+     ],
+     [
+      206.55,
+      {
+       "zoom": 1.0,
+       "aim": [
+        0.5,
+        0.5
+       ]
+      }
+     ],
+     [
+      207.45,
+      {
+       "zoom": 2.4,
+       "aim": [
+        0.17,
+        0.78
+       ]
+      }
+     ],
+     [
+      207.81,
+      {
+       "zoom": 2.5,
+       "aim": [
+        0.17,
+        0.78
+       ]
+      }
      ]
-    },
-    "b": {
-     "zoom": 1.8,
-     "aim": [
-      0.5,
-      0.8
-     ]
-    },
-    "ease": "inout"
+    ]
    },
    "overlays": []
   },
@@ -3453,6 +3570,26 @@
      "fadeIn": 0.01,
      "fadeOut": 0.01,
      "follow": true
+    },
+    {
+     "type": "words",
+     "words": [
+      [
+       215.92,
+       "Including."
+      ],
+      [
+       217.56,
+       "Me."
+      ]
+     ],
+     "x": 0.45,
+     "y": 0.55,
+     "size": 150,
+     "t0": 215.8,
+     "t1": 219.17,
+     "fadeIn": 0.05,
+     "fadeOut": 0.05
     }
    ]
   },
@@ -3516,15 +3653,35 @@
      "fadeIn": 0.01,
      "fadeOut": 0.01,
      "follow": true
+    },
+    {
+     "type": "words",
+     "words": [
+      [
+       215.92,
+       "Including."
+      ],
+      [
+       217.56,
+       "Me."
+      ]
+     ],
+     "x": 0.45,
+     "y": 0.55,
+     "size": 150,
+     "t0": 215.8,
+     "t1": 219.17,
+     "fadeIn": 0.05,
+     "fadeOut": 0.05
     }
    ]
   },
   {
    "t0": 219.17,
-   "t1": 220.88,
+   "t1": 222.18,
    "room": {
     "plate": {
-     "img": "art/bg_door_close_full.png",
+     "img": "art/plate_door_shadow_check.png",
      "fov": 40,
      "h": 0.92,
      "pitch": 0,
@@ -3548,61 +3705,122 @@
    },
    "events": [
     {
-     "t": 219.7,
-     "plate": "art/plate_door_close_covered.png"
+     "t": 219.55,
+     "plate": "art/plate_door_away_0.png"
+    },
+    {
+     "t": 219.66,
+     "plate": "art/plate_door_away_1.png"
+    },
+    {
+     "t": 219.77,
+     "plate": "art/plate_door_away_2.png"
+    },
+    {
+     "t": 219.88,
+     "plate": "art/plate_door_away_3.png"
+    },
+    {
+     "t": 219.99,
+     "plate": "art/plate_door_away_4.png"
+    },
+    {
+     "t": 220.1,
+     "plate": "art/plate_door_away_5.png"
+    },
+    {
+     "t": 220.21,
+     "plate": "art/plate_door_away_6.png"
+    },
+    {
+     "t": 220.32,
+     "plate": "art/plate_door_away_7.png"
+    },
+    {
+     "t": 220.43,
+     "plate": "art/plate_door_away_8.png"
+    },
+    {
+     "t": 220.54,
+     "plate": "art/plate_door_away_9.png"
+    },
+    {
+     "t": 220.65,
+     "plate": "art/plate_door_away_10.png"
+    },
+    {
+     "t": 220.76,
+     "plate": "art/plate_door_away_11.png"
+    },
+    {
+     "t": 220.87,
+     "plate": "art/plate_door_away_12.png"
+    },
+    {
+     "t": 220.98,
+     "plate": "art/plate_door_away_13.png"
+    },
+    {
+     "t": 221.09,
+     "plate": "art/plate_door_away_14.png"
+    },
+    {
+     "t": 221.2,
+     "plate": "art/plate_door_away_15.png"
+    },
+    {
+     "t": 221.31,
+     "plate": "art/plate_door_away_16.png"
+    },
+    {
+     "t": 221.42,
+     "plate": "art/plate_door_away_17.png"
+    },
+    {
+     "t": 221.53,
+     "plate": "art/plate_door_away_18.png"
+    },
+    {
+     "t": 221.64,
+     "plate": "art/plate_door_away_19.png"
+    },
+    {
+     "t": 221.75,
+     "plate": "art/plate_door_away_20.png"
+    },
+    {
+     "t": 221.86,
+     "plate": "art/plate_door_away_21.png"
+    },
+    {
+     "t": 221.97,
+     "plate": "art/plate_door_away_22.png"
+    },
+    {
+     "t": 222.08,
+     "plate": "art/plate_door_away_23.png"
     }
    ],
    "cam": {
     "a": {
-     "zoom": 1.6,
-     "aim": [
-      0.45,
-      0.8
-     ]
-    },
-    "b": {
      "zoom": 1.5,
      "aim": [
       0.45,
       0.78
      ]
+    },
+    "b": {
+     "zoom": 1.4,
+     "aim": [
+      0.48,
+      0.76
+     ]
     }
    },
-   "overlays": [
-    {
-     "type": "pool",
-     "x": 0.45,
-     "y": 0.97,
-     "rx": 38,
-     "ry": 14,
-     "glow": 0.18,
-     "color": "255,220,160",
-     "dark": 0.4,
-     "t0": 219.17,
-     "t1": 219.7,
-     "fadeIn": 0.01,
-     "fadeOut": 0.01,
-     "follow": true
-    },
-    {
-     "type": "pool",
-     "x": 0.45,
-     "y": 0.97,
-     "rx": 38,
-     "ry": 14,
-     "glow": 0.18,
-     "color": "255,220,160",
-     "dark": 0.4,
-     "t0": 219.7,
-     "t1": 220.88,
-     "fadeIn": 0.01,
-     "fadeOut": 0.01,
-     "follow": true
-    }
-   ]
+   "overlays": []
   },
   {
-   "t0": 220.88,
+   "t0": 222.18,
    "t1": 224.3,
    "room": {
     "plate": {
@@ -3620,10 +3838,19 @@
       "facing": 1,
       "clip": "walk",
       "opts": {
-       "pace": 0.45
+       "stride": 0.8,
+       "arms": 0.6,
+       "knee": 0.9,
+       "lean": 0.5,
+       "armOut": 0,
+       "elbow": 0.8,
+       "bounce": 0,
+       "head": 0,
+       "pace": 0.6172839506172839,
+       "phase": 0.42999999999999544
       },
       "at": [
-       0.4,
+       0.35,
        0.8
       ]
      }
@@ -3634,17 +3861,18 @@
     "a": {
      "zoom": 2.4,
      "aim": [
-      0.45,
+      0.3,
       0.7
      ]
     },
     "b": {
      "zoom": 2.4,
      "aim": [
-      0.72,
+      0.3,
       0.7
      ]
-    }
+    },
+    "follow": 0
    },
    "overlays": [
     {
@@ -3652,7 +3880,7 @@
      "glow": 0.0,
      "stable": 0.88,
      "alpha": 0.4,
-     "t0": 220.88,
+     "t0": 222.18,
      "t1": 224.3,
      "fadeIn": 0.01,
      "fadeOut": 0.01,
@@ -3703,12 +3931,6 @@
      "view": "side",
      "facing": -1,
      "clip": "idle",
-     "face": {
-      "eyes": "wide",
-      "brows": "worried",
-      "mouth": "flat"
-     },
-     "sideHead": "scared",
      "pos": [
       1.45,
       0,
@@ -3719,12 +3941,22 @@
    ],
    "events": [
     {
-     "t": 224.9,
+     "t": 224.7,
      "i": 6,
-     "play": "sit",
+     "play": "crouchdown",
      "opts": {
-      "dur": 2.8
+      "dur": 2.6
      }
+    },
+    {
+     "t": 227.45,
+     "i": 6,
+     "card": "huddle"
+    },
+    {
+     "t": 227.45,
+     "i": 6,
+     "mood": "still"
     }
    ],
    "cam": {
@@ -3887,7 +4119,7 @@
     },
     {
      "opts": {
-      "mood": "whisper"
+      "mood": "count"
      },
      "pos": [
       1.45,
@@ -3971,7 +4203,7 @@
     },
     {
      "opts": {
-      "mood": "whisper"
+      "mood": "count"
      },
      "pos": [
       1.45,
