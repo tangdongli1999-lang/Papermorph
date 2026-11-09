@@ -31,7 +31,17 @@ def legs(walkers, tint=SIL): return withplate('hallway_side', 'bg_hallway_side_d
 FOLLOW = lambda zoom=2.6, v=0.70: {'a': {'zoom': zoom, 'aim': [0.3, v]}, 'b': {'zoom': zoom, 'aim': [0.3, v]}, 'follow': 0}
 W = json.load(open('/home/claude/lockdown/vo/words.json'))
 def caption(line, t0, t1, size=84, y=0.5, x=0.45): return {'type': 'words', 'words': [[w[0], w[2]] for w in W[line]], 'x': x, 'y': y, 'size': size, 't0': t0, 't1': t1, 'fadeIn': 0.05, 'fadeOut': 0.05}
+FEARS = ['shiver', 'terror', 'shock', 'sob', 'lookaround', 'headshake', 'shake']
+def fearify(name, v):
+    """a frightened kid cycles through kinds of fear, a new one about every 2 s, each kid starting on a different one"""
+    if isinstance(v, dict) and ('lip' in v or 'card' in v): return v          # someone speaking or posed keeps their own face
+    mood, inten = (v[0], v[1]) if isinstance(v, tuple) else (v, 1.0) if isinstance(v, str) else (v.get('opts', {}).get('mood'), v.get('opts', {}).get('intensity', 1.0)) if isinstance(v, dict) else (None, 1)
+    if mood not in ('shiver', 'shake', 'terror', 'shock', 'rock'): return v
+    k = ORDER.index(name); out = {'opts': {'mood': 'fear', 'list': FEARS[k:] + FEARS[:k], 'intensity': inten}}
+    if isinstance(v, dict): out = {**v, 'opts': {**v.get('opts', {}), **out['opts']}}
+    return out
 def huddle(**m):
+    m = {n: (fearify(n, v) if n != 'harlow' else v) for n, v in m.items()}
     out = moods(**m); h = out[6]
     out[6] = {**(h or {}), **HFRONT}
     return out
@@ -216,8 +226,8 @@ for k in range(6): sfx(219.55 + 0.44 * (k + 1), f'boot{1 + k % 2}', 1.6 - 0.2 * 
 F.shot(222.18, 224.3, legs([walker('deputy', [0.35, 0.80], 222.18, 222.3, 0.9)]), cam=FOLLOW(2.4))
 for k, t in enumerate(steps(222.3, 0.9, 224.3)): sfx(t, f'boot{1 + k % 2}', 0.5 - 0.12 * k)
 # 224.3 "Ms. Harlow sat back down in front of us, very carefully, like the floor might break." - a slow, slow sit
-SIT = huddle(**FROZEN); SIT[6] = {'card': None, 'view': 'side', 'facing': -1, 'clip': 'idle', **HFRONT}
-F.shot(224.3, 228.64, 'rooms/corner_dark.json', who=SIT, events=[{'t': 224.7, 'i': 6, 'play': 'crouchdown', 'opts': {'dur': 2.6}}, {'t': 227.45, 'i': 6, 'card': 'huddle'}, {'t': 227.45, 'i': 6, 'mood': 'still'}],
+SIT = huddle(**FROZEN); SIT[6] = {'card': None, 'view': 'side', 'facing': -1, 'clip': 'idle', 'sideHead': 'scared', **HFRONT}   # frantic: panic face, trembling all the way down
+F.shot(224.3, 228.64, 'rooms/corner_dark.json', who=SIT, events=[{'t': 224.7, 'i': 6, 'play': 'crouchdown', 'opts': {'dur': 2.6, 'shake': 1.0}}, {'t': 227.45, 'i': 6, 'card': 'huddle'}, {'t': 227.45, 'i': 6, 'mood': 'terror', 'intensity': 1.3}],
        cam={'a': {'zoom': 1.5, 'aim': [0.75, 0.45]}, 'b': {'zoom': 1.7, 'aim': [0.78, 0.5]}})
 sfx(225.0, 'cloth', 0.35)
 # 228.64 "She didn't look at us. She just stared at the door," - eyes fixed away from us, on the door

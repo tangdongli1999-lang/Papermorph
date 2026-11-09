@@ -78,13 +78,31 @@
    "who": [
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
       "intensity": 1.2
      }
     },
     {
      "opts": {
-      "mood": "shiver",
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
       "intensity": 1.3
      }
     },
@@ -95,18 +113,47 @@
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
       "intensity": 1.3
      }
     },
     {
      "opts": {
-      "mood": "rock"
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
      }
     },
     {
@@ -163,13 +210,31 @@
    "who": [
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
       "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shiver",
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
       "intensity": 1.1
      }
     },
@@ -242,13 +307,31 @@
    "who": [
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
       "intensity": 1.3
      }
     },
     {
      "opts": {
-      "mood": "shiver",
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
       "intensity": 1.3
      }
     },
@@ -453,7 +536,16 @@
    "who": [
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
       "intensity": 1.0
      }
     },
@@ -896,13 +988,31 @@
    "who": [
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
       "intensity": 1.2
      }
     },
     {
      "opts": {
-      "mood": "shiver",
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
       "intensity": 1.6
      }
     },
@@ -913,18 +1023,47 @@
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
       "intensity": 1.3
      }
     },
     {
      "opts": {
-      "mood": "rock"
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
      }
     },
     {
@@ -1477,34 +1616,91 @@
    "who": [
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
       "intensity": 2.0
      }
     },
     {
      "opts": {
-      "mood": "shiver",
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
       "intensity": 1.6
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "terror"
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
       "intensity": 1.6
      }
     },
@@ -1561,28 +1757,76 @@
     },
     {
      "opts": {
-      "mood": "shiver",
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
       "intensity": 1.6
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "terror"
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
       "intensity": 1.6
      }
     },
@@ -2791,13 +3035,31 @@
    "who": [
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
       "intensity": 1.2
      }
     },
     {
      "opts": {
-      "mood": "shiver",
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
       "intensity": 1.3
      }
     },
@@ -2808,18 +3070,47 @@
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
       "intensity": 1.3
      }
     },
     {
      "opts": {
-      "mood": "rock"
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
      }
     },
     {
@@ -3427,34 +3718,91 @@
    "who": [
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
       "intensity": 2.0
      }
     },
     {
      "opts": {
-      "mood": "shiver",
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
       "intensity": 1.6
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "terror"
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
       "intensity": 1.6
      }
     },
@@ -3895,34 +4243,91 @@
    "who": [
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
       "intensity": 2.0
      }
     },
     {
      "opts": {
-      "mood": "shiver",
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
       "intensity": 1.6
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "terror"
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
       "intensity": 1.6
      }
     },
@@ -3931,6 +4336,7 @@
      "view": "side",
      "facing": -1,
      "clip": "idle",
+     "sideHead": "scared",
      "pos": [
       1.45,
       0,
@@ -3945,7 +4351,8 @@
      "i": 6,
      "play": "crouchdown",
      "opts": {
-      "dur": 2.6
+      "dur": 2.6,
+      "shake": 1.0
      }
     },
     {
@@ -3956,7 +4363,8 @@
     {
      "t": 227.45,
      "i": 6,
-     "mood": "still"
+     "mood": "terror",
+     "intensity": 1.3
     }
    ],
    "cam": {
@@ -4000,34 +4408,91 @@
    "who": [
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
       "intensity": 2.0
      }
     },
     {
      "opts": {
-      "mood": "shiver",
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
       "intensity": 1.6
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "terror"
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
       "intensity": 1.6
      }
     },
@@ -4086,34 +4551,91 @@
    "who": [
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
       "intensity": 2.0
      }
     },
     {
      "opts": {
-      "mood": "shiver",
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
       "intensity": 1.6
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "terror"
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
       "intensity": 1.6
      }
     },
@@ -4170,34 +4692,91 @@
    "who": [
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
       "intensity": 2.0
      }
     },
     {
      "opts": {
-      "mood": "shiver",
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
       "intensity": 1.6
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "terror"
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
       "intensity": 1.6
      }
     },
@@ -4255,34 +4834,91 @@
    "who": [
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
       "intensity": 2.0
      }
     },
     {
      "opts": {
-      "mood": "shiver",
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
       "intensity": 1.6
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "terror"
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
       "intensity": 1.6
      }
     },
@@ -4352,34 +4988,91 @@
    "who": [
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
       "intensity": 2.0
      }
     },
     {
      "opts": {
-      "mood": "shiver",
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
       "intensity": 1.6
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "terror"
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
       "intensity": 1.6
      }
     },
@@ -4462,34 +5155,91 @@
    "who": [
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
       "intensity": 2.0
      }
     },
     {
      "opts": {
-      "mood": "shiver",
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
       "intensity": 1.6
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "terror"
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shake",
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
       "intensity": 1.6
      }
     },
