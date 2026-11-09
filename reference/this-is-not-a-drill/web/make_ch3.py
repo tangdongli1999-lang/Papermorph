@@ -169,12 +169,12 @@ F.shot(307.54, 310.22, CORNER, who=huddle(**{**AFRAID, 'dong': {'opts': {'mood':
        overlays=[{'type': 'glow', 't0': 307.54, 't1': 310.22, 'spots': [[0.36, 0.62, 420]], 'fadeIn': 0.2, 'fadeOut': 0.1}])
 # 310.22 "I love you. I'll call you after." - Mom, in her kitchen, phone to her ear, hearing it
 MOMK = lambda **o: room('kitchen_mom', who=[{'n': 'mom', 'at': [0.5, 0.8], 'card': 'phone_live', 'clip': 'huddle', **o}])
-F.shot(310.22, 312.49, MOMK(opts={'mood': 'holdcry'}), cam={'a': {'zoom': 1.6, 'aim': [0.5, 0.4]}, 'b': {'zoom': 1.9, 'aim': [0.5, 0.38]}})
+F.shot(310.22, 312.49, MOMK(opts={'mood': 'holdcry'}), cam={'a': {'zoom': 1.6, 'aim': [0.5, 0.49]}, 'b': {'zoom': 1.9, 'aim': [0.5, 0.48]}})
 # 312.49 "She didn't say anything back." 314.51 "I could just hear her breathing, fast, the way she breathes when she's trying not to cry,"
-F.shot(312.49, 319.79, MOMK(opts={'mood': 'holdcry'}), cam={'a': {'zoom': 2.0, 'aim': [0.5, 0.38]}, 'b': {'zoom': 2.6, 'aim': [0.5, 0.34]}, 'ease': 'linear'})
+F.shot(312.49, 319.79, MOMK(opts={'mood': 'holdcry'}), cam={'a': {'zoom': 2.0, 'aim': [0.5, 0.47]}, 'b': {'zoom': 2.6, 'aim': [0.5, 0.46]}, 'ease': 'linear'})
 sfx(314.4, 'mombreath', 0.9)
 # 319.79 "and then she whispered 'okay, baby,'" - her lips on "okay, baby"
-F.shot(319.79, 321.96, MOMK(opts={'mood': 'holdcry'}, lip='c3_16', lipSpans=[[320.92, 321.96]], lipGain=1.4), cam={'a': {'zoom': 2.7, 'aim': [0.5, 0.33]}, 'b': {'zoom': 2.8, 'aim': [0.5, 0.33]}})
+F.shot(319.79, 321.96, MOMK(opts={'mood': 'holdcry'}, lip='c3_16', lipSpans=[[320.92, 321.96]], lipGain=1.4), cam={'a': {'zoom': 2.7, 'aim': [0.5, 0.455]}, 'b': {'zoom': 2.8, 'aim': [0.5, 0.455]}})
 # 321.96 "and I hung up" - the call ends
 F.shot(321.96, 322.9, CORNER, who=huddle(**AFRAID), cam=close('dong', 2.4, 2.5),
        overlays=[DIM(321.96, 322.9), {'type': 'call', 't0': 321.96, 't1': 322.9, 'name': 'Mom', 'initial': 'M', 'answer': 307.4, 'end': 322.46, 'fadeIn': 0.05, 'fadeOut': 0.1}])
@@ -204,7 +204,7 @@ F.shot(336.33, 338.09, CORNER, who=huddle(**{**AFRAID, 'dong': {'opts': {'mood':
 sfx(337.29, 'hit', 0.7)
 # 338.09 "My name." - Dong on the phone, saying it; 338.97 "My mom." - Mom; 339.77 "And our room number." - 214
 F.shot(338.09, 338.97, CORNER, who=WHISPER, filter=RED, cam=close('dong', 2.6, 2.7))
-F.shot(338.97, 339.77, MOMK(opts={'mood': 'holdcry'}), filter=RED, cam={'a': {'zoom': 2.4, 'aim': [0.5, 0.35]}, 'b': {'zoom': 2.5, 'aim': [0.5, 0.35]}})
+F.shot(338.97, 339.77, MOMK(opts={'mood': 'holdcry'}), filter=RED, cam={'a': {'zoom': 2.4, 'aim': [0.5, 0.46]}, 'b': {'zoom': 2.5, 'aim': [0.5, 0.46]}})
 F.shot(339.77, 342.0, flat('plate_door_hall_214', tint=HALL), filter=RED, cam={'a': {'zoom': 1.8, 'aim': [0.76, 0.29]}, 'b': {'zoom': 2.6, 'aim': [0.76, 0.29]}, 'ease': 'in'},
        overlays=[{'type': 'black', 't0': 341.2, 't1': 342.1, 'fadeIn': 0.7, 'fadeOut': 0.01}])
 sfx(338.1, 'hit', 0.6); sfx(338.97, 'hit', 0.6); sfx(339.8, 'boom', 0.9)

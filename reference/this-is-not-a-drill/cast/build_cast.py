@@ -296,6 +296,7 @@ CAST = {   # name: (long sleeves?, height in metres)
     'dong': (False, 1.70), 'tyler': (False, 1.76), 'priya': (False, 1.63), 'marcus': (False, 1.84), 'kid_a': (False, 1.62), 'kid_b': (False, 1.72),
     'harlow': (True, 1.68), 'district': (True, 1.65), 'parent_a': (False, 1.80), 'parent_b': (True, 1.66), 'mom': (True, 1.62), 'deputy': (False, 1.83), 'dawes': (True, 1.78)}
 
+MANUAL_HEAD = {('mom', 'phone_live'): [152, 150]}   # collar point of a headless pose, set by hand
 MANUAL_FACE = {'district': {'EL': 205, 'ER': 307, 'EY': 293, 'eye': 28, 'MX': 255, 'MY': 370, 'mouthW': 66}}
 
 def build(name):
@@ -333,6 +334,7 @@ def build(name):
     for n, f in {'harlow': [('book_live', 'harlow_book_headless'), ('hands_live', 'harlow_hands_headless')], 'dong': [('phone_live', 'dong_uni_phone_whisper_headless')], 'mom': [('phone_live', 'mom_phone_ear_headless')]}.get(name, []):
         if os.path.exists(f'{ART}/{f}.png'): headless_card(f'{ART}/{f}.png', n, d, cards)
         if n == 'phone_live' and n in cards and cards[n].get('head'): cards[n]['head']['behind'] = True   # the phone hand is in front of the face
+        if (name, n) in MANUAL_HEAD and n in cards: cards[n]['head']['at'] = MANUAL_HEAD[(name, n)]   # where the neck finder is fooled by hands held up near the face
     for n, f, rw in EXTRA.get(name, []):
         if os.path.exists(f'{ART}/{f}.png'): card(f'{ART}/{f}.png', n, d, cards, ref_w=rw)
     for n, f in [('sit_floor_knees', f'{src}_sit_floor')]:
