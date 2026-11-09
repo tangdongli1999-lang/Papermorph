@@ -35,5 +35,17 @@
   "w": 733,
   "h": 1407,
   "height_m": 1.708
+ },
+ "bed_cheese": {
+  "file": "cards/bed_cheese.webp",
+  "w": 1089,
+  "h": 923,
+  "height_m": 1.059
+ },
+ "bed_sleepy": {
+  "file": "cards/bed_sleepy.webp",
+  "w": 1122,
+  "h": 928,
+  "height_m": 1.034
  }
 }

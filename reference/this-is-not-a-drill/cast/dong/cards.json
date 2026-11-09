@@ -113,5 +113,41 @@
   "w": 732,
   "h": 559,
   "height_m": 0.679
+ },
+ "bed_asleep": {
+  "file": "cards/bed_asleep.webp",
+  "w": 929,
+  "h": 934,
+  "height_m": 1.257
+ },
+ "bed_sit": {
+  "file": "cards/bed_sit.webp",
+  "w": 929,
+  "h": 1234,
+  "height_m": 1.66
+ },
+ "bed_reach": {
+  "file": "cards/bed_reach.webp",
+  "w": 942,
+  "h": 1214,
+  "height_m": 1.611
+ },
+ "bed_halfway": {
+  "file": "cards/bed_halfway.webp",
+  "w": 940,
+  "h": 1150,
+  "height_m": 1.529
+ },
+ "bed_phone": {
+  "file": "cards/bed_phone.webp",
+  "w": 929,
+  "h": 1236,
+  "height_m": 1.663
+ },
+ "floor_tired": {
+  "file": "cards/floor_tired.webp",
+  "w": 536,
+  "h": 1176,
+  "height_m": 1.0
  }
 }

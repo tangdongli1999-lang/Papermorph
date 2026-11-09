@@ -1690,5 +1690,91 @@
    "/home/claude/lockdown/art/out/bg_hallway_dim_open.png"
   ],
   "1536x1024"
+ ],
+ "dong_tee_bed_mom_cheese": [
+  "Combine image 1 (the boy in bed, black beanie, round glasses, pajama tee) and image 2 (his mother). The boy sits up in the SAME bed under the same blue blanket, tired and shaken, eating a grilled cheese sandwich from a small plate on his lap. His mother sits on the edge of the bed beside him, turned toward him, watching him gently with a worried, loving face, one hand resting on the blanket. Full figures, the whole bed visible. Both must look EXACTLY like their references. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, soft flat lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_tee_bed_sit.png",
+   "/home/claude/lockdown/art/out/mom.png"
+  ],
+  "1536x1024"
+ ],
+ "dong_tee_bed_mom_sleepy": [
+  "Combine image 1 (the boy in bed) and image 2 (his mother). The boy is lying down in the SAME bed under the same blue blanket, ALMOST ASLEEP, eyes nearly closed, beanie still on, glasses on the nightstand side. His mother sits on the edge of the bed, gently stroking his hair, worried and tender. Full figures, the whole bed visible. Both must look EXACTLY like their references. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, soft flat lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_tee_bed_sit.png",
+   "/home/claude/lockdown/art/out/mom.png"
+  ],
+  "1536x1024"
+ ],
+ "dong_tee_bed_reach": [
+  "Edit image 1: the same boy in the same bed, same blanket, same size and position. Now he sits up, crying hard with tears, desperate, reaching one arm out toward the RIGHT side of the picture (toward his bedroom door). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, soft flat lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_tee_bed_sit.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_tee_bed_halfway": [
+  "Edit image 1: the same boy and the same bed, same blanket, same size. Now he is HALFWAY OUT OF BED: blanket pushed aside, sitting on the right edge of the bed, one bare foot touching the floor, leaning toward the RIGHT (toward his door), about to stand up, hopeful and teary. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, soft flat lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_tee_bed_sit.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_tee_bed_phone": [
+  "Edit image 1: the same boy in the same bed, same blanket, same size and position. Now he holds a glowing smartphone in both hands close to his face, staring at the screen in pure horror, eyes huge, mouth open, the phone screen light glowing pale blue on his face. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, soft flat lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_tee_bed_sit.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_tee_floor_door": [
+  "Edit image 1: the same boy (black beanie, round glasses, same pajama tee and pants) but now NO BED: he sits on the floor hugging his knees, leaning back slightly as if against a wall, with NOTHING drawn behind him (no door, no wall, only the plain background), tired, hollow-eyed, dark circles, staring ahead. Full figure. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, soft flat lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_tee_bed_sit.png"
+  ],
+  "1024x1536"
+ ],
+ "plate_bedroom_evening_nobed": [
+  "Edit image 1: keep EVERYTHING exactly the same (walls, posters, curtain, lamp, nightstand with the plate, desk, chair, door, rug, floor, framing) but REMOVE THE BED completely, so there is just empty floor and wall where the bed was. Keep EXACTLY the same flat handmade felt and paper cut-out style. 16:9, no people unless described, no text. ",
+  [
+   "/home/claude/lockdown/art/out/bg_bedroom_evening.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_bedroom_lock": [
+  "Close-up inside a dark boy's bedroom at night: a white bedroom door's round brass doorknob with a small push-button lock in its centre, and a boy's hand (light skin, a dark blue pajama sleeve) pressing the lock button in. Faint warm light from the gap under the door, the rest dim blue night. Same flat felt and paper craft style and colours as image 1. Keep EXACTLY the same flat handmade felt and paper cut-out style. 16:9, no people unless described, no text. ",
+  [
+   "/home/claude/lockdown/art/out/bg_bedroom_door_night.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_duck_keys": [
+  "Close-up: a ring of house keys with a small yellow rubber duck keychain, dangling from a woman's hand and jingling, against a dark hallway at night, lit warmly from below. Same flat felt and paper craft style as image 1 (the duck keychain must look like the one hanging in image 1). Keep EXACTLY the same flat handmade felt and paper cut-out style. 16:9, no people unless described, no text. ",
+  [
+   "/home/claude/lockdown/art/out/bg_car_night.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_home_hall_tray": [
+  "Edit image 1: the same upstairs hallway of the family house, same door, same railing, same picture frames, same felt style, but in the EVENING with a lamp on (warm light). On the floor right in front of the closed bedroom door sits a tray with a plate of food covered with foil, a glass of milk and a folded napkin. No people. Keep EXACTLY the same flat handmade felt and paper cut-out style. 16:9, no people unless described, no text. ",
+  [
+   "/home/claude/lockdown/art/out/bg_home_hall_night.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_door_gap_hand": [
+  "Close-up at floor level in the same upstairs hallway (image 1): the bedroom door is opened only a few centimetres, and a boy's thin hand (light skin, dark blue pajama sleeve) reaches out through the narrow gap to slide a tray of food (foil-covered plate, glass of milk) inside. Only the hand and forearm are visible. Warm evening lamp light. Keep EXACTLY the same flat handmade felt and paper cut-out style. 16:9, no people unless described, no text. ",
+  [
+   "/home/claude/lockdown/art/out/bg_home_hall_night.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_bedroom_door_night_clear": [
+  "Edit image 1: keep EVERYTHING exactly the same (the door, knob, walls, bed post, lamp, floor, the warm strip of hallway light under the door, framing, felt style) but REMOVE the two dark foot shadows from the light strip and from the floor, so the light under the door is one smooth unbroken warm strip with nobody standing outside. No people, no text.",
+  [
+   "/home/claude/lockdown/art/out/bg_bedroom_door_night.png"
+  ],
+  "1536x1024"
  ]
 }

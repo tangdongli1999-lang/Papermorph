@@ -331,10 +331,11 @@ def build(name):
         for n, f in [('sit_floor_knees', 'dong_uni_sit_floor'), ('crouch_hide', 'dong_uni_crouch')]:
             card(f'{ART}/{f}.png', n, d, cards, ref_w=1.0)
     if os.path.exists(f'{ART}/{src}_sit_floor_headless.png'): headless_card(f'{ART}/{src}_sit_floor_headless.png', 'huddle', d, cards)
-    EXTRA = {'dong': [('sit_desk', 'dong_uni_sit_desk', 1.0), ('floor_phone', 'dong_uni_floor_phone', 1.0), ('phone_whisper', 'dong_uni_phone_whisper', 1.0), ('phone_discreet', 'dong_uni_phone_discreet', 1.0), ('crawl', 'dong_uni_crawl', 1 / 1.45)],
+    EXTRA = {'dong': [('sit_desk', 'dong_uni_sit_desk', 1.0), ('floor_phone', 'dong_uni_floor_phone', 1.0), ('phone_whisper', 'dong_uni_phone_whisper', 1.0), ('phone_discreet', 'dong_uni_phone_discreet', 1.0), ('crawl', 'dong_uni_crawl', 1 / 1.45),
+                      ('bed_asleep', 'dong_tee_bed_asleep', 1.0), ('bed_sit', 'dong_tee_bed_sit', 1.0), ('bed_reach', 'dong_tee_bed_reach', 1.0), ('bed_halfway', 'dong_tee_bed_halfway', 1.0), ('bed_phone', 'dong_tee_bed_phone', 1.0), ('floor_tired', 'dong_tee_floor_door', 1.0)],
              'tyler': [('sit_desk', 'tyler_sit_desk', 1.0), ('hands_mouth', 'tyler_hands_mouth', 1.0), ('face_knees', 'tyler_face_knees', 1.0)], 'priya': [('sit_desk', 'priya_sit_desk', 1.0), ('grab', 'priya_grab', 1.0)], 'dawes': [('menu', 'dawes_menu', 1.0)], 'marcus': [('sit_desk', 'marcus_sit_desk', 1.0), ('asleep', 'marcus_asleep', 1.0), ('comfort', 'marcus_comfort', 1.0)],
              'kid_a': [('sit_desk', 'kid_a_sit_desk', 1.0)], 'kid_b': [('sit_desk', 'kid_b_sit_desk', 1.0)],
-             'mom': [('phone_ear', 'mom_phone_ear', 1.0), ('phone_text', 'mom_phone_hold', 1 / 1.34), ('hug', 'mom_hug', 1.0), ('lift', 'mom_lift_hug', 1.0)],
+             'mom': [('phone_ear', 'mom_phone_ear', 1.0), ('phone_text', 'mom_phone_hold', 1 / 1.34), ('hug', 'mom_hug', 1.0), ('lift', 'mom_lift_hug', 1.0), ('bed_cheese', 'dong_tee_bed_mom_cheese', 1.0), ('bed_sleepy', 'dong_tee_bed_mom_sleepy', 1.0)],
              'harlow': [('phone', 'harlow_phone', 1 / 1.17), ('book', 'harlow_book', 1.0), ('shush', 'harlow_shush', 1.0), ('hands', 'harlow_hands', 1.0), ('floor_phone', 'harlow_floor_phone', 1.0), ('confiscate', 'harlow_confiscate', 1.0)], 'district': [('clipboard', 'district_clipboard', 1.0)]}
     # poses with the head taken off, so the live head (blinks, talks, expressions) sits on them
     for n, f in {'harlow': [('book_live', 'harlow_book_headless'), ('hands_live', 'harlow_hands_headless')], 'dong': [('phone_live', 'dong_uni_phone_whisper_headless')], 'mom': [('phone_live', 'mom_phone_ear_headless')], 'district': [('clipboard_live', 'district_clipboard_headless')]}.get(name, []):
@@ -348,7 +349,11 @@ def build(name):
         if name != 'dong' and os.path.exists(f'{ART}/{f}.png'): card(f'{ART}/{f}.png', n, d, cards, ref_w=1.0)
     # floor and crouch cards came out at about the same pixel scale as the standing images: keep their size relative to the 1536 px source
     for n, c in cards.items():
-        if n in ('sit_floor_knees', 'crouch_hide', 'shush', 'hands', 'hands_mouth', 'grab', 'floor_phone', 'phone_whisper', 'phone_discreet', 'face_knees', 'asleep', 'comfort'): c['height_m'] = round(c['h'] / 1400 * 1.7, 3)
+        if n in ('sit_floor_knees', 'crouch_hide', 'shush', 'hands', 'hands_mouth', 'grab', 'floor_phone', 'phone_whisper', 'phone_discreet', 'face_knees', 'asleep', 'comfort', 'floor_tired'): c['height_m'] = round(c['h'] / 1400 * 1.7, 3)
+    # the home bed: every bed card draws the same bed, so size each one by the bed's width (the bed is the card's full width), 1.25 m wide
+    for n, c in cards.items():
+        if n.startswith('bed_'): c['height_m'] = round(1.25 * c['h'] / c['w'], 3)
+    if 'floor_tired' in cards: cards['floor_tired']['height_m'] = 1.0   # sitting on the floor hugging his knees: the same height as his other floor poses
     for v in R['views'].values():
         for p in v['pieces'].values():
             if not p['file'].startswith('heads/'): p['size'] = list(Image.open(f"{d}/{p['file']}").size)
