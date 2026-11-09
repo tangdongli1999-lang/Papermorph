@@ -1,0 +1,3 @@
+22. **At the start of every new video, do the full pass:** check every frame of the storyboard and generate every character pose and background the story needs, before rendering. *(2026-11-09: "at times when i want you to analyze every frame and generate 3js images for characters and background you have to do that. but that will always come up at the start.")*
+23. **For fixes, re-render only the shots that changed** and splice them back in; never re-render a whole chapter for a few notes.
+24. **Before each chapter's full render, send a storyboard sheet:** one frame per shot, labelled with its narration line, plus the sound cues, so problems are caught in minutes. The goal is one full render per chapter.

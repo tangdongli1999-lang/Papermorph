@@ -1,0 +1,35 @@
+{
+ "plate": {
+  "img": "art/bg_hallway.png",
+  "fov": 40,
+  "h": 1.031,
+  "pitch": 0,
+  "horizon": 0.55,
+  "sides": [
+   {
+    "at": [
+     0.2,
+     0.69
+    ]
+   },
+   {
+    "at": [
+     0.82,
+     0.69
+    ]
+   }
+  ]
+ },
+ "tint": 16777215,
+ "who": [
+  {
+   "n": "dong",
+   "clip": "walkToward",
+   "at": [
+    0.5,
+    0.66
+   ]
+  }
+ ],
+ "name": "hallway"
+}

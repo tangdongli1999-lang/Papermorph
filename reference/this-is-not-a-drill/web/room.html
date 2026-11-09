@@ -1,0 +1,15 @@
+<!doctype html><html><head><meta charset="utf-8"><style>body{margin:0;background:#000}</style></head><body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="dong.js"></script><script src="set.js"></script>
+<script>
+const W=1280,H=720,r=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});r.setSize(W,H);r.outputEncoding=THREE.sRGBEncoding;document.body.appendChild(r.domElement);
+const sc=new THREE.Scene();let cam,set,T=0,events=[];
+window.setup=async(cfg)=>{
+ set=buildSet(sc,cfg.plate); console.log('zWall',set.zWall); const zw=set.zWall; for(const w of cfg.who){ if(w.at){const f=set.floorAt(...w.at); w.pos=[f.x,w.y||0,f.z];} else if(w.wall!=null) w.pos[2]=zw+w.wall; } for(const p of cfg.props||[]){ if(p.at){const f=set.floorAt(...p.at); p.x=f.x; p.z=f.z;} else if(p.wall!=null) p.z=zw+p.wall; } cam=set.camera.clone(); if(cfg.cam){cam.position.set(...cfg.cam.pos);cam.rotation.set(cfg.cam.rx*Math.PI/180,(cfg.cam.ry||0)*Math.PI/180,0,'YXZ');cam.fov=cfg.cam.fov||cam.fov;cam.updateProjectionMatrix();}
+ for(const p of cfg.props||[]) addProp(sc,p);
+ window.P=await Promise.all(cfg.who.map(w=>Dong.load('cast/'+w.n+'/',{shared:'shared/'})));
+ for(let i=0;i<P.length;i++){const p=P[i],w=cfg.who[i];p.root.position.set(...w.pos);sc.add(p.root);p.addShadow(w.shadow??0.5);if(w.card)await p.showCard(w.card);if(w.view)p.setView(w.view);if(w.facing)p.setFacing(w.facing);if(w.clip)p.play(w.clip,w.opts||{});if(w.scale)p.root.scale.setScalar(w.scale);if(cfg.tint)p.setTint(cfg.tint);}
+ events=(cfg.events||[]).slice();
+};
+window.step=(t,dt=1/30)=>{for(let x=0;x<t;x+=dt){T+=dt;while(events.length&&events[0].t<=T){const e=events.shift();if(e.flinch)P.forEach((p,i)=>p.flinch(Math.random()*0.35,e.flinch*(0.6+Math.random()*0.8)));}P.forEach(p=>p.update(dt));}r.render(sc,cam);};
+</script></body></html>

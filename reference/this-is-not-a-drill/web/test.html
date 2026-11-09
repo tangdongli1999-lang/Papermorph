@@ -1,0 +1,13 @@
+<!doctype html><html><head><meta charset="utf-8"><style>body{margin:0;background:#3a5a4e}</style></head><body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="dong.js"></script>
+<script>
+const W=1600,H=700,r=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});r.setSize(W,H);r.outputEncoding=THREE.sRGBEncoding;r.shadowMap.enabled=true;document.body.appendChild(r.domElement);
+const sc=new THREE.Scene();sc.background=new THREE.Color(0x3a5a4e);
+const cam=new THREE.PerspectiveCamera(30,W/H,0.1,80);cam.position.set(0,1.1,9.5);cam.lookAt(0,0.9,0);
+const sun=new THREE.DirectionalLight(0xffffff,0.6);sun.position.set(2,5,4);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-8,right:8,top:5,bottom:-1});sc.add(sun,new THREE.HemisphereLight(0xffffff,0x888888,0.7));
+const fl=new THREE.Mesh(new THREE.PlaneGeometry(30,10),new THREE.MeshLambertMaterial({color:0xd9c9a8}));fl.rotation.x=-Math.PI/2;fl.receiveShadow=true;sc.add(fl);
+const NAMES=['dong','tyler','priya','marcus','kid_a','kid_b','harlow','mom','deputy','dawes'];
+window.ready=Promise.all(NAMES.map(n=>Dong.load('cast/'+n+'/',{shared:'shared/'}))).then(ps=>{window.P=ps;ps.forEach((p,i)=>{p.root.position.x=(i-4.5)*0.85;sc.add(p.root);});});
+window.step=(t,dt=1/30)=>{for(let x=0;x<t;x+=dt)P.forEach(p=>p.update(dt));r.render(sc,cam);};
+</script></body></html>

@@ -1,0 +1,254 @@
+{
+ "kindergarten": [
+  {
+   "mask": "masks/kindergarten_0.png",
+   "base": 0.8613,
+   "u": 0.5131,
+   "area": 80002,
+   "top": 0.572
+  },
+  {
+   "mask": "masks/kindergarten_1.png",
+   "base": 0.9355,
+   "u": 0.1312,
+   "area": 75504,
+   "top": 0.614
+  }
+ ],
+ "office": [
+  {
+   "mask": "masks/office_0.png",
+   "base": 0.7656,
+   "u": 0.9592,
+   "area": 52893,
+   "top": 0.044
+  },
+  {
+   "mask": "masks/office_1.png",
+   "base": 0.1045,
+   "u": 0.7836,
+   "area": 18546,
+   "top": 0.052
+  },
+  {
+   "mask": "masks/office_2.png",
+   "base": 0.2988,
+   "u": 0.3282,
+   "area": 17925,
+   "top": 0.067
+  },
+  {
+   "mask": "masks/office_3.png",
+   "base": 0.8496,
+   "u": 0.5167,
+   "area": 441696,
+   "top": 0.081
+  },
+  {
+   "mask": "masks/office_4.png",
+   "base": 0.1299,
+   "u": 0.8027,
+   "area": 2084,
+   "top": 0.122
+  },
+  {
+   "mask": "masks/office_5.png",
+   "base": 0.1543,
+   "u": 0.8212,
+   "area": 2196,
+   "top": 0.142
+  },
+  {
+   "mask": "masks/office_6.png",
+   "base": 0.1816,
+   "u": 0.8074,
+   "area": 2941,
+   "top": 0.167
+  },
+  {
+   "mask": "masks/office_7.png",
+   "base": 0.2363,
+   "u": 0.791,
+   "area": 5079,
+   "top": 0.195
+  }
+ ],
+ "gym": [
+  {
+   "mask": "masks/gym_0.png",
+   "base": 0.7441,
+   "u": 0.8259,
+   "area": 30105,
+   "top": 0.518
+  }
+ ],
+ "bedroom_night": [
+  {
+   "mask": "masks/bedroom_night_0.png",
+   "base": 0.1895,
+   "u": 0.641,
+   "area": 12737,
+   "top": 0.083
+  },
+  {
+   "mask": "masks/bedroom_night_1.png",
+   "base": 0.4229,
+   "u": 0.1735,
+   "area": 56933,
+   "top": 0.088
+  },
+  {
+   "mask": "masks/bedroom_night_2.png",
+   "base": 0.3633,
+   "u": 0.512,
+   "area": 16027,
+   "top": 0.215
+  },
+  {
+   "mask": "masks/bedroom_night_3.png",
+   "base": 0.3643,
+   "u": 0.6481,
+   "area": 14440,
+   "top": 0.252
+  },
+  {
+   "mask": "masks/bedroom_night_4.png",
+   "base": 0.75,
+   "u": 0.3884,
+   "area": 41787,
+   "top": 0.393
+  },
+  {
+   "mask": "masks/bedroom_night_5.png",
+   "base": 0.9053,
+   "u": 0.1797,
+   "area": 208148,
+   "top": 0.44
+  },
+  {
+   "mask": "masks/bedroom_night_6.png",
+   "base": 0.7539,
+   "u": 0.6009,
+   "area": 38613,
+   "top": 0.478
+  },
+  {
+   "mask": "masks/bedroom_night_7.png",
+   "base": 0.749,
+   "u": 0.7508,
+   "area": 21441,
+   "top": 0.553
+  }
+ ],
+ "stairwell": [
+  {
+   "mask": "masks/stairwell_0.png",
+   "base": 0.8086,
+   "u": 0.1729,
+   "area": 137789,
+   "top": 0.014
+  }
+ ],
+ "door_close": [
+  {
+   "mask": "masks/door_close_0.png",
+   "base": 0.502,
+   "u": 0.1071,
+   "area": 20837,
+   "top": 0.002
+  },
+  {
+   "mask": "masks/door_close_1.png",
+   "base": 0.8262,
+   "u": 0.3298,
+   "area": 8632,
+   "top": 0.002
+  },
+  {
+   "mask": "masks/door_close_2.png",
+   "base": 0.8271,
+   "u": 0.7074,
+   "area": 6948,
+   "top": 0.002
+  },
+  {
+   "mask": "masks/door_close_3.png",
+   "base": 0.417,
+   "u": 0.9342,
+   "area": 16967,
+   "top": 0.002
+  },
+  {
+   "mask": "masks/door_close_4.png",
+   "base": 0.4795,
+   "u": 0.5254,
+   "area": 101700,
+   "top": 0.041
+  },
+  {
+   "mask": "masks/door_close_5.png",
+   "base": 0.3662,
+   "u": 0.945,
+   "area": 13512,
+   "top": 0.241
+  },
+  {
+   "mask": "masks/door_close_6.png",
+   "base": 0.3457,
+   "u": 0.7949,
+   "area": 8784,
+   "top": 0.264
+  },
+  {
+   "mask": "masks/door_close_7.png",
+   "base": 0.4971,
+   "u": 0.6636,
+   "area": 3999,
+   "top": 0.438
+  },
+  {
+   "mask": "masks/door_close_8.png",
+   "base": 0.8535,
+   "u": 0.9451,
+   "area": 44953,
+   "top": 0.468
+  },
+  {
+   "mask": "masks/door_close_9.png",
+   "base": 0.9932,
+   "u": 0.1063,
+   "area": 75957,
+   "top": 0.671
+  }
+ ],
+ "classroom_day": [
+  {
+   "mask": "masks/classroom_day_0.png",
+   "base": 0.9961,
+   "u": 0.075,
+   "area": 60781,
+   "top": 0.766
+  },
+  {
+   "mask": "masks/classroom_day_1.png",
+   "base": 0.9961,
+   "u": 0.9602,
+   "area": 25363,
+   "top": 0.774
+  },
+  {
+   "mask": "masks/classroom_day_2.png",
+   "base": 0.9971,
+   "u": 0.5221,
+   "area": 93920,
+   "top": 0.776
+  },
+  {
+   "mask": "masks/classroom_day_teacher.png",
+   "base": 0.83,
+   "u": 0.51,
+   "area": 127716,
+   "top": 0.6
+  }
+ ]
+}

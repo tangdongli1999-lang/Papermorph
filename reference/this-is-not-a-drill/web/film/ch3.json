@@ -1,0 +1,858 @@
+{
+ "t0": 239.0,
+ "t1": 342.0,
+ "shots": [
+  {
+   "t0": 239.0,
+   "t1": 240.9,
+   "room": {
+    "plate": {
+     "img": "art/bg_ext_midday.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.0
+    },
+    "b": {
+     "zoom": 1.15,
+     "aim": [
+      0.6,
+      0.45
+     ]
+    }
+   }
+  },
+  {
+   "t0": 240.9,
+   "t1": 242.3,
+   "room": {
+    "plate": {
+     "img": "art/bg_ext_midday.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "overlays": [
+    {
+     "type": "clock",
+     "t0": 240.9,
+     "t1": 242.3,
+     "h": 10,
+     "m": 20,
+     "h2": 11,
+     "m2": 20,
+     "t2": 241.05,
+     "label": "11:20 AM",
+     "fadeIn": 0.01,
+     "fadeOut": 0.01
+    }
+   ]
+  },
+  {
+   "t0": 242.3,
+   "t1": 249.4,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.8
+     }
+    },
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookaround"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "sob"
+     }
+    },
+    {
+     "opts": {
+      "mood": "rock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "still"
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.0
+    },
+    "b": {
+     "zoom": 1.08,
+     "dz": 0.2
+    }
+   },
+   "overlays": [
+    {
+     "type": "glow",
+     "t0": 242.6,
+     "t1": 249.4,
+     "spots": [
+      [
+       0.25,
+       0.64,
+       230
+      ],
+      [
+       0.165,
+       0.64,
+       230
+      ],
+      [
+       0.34,
+       0.64,
+       230
+      ],
+      [
+       0.45,
+       0.66,
+       230
+      ],
+      [
+       0.555,
+       0.66,
+       230
+      ],
+      [
+       0.66,
+       0.66,
+       230
+      ]
+     ],
+     "fadeIn": 0.6
+    }
+   ]
+  },
+  {
+   "t0": 249.4,
+   "t1": 264.9,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.8
+     }
+    },
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookaround"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "sob"
+     }
+    },
+    {
+     "opts": {
+      "mood": "rock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "still"
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.6,
+     "aim": [
+      0.45,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 1.7,
+     "aim": [
+      0.45,
+      0.55
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "black",
+     "alpha": 0.55,
+     "t0": 249.4,
+     "t1": 264.9,
+     "fadeIn": 0.25,
+     "fadeOut": 0.1
+    },
+    {
+     "type": "chat",
+     "t0": 249.4,
+     "t1": 264.9,
+     "fadeIn": 0.25,
+     "fadeOut": 0.1,
+     "msgs": [
+      {
+       "t": 249.7,
+       "name": "Jayden",
+       "text": "is anyone else hearing knocking??",
+       "color": "#ffb86b"
+      },
+      {
+       "t": 251.8,
+       "name": "Mia",
+       "text": "it's in the science wing",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 253.2,
+       "name": "Ethan",
+       "text": "it said it was the nurse",
+       "color": "#c79bff"
+      },
+      {
+       "t": 257.4,
+       "name": "Kayla \u00b7 Room 208",
+       "text": "Coach Reyes is outside. He says it's clear. We're opening.",
+       "color": "#ff8fb1",
+       "seen": 261.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "t0": 264.9,
+   "t1": 269.3,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.8
+     }
+    },
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookaround"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "sob"
+     }
+    },
+    {
+     "opts": {
+      "mood": "rock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "still"
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.2,
+     "aim": [
+      0.86,
+      0.49
+     ]
+    },
+    "b": {
+     "zoom": 2.4,
+     "aim": [
+      0.86,
+      0.49
+     ]
+    }
+   }
+  },
+  {
+   "t0": 269.3,
+   "t1": 270.6,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.8
+     }
+    },
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookaround"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "sob"
+     }
+    },
+    {
+     "opts": {
+      "mood": "rock"
+     }
+    },
+    {
+     "card": "phone",
+     "clip": "idle"
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.2,
+     "aim": [
+      0.86,
+      0.53
+     ]
+    },
+    "b": {
+     "zoom": 2.3,
+     "aim": [
+      0.86,
+      0.53
+     ]
+    }
+   }
+  },
+  {
+   "t0": 270.6,
+   "t1": 287.4,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.8
+     }
+    },
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookaround"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "sob"
+     }
+    },
+    {
+     "opts": {
+      "mood": "rock"
+     }
+    },
+    {
+     "card": "phone",
+     "clip": "idle"
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.6,
+     "aim": [
+      0.55,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 1.7,
+     "aim": [
+      0.55,
+      0.55
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "black",
+     "alpha": 0.55,
+     "t0": 270.6,
+     "t1": 287.4,
+     "fadeIn": 0.25,
+     "fadeOut": 0.1
+    },
+    {
+     "type": "chat",
+     "t0": 270.6,
+     "t1": 287.4,
+     "fadeIn": 0.25,
+     "fadeOut": 0.1,
+     "msgs": [
+      {
+       "t": 249.7,
+       "name": "Jayden",
+       "text": "is anyone else hearing knocking??",
+       "color": "#ffb86b"
+      },
+      {
+       "t": 251.8,
+       "name": "Mia",
+       "text": "it's in the science wing",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 253.2,
+       "name": "Ethan",
+       "text": "it said it was the nurse",
+       "color": "#c79bff"
+      },
+      {
+       "t": 257.4,
+       "name": "Kayla \u00b7 Room 208",
+       "text": "Coach Reyes is outside. He says it's clear. We're opening.",
+       "color": "#ff8fb1",
+       "seen": 261.4
+      },
+      {
+       "t": 272.4,
+       "name": "Sofia",
+       "text": "something knocked on 204 in Mr. Kim's voice. Mr. Kim is IN 204",
+       "color": "#ffd36b"
+      },
+      {
+       "t": 276.7,
+       "name": "Ethan",
+       "text": "it knows our names",
+       "color": "#c79bff"
+      },
+      {
+       "t": 278.5,
+       "name": "Jayden",
+       "text": "why is nobody coming",
+       "color": "#ffb86b"
+      },
+      {
+       "t": 281.7,
+       "name": "Room 210",
+       "text": "Don't talk. It's listening. It only knows voices it's heard.",
+       "color": "#ff6b6b",
+       "alert": true
+      }
+     ],
+     "keep": 5
+    }
+   ]
+  },
+  {
+   "t0": 287.4,
+   "t1": 297.3,
+   "room": {
+    "plate": {
+     "img": "art/bg_hallway_dim.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.0
+    },
+    "b": {
+     "zoom": 1.6,
+     "aim": [
+      0.5,
+      0.45
+     ]
+    },
+    "ease": "linear"
+   },
+   "overlays": [
+    {
+     "type": "flicker",
+     "t0": 287.4,
+     "t1": 297.3,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "rate": 7,
+     "on": 0.85,
+     "alpha": 0.7
+    }
+   ]
+  },
+  {
+   "t0": 297.3,
+   "t1": 303.2,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    null,
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.0
+     }
+    },
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.3,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.6,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "glow",
+     "t0": 297.3,
+     "t1": 303.2,
+     "spots": [
+      [
+       0.47,
+       0.9,
+       520
+      ]
+     ],
+     "fadeIn": 0.6
+    }
+   ]
+  },
+  {
+   "t0": 303.2,
+   "t1": 307.4,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    null,
+    {
+     "card": "floor_phone",
+     "clip": "idle"
+    },
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.4,
+     "aim": [
+      0.165,
+      0.54
+     ]
+    },
+    "b": {
+     "zoom": 2.6,
+     "aim": [
+      0.165,
+      0.54
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "glow",
+     "t0": 303.2,
+     "t1": 307.4,
+     "spots": [
+      [
+       0.52,
+       0.42,
+       440
+      ]
+     ],
+     "fadeIn": 0.6
+    }
+   ]
+  },
+  {
+   "t0": 307.4,
+   "t1": 312.3,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    null,
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "lip": "c3_15",
+     "lipGain": 1.1
+    },
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.9,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 3.1,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "glow",
+     "t0": 307.4,
+     "t1": 312.3,
+     "spots": [
+      [
+       0.47,
+       0.92,
+       560
+      ]
+     ],
+     "fadeIn": 0.6
+    }
+   ]
+  },
+  {
+   "t0": 312.3,
+   "t1": 324.6,
+   "room": "rooms/kitchen_mom.json",
+   "cam": {
+    "a": {
+     "zoom": 1.2,
+     "aim": [
+      0.5,
+      0.45
+     ]
+    },
+    "b": {
+     "zoom": 2.0,
+     "aim": [
+      0.5,
+      0.42
+     ]
+    },
+    "ease": "linear"
+   }
+  },
+  {
+   "t0": 324.6,
+   "t1": 327.4,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    null,
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.2
+     }
+    },
+    null,
+    {
+     "opts": {
+      "mood": "stare"
+     }
+    },
+    null,
+    null,
+    null
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.5,
+     "aim": [
+      0.45,
+      0.52
+     ]
+    },
+    "b": {
+     "zoom": 2.7,
+     "aim": [
+      0.45,
+      0.52
+     ]
+    }
+   }
+  },
+  {
+   "t0": 327.4,
+   "t1": 336.2,
+   "room": {
+    "plate": {
+     "img": "art/bg_door_close.png",
+     "fov": 40,
+     "h": 0.92,
+     "pitch": 0,
+     "horizon": 0.83,
+     "holdouts": [
+      {
+       "mask": "masks/door_close_8.png",
+       "base": 0.8535,
+       "u": 0.9451
+      },
+      {
+       "mask": "masks/door_close_9.png",
+       "base": 0.9932,
+       "u": 0.1063
+      }
+     ]
+    },
+    "tint": 8884397,
+    "who": [],
+    "name": "door_close"
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.2,
+     "aim": [
+      0.45,
+      0.7
+     ]
+    },
+    "b": {
+     "zoom": 2.1,
+     "aim": [
+      0.45,
+      0.84
+     ]
+    },
+    "ease": "linear",
+    "kicks": [
+     333.1
+    ],
+    "kick": 0.4
+   }
+  },
+  {
+   "t0": 336.2,
+   "t1": 342.0,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.2
+     }
+    },
+    {
+     "opts": {
+      "mood": "terror",
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    null,
+    null,
+    null,
+    null
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.5,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 3.0,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "black",
+     "t0": 341.3,
+     "t1": 342.1,
+     "fadeIn": 0.6,
+     "fadeOut": 0.01
+    }
+   ]
+  }
+ ]
+}

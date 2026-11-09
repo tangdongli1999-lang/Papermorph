@@ -1,0 +1,31 @@
+{
+ "plate": {
+  "img": "art/bg_bedroom_evening.png",
+  "fov": 40,
+  "h": 0.71,
+  "pitch": 0,
+  "horizon": 0.735
+ },
+ "tint": 16770760,
+ "who": [
+  {
+   "n": "dong_home",
+   "card": "sit_floor_knees",
+   "clip": "idle",
+   "at": [
+    0.13,
+    0.775
+   ],
+   "y": 0.42
+  },
+  {
+   "n": "mom",
+   "clip": "talk",
+   "at": [
+    0.8,
+    0.76
+   ]
+  }
+ ],
+ "name": "bedroom_evening"
+}

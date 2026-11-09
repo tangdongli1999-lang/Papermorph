@@ -1,0 +1,22 @@
+{
+ "plate": {
+  "img": "art/bg_bedroom_day.png",
+  "fov": 40,
+  "h": 0.75,
+  "pitch": 0,
+  "horizon": 0.69
+ },
+ "tint": 14736600,
+ "who": [
+  {
+   "n": "dong_home",
+   "card": "sit_floor_knees",
+   "clip": "idle",
+   "at": [
+    0.58,
+    0.7
+   ]
+  }
+ ],
+ "name": "bedroom_day"
+}

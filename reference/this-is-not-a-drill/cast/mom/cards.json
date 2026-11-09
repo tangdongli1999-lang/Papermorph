@@ -1,0 +1,20 @@
+{
+ "phone_ear": {
+  "file": "cards/phone_ear.webp",
+  "w": 398,
+  "h": 1332,
+  "height_m": 1.617
+ },
+ "phone_text": {
+  "file": "cards/phone_text.webp",
+  "w": 417,
+  "h": 1034,
+  "height_m": 1.256
+ },
+ "hug": {
+  "file": "cards/hug.webp",
+  "w": 640,
+  "h": 1344,
+  "height_m": 1.632
+ }
+}

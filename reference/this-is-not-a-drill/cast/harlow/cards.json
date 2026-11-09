@@ -1,0 +1,68 @@
+{
+ "huddle": {
+  "file": "cards/huddle.webp",
+  "w": 453,
+  "h": 619,
+  "height_m": 0.752,
+  "head": {
+   "at": [
+    233.5,
+    14
+   ]
+  }
+ },
+ "book_live": {
+  "file": "cards/book_live.webp",
+  "w": 392,
+  "h": 1015,
+  "height_m": 1.232,
+  "head": {
+   "at": [
+    201.0,
+    14
+   ]
+  }
+ },
+ "hands_live": {
+  "file": "cards/hands_live.webp",
+  "w": 408,
+  "h": 586,
+  "height_m": 0.712,
+  "head": {
+   "at": [
+    198.0,
+    14
+   ]
+  }
+ },
+ "phone": {
+  "file": "cards/phone.webp",
+  "w": 396,
+  "h": 911,
+  "height_m": 1.106
+ },
+ "book": {
+  "file": "cards/book.webp",
+  "w": 374,
+  "h": 1353,
+  "height_m": 1.643
+ },
+ "shush": {
+  "file": "cards/shush.webp",
+  "w": 410,
+  "h": 930,
+  "height_m": 1.129
+ },
+ "hands": {
+  "file": "cards/hands.webp",
+  "w": 402,
+  "h": 942,
+  "height_m": 1.144
+ },
+ "sit_floor_knees": {
+  "file": "cards/sit_floor_knees.webp",
+  "w": 421,
+  "h": 905,
+  "height_m": 1.099
+ }
+}

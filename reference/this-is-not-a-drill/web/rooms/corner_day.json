@@ -1,0 +1,134 @@
+{
+ "plate": {
+  "img": "art/plate_corner_day.png",
+  "fov": 42,
+  "h": 1.2,
+  "pitch": 4,
+  "horizon": 0.72
+ },
+ "tint": 16777215,
+ "props": [
+  {
+   "img": "props/bookshelf.png",
+   "height": 1.9,
+   "x": -2.75,
+   "wall": 0.25,
+   "tint": 16777215
+  },
+  {
+   "img": "props/backpacks.png",
+   "height": 0.42,
+   "x": 2.6,
+   "wall": 0.3,
+   "tint": 16777215
+  },
+  {
+   "img": "props/desk.png",
+   "height": 0.78,
+   "x": 1.55,
+   "wall": 3.0,
+   "tint": 16777215
+  }
+ ],
+ "who": [
+  {
+   "n": "tyler",
+   "card": "huddle",
+   "clip": "huddle",
+   "opts": {
+    "mood": "giggle"
+   },
+   "pos": [
+    -1.43,
+    0,
+    -3.25
+   ],
+   "wall": 0.7
+  },
+  {
+   "n": "dong",
+   "card": "huddle",
+   "clip": "huddle",
+   "opts": {
+    "mood": "calm"
+   },
+   "pos": [
+    -2.05,
+    0,
+    -3.0
+   ],
+   "wall": 0.55
+  },
+  {
+   "n": "marcus",
+   "card": "huddle",
+   "clip": "huddle",
+   "opts": {
+    "mood": "giggle"
+   },
+   "pos": [
+    -0.81,
+    0,
+    -3.3
+   ],
+   "wall": 0.55
+  },
+  {
+   "n": "priya",
+   "card": "huddle",
+   "clip": "huddle",
+   "opts": {
+    "mood": "calm"
+   },
+   "pos": [
+    -0.19,
+    0,
+    -3.05
+   ],
+   "wall": 0.7
+  },
+  {
+   "n": "kid_a",
+   "card": "huddle",
+   "clip": "huddle",
+   "opts": {
+    "mood": "spooky"
+   },
+   "pos": [
+    0.43,
+    0,
+    -3.3
+   ],
+   "wall": 0.55
+  },
+  {
+   "n": "kid_b",
+   "card": "huddle",
+   "clip": "huddle",
+   "opts": {
+    "mood": "giggle"
+   },
+   "pos": [
+    1.05,
+    0,
+    -3.05
+   ],
+   "wall": 0.7
+  },
+  {
+   "n": "harlow",
+   "card": "huddle",
+   "clip": "huddle",
+   "opts": {
+    "mood": "calm"
+   },
+   "pos": [
+    1.78,
+    0,
+    -2.3
+   ],
+   "wall": 0.85
+  }
+ ],
+ "name": "corner_day"
+}

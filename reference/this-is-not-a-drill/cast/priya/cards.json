@@ -1,0 +1,32 @@
+{
+ "huddle": {
+  "file": "cards/huddle.webp",
+  "w": 407,
+  "h": 564,
+  "height_m": 0.685,
+  "head": {
+   "at": [
+    204.0,
+    14
+   ]
+  }
+ },
+ "sit_desk": {
+  "file": "cards/sit_desk.webp",
+  "w": 589,
+  "h": 1254,
+  "height_m": 1.523
+ },
+ "grab": {
+  "file": "cards/grab.webp",
+  "w": 783,
+  "h": 1165,
+  "height_m": 1.415
+ },
+ "sit_floor_knees": {
+  "file": "cards/sit_floor_knees.webp",
+  "w": 480,
+  "h": 963,
+  "height_m": 1.169
+ }
+}

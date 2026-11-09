@@ -1,0 +1,22 @@
+{
+ "plate": {
+  "img": "art/bg_kitchen_mom.png",
+  "fov": 40,
+  "h": 1.017,
+  "pitch": 0,
+  "horizon": 0.76
+ },
+ "tint": 16777215,
+ "who": [
+  {
+   "n": "mom",
+   "card": "phone_ear",
+   "clip": "idle",
+   "at": [
+    0.5,
+    0.8
+   ]
+  }
+ ],
+ "name": "kitchen_mom"
+}

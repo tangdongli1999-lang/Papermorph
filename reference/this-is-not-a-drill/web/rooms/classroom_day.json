@@ -1,0 +1,44 @@
+{
+ "plate": {
+  "img": "art/bg_classroom_day.png",
+  "fov": 40,
+  "h": 0.929,
+  "pitch": 0,
+  "horizon": 0.74,
+  "holdouts": [
+   {
+    "mask": "masks/classroom_day_0.png",
+    "base": 0.9961,
+    "u": 0.075
+   },
+   {
+    "mask": "masks/classroom_day_1.png",
+    "base": 0.9961,
+    "u": 0.9602
+   },
+   {
+    "mask": "masks/classroom_day_2.png",
+    "base": 0.9971,
+    "u": 0.5221
+   },
+   {
+    "mask": "masks/classroom_day_teacher.png",
+    "base": 0.83,
+    "u": 0.51
+   }
+  ]
+ },
+ "tint": 16777215,
+ "who": [
+  {
+   "n": "harlow",
+   "card": "book",
+   "clip": "idle",
+   "at": [
+    0.8,
+    0.8
+   ]
+  }
+ ],
+ "name": "classroom_day"
+}

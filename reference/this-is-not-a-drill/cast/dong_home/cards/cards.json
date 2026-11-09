@@ -1,0 +1,118 @@
+{
+ "sit_chair_front": {
+  "file": "cards/sit_chair_front.webp",
+  "w": 425,
+  "h": 1205,
+  "height_m": 1.463
+ },
+ "sit_chair_side": {
+  "file": "cards/sit_chair_side.webp",
+  "w": 559,
+  "h": 1205,
+  "height_m": 1.463
+ },
+ "sit_floor_knees": {
+  "file": "cards/sit_floor_knees.webp",
+  "w": 398,
+  "h": 932,
+  "height_m": 1.132
+ },
+ "crouch_hide": {
+  "file": "cards/crouch_hide.webp",
+  "w": 379,
+  "h": 883,
+  "height_m": 1.072
+ },
+ "phone_hold": {
+  "file": "cards/phone_hold.webp",
+  "w": 349,
+  "h": 1399,
+  "height_m": 1.699
+ },
+ "phone_ear": {
+  "file": "cards/phone_ear.webp",
+  "w": 437,
+  "h": 1401,
+  "height_m": 1.701
+ },
+ "hands_head_scared": {
+  "file": "cards/hands_head_scared.webp",
+  "w": 528,
+  "h": 1401,
+  "height_m": 1.701
+ },
+ "cover_face": {
+  "file": "cards/cover_face.webp",
+  "w": 365,
+  "h": 1401,
+  "height_m": 1.701
+ },
+ "walk_away_back": {
+  "file": "cards/walk_away_back.webp",
+  "w": 480,
+  "h": 1400,
+  "height_m": 1.7
+ },
+ "wave": {
+  "file": "cards/wave.webp",
+  "w": 521,
+  "h": 1401,
+  "height_m": 1.701
+ },
+ "lying_asleep": {
+  "file": "cards/lying_asleep.webp",
+  "w": 1371,
+  "h": 388,
+  "height_m": 0.471
+ },
+ "hands_up": {
+  "file": "cards/hands_up.webp",
+  "w": 639,
+  "h": 1398,
+  "height_m": 1.698
+ },
+ "pointing": {
+  "file": "cards/pointing.webp",
+  "w": 433,
+  "h": 1397,
+  "height_m": 1.696
+ },
+ "pointing_side": {
+  "file": "cards/pointing_side.webp",
+  "w": 653,
+  "h": 1399,
+  "height_m": 1.699
+ },
+ "looking_down": {
+  "file": "cards/looking_down.webp",
+  "w": 387,
+  "h": 1399,
+  "height_m": 1.699
+ },
+ "turn_three_q": {
+  "file": "cards/turn_three_q.webp",
+  "w": 341,
+  "h": 1400,
+  "height_m": 1.7,
+  "faces": "right"
+ },
+ "turn_three_q_back": {
+  "file": "cards/turn_three_q_back.webp",
+  "w": 366,
+  "h": 1400,
+  "height_m": 1.7,
+  "faces": "right"
+ },
+ "bed_sit": {
+  "file": "cards/bed_sit.webp",
+  "w": 936,
+  "h": 1240,
+  "height_m": 1.506
+ },
+ "bed_asleep": {
+  "file": "cards/bed_asleep.webp",
+  "w": 929,
+  "h": 934,
+  "height_m": 1.134
+ }
+}

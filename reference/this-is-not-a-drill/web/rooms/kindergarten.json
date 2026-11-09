@@ -1,0 +1,64 @@
+{
+ "plate": {
+  "img": "art/bg_kindergarten.png",
+  "fov": 40,
+  "h": 0.646,
+  "pitch": 0,
+  "horizon": 0.69,
+  "holdouts": [
+   {
+    "mask": "masks/kindergarten_0.png",
+    "base": 0.8613,
+    "u": 0.5131
+   },
+   {
+    "mask": "masks/kindergarten_1.png",
+    "base": 0.9355,
+    "u": 0.1312
+   }
+  ]
+ },
+ "tint": 16777215,
+ "who": [
+  {
+   "n": "kid_a",
+   "card": "huddle",
+   "clip": "huddle",
+   "opts": {
+    "mood": "whisper"
+   },
+   "at": [
+    0.4,
+    0.79
+   ],
+   "scale": 0.62
+  },
+  {
+   "n": "priya",
+   "card": "huddle",
+   "clip": "huddle",
+   "opts": {
+    "mood": "glance"
+   },
+   "at": [
+    0.56,
+    0.8
+   ],
+   "scale": 0.6
+  },
+  {
+   "n": "kid_b",
+   "card": "huddle",
+   "clip": "huddle",
+   "opts": {
+    "mood": "still"
+   },
+   "at": [
+    0.13,
+    0.85
+   ],
+   "scale": 0.6
+  }
+ ],
+ "name": "kindergarten"
+}

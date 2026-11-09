@@ -1,0 +1,21 @@
+{
+ "plate": {
+  "img": "art/bg_door_open.png",
+  "fov": 40,
+  "h": 0.743,
+  "pitch": 0,
+  "horizon": 0.73
+ },
+ "tint": 14208960,
+ "who": [
+  {
+   "n": "deputy",
+   "clip": "talk",
+   "at": [
+    0.69,
+    0.735
+   ]
+  }
+ ],
+ "name": "door_open"
+}

@@ -1,0 +1,81 @@
+{
+ "plate": {
+  "img": "art/bg_gym.png",
+  "fov": 40,
+  "h": 1.12,
+  "pitch": 0,
+  "horizon": 0.66,
+  "holdouts": [
+   {
+    "mask": "masks/gym_0.png",
+    "base": 0.7441,
+    "u": 0.8259
+   }
+  ]
+ },
+ "tint": 16777215,
+ "who": [
+  {
+   "n": "marcus",
+   "card": "sit_floor_knees",
+   "clip": "huddle",
+   "opts": {
+    "mood": "still"
+   },
+   "at": [
+    0.47,
+    0.665
+   ],
+   "y": 0.34
+  },
+  {
+   "n": "priya",
+   "card": "sit_floor_knees",
+   "clip": "huddle",
+   "opts": {
+    "mood": "still"
+   },
+   "at": [
+    0.6,
+    0.665
+   ],
+   "y": 0.34
+  },
+  {
+   "n": "tyler",
+   "card": "sit_floor_knees",
+   "clip": "huddle",
+   "opts": {
+    "mood": "rock"
+   },
+   "at": [
+    0.73,
+    0.665
+   ],
+   "y": 0.34
+  },
+  {
+   "n": "dong",
+   "card": "sit_floor_knees",
+   "clip": "huddle",
+   "opts": {
+    "mood": "still"
+   },
+   "at": [
+    0.86,
+    0.665
+   ],
+   "y": 0.34
+  },
+  {
+   "n": "district",
+   "card": "clipboard",
+   "clip": "idle",
+   "at": [
+    0.3,
+    0.8
+   ]
+  }
+ ],
+ "name": "gym"
+}

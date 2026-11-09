@@ -1,0 +1,11 @@
+<!doctype html><html><head><meta charset="utf-8"><style>body{margin:0}</style></head><body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="dong.js"></script>
+<script>
+const W=360,H=420,r=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});r.setSize(W,H);r.outputEncoding=THREE.sRGBEncoding;r.shadowMap.enabled=true;document.body.appendChild(r.domElement);
+const sc=new THREE.Scene();sc.background=new THREE.Color(0x4a6d60);const cam=new THREE.PerspectiveCamera(30,W/H,0.1,80);cam.position.set(0,1.0,4.6);cam.lookAt(0,0.92,0);
+const fl=new THREE.Mesh(new THREE.PlaneGeometry(20,10),new THREE.MeshBasicMaterial({color:0xe8dcc4}));fl.rotation.x=-Math.PI/2;sc.add(fl);
+const cache={};
+window.load=async n=>{if(!cache[n])cache[n]=await Dong.load('cast/'+n+'/',{shared:n==='dong_home'?'cast/dong_home/':'shared/'});return cache[n];};
+window.shot=async(n,js,t)=>{for(const k in cache)sc.remove(cache[k].root);const d=await load(n);d.root.position.set(0,0,0);d.setTint(0xffffff);sc.add(d.root);await eval('(async()=>{'+js+'})()');for(let x=0;x<t;x+=1/30)d.update(1/30);d.root.position.x=0;d.root.position.z=0;r.render(sc,cam);};
+</script></body></html>

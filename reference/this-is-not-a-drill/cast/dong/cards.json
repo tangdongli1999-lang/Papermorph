@@ -1,0 +1,92 @@
+{
+ "turn_three_q": {
+  "file": "cards/turn_three_q.webp",
+  "w": 360,
+  "h": 1399,
+  "height_m": 1.699
+ },
+ "turn_three_q_back": {
+  "file": "cards/turn_three_q_back.webp",
+  "w": 367,
+  "h": 1387,
+  "height_m": 1.684
+ },
+ "phone_ear": {
+  "file": "cards/phone_ear.webp",
+  "w": 432,
+  "h": 1390,
+  "height_m": 1.688
+ },
+ "phone_hold": {
+  "file": "cards/phone_hold.webp",
+  "w": 347,
+  "h": 1390,
+  "height_m": 1.688
+ },
+ "cover_face": {
+  "file": "cards/cover_face.webp",
+  "w": 379,
+  "h": 1450,
+  "height_m": 1.761
+ },
+ "hands_head_scared": {
+  "file": "cards/hands_head_scared.webp",
+  "w": 519,
+  "h": 1391,
+  "height_m": 1.689
+ },
+ "sit_chair_front": {
+  "file": "cards/sit_chair_front.webp",
+  "w": 432,
+  "h": 1230,
+  "height_m": 1.494
+ },
+ "sit_chair_side": {
+  "file": "cards/sit_chair_side.webp",
+  "w": 569,
+  "h": 1232,
+  "height_m": 1.496
+ },
+ "sit_floor_knees": {
+  "file": "cards/sit_floor_knees.webp",
+  "w": 418,
+  "h": 963,
+  "height_m": 1.169
+ },
+ "crouch_hide": {
+  "file": "cards/crouch_hide.webp",
+  "w": 423,
+  "h": 992,
+  "height_m": 1.205
+ },
+ "huddle": {
+  "file": "cards/huddle.webp",
+  "w": 430,
+  "h": 630,
+  "height_m": 0.765,
+  "head": {
+   "at": [
+    217.0,
+    14
+   ]
+  }
+ },
+ "sit_desk": {
+  "file": "cards/sit_desk.webp",
+  "w": 610,
+  "h": 1183,
+  "height_m": 1.436
+ },
+ "floor_phone": {
+  "file": "cards/floor_phone.webp",
+  "w": 440,
+  "h": 931,
+  "height_m": 1.131
+ },
+ "crawl": {
+  "file": "cards/crawl.webp",
+  "w": 732,
+  "h": 559,
+  "height_m": 0.679
+ }
+}

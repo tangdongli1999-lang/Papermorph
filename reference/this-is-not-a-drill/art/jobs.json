@@ -1,0 +1,1476 @@
+{
+ "dong_uni": [
+  "Edit image 1 (Dong, a flat handmade felt paper cut-out character). Keep EXACTLY the same art style, felt texture, flat even lighting, the same pose, the same size and the same position on the canvas (top of the head and soles of the shoes at exactly the same heights), plain cream background (#f3ecdf), no shadows, no outlines, no text. Change ONLY his clothes to the Westbrook High school uniform: a white short-sleeve polo shirt with a navy blue collar and navy trim on the sleeve cuffs, two small buttons at the neck, a small navy hawk crest embroidered on the left chest (instead of the dog logo), shirt untucked, and plain navy blue trousers, same white sneakers. Keep his black docker beanie, round clear glasses, face, hair and smile exactly the same.",
+  [
+   "/home/claude/dong/out/hero_v1.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_uni_back": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size and position on the canvas, and everything about the character's head, face, beanie, glasses and body shape. Change ONLY his clothes to the Westbrook High school uniform: white short-sleeve polo shirt with a navy blue collar and navy trim on the sleeve cuffs, small navy hawk crest on the left chest, shirt untucked, plain navy blue trousers, white sneakers, exactly like image 2. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/dong/out/turn/back.png",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_uni_3q": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size and position on the canvas, and everything about the character's head, face, beanie, glasses and body shape. Change ONLY his clothes to the Westbrook High school uniform: white short-sleeve polo shirt with a navy blue collar and navy trim on the sleeve cuffs, small navy hawk crest on the left chest, shirt untucked, plain navy blue trousers, white sneakers, exactly like image 2. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/dong/out/turn/three_q.png",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_uni_3qback": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size and position on the canvas, and everything about the character's head, face, beanie, glasses and body shape. Change ONLY his clothes to the Westbrook High school uniform: white short-sleeve polo shirt with a navy blue collar and navy trim on the sleeve cuffs, small navy hawk crest on the left chest, shirt untucked, plain navy blue trousers, white sneakers, exactly like image 2. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/dong/out/turn/three_q_back.png",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_uni_side": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size and position on the canvas, and everything about the character's head, face, beanie, glasses and body shape. Change ONLY his clothes to the Westbrook High school uniform: white short-sleeve polo shirt with a navy blue collar and navy trim on the sleeve cuffs, small navy hawk crest on the left chest, shirt untucked, plain navy blue trousers, white sneakers, exactly like image 2. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/dong/ref/side_full_cream.png",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_uni_side_noarm": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size and position on the canvas, and everything about the character's head, face, beanie, glasses and body shape. Change ONLY his clothes to the Westbrook High school uniform: white short-sleeve polo shirt with a navy blue collar and navy trim on the sleeve cuffs, small navy hawk crest on the left chest, shirt untucked, plain navy blue trousers, white sneakers, exactly like image 2. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/dong/out/more/side_noarm.png",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_uni_sit_floor": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size and position on the canvas, and everything about the character's head, face, beanie, glasses and body shape. Change ONLY his clothes to the Westbrook High school uniform: white short-sleeve polo shirt with a navy blue collar and navy trim on the sleeve cuffs, small navy hawk crest on the left chest, shirt untucked, plain navy blue trousers, white sneakers, exactly like image 2. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/dong/out/more/sit_floor_knees.png",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_uni_crouch": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size and position on the canvas, and everything about the character's head, face, beanie, glasses and body shape. Change ONLY his clothes to the Westbrook High school uniform: white short-sleeve polo shirt with a navy blue collar and navy trim on the sleeve cuffs, small navy hawk crest on the left chest, shirt untucked, plain navy blue trousers, white sneakers, exactly like image 2. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/dong/out/more/crouch_hide.png",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_uni_phone_ear": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size and position on the canvas, and everything about the character's head, face, beanie, glasses and body shape. Change ONLY his clothes to the Westbrook High school uniform: white short-sleeve polo shirt with a navy blue collar and navy trim on the sleeve cuffs, small navy hawk crest on the left chest, shirt untucked, plain navy blue trousers, white sneakers, exactly like image 2. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/dong/out/more/phone_ear.png",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_uni_phone_hold": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size and position on the canvas, and everything about the character's head, face, beanie, glasses and body shape. Change ONLY his clothes to the Westbrook High school uniform: white short-sleeve polo shirt with a navy blue collar and navy trim on the sleeve cuffs, small navy hawk crest on the left chest, shirt untucked, plain navy blue trousers, white sneakers, exactly like image 2. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/dong/out/more/phone_hold.png",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_uni_cover_face": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size and position on the canvas, and everything about the character's head, face, beanie, glasses and body shape. Change ONLY his clothes to the Westbrook High school uniform: white short-sleeve polo shirt with a navy blue collar and navy trim on the sleeve cuffs, small navy hawk crest on the left chest, shirt untucked, plain navy blue trousers, white sneakers, exactly like image 2. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/dong/out/more/cover_face.png",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_uni_hands_head": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size and position on the canvas, and everything about the character's head, face, beanie, glasses and body shape. Change ONLY his clothes to the Westbrook High school uniform: white short-sleeve polo shirt with a navy blue collar and navy trim on the sleeve cuffs, small navy hawk crest on the left chest, shirt untucked, plain navy blue trousers, white sneakers, exactly like image 2. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/dong/out/more/hands_head_scared.png",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_uni_sit_chair": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size and position on the canvas, and everything about the character's head, face, beanie, glasses and body shape. Change ONLY his clothes to the Westbrook High school uniform: white short-sleeve polo shirt with a navy blue collar and navy trim on the sleeve cuffs, small navy hawk crest on the left chest, shirt untucked, plain navy blue trousers, white sneakers, exactly like image 2. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/dong/out/more/sit_chair_front.png",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_uni_sit_chair_side": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size and position on the canvas, and everything about the character's head, face, beanie, glasses and body shape. Change ONLY his clothes to the Westbrook High school uniform: white short-sleeve polo shirt with a navy blue collar and navy trim on the sleeve cuffs, small navy hawk crest on the left chest, shirt untucked, plain navy blue trousers, white sneakers, exactly like image 2. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/dong/out/more/sit_chair_side.png",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "tyler": [
+  "Edit image 1 (Dong). Keep EXACTLY the same pose (standing straight facing the viewer, arms hanging straight down a little away from the body, legs straight and slightly apart), the same framing, the same size, the same position on the canvas, the same head size and the same body proportions. Replace Dong with a different character: TYLER, a lanky 17-year-old American boy, the class clown: messy curly light-brown hair (no hat), freckles across the nose, small black dot eyes, a cheeky lopsided grin, rosy cheeks, no glasses, wearing the Westbrook High school uniform: white short-sleeve polo shirt with a navy blue collar and navy trim on the sleeve cuffs, small navy hawk crest on the left chest, shirt untucked, plain navy blue trousers, white sneakers (exactly the same uniform as image 1). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "priya": [
+  "Edit image 1 (Dong). Keep EXACTLY the same pose (standing straight facing the viewer, arms hanging straight down a little away from the body, legs straight and slightly apart), the same framing, the same size, the same position on the canvas, the same head size and the same body proportions. Replace Dong with a different character: PRIYA, a 17-year-old Indian-American girl, serious and smart: black hair pulled back tight in a high ponytail with straight bangs (no hat), small gold stud earrings, small black dot eyes, rosy cheeks, a calm small smile, no glasses, wearing the Westbrook High school uniform: white short-sleeve polo shirt with a navy blue collar and navy trim on the sleeve cuffs, small navy hawk crest on the left chest, shirt untucked, plain navy blue trousers, white sneakers (exactly the same uniform as image 1). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "marcus": [
+  "Edit image 1 (Dong). Keep EXACTLY the same pose (standing straight facing the viewer, arms hanging straight down a little away from the body, legs straight and slightly apart), the same framing, the same size, the same position on the canvas, the same head size and the same body proportions. Replace Dong with a different character: MARCUS, a big gentle 17-year-old Black American boy: broad shoulders, short cropped black hair (no hat), dark brown skin, small black dot eyes, rosy cheeks, a calm small smile, no glasses, wearing the Westbrook High school uniform: white short-sleeve polo shirt with a navy blue collar and navy trim on the sleeve cuffs, small navy hawk crest on the left chest, shirt untucked, plain navy blue trousers, white sneakers (exactly the same uniform as image 1). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_a": [
+  "Edit image 1 (Dong). Keep EXACTLY the same pose (standing straight facing the viewer, arms hanging straight down a little away from the body, legs straight and slightly apart), the same framing, the same size, the same position on the canvas, the same head size and the same body proportions. Replace Dong with a different character: a 16-year-old American girl with bright red hair in two short braids that end above her shoulders, freckles, small black dot eyes, rosy cheeks, a small worried smile, no hat, no glasses, wearing the Westbrook High school uniform: white short-sleeve polo shirt with a navy blue collar and navy trim on the sleeve cuffs, small navy hawk crest on the left chest, shirt untucked, plain navy blue trousers, white sneakers (exactly the same uniform as image 1). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_b": [
+  "Edit image 1 (Dong). Keep EXACTLY the same pose (standing straight facing the viewer, arms hanging straight down a little away from the body, legs straight and slightly apart), the same framing, the same size, the same position on the canvas, the same head size and the same body proportions. Replace Dong with a different character: a 16-year-old American boy with neat blond side-parted hair, small black dot eyes, rosy cheeks, a neutral mouth, no hat, no glasses, wearing the Westbrook High school uniform: white short-sleeve polo shirt with a navy blue collar and navy trim on the sleeve cuffs, small navy hawk crest on the left chest, shirt untucked, plain navy blue trousers, white sneakers (exactly the same uniform as image 1). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "harlow": [
+  "Edit image 1 (Dong). Keep EXACTLY the same pose (standing straight facing the viewer, arms hanging straight down a little away from the body, legs straight and slightly apart), the same framing, the same size, the same position on the canvas, the same head size and the same body proportions. Replace Dong with a different character: MS. HARLOW, a 35-year-old American English teacher: chestnut-brown hair in a neat bun, small black dot eyes, rosy cheeks, gentle smile, no glasses; mustard-yellow knitted cardigan over a white blouse, grey slacks, brown flat shoes. Keep the head and body exactly as large as Dong's. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "dawes": [
+  "Edit image 1 (Dong). Keep EXACTLY the same pose (standing straight facing the viewer, arms hanging straight down a little away from the body, legs straight and slightly apart), the same framing, the same size, the same position on the canvas, the same head size and the same body proportions. Replace Dong with a different character: PRINCIPAL DAWES, a 55-year-old American school principal: balding with short grey hair at the sides, grey moustache, small black dot eyes behind small rectangular glasses, rosy cheeks, warm smile; light blue shirt with a navy tie, a red school lanyard with an ID card, khaki trousers, brown shoes. Keep the head and body exactly as large as Dong's. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "mom": [
+  "Edit image 1 (Dong). Keep EXACTLY the same pose (standing straight facing the viewer, arms hanging straight down a little away from the body, legs straight and slightly apart), the same framing, the same size, the same position on the canvas, the same head size and the same body proportions. Replace Dong with a different character: DONG'S MOM, a 45-year-old East Asian American woman: straight black chin-length bob, small black dot eyes, rosy cheeks, kind tired smile, no glasses; a beige knee-length car coat over a grey sweater, blue jeans, white sneakers. Keep the head and body exactly as large as Dong's. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "deputy": [
+  "Edit image 1 (Dong). Keep EXACTLY the same pose (standing straight facing the viewer, arms hanging straight down a little away from the body, legs straight and slightly apart), the same framing, the same size, the same position on the canvas, the same head size and the same body proportions. Replace Dong with a different character: a SHERIFF'S DEPUTY, a 40-year-old American man: short brown hair, a dark green peaked cap with a gold badge, small black dot eyes, rosy cheeks, serious mouth; tan uniform shirt with a gold star badge and shoulder patches, dark green trousers, black belt with a radio and a flashlight, black boots. Keep the head and body exactly as large as Dong's. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "tyler_side": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (Tyler): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Side view facing right.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side.png",
+   "/home/claude/lockdown/art/out/tyler.png"
+  ],
+  "1024x1536"
+ ],
+ "tyler_side_noarm": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (Tyler): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Side view facing right, with NO arm visible (the arm is removed, exactly like image 1).",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side_noarm.png",
+   "/home/claude/lockdown/art/out/tyler.png"
+  ],
+  "1024x1536"
+ ],
+ "tyler_blank": [
+  "Edit image 1. Keep EVERYTHING exactly the same: size, position, pose, hair, ears, skin, clothes, cheeks. Only REMOVE the eyes, eyebrows and mouth, filling them with the same plain skin felt, so the face is blank (cheeks stay). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/tyler.png"
+  ],
+  "1024x1536"
+ ],
+ "priya_side": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (Priya): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Side view facing right.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side.png",
+   "/home/claude/lockdown/art/out/priya.png"
+  ],
+  "1024x1536"
+ ],
+ "priya_side_noarm": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (Priya): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Side view facing right, with NO arm visible (the arm is removed, exactly like image 1).",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side_noarm.png",
+   "/home/claude/lockdown/art/out/priya.png"
+  ],
+  "1024x1536"
+ ],
+ "priya_blank": [
+  "Edit image 1. Keep EVERYTHING exactly the same: size, position, pose, hair, ears, skin, clothes, cheeks. Only REMOVE the eyes, eyebrows and mouth, filling them with the same plain skin felt, so the face is blank (cheeks stay). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/priya.png"
+  ],
+  "1024x1536"
+ ],
+ "marcus_side": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (Marcus): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Side view facing right.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side.png",
+   "/home/claude/lockdown/art/out/marcus.png"
+  ],
+  "1024x1536"
+ ],
+ "marcus_side_noarm": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (Marcus): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Side view facing right, with NO arm visible (the arm is removed, exactly like image 1).",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side_noarm.png",
+   "/home/claude/lockdown/art/out/marcus.png"
+  ],
+  "1024x1536"
+ ],
+ "marcus_blank": [
+  "Edit image 1. Keep EVERYTHING exactly the same: size, position, pose, hair, ears, skin, clothes, cheeks. Only REMOVE the eyes, eyebrows and mouth, filling them with the same plain skin felt, so the face is blank (cheeks stay). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/marcus.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_a_side": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (the red-haired girl): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Side view facing right.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side.png",
+   "/home/claude/lockdown/art/out/kid_a.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_a_side_noarm": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (the red-haired girl): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Side view facing right, with NO arm visible (the arm is removed, exactly like image 1).",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side_noarm.png",
+   "/home/claude/lockdown/art/out/kid_a.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_a_blank": [
+  "Edit image 1. Keep EVERYTHING exactly the same: size, position, pose, hair, ears, skin, clothes, cheeks. Only REMOVE the eyes, eyebrows and mouth, filling them with the same plain skin felt, so the face is blank (cheeks stay). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/kid_a.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_b_side": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (the blond boy): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Side view facing right.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side.png",
+   "/home/claude/lockdown/art/out/kid_b.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_b_side_noarm": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (the blond boy): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Side view facing right, with NO arm visible (the arm is removed, exactly like image 1).",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side_noarm.png",
+   "/home/claude/lockdown/art/out/kid_b.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_b_blank": [
+  "Edit image 1. Keep EVERYTHING exactly the same: size, position, pose, hair, ears, skin, clothes, cheeks. Only REMOVE the eyes, eyebrows and mouth, filling them with the same plain skin felt, so the face is blank (cheeks stay). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/kid_b.png"
+  ],
+  "1024x1536"
+ ],
+ "harlow_side": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (Ms. Harlow the teacher): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Side view facing right.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side.png",
+   "/home/claude/lockdown/art/out/harlow.png"
+  ],
+  "1024x1536"
+ ],
+ "harlow_side_noarm": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (Ms. Harlow the teacher): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Side view facing right, with NO arm visible (the arm is removed, exactly like image 1).",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side_noarm.png",
+   "/home/claude/lockdown/art/out/harlow.png"
+  ],
+  "1024x1536"
+ ],
+ "harlow_blank": [
+  "Edit image 1. Keep EVERYTHING exactly the same: size, position, pose, hair, ears, skin, clothes, cheeks. Only REMOVE the eyes, eyebrows and mouth, filling them with the same plain skin felt, so the face is blank (cheeks stay). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/harlow.png"
+  ],
+  "1024x1536"
+ ],
+ "mom_side": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (Dong's mom): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Side view facing right.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side.png",
+   "/home/claude/lockdown/art/out/mom.png"
+  ],
+  "1024x1536"
+ ],
+ "mom_side_noarm": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (Dong's mom): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Side view facing right, with NO arm visible (the arm is removed, exactly like image 1).",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side_noarm.png",
+   "/home/claude/lockdown/art/out/mom.png"
+  ],
+  "1024x1536"
+ ],
+ "mom_blank": [
+  "Edit image 1. Keep EVERYTHING exactly the same: size, position, pose, hair, ears, skin, clothes, cheeks. Only REMOVE the eyes, eyebrows and mouth, filling them with the same plain skin felt, so the face is blank (cheeks stay). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/mom.png"
+  ],
+  "1024x1536"
+ ],
+ "deputy_side": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (the sheriff's deputy): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Side view facing right.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side.png",
+   "/home/claude/lockdown/art/out/deputy.png"
+  ],
+  "1024x1536"
+ ],
+ "deputy_side_noarm": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (the sheriff's deputy): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Side view facing right, with NO arm visible (the arm is removed, exactly like image 1).",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side_noarm.png",
+   "/home/claude/lockdown/art/out/deputy.png"
+  ],
+  "1024x1536"
+ ],
+ "deputy_blank": [
+  "Edit image 1. Keep EVERYTHING exactly the same: size, position, pose, hair, ears, skin, clothes, cheeks. Only REMOVE the eyes, eyebrows and mouth, filling them with the same plain skin felt, so the face is blank (cheeks stay). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/deputy.png"
+  ],
+  "1024x1536"
+ ],
+ "tyler_sit_floor": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (Tyler): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Sitting on the floor hugging the knees, scared, exactly like image 1.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_sit_floor.png",
+   "/home/claude/lockdown/art/out/tyler.png"
+  ],
+  "1024x1536"
+ ],
+ "priya_sit_floor": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (Priya): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Sitting on the floor hugging the knees, scared, exactly like image 1.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_sit_floor.png",
+   "/home/claude/lockdown/art/out/priya.png"
+  ],
+  "1024x1536"
+ ],
+ "marcus_sit_floor": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (Marcus): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Sitting on the floor hugging the knees, scared, exactly like image 1.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_sit_floor.png",
+   "/home/claude/lockdown/art/out/marcus.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_a_sit_floor": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (the red-haired girl): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Sitting on the floor hugging the knees, scared, exactly like image 1.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_sit_floor.png",
+   "/home/claude/lockdown/art/out/kid_a.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_b_sit_floor": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (the blond boy): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Sitting on the floor hugging the knees, scared, exactly like image 1.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_sit_floor.png",
+   "/home/claude/lockdown/art/out/kid_b.png"
+  ],
+  "1024x1536"
+ ],
+ "harlow_sit_floor": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (Ms. Harlow the teacher): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Sitting on the floor hugging the knees, scared, exactly like image 1.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_sit_floor.png",
+   "/home/claude/lockdown/art/out/harlow.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_uni_side_noarm2": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, clothes, legs and shoes, pixel for pixel. Only REMOVE the arm completely (the upper arm, forearm and hand), and fill where it was with the plain side of the shirt and trousers, so the side of the body shows no arm at all. Keep EXACTLY the same flat handmade felt paper cut-out style and the plain cream background (#f3ecdf), no shadows, no text.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side.png"
+  ],
+  "1024x1536"
+ ],
+ "tyler_side_noarm2": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, clothes, legs and shoes, pixel for pixel. Only REMOVE the arm completely (the upper arm, forearm and hand), and fill where it was with the plain side of the shirt and trousers, so the side of the body shows no arm at all. Keep EXACTLY the same flat handmade felt paper cut-out style and the plain cream background (#f3ecdf), no shadows, no text.",
+  [
+   "/home/claude/lockdown/art/out/tyler_side.png"
+  ],
+  "1024x1536"
+ ],
+ "priya_side_noarm2": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, clothes, legs and shoes, pixel for pixel. Only REMOVE the arm completely (the upper arm, forearm and hand), and fill where it was with the plain side of the shirt and trousers, so the side of the body shows no arm at all. Keep EXACTLY the same flat handmade felt paper cut-out style and the plain cream background (#f3ecdf), no shadows, no text.",
+  [
+   "/home/claude/lockdown/art/out/priya_side.png"
+  ],
+  "1024x1536"
+ ],
+ "marcus_side_noarm2": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, clothes, legs and shoes, pixel for pixel. Only REMOVE the arm completely (the upper arm, forearm and hand), and fill where it was with the plain side of the shirt and trousers, so the side of the body shows no arm at all. Keep EXACTLY the same flat handmade felt paper cut-out style and the plain cream background (#f3ecdf), no shadows, no text.",
+  [
+   "/home/claude/lockdown/art/out/marcus_side.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_a_side_noarm2": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, clothes, legs and shoes, pixel for pixel. Only REMOVE the arm completely (the upper arm, forearm and hand), and fill where it was with the plain side of the shirt and trousers, so the side of the body shows no arm at all. Keep EXACTLY the same flat handmade felt paper cut-out style and the plain cream background (#f3ecdf), no shadows, no text.",
+  [
+   "/home/claude/lockdown/art/out/kid_a_side.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_b_side_noarm2": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, clothes, legs and shoes, pixel for pixel. Only REMOVE the arm completely (the upper arm, forearm and hand), and fill where it was with the plain side of the shirt and trousers, so the side of the body shows no arm at all. Keep EXACTLY the same flat handmade felt paper cut-out style and the plain cream background (#f3ecdf), no shadows, no text.",
+  [
+   "/home/claude/lockdown/art/out/kid_b_side.png"
+  ],
+  "1024x1536"
+ ],
+ "harlow_side_noarm2": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, clothes, legs and shoes, pixel for pixel. Only REMOVE the arm completely (the upper arm, forearm and hand), and fill where it was with the plain side of the shirt and trousers, so the side of the body shows no arm at all. Keep EXACTLY the same flat handmade felt paper cut-out style and the plain cream background (#f3ecdf), no shadows, no text.",
+  [
+   "/home/claude/lockdown/art/out/harlow_side.png"
+  ],
+  "1024x1536"
+ ],
+ "mom_side_noarm2": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, clothes, legs and shoes, pixel for pixel. Only REMOVE the arm completely (the upper arm, forearm and hand), and fill where it was with the plain side of the shirt and trousers, so the side of the body shows no arm at all. Keep EXACTLY the same flat handmade felt paper cut-out style and the plain cream background (#f3ecdf), no shadows, no text.",
+  [
+   "/home/claude/lockdown/art/out/mom_side.png"
+  ],
+  "1024x1536"
+ ],
+ "deputy_side_noarm2": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, clothes, legs and shoes, pixel for pixel. Only REMOVE the arm completely (the upper arm, forearm and hand), and fill where it was with the plain side of the shirt and trousers, so the side of the body shows no arm at all. Keep EXACTLY the same flat handmade felt paper cut-out style and the plain cream background (#f3ecdf), no shadows, no text.",
+  [
+   "/home/claude/lockdown/art/out/deputy_side.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_uni_side_noarm3": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same boy, size, position on the canvas, beanie, glasses, head, the polo shirt's body and collar, trousers and shoes. REMOVE his whole arm INCLUDING the short shirt SLEEVE and the navy sleeve cuff: there must be no sleeve, no arm and no hand at all. Where the sleeve and arm were, show the plain white side of the polo shirt going straight down from the shoulder to the hem, and the plain navy trousers below. Same flat felt paper cut-out style, plain cream background (#f3ecdf), no text.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side.png"
+  ],
+  "1024x1536"
+ ],
+ "bg_ext_morning": [
+  "Create a new image. Exterior of WESTBROOK HIGH, an American red-brick two-storey high school, seen straight-on from across the bus loop on a bright early morning. Rows of white-framed windows on two floors; the top-right corner window of the second floor is Room 214. Front steps and double doors in the middle, a flagpole with an American flag, a low brick sign on the lawn reading 'WESTBROOK HIGH SCHOOL' and 'HOME OF THE HAWKS', green lawn, two yellow school buses parked at the curb on the left, a few trees, pale blue sky with soft clouds. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, no gradients except soft paper shading, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, NO text except where asked. The floor/ground meets the wall in a straight horizontal line about 72% down the image so paper puppets can stand on it. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_classroom_day": [
+  "Create a new image. Inside Room 214, an American high school English classroom, seen from the middle of the room looking at the back-left corner. Left: a tall wooden bookshelf full of books in the corner. Back wall: a cork board with posters ('READ', a poster of Edgar Allan Poe with a raven), a wall clock reading 10:14, a small grey intercom speaker box high on the wall. Right: the classroom door, wooden, with a tall narrow glass window and a metal lever handle, a light switch beside it. A few student desks with chairs in front, a teacher's desk. Fluorescent ceiling lights on, warm morning light from the windows. Grey-blue linoleum floor. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, no gradients except soft paper shading, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, NO text except where asked. The floor/ground meets the wall in a straight horizontal line about 72% down the image so paper puppets can stand on it. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_hallway": [
+  "Create a new image. A long second-floor hallway of an American high school, seen straight down its length with one-point perspective toward the stairs at the far end. Rows of blue metal lockers on both walls, classroom doors with small numbered plaques 208, 210, 212 and 214 and tall narrow door windows, a 'GO HAWKS' paper banner, flyers on a cork board, an exit sign at the far end, fluorescent ceiling lights, shiny pale linoleum floor. Empty. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, no gradients except soft paper shading, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, NO text except where asked. The floor/ground meets the wall in a straight horizontal line about 72% down the image so paper puppets can stand on it. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_office": [
+  "Create a new image. A small American high school principal's office: a wooden desk with papers and a coffee mug, a desk microphone for the school PA system with a red button, a framed 'WESTBROOK HAWKS' pennant, a bookshelf, window blinds, a flag in the corner. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, no gradients except soft paper shading, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, NO text except where asked. The floor/ground meets the wall in a straight horizontal line about 72% down the image so paper puppets can stand on it. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_room208": [
+  "Create a new image. Room 208, an empty American high school classroom: the door standing wide open on the right, every student desk still has a backpack on it, open notebooks, a water bottle lying on its side on the floor, chairs pushed back as if everyone stood up at once, the lights on, nobody there. Eerie and still. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, no gradients except soft paper shading, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, NO text except where asked. The floor/ground meets the wall in a straight horizontal line about 72% down the image so paper puppets can stand on it. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_gym": [
+  "Create a new image. A high school gymnasium in the late afternoon: wooden basketball floor, folded bleachers, a 'WESTBROOK HAWKS' banner, a folding table with a clipboard and paper cups of water, grey plastic blankets on the bleachers. Empty. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, no gradients except soft paper shading, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, NO text except where asked. The floor/ground meets the wall in a straight horizontal line about 72% down the image so paper puppets can stand on it. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_bedroom_night": [
+  "Create a new image. A teenage boy's small bedroom at three in the morning, lit only by blue moonlight through the window and a thin strip of warm hallway light under the closed bedroom door on the right. A single bed with a rumpled blanket on the left, a nightstand with a phone and a lamp (off), posters on the wall, a desk with a backpack, the closed white bedroom door on the right with a round knob and a small lock. Dark, quiet, eerie. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, no gradients except soft paper shading, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, NO text except where asked. The floor/ground meets the wall in a straight horizontal line about 72% down the image so paper puppets can stand on it. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_home_hall_night": [
+  "Create a new image. The upstairs hallway of an American suburban house at three in the morning, seen from the far end: a closed white bedroom door in the middle of the end wall, a small dim night light glowing near the floor, family photos on the walls, a runner rug on the wooden floor. Very dark blue shadows. Nobody there. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, no gradients except soft paper shading, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, NO text except where asked. The floor/ground meets the wall in a straight horizontal line about 72% down the image so paper puppets can stand on it. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_house_night": [
+  "Create a new image. An American suburban two-storey house at night, seen from the street: one upstairs window dimly lit, a car parked in the driveway with its interior light on, a porch light, a lawn, a mailbox, dark blue sky with stars and a moon. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, no gradients except soft paper shading, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, NO text except where asked. The floor/ground meets the wall in a straight horizontal line about 72% down the image so paper puppets can stand on it. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_ext_midday": [
+  "Edit image 1. Keep EXACTLY the same composition, buildings, objects, positions, felt paper style and framing. Make it a grey, overcast, silent midday: every window dark with the blinds pulled down, the buses gone, nobody anywhere, a single black crow sitting on the school sign, dull grey sky. Eerie and still. No people.",
+  [
+   "/home/claude/lockdown/art/out/bg_ext_morning.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_ext_dusk": [
+  "Edit image 1. Keep EXACTLY the same composition, objects, positions, felt paper style and framing. Make it dusk: deep orange and purple sky with NO sun, the school lit in red and blue by three police cars with flashing lights parked in the bus loop, a yellow police tape line across the lawn, an ambulance and a news van on the left, the second-floor windows on the right glowing yellow. No people.",
+  [
+   "/home/claude/lockdown/art/out/bg_ext_morning.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_classroom_dark": [
+  "Edit image 1. Keep EXACTLY the same composition, buildings, objects, positions, felt paper style and framing. Make it the lockdown: the ceiling lights are OFF and the room is dim and blue-grey, only thin daylight through closed blinds; the narrow window in the classroom door is covered with a sheet of black paper; the desks pushed slightly; the wall clock reads 10:20. Tense and quiet. No people.",
+  [
+   "/home/claude/lockdown/art/out/bg_classroom_day.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_hallway_dim": [
+  "Edit image 1. Keep EXACTLY the same composition, buildings, objects, positions, felt paper style and framing. Make it eerie: half the fluorescent lights are off and one flickers, the hallway is dim blue-grey, long shadows, every classroom door window covered with black paper from inside, completely empty. No people.",
+  [
+   "/home/claude/lockdown/art/out/bg_hallway.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_door_close": [
+  "Create a new image. A close-up of a classroom door seen from INSIDE a dark classroom: a wooden door filling most of the frame, a tall narrow glass window covered with black paper with its top corner peeled down showing a small triangle of glass and the lit hallway beyond, a metal lever handle, and a bright strip of hallway light under the door with the shadows of TWO FEET standing perfectly still in it. Dim, eerie. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, no gradients except soft paper shading, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, NO text except where asked. The floor/ground meets the wall in a straight horizontal line about 72% down the image so paper puppets can stand on it. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_hallway_side": [
+  "Create a new image. A straight-on, flat side view of one wall of an American high school second-floor hallway (camera facing the wall, no perspective): a long row of blue metal lockers, two classroom doors with numbered plaques '210' and '212' and tall narrow windows, a cork board with flyers, a 'GO HAWKS' paper banner, fluorescent ceiling lights along the top, pale shiny linoleum floor in front. Daylight. Empty. The floor meets the wall in a straight horizontal line about 72% down the image so paper puppets can stand on it. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, no text except where asked. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_intercom": [
+  "Create a new image. A close-up of a classroom wall high up: a small grey metal intercom speaker grille box mounted on a cream painted wall next to the top of a round wall clock reading 10:14, a cable running into the ceiling tile. Flat, close, slightly low angle. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, no text except where asked. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_stairwell": [
+  "Create a new image. A school stairwell seen from the side: concrete stairs going down to the left with a metal handrail, a landing, a window with afternoon light, an 'EXIT' sign, a painted wall with a 'HAWKS' mural. Empty. The floor meets the wall in a straight horizontal line about 72% down the image so paper puppets can stand on it. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, no text except where asked. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_lawn_close": [
+  "Create a new image. Ground level on the front lawn of an American high school at dusk: yellow police tape strung between metal posts across the middle, a police car with flashing red and blue lights behind it, a news van with a satellite dish, the red-brick school in the background, the grass lit red and blue, a few dropped paper flyers. Empty, no people. The floor meets the wall in a straight horizontal line about 72% down the image so paper puppets can stand on it. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, no text except where asked. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_bedroom_evening": [
+  "Create a new image. The same kind of small teenage boy's bedroom in the evening with the warm bedside lamp ON: a single bed with a blue blanket on the left, a nightstand with the lamp and a plate with half a grilled cheese sandwich, posters (a planet, a rocket), a desk with a backpack, a closed white bedroom door on the right with a round knob and a small lock, curtains closed. Warm and safe. The floor meets the wall in a straight horizontal line about 72% down the image so paper puppets can stand on it. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, no text except where asked. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_bedroom_door_night": [
+  "Create a new image. A close-up of the inside of a closed white bedroom door at three in the morning: a round brass knob with a little push-button lock, the door filling most of the frame, dark blue room shadows, and a bright warm strip of hallway light under the door with the shadows of TWO FEET standing perfectly still in it. Eerie. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, no text except where asked. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_bedroom_day": [
+  "Create a new image. A teenage boy's bedroom eleven days later, in dim grey daylight with the curtains almost closed: a messy unmade bed, a pile of untouched plates and a tray of food on the floor just inside the closed white bedroom door, a phone charging on the floor, posters, a desk with a backpack, the door has a chair wedged under its knob. Lonely and tense. The floor meets the wall in a straight horizontal line about 72% down the image so paper puppets can stand on it. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, no text except where asked. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_car_night": [
+  "Create a new image. Inside a parked car at night, seen from the passenger seat: the steering wheel, the dashboard glowing softly, the windshield showing a suburban house with one upstairs window lit, a phone mount, a little rubber duck keychain hanging from the keys in the ignition. Dark blue night. No people. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, no text except where asked. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_door_open": [
+  "Create a new image. Inside a dark classroom looking at its door, which is now wide open: the bright hallway beyond, and two bright white flashlight beams shining into the room through the doorway, dust in the beams, the black paper hanging half torn from the door window. Dramatic. No people. The floor meets the wall in a straight horizontal line about 72% down the image so paper puppets can stand on it. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, no text except where asked. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_bus_loop": [
+  "Create a new image. Morning in front of an American high school: a bright yellow school bus seen from the side parked at the curb with its door open, the red-brick school entrance behind with steps, a few backpacks-on-the-ground spots, trees, sunny. No people. The floor meets the wall in a straight horizontal line about 72% down the image so paper puppets can stand on it. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, no text except where asked. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_classroom_afternoon": [
+  "Edit image 1. Keep EXACTLY the same composition, objects, positions, felt paper style and framing. Make it late afternoon after hours of lockdown: the ceiling lights still OFF, warm low orange sunlight slanting through the closed blinds in long stripes across the floor and the bookshelf, the door window still covered with black paper, the clock reads 4:40. No people.",
+  [
+   "/home/claude/lockdown/art/out/bg_classroom_dark.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_hallway_side_dim": [
+  "Edit image 1. Keep EXACTLY the same composition, objects, positions, felt paper style and framing. Make it eerie: most ceiling lights off, one flickering, dim blue-grey, the door windows covered with black paper from inside. No people.",
+  [
+   "/home/claude/lockdown/art/out/bg_hallway_side.png"
+  ],
+  "1536x1024"
+ ],
+ "district": [
+  "Edit image 1 (Dong). Keep EXACTLY the same pose (standing straight facing the viewer, arms hanging straight down a little away from the body, legs straight and slightly apart), the same framing, the same size, the same position on the canvas, the same head size and body proportions. Replace Dong with a different character: a 50-year-old American woman from the school district office: grey hair in a short neat bob, small black dot eyes behind thin red reading glasses, rosy cheeks, a thin serious mouth; a navy blazer over a white blouse, a district ID lanyard, grey trousers, black flats, holding nothing. Keep EXACTLY the same flat handmade felt paper cut-out style, plain cream background (#f3ecdf), no shadows, no text.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "parent_a": [
+  "Edit image 1 (Dong). Keep EXACTLY the same pose (standing straight facing the viewer, arms hanging straight down a little away from the body, legs straight and slightly apart), the same framing, the same size, the same position on the canvas, the same head size and body proportions. Replace Dong with a different character: a worried American dad in his forties: short brown hair and stubble, small black dot eyes, rosy cheeks, a frown; a grey hoodie, jeans, sneakers. Keep EXACTLY the same flat handmade felt paper cut-out style, plain cream background (#f3ecdf), no shadows, no text.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "parent_b": [
+  "Edit image 1 (Dong). Keep EXACTLY the same pose (standing straight facing the viewer, arms hanging straight down a little away from the body, legs straight and slightly apart), the same framing, the same size, the same position on the canvas, the same head size and body proportions. Replace Dong with a different character: a worried American mother in her forties: curly black hair, dark brown skin, small black dot eyes, rosy cheeks, a frown; a green work scrubs top, black trousers, white sneakers. Keep EXACTLY the same flat handmade felt paper cut-out style, plain cream background (#f3ecdf), no shadows, no text.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "bg_kindergarten": [
+  "Create a new image. A bright American kindergarten classroom: tiny colourful chairs and low tables, an alphabet banner, crayon drawings on the wall, a cubby shelf, a small rug with a rainbow, and a poster that says 'LOCKDOWN: LIGHTS OFF · LOCK THE DOOR · HIDE · BE QUIET' with simple pictures, next to the door. Cheerful but with that one serious poster. The floor meets the wall in a straight horizontal line about 72% down the image so paper puppets can stand on it. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, no text except where asked. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_window_view": [
+  "Create a new image. Looking out of a second-floor classroom window with the blinds half open: an empty school parking lot, a few parked cars, an empty road, a flat grey-blue sky with no helicopters and no police, everything perfectly still. Seen from inside, the window frame and blind slats in front. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, no text except where asked. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_hallway_floor": [
+  "Create a new image. A very low camera right on the floor of an empty high school hallway: shiny pale linoleum tiles stretching away, the bottoms of blue lockers along one side, the bottom of a classroom door with a gap of light, a dropped pencil. Dim fluorescent light. No people, no feet. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, no text except where asked. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_door_hall_close": [
+  "Create a new image. A close-up, straight-on view of a classroom door from the HALLWAY side: a wooden door with a tall narrow window covered from inside by black paper, a metal lever handle, a blank small white number plaque beside the door at head height, blue lockers at the edges, dim hallway light. No people. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, no text except where asked. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_handle_inside": [
+  "Create a new image. An extreme close-up of a metal lever door handle on a wooden classroom door, seen from inside a dark classroom, with a small silver thumb-turn lock just above it. Dim light. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, no text except where asked. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_kitchen_mom": [
+  "Create a new image. A small American suburban kitchen at midday: a counter with a coffee mug and an open laptop, a fridge with school photos and magnets, a window with daylight, a wall calendar. No people. The floor meets the wall in a straight horizontal line about 72% down the image so paper puppets can stand on it. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, slightly muted colours. A background set for an animated short, wide 16:9, NO people, NO characters, no text except where asked. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1536x1024"
+ ],
+ "dong_uni_sit_floor_headless": [
+  "Edit image 1. Keep EVERYTHING exactly the same — the same pose, size, position, body, arms, hands, legs, clothes and shoes — but REMOVE the head, hair and neck completely, so the shirt collar is empty at the top. Nothing above the collar. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_sit_floor.png"
+  ],
+  "1024x1536"
+ ],
+ "tyler_sit_floor_headless": [
+  "Edit image 1. Keep EVERYTHING exactly the same — the same pose, size, position, body, arms, hands, legs, clothes and shoes — but REMOVE the head, hair and neck completely, so the shirt collar is empty at the top. Nothing above the collar. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/tyler_sit_floor.png"
+  ],
+  "1024x1536"
+ ],
+ "priya_sit_floor_headless": [
+  "Edit image 1. Keep EVERYTHING exactly the same — the same pose, size, position, body, arms, hands, legs, clothes and shoes — but REMOVE the head, hair and neck completely, so the shirt collar is empty at the top. Nothing above the collar. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/priya_sit_floor.png"
+  ],
+  "1024x1536"
+ ],
+ "marcus_sit_floor_headless": [
+  "Edit image 1. Keep EVERYTHING exactly the same — the same pose, size, position, body, arms, hands, legs, clothes and shoes — but REMOVE the head, hair and neck completely, so the shirt collar is empty at the top. Nothing above the collar. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/marcus_sit_floor.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_a_sit_floor_headless": [
+  "Edit image 1. Keep EVERYTHING exactly the same — the same pose, size, position, body, arms, hands, legs, clothes and shoes — but REMOVE the head, hair and neck completely, so the shirt collar is empty at the top. Nothing above the collar. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/kid_a_sit_floor.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_b_sit_floor_headless": [
+  "Edit image 1. Keep EVERYTHING exactly the same — the same pose, size, position, body, arms, hands, legs, clothes and shoes — but REMOVE the head, hair and neck completely, so the shirt collar is empty at the top. Nothing above the collar. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/kid_b_sit_floor.png"
+  ],
+  "1024x1536"
+ ],
+ "harlow_sit_floor_headless": [
+  "Edit image 1. Keep EVERYTHING exactly the same — the same pose, size, position, body, arms, hands, legs, clothes and shoes — but REMOVE the head, hair and neck completely, so the shirt collar is empty at the top. Nothing above the collar. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/harlow_sit_floor.png"
+  ],
+  "1024x1536"
+ ],
+ "tyler_sit_desk": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size and position. Replace the character with the character in image 2 (Tyler): same face, hair, skin, uniform. He or she sits on the chair at a small student desk placed in front of them, hands on the desk, drawing on his own forearm with a blue pen, grinning. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_sit_chair.png",
+   "/home/claude/lockdown/art/out/tyler.png"
+  ],
+  "1024x1536"
+ ],
+ "priya_sit_desk": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size and position. Replace the character with the character in image 2 (Priya): same face, hair, skin, uniform. He or she sits on the chair at a small student desk placed in front of them, hands on the desk, writing notes. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_sit_chair.png",
+   "/home/claude/lockdown/art/out/priya.png"
+  ],
+  "1024x1536"
+ ],
+ "marcus_sit_desk": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size and position. Replace the character with the character in image 2 (Marcus): same face, hair, skin, uniform. He or she sits on the chair at a small student desk placed in front of them, hands on the desk. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_sit_chair.png",
+   "/home/claude/lockdown/art/out/marcus.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_a_sit_desk": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size and position. Replace the character with the character in image 2 (the red-haired girl): same face, hair, skin, uniform. He or she sits on the chair at a small student desk placed in front of them, hands on the desk. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_sit_chair.png",
+   "/home/claude/lockdown/art/out/kid_a.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_b_sit_desk": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size and position. Replace the character with the character in image 2 (the blond boy): same face, hair, skin, uniform. He or she sits on the chair at a small student desk placed in front of them, hands on the desk. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_sit_chair.png",
+   "/home/claude/lockdown/art/out/kid_b.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_uni_floor_phone": [
+  "Edit image 1 so it shows the same boy sitting on the floor with his knees up, hunched, holding a smartphone to his right ear with his hand cupped over his mouth, whispering, eyes wide and teary. The character must look EXACTLY like image 1 (same face, hair, clothes, colours, proportions, same size on the canvas). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_sit_floor.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_uni_crawl": [
+  "Edit image 1. Show the same boy (same face, beanie, glasses, uniform) seen from the SIDE facing right, crawling on his hands and knees, low to the floor, head raised, scared, sneaking forward. Same size of head and body as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side.png"
+  ],
+  "1536x1024"
+ ],
+ "dong_tee_bed_sit": [
+  "Edit image 1. Show the same boy (Dong, same face, beanie, glasses, white tee with the small dog logo, charcoal trousers) sitting up in a single bed with a blue blanket over his legs, seen from the front, holding the blanket, eyes wide, scared, at night. Draw the bed too. Same head size. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/dong/out/hero_v1.png"
+  ],
+  "1024x1536"
+ ],
+ "mom_phone_ear": [
+  "Edit image 1 so it shows the same woman standing, front view, holding a smartphone to her ear with one hand and her other hand over her mouth, eyes closed, crying quietly. The character must look EXACTLY like image 1 (same face, hair, clothes, colours, proportions, same size on the canvas). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/mom.png"
+  ],
+  "1024x1536"
+ ],
+ "mom_phone_hold": [
+  "Edit image 1 so it shows the same woman sitting (seen from the waist up behind a car steering wheel is NOT needed — just her) standing, front view, typing fast on a smartphone held in both hands at chest height, face lit pale blue from the screen, terrified. The character must look EXACTLY like image 1 (same face, hair, clothes, colours, proportions, same size on the canvas). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/mom.png"
+  ],
+  "1024x1536"
+ ],
+ "mom_hug": [
+  "Edit image 1. Show the woman from image 1 (Dong's mom, same face, hair, lilac cardigan, beige trousers) hugging the boy from image 2 (Dong, same face, beanie, glasses, school uniform) tightly, both standing, seen from the side-front, her lifting him slightly off the ground, his eyes closed in relief, her crying. Both at the same scale as in their images. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/mom.png",
+   "/home/claude/lockdown/art/out/dong_uni.png"
+  ],
+  "1024x1536"
+ ],
+ "harlow_phone": [
+  "Edit image 1 so it shows the same teacher, front view, crouching low, holding a smartphone in both hands, reading it, face lit pale blue, worried. The character must look EXACTLY like image 1 (same face, hair, clothes, colours, proportions, same size on the canvas). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/harlow.png"
+  ],
+  "1024x1536"
+ ],
+ "harlow_book": [
+  "Edit image 1 so it shows the same teacher standing, front view, holding an open book in both hands at chest height, reading aloud, calm. The character must look EXACTLY like image 1 (same face, hair, clothes, colours, proportions, same size on the canvas). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/harlow.png"
+  ],
+  "1024x1536"
+ ],
+ "district_clipboard": [
+  "Edit image 1 so it shows the same woman standing, front view, holding a clipboard in her left hand and writing on it with a pen in her right, looking up over her glasses, serious. The character must look EXACTLY like image 1 (same face, hair, clothes, colours, proportions, same size on the canvas). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/district.png"
+  ],
+  "1024x1536"
+ ],
+ "bg_door_hall_open": [
+  "Edit image 1. Keep EXACTLY the same composition, objects, positions, felt paper style and framing. The classroom door is now swung wide OPEN inward, and beyond it the classroom is pitch black — nothing visible inside. No people.",
+  [
+   "/home/claude/lockdown/art/out/bg_door_hall_close.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_hallway_dim_open": [
+  "Edit image 1. Keep EXACTLY the same composition, objects, positions, felt paper style and framing. Five of the classroom doors along the hallway are now standing wide open, each opening showing an empty classroom; the others are closed. Completely empty, eerie, dim. No people.",
+  [
+   "/home/claude/lockdown/art/out/bg_hallway_dim.png"
+  ],
+  "1536x1024"
+ ],
+ "dong_uni_side_g": [
+  "Edit image 1. Keep the character EXACTLY the same, pixel for pixel: same pose, size, position, colours, clothes, shoes and felt texture. ONLY replace the plain cream background with a perfectly flat, uniform, pure chroma-key green (#00FF00) everywhere around the character, with no shadows, no texture and no gradient in the green.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side.png"
+  ],
+  "1024x1536"
+ ],
+ "dong_uni_side_noarm_g": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, the shirt's body and collar, trousers, shoes and the flat pure green (#00FF00) background. REMOVE the arm completely INCLUDING the short shirt sleeve and its coloured cuff band (or the jacket/cardigan sleeve): no sleeve, no arm, no hand at all. Where they were, show the plain side of the shirt going straight down from the shoulder to the hem, and the plain trousers below. Same flat felt paper cut-out style, no text.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side_g.png"
+  ],
+  "1024x1536"
+ ],
+ "tyler_side_g": [
+  "Edit image 1. Keep the character EXACTLY the same, pixel for pixel: same pose, size, position, colours, clothes, shoes and felt texture. ONLY replace the plain cream background with a perfectly flat, uniform, pure chroma-key green (#00FF00) everywhere around the character, with no shadows, no texture and no gradient in the green.",
+  [
+   "/home/claude/lockdown/art/out/tyler_side.png"
+  ],
+  "1024x1536"
+ ],
+ "tyler_side_noarm_g": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, the shirt's body and collar, trousers, shoes and the flat pure green (#00FF00) background. REMOVE the arm completely INCLUDING the short shirt sleeve and its coloured cuff band (or the jacket/cardigan sleeve): no sleeve, no arm, no hand at all. Where they were, show the plain side of the shirt going straight down from the shoulder to the hem, and the plain trousers below. Same flat felt paper cut-out style, no text.",
+  [
+   "/home/claude/lockdown/art/out/tyler_side_g.png"
+  ],
+  "1024x1536"
+ ],
+ "priya_side_g": [
+  "Edit image 1. Keep the character EXACTLY the same, pixel for pixel: same pose, size, position, colours, clothes, shoes and felt texture. ONLY replace the plain cream background with a perfectly flat, uniform, pure chroma-key green (#00FF00) everywhere around the character, with no shadows, no texture and no gradient in the green.",
+  [
+   "/home/claude/lockdown/art/out/priya_side.png"
+  ],
+  "1024x1536"
+ ],
+ "priya_side_noarm_g": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, the shirt's body and collar, trousers, shoes and the flat pure green (#00FF00) background. REMOVE the arm completely INCLUDING the short shirt sleeve and its coloured cuff band (or the jacket/cardigan sleeve): no sleeve, no arm, no hand at all. Where they were, show the plain side of the shirt going straight down from the shoulder to the hem, and the plain trousers below. Same flat felt paper cut-out style, no text.",
+  [
+   "/home/claude/lockdown/art/out/priya_side_g.png"
+  ],
+  "1024x1536"
+ ],
+ "marcus_side_g": [
+  "Edit image 1. Keep the character EXACTLY the same, pixel for pixel: same pose, size, position, colours, clothes, shoes and felt texture. ONLY replace the plain cream background with a perfectly flat, uniform, pure chroma-key green (#00FF00) everywhere around the character, with no shadows, no texture and no gradient in the green.",
+  [
+   "/home/claude/lockdown/art/out/marcus_side.png"
+  ],
+  "1024x1536"
+ ],
+ "marcus_side_noarm_g": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, the shirt's body and collar, trousers, shoes and the flat pure green (#00FF00) background. REMOVE the arm completely INCLUDING the short shirt sleeve and its coloured cuff band (or the jacket/cardigan sleeve): no sleeve, no arm, no hand at all. Where they were, show the plain side of the shirt going straight down from the shoulder to the hem, and the plain trousers below. Same flat felt paper cut-out style, no text.",
+  [
+   "/home/claude/lockdown/art/out/marcus_side_g.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_a_side_g": [
+  "Edit image 1. Keep the character EXACTLY the same, pixel for pixel: same pose, size, position, colours, clothes, shoes and felt texture. ONLY replace the plain cream background with a perfectly flat, uniform, pure chroma-key green (#00FF00) everywhere around the character, with no shadows, no texture and no gradient in the green.",
+  [
+   "/home/claude/lockdown/art/out/kid_a_side.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_a_side_noarm_g": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, the shirt's body and collar, trousers, shoes and the flat pure green (#00FF00) background. REMOVE the arm completely INCLUDING the short shirt sleeve and its coloured cuff band (or the jacket/cardigan sleeve): no sleeve, no arm, no hand at all. Where they were, show the plain side of the shirt going straight down from the shoulder to the hem, and the plain trousers below. Same flat felt paper cut-out style, no text.",
+  [
+   "/home/claude/lockdown/art/out/kid_a_side_g.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_b_side_g": [
+  "Edit image 1. Keep the character EXACTLY the same, pixel for pixel: same pose, size, position, colours, clothes, shoes and felt texture. ONLY replace the plain cream background with a perfectly flat, uniform, pure chroma-key green (#00FF00) everywhere around the character, with no shadows, no texture and no gradient in the green.",
+  [
+   "/home/claude/lockdown/art/out/kid_b_side.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_b_side_noarm_g": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, the shirt's body and collar, trousers, shoes and the flat pure green (#00FF00) background. REMOVE the arm completely INCLUDING the short shirt sleeve and its coloured cuff band (or the jacket/cardigan sleeve): no sleeve, no arm, no hand at all. Where they were, show the plain side of the shirt going straight down from the shoulder to the hem, and the plain trousers below. Same flat felt paper cut-out style, no text.",
+  [
+   "/home/claude/lockdown/art/out/kid_b_side_g.png"
+  ],
+  "1024x1536"
+ ],
+ "harlow_side_g": [
+  "Edit image 1. Keep the character EXACTLY the same, pixel for pixel: same pose, size, position, colours, clothes, shoes and felt texture. ONLY replace the plain cream background with a perfectly flat, uniform, pure chroma-key green (#00FF00) everywhere around the character, with no shadows, no texture and no gradient in the green.",
+  [
+   "/home/claude/lockdown/art/out/harlow_side.png"
+  ],
+  "1024x1536"
+ ],
+ "harlow_side_noarm_g": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, the shirt's body and collar, trousers, shoes and the flat pure green (#00FF00) background. REMOVE the arm completely INCLUDING the short shirt sleeve and its coloured cuff band (or the jacket/cardigan sleeve): no sleeve, no arm, no hand at all. Where they were, show the plain side of the shirt going straight down from the shoulder to the hem, and the plain trousers below. Same flat felt paper cut-out style, no text.",
+  [
+   "/home/claude/lockdown/art/out/harlow_side_g.png"
+  ],
+  "1024x1536"
+ ],
+ "mom_side_g": [
+  "Edit image 1. Keep the character EXACTLY the same, pixel for pixel: same pose, size, position, colours, clothes, shoes and felt texture. ONLY replace the plain cream background with a perfectly flat, uniform, pure chroma-key green (#00FF00) everywhere around the character, with no shadows, no texture and no gradient in the green.",
+  [
+   "/home/claude/lockdown/art/out/mom_side.png"
+  ],
+  "1024x1536"
+ ],
+ "mom_side_noarm_g": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, the shirt's body and collar, trousers, shoes and the flat pure green (#00FF00) background. REMOVE the arm completely INCLUDING the short shirt sleeve and its coloured cuff band (or the jacket/cardigan sleeve): no sleeve, no arm, no hand at all. Where they were, show the plain side of the shirt going straight down from the shoulder to the hem, and the plain trousers below. Same flat felt paper cut-out style, no text.",
+  [
+   "/home/claude/lockdown/art/out/mom_side_g.png"
+  ],
+  "1024x1536"
+ ],
+ "deputy_side_g": [
+  "Edit image 1. Keep the character EXACTLY the same, pixel for pixel: same pose, size, position, colours, clothes, shoes and felt texture. ONLY replace the plain cream background with a perfectly flat, uniform, pure chroma-key green (#00FF00) everywhere around the character, with no shadows, no texture and no gradient in the green.",
+  [
+   "/home/claude/lockdown/art/out/deputy_side.png"
+  ],
+  "1024x1536"
+ ],
+ "deputy_side_noarm_g": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, the shirt's body and collar, trousers, shoes and the flat pure green (#00FF00) background. REMOVE the arm completely INCLUDING the short shirt sleeve and its coloured cuff band (or the jacket/cardigan sleeve): no sleeve, no arm, no hand at all. Where they were, show the plain side of the shirt going straight down from the shoulder to the hem, and the plain trousers below. Same flat felt paper cut-out style, no text.",
+  [
+   "/home/claude/lockdown/art/out/deputy_side_g.png"
+  ],
+  "1024x1536"
+ ],
+ "plate_corner_day": [
+  "Create a new image. A wide 16:9 background PLATE of the back corner of an American high school English classroom, seen from a low camera about 1 metre off the floor, looking straight into the corner: the back wall on the right and the left side wall meeting in a vertical corner line a little left of centre. On the back wall: a cork board with a 'READ' poster and an Edgar Allan Poe poster, a round wall clock, a small grey intercom speaker high up. On the left wall: a window with closed blinds. The floor is EMPTY grey-blue classroom linoleum tiles, visible across the whole bottom 40% of the image, with NOTHING standing on it (no desks, no chairs, no bookshelf, no rug). Lights on, morning. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference image: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, slightly muted colours. NO people. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg"
+  ],
+  "1536x1024"
+ ],
+ "plate_corner_dark": [
+  "Edit image 1. Keep EXACTLY the same composition, walls, floor, objects, positions, felt paper style and framing. Make it the lockdown: ceiling lights OFF, the room dim and blue-grey, thin grey daylight through the closed blinds making faint stripes on the floor, the clock reading 10:20. Nobody there.",
+  [
+   "/home/claude/lockdown/art/out/plate_corner_day.png"
+  ],
+  "1536x1024"
+ ],
+ "plate_corner_afternoon": [
+  "Edit image 1. Keep EXACTLY the same composition, walls, floor, objects, positions, felt paper style and framing. Make it late afternoon after hours of lockdown: lights OFF, warm low orange sunlight slanting through the closed blinds in long stripes across the walls and floor, the clock reading 4:40. Nobody there.",
+  [
+   "/home/claude/lockdown/art/out/plate_corner_day.png"
+  ],
+  "1536x1024"
+ ],
+ "prop_bookshelf": [
+  "Create a new image. A single tall wooden classroom bookshelf full of colourful books, seen straight from the front, on a perfectly flat, uniform pure chroma-key green (#00FF00) background with nothing else, no shadow, no floor. Flat handmade felt and paper cut-out craft style like the reference image, soft felt texture, no outlines. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg"
+  ],
+  "1024x1536"
+ ],
+ "prop_desk": [
+  "Create a new image. A single American student desk (light wood top, grey metal legs) with a blue plastic chair pushed in behind it, seen from the front at a slight high angle, on a perfectly flat, uniform pure chroma-key green (#00FF00) background with nothing else, no shadow, no floor. Flat handmade felt and paper cut-out craft style like the reference image, soft felt texture, no outlines. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg"
+  ],
+  "1536x1024"
+ ],
+ "prop_desk_side": [
+  "Create a new image. A single American student desk (light wood top, grey metal legs) seen exactly from the SIDE, on a perfectly flat, uniform pure chroma-key green (#00FF00) background with nothing else, no shadow, no floor. Flat handmade felt and paper cut-out craft style like the reference image, soft felt texture, no outlines. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg"
+  ],
+  "1536x1024"
+ ],
+ "prop_teacher_desk": [
+  "Create a new image. A teacher's wooden desk with a stack of books, a cup of pencils and an apple, seen straight from the front, on a perfectly flat, uniform pure chroma-key green (#00FF00) background with nothing else, no shadow, no floor. Flat handmade felt and paper cut-out craft style like the reference image, soft felt texture, no outlines. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg"
+  ],
+  "1536x1024"
+ ],
+ "prop_backpacks": [
+  "Create a new image. Three school backpacks (navy, red and grey) slumped on the floor in a row, seen from the front, on a perfectly flat, uniform pure chroma-key green (#00FF00) background with nothing else, no shadow, no floor. Flat handmade felt and paper cut-out craft style like the reference image, soft felt texture, no outlines. ",
+  [
+   "/home/claude/dong/ref/style_dani.jpg"
+  ],
+  "1536x1024"
+ ],
+ "mask_kindergarten": [
+  "Edit image 1. Turn it into a black-and-white matte (a mask), keeping EXACTLY the same framing, perspective, positions, shapes and sizes as image 1, pixel for pixel. Paint the two small round wooden kids tables and all the small coloured plastic kids chairs (red, yellow, green, blue) in the front of the room solid pure white (#FFFFFF), completely filled, following their exact outlines including legs and thin parts. Paint EVERYTHING else (walls, floor, ceiling, windows, posters, all other objects) solid pure black (#000000). No grey, no texture, no shading, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/bg_kindergarten.png"
+  ],
+  "1536x1024"
+ ],
+ "mask_office": [
+  "Edit image 1. Turn it into a black-and-white matte (a mask), keeping EXACTLY the same framing, perspective, positions, shapes and sizes as image 1, pixel for pixel. Paint the big wooden principal's desk together with everything standing on it (the papers, the mug, the microphone on its stand) solid pure white (#FFFFFF), completely filled, following their exact outlines including legs and thin parts. Paint EVERYTHING else (walls, floor, ceiling, windows, posters, all other objects) solid pure black (#000000). No grey, no texture, no shading, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/bg_office.png"
+  ],
+  "1536x1024"
+ ],
+ "mask_gym": [
+  "Edit image 1. Turn it into a black-and-white matte (a mask), keeping EXACTLY the same framing, perspective, positions, shapes and sizes as image 1, pixel for pixel. Paint the folding table at the front right with the cups and clipboard on it solid pure white (#FFFFFF), completely filled, following their exact outlines including legs and thin parts. Paint EVERYTHING else (walls, floor, ceiling, windows, posters, all other objects) solid pure black (#000000). No grey, no texture, no shading, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/bg_gym.png"
+  ],
+  "1536x1024"
+ ],
+ "mask_bedroom_night": [
+  "Edit image 1. Turn it into a black-and-white matte (a mask), keeping EXACTLY the same framing, perspective, positions, shapes and sizes as image 1, pixel for pixel. Paint the bed in the bottom-left corner (the blanket, the mattress, the bed frame and the wooden headboard) solid pure white (#FFFFFF), completely filled, following their exact outlines including legs and thin parts. Paint EVERYTHING else (walls, floor, ceiling, windows, posters, all other objects) solid pure black (#000000). No grey, no texture, no shading, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/bg_bedroom_night.png"
+  ],
+  "1536x1024"
+ ],
+ "mask_stairwell": [
+  "Edit image 1. Turn it into a black-and-white matte (a mask), keeping EXACTLY the same framing, perspective, positions, shapes and sizes as image 1, pixel for pixel. Paint the staircase on the left: its steps, its side, and the metal hand railing with its posts solid pure white (#FFFFFF), completely filled, following their exact outlines including legs and thin parts. Paint EVERYTHING else (walls, floor, ceiling, windows, posters, all other objects) solid pure black (#000000). No grey, no texture, no shading, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/bg_stairwell.png"
+  ],
+  "1536x1024"
+ ],
+ "mask_door_close": [
+  "Edit image 1. Turn it into a black-and-white matte (a mask), keeping EXACTLY the same framing, perspective, positions, shapes and sizes as image 1, pixel for pixel. Paint the student desk in the bottom-left corner and the bookshelf at the bottom right solid pure white (#FFFFFF), completely filled, following their exact outlines including legs and thin parts. Paint EVERYTHING else (walls, floor, ceiling, windows, posters, all other objects) solid pure black (#000000). No grey, no texture, no shading, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/bg_door_close.png"
+  ],
+  "1536x1024"
+ ],
+ "mask_classroom_day": [
+  "Edit image 1. Turn it into a black-and-white matte (a mask), keeping EXACTLY the same framing, perspective, positions, shapes and sizes as image 1, pixel for pixel. Paint all the student desks and chairs in the front of the picture (the bottom rows), and the teacher's wooden desk in the middle with the things on it solid pure white (#FFFFFF), completely filled, following their exact outlines including legs and thin parts. Paint EVERYTHING else (walls, floor, ceiling, windows, posters, all other objects) solid pure black (#000000). No grey, no texture, no shading, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/bg_classroom_day.png"
+  ],
+  "1536x1024"
+ ],
+ "plate_class_students_day": [
+  "Edit image 1 (Room 214, an American high school English classroom in a flat handmade felt and paper cut-out style). Show the SAME classroom, the same style, colours, flooring, wall colour, fluorescent ceiling lights and warm morning light, but now seen from the front of the room where the teacher stands, looking straight towards the back wall where the students sit. Back wall: three tall windows with half-open blinds on the left half, a row of wooden coat hooks with two backpacks hanging, a cork board with student work, a small American flag on a pole in the corner. The back wall is flat and faces the camera straight on; the floor (the same blue-grey speckled floor as image 1) is completely EMPTY: no desks, no chairs, no people, no rugs, nothing on the floor. Camera at standing eye height, level, looking straight ahead; the line where the floor meets the back wall runs straight across the picture at about 62% of the picture height. No people, no text except posters.",
+  [
+   "/home/claude/lockdown/art/out/bg_classroom_day.png",
+   "/home/claude/lockdown/art/out/plate_corner_day.png"
+  ],
+  "1536x1024"
+ ],
+ "dong_uni_sit_desk": [
+  "Edit image 1. Keep EXACTLY the same character (Dong: black beanie, round glasses, school uniform), the same pose, framing, size and position. He sits on the chair at a small student desk placed in front of him, exactly like the desk in image 2, hands resting on the desk on an open notebook, holding a pencil, looking ahead calmly. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_sit_chair.png",
+   "/home/claude/lockdown/art/out/tyler_sit_desk.png"
+  ],
+  "1024x1536"
+ ],
+ "plate_class_students_empty": [
+  "Edit image 1. Keep EXACTLY the same picture, camera, framing, perspective, walls, windows, blinds, coat hooks, backpacks, cork board, flag, ceiling lights, light and felt paper style, pixel for pixel. Remove ALL the student desks and ALL the chairs: the floor becomes completely empty, the same blue-grey speckled classroom floor continuing smoothly all the way to the bottom of the picture and to the skirting at the bottom of the back wall. Nothing on the floor. No people.",
+  [
+   "/home/claude/lockdown/art/out/plate_class_students_day.png"
+  ],
+  "1536x1024"
+ ],
+ "plate_bedroom_night_nobed": [
+  "Edit image 1. Keep EXACTLY the same picture, camera, framing, perspective, walls, window, curtains, posters, shelf, lamp, nightstand, desk, chair, backpack, door, light strip, moonlight and felt paper style, pixel for pixel. Remove ONLY the bed (its blanket, mattress, pillow, frame and headboard): where it was, show the same dark blue wall continuing down to the same dark blue carpet floor, with the floor meeting the wall in the same straight line as the rest of the room. Nothing else changes. No people.",
+  [
+   "/home/claude/lockdown/art/out/bg_bedroom_night.png"
+  ],
+  "1536x1024"
+ ],
+ "dong_tee_bed_asleep": [
+  "Edit image 1. Keep EXACTLY the same bed (headboard, pillow, mattress, frame, blue blanket colour), the same framing, size and position on the canvas, the same flat handmade felt paper cut-out style and the same plain cream background (#f3ecdf). Change ONLY Dong's pose: he now lies flat on his back fast asleep, his head resting on the pillow, eyes closed, mouth relaxed, still wearing his black beanie and round glasses, the blue blanket pulled up over his body to his chest with only his head, shoulders and arms on top of the blanket. No shadows, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/dong_tee_bed_sit.png"
+  ],
+  "1024x1536"
+ ],
+ "dawes_blank": [
+  "Edit image 1. Keep EVERYTHING exactly the same: size, position, pose, hair, ears, skin, clothes, cheeks, the thin metal glasses and the grey moustache. Only REMOVE the two eyes, the two eyebrows and the mouth, filling them with the same plain skin felt (the the thin metal glasses and the grey moustache stay exactly where they are). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/dawes.png"
+  ],
+  "1024x1536"
+ ],
+ "district_blank": [
+  "Edit image 1. Keep EVERYTHING exactly the same: size, position, pose, hair, ears, skin, clothes, cheeks, the thin red glasses and the pearl earrings. Only REMOVE the two eyes, the two eyebrows and the mouth, filling them with the same plain skin felt (the the thin red glasses and the pearl earrings stay exactly where they are). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/district.png"
+  ],
+  "1024x1536"
+ ],
+ "harlow_shush": [
+  "Edit image 1. Keep EXACTLY the same woman (Ms. Harlow: same face, hair bun, lanyard, cardigan, clothes, shoes), the same crouching pose on the floor, the same size and position on the canvas. Change only her right arm: she raises her index finger to her lips in a firm 'shhh' gesture, the other hand resting on her knee. Her eyes are wide and serious, eyebrows tense. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/harlow_sit_floor.png"
+  ],
+  "1024x1536"
+ ],
+ "harlow_hands": [
+  "Edit image 1. Keep EXACTLY the same woman (Ms. Harlow: same face, hair bun, lanyard, cardigan, clothes, shoes), the same crouching pose, the same size and position on the canvas. Change only her arms and hands: both hands are held together in front of her chest, one hand tightly gripping the other trembling hand to hold it still. Her face is frightened, eyes wide. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/harlow_sit_floor.png"
+  ],
+  "1024x1536"
+ ],
+ "harlow_hands_headless": [
+  "Edit image 1. Keep EVERYTHING exactly the same — the same pose, size, position, body, arms, hands, legs, clothes and shoes — but REMOVE the head, hair and neck completely, so the shirt collar is empty at the top. Nothing above the collar. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/harlow_hands.png"
+  ],
+  "1024x1536"
+ ],
+ "harlow_book_headless": [
+  "Edit image 1. Keep EVERYTHING exactly the same — the same pose, size, position, body, arms, hands, legs, clothes and shoes — but REMOVE the head, hair and neck completely, so the shirt collar is empty at the top. Nothing above the collar. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/harlow_book.png"
+  ],
+  "1024x1536"
+ ],
+ "plate_door_close_clean": [
+  "Edit image 1. Keep EXACTLY the same picture, camera, framing, perspective, door, black paper on the window, walls, desk, shelf, light switch, colours and felt paper style, pixel for pixel. Change ONLY the strip of light under the door: it is an even, unbroken line of warm light with NO shadows and NO dark shapes in it at all. Nothing else changes.",
+  [
+   "/home/claude/lockdown/art/out/bg_door_close.png"
+  ],
+  "1536x1024"
+ ],
+ "plate_door_close_window": [
+  "Edit image 1. Keep EXACTLY the same picture, camera, framing, perspective, door, walls, desk, shelf, light switch, the even strip of light under the door, colours and felt paper style, pixel for pixel. Change ONLY the narrow door window: it is NOT covered any more. Remove the black paper completely, so the window shows clear glass with the softly lit school hallway and a row of blue lockers beyond it. Nothing else changes.",
+  [
+   "/home/claude/lockdown/art/out/plate_door_close_clean.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_key_lock": [
+  "A close-up in a flat handmade felt and paper cut-out style (like image 1): the outside of an American school classroom door, a round brushed-steel door lock beside a lever handle, and a man's hand in a tan sheriff's-deputy sleeve turning a brass key in the lock. A ring of several keys hangs from the key. Warm hallway light, soft felt textures, simple shapes, no outlines, no text, no faces. Landscape, the lock and key in the centre.",
+  [
+   "/home/claude/lockdown/art/out/bg_handle_inside.png",
+   "/home/claude/lockdown/art/out/deputy.png"
+  ],
+  "1536x1024"
+ ],
+ "parent_b_side": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (the woman): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Side view facing right.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side.png",
+   "/home/claude/lockdown/art/out/parent_b.png"
+  ],
+  "1024x1536"
+ ],
+ "parent_b_side_g": [
+  "Edit image 1. Keep the character EXACTLY the same, pixel for pixel: same pose, size, position, colours, clothes, shoes and felt texture. ONLY replace the plain cream background with a perfectly flat, uniform, pure chroma-key green (#00FF00) everywhere around the character, with no shadows, no texture and no gradient in the green.",
+  [
+   "/home/claude/lockdown/art/out/parent_b_side.png"
+  ],
+  "1024x1536"
+ ],
+ "parent_b_side_noarm_g": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, the shirt's body and collar, trousers, shoes and the flat pure green (#00FF00) background. REMOVE the arm completely INCLUDING the short shirt sleeve and its coloured cuff band (or the jacket/cardigan sleeve): no sleeve, no arm, no hand at all. Where they were, show the plain side of the shirt going straight down from the shoulder to the hem, and the plain trousers below. Same flat felt paper cut-out style, no text.",
+  [
+   "/home/claude/lockdown/art/out/parent_b_side_g.png"
+  ],
+  "1024x1536"
+ ],
+ "dawes_side": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (Principal Dawes): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Side view facing right.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side.png",
+   "/home/claude/lockdown/art/out/dawes.png"
+  ],
+  "1024x1536"
+ ],
+ "dawes_side_g": [
+  "Edit image 1. Keep the character EXACTLY the same, pixel for pixel: same pose, size, position, colours, clothes, shoes and felt texture. ONLY replace the plain cream background with a perfectly flat, uniform, pure chroma-key green (#00FF00) everywhere around the character, with no shadows, no texture and no gradient in the green.",
+  [
+   "/home/claude/lockdown/art/out/dawes_side.png"
+  ],
+  "1024x1536"
+ ],
+ "dawes_side_noarm_g": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, the shirt's body and collar, trousers, shoes and the flat pure green (#00FF00) background. REMOVE the arm completely INCLUDING the short shirt sleeve and its coloured cuff band (or the jacket/cardigan sleeve): no sleeve, no arm, no hand at all. Where they were, show the plain side of the shirt going straight down from the shoulder to the hem, and the plain trousers below. Same flat felt paper cut-out style, no text.",
+  [
+   "/home/claude/lockdown/art/out/dawes_side_g.png"
+  ],
+  "1024x1536"
+ ],
+ "plate_door_close_covered": [
+  "Edit image 1. Keep EXACTLY the same picture, camera, framing, perspective, door, walls, desk, shelf, light switch, colours, the strip of light under the door and the felt paper style, pixel for pixel. Change ONLY the narrow door window: a sheet of black paper now covers the ENTIRE window completely, edge to edge and corner to corner, taped flat at all four corners, with no peeled corner, no gap and no light showing through anywhere. Nothing else changes.",
+  [
+   "/home/claude/lockdown/art/out/plate_door_close_clean.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_door_close_full": [
+  "Edit image 1. Keep EXACTLY the same picture, camera, framing, perspective, door, walls, desk, shelf, light switch, colours, the strip of light under the door with the two shadows of feet in it and the felt paper style, pixel for pixel. Change ONLY the narrow door window: a sheet of black paper now covers the ENTIRE window completely, edge to edge and corner to corner, taped flat at all four corners, with no peeled corner, no gap and no light showing through anywhere. Nothing else changes.",
+  [
+   "/home/claude/lockdown/art/out/bg_door_close.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_window_view_dark": [
+  "Edit image 1. Keep EXACTLY the same picture, camera, framing, window, blinds, frame and the view outside, pixel for pixel. Change ONLY the lighting INSIDE the room: the classroom lights are switched off, so the wall, the window frame, the sill and the blinds on the inside are dim and shadowy grey-blue. The view outside the glass stays in normal grey daylight, so the window is the brightest thing in the picture, with a little cool daylight falling on the inner sill. Same flat felt paper style, no people, no text.",
+  [
+   "/home/claude/lockdown/art/out/bg_window_view.png"
+  ],
+  "1536x1024"
+ ],
+ "harlow_side_scared_g": [
+  "Edit image 1. Keep EVERYTHING exactly the same, pixel for pixel: the same character seen from the side, the same size and position on the canvas, the same hair, head shape, ear, clothes, body, shoes and the flat pure green (#00FF00) background. Change ONLY the face to a PANICKED, terrified expression: the eye wide open with a small pupil, the eyebrow raised high and tense, the mouth open in a frightened gasp, a small sweat drop on the forehead. Same flat handmade felt paper style, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/harlow_side_noarm_g.png"
+  ],
+  "1024x1536"
+ ],
+ "priya_side_scared_g": [
+  "Edit image 1. Keep EVERYTHING exactly the same, pixel for pixel: the same character seen from the side, the same size and position on the canvas, the same hair, head shape, ear, clothes, body, shoes and the flat pure green (#00FF00) background. Change ONLY the face to a PANICKED, terrified expression: the eye wide open with a small pupil, the eyebrow raised high and tense, the mouth open in a frightened gasp, a small sweat drop on the forehead. Same flat handmade felt paper style, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/priya_side_noarm_g.png"
+  ],
+  "1024x1536"
+ ],
+ "tyler_side_scared_g": [
+  "Edit image 1. Keep EVERYTHING exactly the same, pixel for pixel: the same character seen from the side, the same size and position on the canvas, the same hair, head shape, ear, clothes, body, shoes and the flat pure green (#00FF00) background. Change ONLY the face to a PANICKED, terrified expression: the eye wide open with a small pupil, the eyebrow raised high and tense, the mouth open in a frightened gasp, a small sweat drop on the forehead. Same flat handmade felt paper style, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/tyler_side_noarm_g.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_a_side_scared_g": [
+  "Edit image 1. Keep EVERYTHING exactly the same, pixel for pixel: the same character seen from the side, the same size and position on the canvas, the same hair, head shape, ear, clothes, body, shoes and the flat pure green (#00FF00) background. Change ONLY the face to a PANICKED, terrified expression: the eye wide open with a small pupil, the eyebrow raised high and tense, the mouth open in a frightened gasp, a small sweat drop on the forehead. Same flat handmade felt paper style, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/kid_a_side_noarm_g.png"
+  ],
+  "1024x1536"
+ ],
+ "kid_b_side_scared_g": [
+  "Edit image 1. Keep EVERYTHING exactly the same, pixel for pixel: the same character seen from the side, the same size and position on the canvas, the same hair, head shape, ear, clothes, body, shoes and the flat pure green (#00FF00) background. Change ONLY the face to a PANICKED, terrified expression: the eye wide open with a small pupil, the eyebrow raised high and tense, the mouth open in a frightened gasp, a small sweat drop on the forehead. Same flat handmade felt paper style, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/kid_b_side_noarm_g.png"
+  ],
+  "1024x1536"
+ ],
+ "marcus_side_scared_g": [
+  "Edit image 1. Keep EVERYTHING exactly the same, pixel for pixel: the same character seen from the side, the same size and position on the canvas, the same hair, head shape, ear, clothes, body, shoes and the flat pure green (#00FF00) background. Change ONLY the face to a PANICKED, terrified expression: the eye wide open with a small pupil, the eyebrow raised high and tense, the mouth open in a frightened gasp, a small sweat drop on the forehead. Same flat handmade felt paper style, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/marcus_side_noarm_g.png"
+  ],
+  "1024x1536"
+ ],
+ "mom_side_scared_g": [
+  "Edit image 1. Keep EVERYTHING exactly the same, pixel for pixel: the same character seen from the side, the same size and position on the canvas, the same hair, head shape, ear, clothes, body, shoes and the flat pure green (#00FF00) background. Change ONLY the face to a PANICKED, terrified expression: the eye wide open with a small pupil, the eyebrow raised high and tense, the mouth open in a frightened gasp, a small sweat drop on the forehead. Same flat handmade felt paper style, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/mom_side_noarm_g.png"
+  ],
+  "1024x1536"
+ ],
+ "parent_b_blank": [
+  "Edit image 1. Keep EVERYTHING exactly the same: size, position, pose, hair, ears, earrings, skin, clothes, cheeks. Only REMOVE the two eyes, the two eyebrows and the mouth, filling them with the same plain skin felt. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/parent_b.png"
+  ],
+  "1024x1536"
+ ],
+ "district_side": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (the woman from the school district, wearing black high-heeled shoes): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Side view facing right.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side.png",
+   "/home/claude/lockdown/art/out/district.png"
+  ],
+  "1024x1536"
+ ],
+ "parent_a_side": [
+  "Edit image 1. Keep EXACTLY the same pose, framing, size, position on the canvas and body proportions as image 1. Replace the character with the character shown in image 2 (a dad): same face, hair, skin colour, clothes and colours as image 2, seen from the same angle as image 1. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. Side view facing right.",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_side.png",
+   "/home/claude/lockdown/art/out/parent_a.png"
+  ],
+  "1024x1536"
+ ],
+ "district_side_g": [
+  "Edit image 1. Keep the character EXACTLY the same, pixel for pixel: same pose, size, position, colours, clothes, shoes and felt texture. ONLY replace the plain cream background with a perfectly flat, uniform, pure chroma-key green (#00FF00) everywhere around the character, with no shadows, no texture and no gradient in the green.",
+  [
+   "/home/claude/lockdown/art/out/district_side.png"
+  ],
+  "1024x1536"
+ ],
+ "district_side_noarm_g": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, the shirt's body and collar, trousers, shoes and the flat pure green (#00FF00) background. REMOVE the arm completely INCLUDING the short shirt sleeve and its coloured cuff band (or the jacket/cardigan sleeve): no sleeve, no arm, no hand at all. Where they were, show the plain side of the shirt going straight down from the shoulder to the hem, and the plain trousers below. Same flat felt paper cut-out style, no text.",
+  [
+   "/home/claude/lockdown/art/out/district_side_g.png"
+  ],
+  "1024x1536"
+ ],
+ "parent_a_side_g": [
+  "Edit image 1. Keep the character EXACTLY the same, pixel for pixel: same pose, size, position, colours, clothes, shoes and felt texture. ONLY replace the plain cream background with a perfectly flat, uniform, pure chroma-key green (#00FF00) everywhere around the character, with no shadows, no texture and no gradient in the green.",
+  [
+   "/home/claude/lockdown/art/out/parent_a_side.png"
+  ],
+  "1024x1536"
+ ],
+ "parent_a_side_noarm_g": [
+  "Edit image 1. Keep EVERYTHING exactly the same: the same character, size, position on the canvas, head, hair, the shirt's body and collar, trousers, shoes and the flat pure green (#00FF00) background. REMOVE the arm completely INCLUDING the short shirt sleeve and its coloured cuff band (or the jacket/cardigan sleeve): no sleeve, no arm, no hand at all. Where they were, show the plain side of the shirt going straight down from the shoulder to the hem, and the plain trousers below. Same flat felt paper cut-out style, no text.",
+  [
+   "/home/claude/lockdown/art/out/parent_a_side_g.png"
+  ],
+  "1024x1536"
+ ],
+ "tyler_hands_mouth": [
+  "Edit image 1. Keep EXACTLY the same boy (Tyler: curly hair, freckles, school uniform), the same sitting pose on the floor with knees up, the same size and position on the canvas. Change only his arms and face: both hands pressed tightly over his mouth, eyes wide and terrified, tears in his eyes. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/tyler_sit_floor.png"
+  ],
+  "1024x1536"
+ ],
+ "priya_grab": [
+  "Edit image 1. Keep EXACTLY the same girl (Priya: dark hair with bangs and ponytail, school uniform), sitting on the floor with knees up, the same size and position on the canvas. Change only her right arm and face: her right arm reaches up and out to the right, her hand tightly grabbing at something (a sleeve) above her, her face urgent and frightened, eyes wide, mouth open whispering. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/priya_sit_floor.png"
+  ],
+  "1024x1536"
+ ],
+ "dawes_menu": [
+  "Edit image 1. Keep EXACTLY the same man (Principal Dawes: bald with grey hair at the sides, thin glasses, grey moustache, dark suit, lanyard), the same size and position, standing facing us. Change only his arms and face: he holds a sheet of paper (the lunch menu) up in front of his chest with both hands, reading it out cheerfully, a warm tired friendly smile, eyebrows relaxed. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/dawes.png"
+  ],
+  "1024x1536"
+ ],
+ "bg_sunday_driveway": [
+  "A sunny, calm Sunday morning in an American suburb, in a flat handmade felt and paper cut-out style (like image 1): a neat house with a short driveway and a parked family car, a green lawn, a small tree, blue sky with soft clouds. Seen from the side at eye level, the driveway running left to right across the lower part of the picture, flat open ground in front for a person to walk on. No people, no text.",
+  [
+   "/home/claude/lockdown/art/out/bg_ext_morning.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_master_keys": [
+  "A close-up in a flat handmade felt and paper cut-out style (like image 1): a big ring of school master keys lying on a wooden principal's desk, one brass key larger than the others with a small tag reading 'MASTER', soft office light, felt textures, no people.",
+  [
+   "/home/claude/lockdown/art/out/bg_office.png"
+  ],
+  "1536x1024"
+ ],
+ "plate_door_hall_nolever": [
+  "Edit image 1. Keep EXACTLY the same picture, camera, framing, door, window, lockers, plaque, colours and felt paper style, pixel for pixel. Remove ONLY the lever handle of the door (the long horizontal bar), leaving its round base plate on the door. Nothing else changes.",
+  [
+   "/home/claude/lockdown/art/out/bg_door_hall_close.png"
+  ],
+  "1536x1024"
+ ],
+ "mask_lever_out": [
+  "Edit image 1. Turn it into a black-and-white matte (a mask), keeping EXACTLY the same framing, perspective, positions, shapes and sizes as image 1, pixel for pixel. Paint ONLY the door's lever handle (the long horizontal metal bar and its round base) solid pure white (#FFFFFF), completely filled. Paint everything else solid pure black (#000000). No grey, no texture.",
+  [
+   "/home/claude/lockdown/art/out/bg_door_hall_close.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_handle_inside_nolever": [
+  "Edit image 1. Keep EXACTLY the same picture, camera, framing, door, lock thumb-turn, colours and felt paper style, pixel for pixel. Remove ONLY the long lever handle bar (keep its round base plate on the door and keep the thumb-turn lock above it). Nothing else changes.",
+  [
+   "/home/claude/lockdown/art/out/bg_handle_inside.png"
+  ],
+  "1536x1024"
+ ],
+ "mask_lever_in": [
+  "Edit image 1. Turn it into a black-and-white matte (a mask), keeping EXACTLY the same framing, perspective, positions, shapes and sizes as image 1, pixel for pixel. Paint ONLY the long lever handle bar of the door (the horizontal metal lever, not the round base plate and not the thumb-turn lock) solid pure white (#FFFFFF), completely filled. Paint everything else solid pure black (#000000). No grey, no texture.",
+  [
+   "/home/claude/lockdown/art/out/bg_handle_inside.png"
+  ],
+  "1536x1024"
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "plate": {
+  "img": "art/bg_hallway_side.png",
+  "fov": 40,
+  "h": 0.887,
+  "pitch": 0,
+  "horizon": 0.69
+ },
+ "tint": 16777215,
+ "who": [
+  {
+   "n": "kid_b",
+   "view": "side",
+   "facing": 1,
+   "clip": "walk",
+   "at": [
+    0.0,
+    0.8
+   ]
+  },
+  {
+   "n": "marcus",
+   "view": "side",
+   "facing": 1,
+   "clip": "walk",
+   "at": [
+    0.15,
+    0.8
+   ]
+  },
+  {
+   "n": "priya",
+   "view": "side",
+   "facing": 1,
+   "clip": "walk",
+   "at": [
+    0.3,
+    0.8
+   ]
+  },
+  {
+   "n": "kid_a",
+   "view": "side",
+   "facing": 1,
+   "clip": "walk",
+   "at": [
+    0.45,
+    0.8
+   ]
+  },
+  {
+   "n": "tyler",
+   "view": "side",
+   "facing": 1,
+   "clip": "walk",
+   "at": [
+    0.6,
+    0.8
+   ]
+  },
+  {
+   "n": "dong",
+   "view": "side",
+   "facing": 1,
+   "clip": "walk",
+   "at": [
+    0.75,
+    0.8
+   ]
+  }
+ ],
+ "name": "hallway_side"
+}

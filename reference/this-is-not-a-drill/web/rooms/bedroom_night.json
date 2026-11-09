@@ -1,0 +1,22 @@
+{
+ "plate": {
+  "img": "art/plate_bedroom_night_nobed.png",
+  "fov": 40,
+  "h": 0.752,
+  "pitch": 0,
+  "horizon": 0.74
+ },
+ "tint": 7306408,
+ "who": [
+  {
+   "n": "dong_home",
+   "card": "bed_asleep",
+   "clip": "idle",
+   "at": [
+    0.17,
+    0.8
+   ]
+  }
+ ],
+ "name": "bedroom_night"
+}

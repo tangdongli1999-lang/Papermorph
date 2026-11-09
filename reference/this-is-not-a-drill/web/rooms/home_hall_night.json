@@ -1,0 +1,29 @@
+{
+ "plate": {
+  "img": "art/bg_home_hall_night.png",
+  "fov": 40,
+  "h": 0.639,
+  "pitch": 0,
+  "horizon": 0.645,
+  "sides": [
+   {
+    "at": [
+     0.86,
+     0.745
+    ]
+   }
+  ]
+ },
+ "tint": 7306408,
+ "who": [
+  {
+   "n": "dong_home",
+   "clip": "idle",
+   "at": [
+    0.5,
+    0.66
+   ]
+  }
+ ],
+ "name": "home_hall_night"
+}

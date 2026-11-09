@@ -1,0 +1,4357 @@
+{
+ "t0": 107.0,
+ "t1": 239.0,
+ "shots": [
+  {
+   "t0": 107.0,
+   "t1": 107.99,
+   "room": {
+    "plate": {
+     "img": "art/bg_hallway_side_dim.png",
+     "fov": 40,
+     "h": 0.887,
+     "pitch": 0,
+     "horizon": 0.69
+    },
+    "tint": 855829,
+    "who": [
+     {
+      "n": "deputy",
+      "view": "side",
+      "facing": 1,
+      "clip": "walk",
+      "opts": {
+       "pace": 0.5
+      },
+      "at": [
+       0.22,
+       0.8
+      ]
+     }
+    ],
+    "name": "hallway_side"
+   },
+   "cam": {
+    "a": {
+     "zoom": 2.6,
+     "aim": [
+      0.3,
+      0.7
+     ]
+    },
+    "b": {
+     "zoom": 2.6,
+     "aim": [
+      0.4,
+      0.7
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "tube",
+     "glow": 0.0,
+     "stable": 0.88,
+     "alpha": 0.4,
+     "t0": 107.0,
+     "t1": 107.99,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 107.99,
+   "t1": 109.49,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.2
+     }
+    },
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.3
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookaround"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.3
+     }
+    },
+    {
+     "opts": {
+      "mood": "rock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.8
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.6,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 3.0,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 107.99,
+     "t1": 109.49,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 109.49,
+   "t1": 112.02,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookaround"
+     }
+    },
+    {
+     "opts": {
+      "mood": "glance"
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookaround"
+     }
+    },
+    {
+     "opts": {
+      "mood": "glance"
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookaround"
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.05
+    },
+    "b": {
+     "zoom": 1.2,
+     "aim": [
+      0.45,
+      0.52
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 109.49,
+     "t1": 112.02,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 112.02,
+   "t1": 114.39,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.3
+     }
+    },
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.3
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookaround"
+     }
+    },
+    {
+     "opts": {
+      "mood": "glance"
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookaround"
+     }
+    },
+    {
+     "opts": {
+      "mood": "glance"
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookaround"
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.2,
+     "aim": [
+      0.21,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.4,
+     "aim": [
+      0.21,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 112.02,
+     "t1": 114.39,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 114.39,
+   "t1": 115.9,
+   "room": {
+    "plate": {
+     "img": "art/bg_hallway_side_dim.png",
+     "fov": 40,
+     "h": 0.887,
+     "pitch": 0,
+     "horizon": 0.69
+    },
+    "tint": 855829,
+    "who": [
+     {
+      "n": "deputy",
+      "view": "side",
+      "facing": 1,
+      "clip": "walk",
+      "opts": {
+       "pace": 0.45
+      },
+      "at": [
+       0.3,
+       0.8
+      ]
+     }
+    ],
+    "name": "hallway_side"
+   },
+   "cam": {
+    "a": {
+     "zoom": 3.0,
+     "aim": [
+      0.36,
+      0.72
+     ]
+    },
+    "b": {
+     "zoom": 3.1,
+     "aim": [
+      0.42,
+      0.72
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "tube",
+     "glow": 0.0,
+     "stable": 0.88,
+     "alpha": 0.4,
+     "t0": 114.39,
+     "t1": 115.9,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 115.9,
+   "t1": 118.68,
+   "room": {
+    "plate": {
+     "img": "art/bg_sunday_driveway.png",
+     "fov": 40,
+     "h": 1.5,
+     "pitch": 0,
+     "horizon": 0.56
+    },
+    "who": [
+     {
+      "n": "parent_a",
+      "view": "side",
+      "facing": 1,
+      "clip": "walk",
+      "opts": {
+       "pace": 0.6
+      },
+      "at": [
+       0.22,
+       0.86
+      ],
+      "face": {
+       "mouth": "grin"
+      }
+     }
+    ],
+    "tint": 16777215
+   },
+   "filter": "sepia(0.45) saturate(1.25) brightness(1.06) contrast(0.95)",
+   "cam": {
+    "a": {
+     "zoom": 1.12,
+     "aim": [
+      0.45,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 1.25,
+     "aim": [
+      0.5,
+      0.58
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "flash",
+     "t0": 115.9,
+     "t1": 116.3,
+     "fadeIn": 0.01,
+     "fadeOut": 0.4,
+     "alpha": 0.7
+    }
+   ]
+  },
+  {
+   "t0": 118.68,
+   "t1": 122.6,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "glance"
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookaround"
+     }
+    },
+    {
+     "opts": {
+      "mood": "glance"
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookaround"
+     }
+    },
+    {
+     "opts": {
+      "mood": "glance"
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookaround"
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.2,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.9,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 118.68,
+     "t1": 122.6,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 122.6,
+   "t1": 124.81,
+   "room": {
+    "plate": {
+     "img": "art/bg_hallway_side_dim.png",
+     "fov": 40,
+     "h": 0.887,
+     "pitch": 0,
+     "horizon": 0.69
+    },
+    "tint": 855829,
+    "who": [
+     {
+      "n": "deputy",
+      "view": "side",
+      "facing": 1,
+      "clip": "walk",
+      "opts": {
+       "pace": 0.5
+      },
+      "at": [
+       0.18,
+       0.8
+      ]
+     }
+    ],
+    "name": "hallway_side"
+   },
+   "cam": {
+    "a": {
+     "zoom": 2.6,
+     "aim": [
+      0.26,
+      0.7
+     ]
+    },
+    "b": {
+     "zoom": 2.6,
+     "aim": [
+      0.38,
+      0.7
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "tube",
+     "glow": 0.0,
+     "stable": 0.88,
+     "alpha": 0.4,
+     "t0": 122.6,
+     "t1": 124.81,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 124.81,
+   "t1": 126.46,
+   "room": {
+    "plate": {
+     "img": "art/bg_hallway_side_dim.png",
+     "fov": 40,
+     "h": 0.887,
+     "pitch": 0,
+     "horizon": 0.69
+    },
+    "tint": 8028569,
+    "who": [
+     {
+      "n": "tyler",
+      "view": "side",
+      "facing": 1,
+      "clip": "walk",
+      "opts": {
+       "pace": 0.55
+      },
+      "at": [
+       0.3,
+       0.8
+      ]
+     }
+    ],
+    "name": "hallway_side"
+   },
+   "cam": {
+    "a": {
+     "zoom": 3.2,
+     "aim": [
+      0.33,
+      0.73
+     ]
+    },
+    "b": {
+     "zoom": 3.2,
+     "aim": [
+      0.41,
+      0.73
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "tube",
+     "glow": 0.0,
+     "stable": 0.88,
+     "alpha": 0.4,
+     "t0": 124.81,
+     "t1": 126.46,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 126.46,
+   "t1": 127.89,
+   "room": {
+    "plate": {
+     "img": "art/bg_hallway_side_dim.png",
+     "fov": 40,
+     "h": 0.887,
+     "pitch": 0,
+     "horizon": 0.69
+    },
+    "tint": 8028569,
+    "who": [
+     {
+      "n": "district",
+      "view": "side",
+      "facing": 1,
+      "clip": "walk",
+      "opts": {
+       "pace": 0.55
+      },
+      "at": [
+       0.3,
+       0.8
+      ]
+     }
+    ],
+    "name": "hallway_side"
+   },
+   "cam": {
+    "a": {
+     "zoom": 3.2,
+     "aim": [
+      0.33,
+      0.73
+     ]
+    },
+    "b": {
+     "zoom": 3.2,
+     "aim": [
+      0.41,
+      0.73
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "tube",
+     "glow": 0.0,
+     "stable": 0.88,
+     "alpha": 0.4,
+     "t0": 126.46,
+     "t1": 127.89,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 127.89,
+   "t1": 129.2,
+   "room": {
+    "plate": {
+     "img": "art/bg_hallway_side_dim.png",
+     "fov": 40,
+     "h": 0.887,
+     "pitch": 0,
+     "horizon": 0.69
+    },
+    "tint": 8028569,
+    "who": [
+     {
+      "n": "deputy",
+      "view": "side",
+      "facing": 1,
+      "clip": "walk",
+      "opts": {
+       "pace": 0.55
+      },
+      "at": [
+       0.3,
+       0.8
+      ]
+     }
+    ],
+    "name": "hallway_side"
+   },
+   "cam": {
+    "a": {
+     "zoom": 3.2,
+     "aim": [
+      0.33,
+      0.73
+     ]
+    },
+    "b": {
+     "zoom": 3.2,
+     "aim": [
+      0.41,
+      0.73
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "tube",
+     "glow": 0.0,
+     "stable": 0.88,
+     "alpha": 0.4,
+     "t0": 127.89,
+     "t1": 129.2,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 129.2,
+   "t1": 131.04,
+   "room": {
+    "plate": {
+     "img": "art/bg_hallway_side_dim.png",
+     "fov": 40,
+     "h": 0.887,
+     "pitch": 0,
+     "horizon": 0.69
+    },
+    "tint": 8028569,
+    "who": [
+     {
+      "n": "tyler",
+      "view": "side",
+      "facing": 1,
+      "clip": "walk",
+      "opts": {
+       "pace": 0.55
+      },
+      "at": [
+       0.3,
+       0.8
+      ]
+     },
+     {
+      "n": "district",
+      "view": "side",
+      "facing": 1,
+      "clip": "walk",
+      "opts": {
+       "pace": 0.55
+      },
+      "at": [
+       0.3,
+       0.8
+      ],
+      "hidden": 1
+     },
+     {
+      "n": "deputy",
+      "view": "side",
+      "facing": 1,
+      "clip": "walk",
+      "opts": {
+       "pace": 0.55
+      },
+      "at": [
+       0.3,
+       0.8
+      ],
+      "hidden": 1
+     }
+    ],
+    "name": "hallway_side"
+   },
+   "events": [
+    {
+     "t": 129.55,
+     "i": 0,
+     "hide": 1
+    },
+    {
+     "t": 129.55,
+     "i": 1,
+     "show": 1
+    },
+    {
+     "t": 129.85,
+     "i": 1,
+     "hide": 1
+    },
+    {
+     "t": 129.85,
+     "i": 2,
+     "show": 1
+    },
+    {
+     "t": 130.15,
+     "i": 2,
+     "hide": 1
+    },
+    {
+     "t": 130.15,
+     "i": 0,
+     "show": 1
+    },
+    {
+     "t": 130.4,
+     "i": 0,
+     "hide": 1
+    },
+    {
+     "t": 130.4,
+     "i": 1,
+     "show": 1
+    },
+    {
+     "t": 130.62,
+     "i": 1,
+     "hide": 1
+    },
+    {
+     "t": 130.62,
+     "i": 2,
+     "show": 1
+    },
+    {
+     "t": 130.82,
+     "i": 2,
+     "hide": 1
+    },
+    {
+     "t": 130.82,
+     "i": 0,
+     "show": 1
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 3.2,
+     "aim": [
+      0.33,
+      0.73
+     ]
+    },
+    "b": {
+     "zoom": 3.2,
+     "aim": [
+      0.4,
+      0.73
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "tube",
+     "glow": 0.0,
+     "stable": 0.88,
+     "alpha": 0.4,
+     "t0": 129.2,
+     "t1": 131.04,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 131.04,
+   "t1": 132.16,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.2
+     }
+    },
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookaround"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.3
+     }
+    },
+    {
+     "opts": {
+      "mood": "rock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.8
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.8,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 3.1,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 131.04,
+     "t1": 132.16,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 132.16,
+   "t1": 133.24,
+   "room": {
+    "plate": {
+     "img": "art/bg_hallway_side_dim.png",
+     "fov": 40,
+     "h": 0.887,
+     "pitch": 0,
+     "horizon": 0.69
+    },
+    "tint": 9081773,
+    "who": [],
+    "name": "hallway_side"
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.0
+    },
+    "b": {
+     "zoom": 1.15,
+     "aim": [
+      0.35,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "tube",
+     "glow": 0.0,
+     "stable": 0.88,
+     "alpha": 0.4,
+     "t0": 132.16,
+     "t1": 133.24,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 133.24,
+   "t1": 137.33,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_hall_208_lv0.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 3159626
+    },
+    "who": [],
+    "tint": 3159626
+   },
+   "plateTint": 3159626,
+   "events": [
+    {
+     "t": 135.05,
+     "plate": "art/plate_door_hall_208_lv6.png"
+    },
+    {
+     "t": 135.095,
+     "plate": "art/plate_door_hall_208_lv12.png"
+    },
+    {
+     "t": 135.14,
+     "plate": "art/plate_door_hall_208_lv18.png"
+    },
+    {
+     "t": 135.185,
+     "plate": "art/plate_door_hall_208_lv12.png"
+    },
+    {
+     "t": 135.23,
+     "plate": "art/plate_door_hall_208_lv18.png"
+    },
+    {
+     "t": 135.275,
+     "plate": "art/plate_door_hall_208_lv6.png"
+    },
+    {
+     "t": 135.32,
+     "plate": "art/plate_door_hall_208_lv12.png"
+    },
+    {
+     "t": 135.365,
+     "plate": "art/plate_door_hall_208_lv0.png"
+    },
+    {
+     "t": 136.15,
+     "plate": "art/plate_door_hall_208_lv6.png"
+    },
+    {
+     "t": 136.195,
+     "plate": "art/plate_door_hall_208_lv12.png"
+    },
+    {
+     "t": 136.24,
+     "plate": "art/plate_door_hall_208_lv18.png"
+    },
+    {
+     "t": 136.285,
+     "plate": "art/plate_door_hall_208_lv12.png"
+    },
+    {
+     "t": 136.33,
+     "plate": "art/plate_door_hall_208_lv18.png"
+    },
+    {
+     "t": 136.375,
+     "plate": "art/plate_door_hall_208_lv6.png"
+    },
+    {
+     "t": 136.42,
+     "plate": "art/plate_door_hall_208_lv12.png"
+    },
+    {
+     "t": 136.465,
+     "plate": "art/plate_door_hall_208_lv0.png"
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.0,
+     "aim": [
+      0.6,
+      0.45
+     ]
+    },
+    "b": {
+     "zoom": 1.6,
+     "aim": [
+      0.63,
+      0.58
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 137.33,
+   "t1": 139.98,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_hall_210_lv0.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 3159626
+    },
+    "who": [],
+    "tint": 3159626
+   },
+   "plateTint": 3159626,
+   "events": [
+    {
+     "t": 138.2,
+     "plate": "art/plate_door_hall_210_lv6.png"
+    },
+    {
+     "t": 138.245,
+     "plate": "art/plate_door_hall_210_lv12.png"
+    },
+    {
+     "t": 138.29,
+     "plate": "art/plate_door_hall_210_lv18.png"
+    },
+    {
+     "t": 138.335,
+     "plate": "art/plate_door_hall_210_lv12.png"
+    },
+    {
+     "t": 138.38,
+     "plate": "art/plate_door_hall_210_lv18.png"
+    },
+    {
+     "t": 138.425,
+     "plate": "art/plate_door_hall_210_lv6.png"
+    },
+    {
+     "t": 138.47,
+     "plate": "art/plate_door_hall_210_lv12.png"
+    },
+    {
+     "t": 138.515,
+     "plate": "art/plate_door_hall_210_lv0.png"
+    },
+    {
+     "t": 138.86,
+     "plate": "art/plate_door_hall_210_lv6.png"
+    },
+    {
+     "t": 138.905,
+     "plate": "art/plate_door_hall_210_lv12.png"
+    },
+    {
+     "t": 138.95,
+     "plate": "art/plate_door_hall_210_lv18.png"
+    },
+    {
+     "t": 138.995,
+     "plate": "art/plate_door_hall_210_lv12.png"
+    },
+    {
+     "t": 139.04,
+     "plate": "art/plate_door_hall_210_lv18.png"
+    },
+    {
+     "t": 139.085,
+     "plate": "art/plate_door_hall_210_lv6.png"
+    },
+    {
+     "t": 139.13,
+     "plate": "art/plate_door_hall_210_lv12.png"
+    },
+    {
+     "t": 139.175,
+     "plate": "art/plate_door_hall_210_lv0.png"
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.3,
+     "aim": [
+      0.62,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 1.7,
+     "aim": [
+      0.63,
+      0.58
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 139.98,
+   "t1": 142.17,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_hall_212_lv0.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 3159626
+    },
+    "who": [],
+    "tint": 3159626
+   },
+   "plateTint": 3159626,
+   "events": [
+    {
+     "t": 140.6,
+     "plate": "art/plate_door_hall_212_lv6.png"
+    },
+    {
+     "t": 140.645,
+     "plate": "art/plate_door_hall_212_lv12.png"
+    },
+    {
+     "t": 140.69,
+     "plate": "art/plate_door_hall_212_lv18.png"
+    },
+    {
+     "t": 140.735,
+     "plate": "art/plate_door_hall_212_lv12.png"
+    },
+    {
+     "t": 140.78,
+     "plate": "art/plate_door_hall_212_lv18.png"
+    },
+    {
+     "t": 140.825,
+     "plate": "art/plate_door_hall_212_lv6.png"
+    },
+    {
+     "t": 140.87,
+     "plate": "art/plate_door_hall_212_lv12.png"
+    },
+    {
+     "t": 140.915,
+     "plate": "art/plate_door_hall_212_lv0.png"
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.6,
+     "aim": [
+      0.63,
+      0.56
+     ]
+    },
+    "b": {
+     "zoom": 1.2,
+     "aim": [
+      0.75,
+      0.5
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 142.17,
+   "t1": 144.67,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_close_covered.png",
+     "fov": 40,
+     "h": 0.92,
+     "pitch": 0,
+     "horizon": 0.83,
+     "holdouts": [
+      {
+       "mask": "masks/door_close_8.png",
+       "base": 0.8535,
+       "u": 0.9451
+      },
+      {
+       "mask": "masks/door_close_9.png",
+       "base": 0.9932,
+       "u": 0.1063
+      }
+     ]
+    },
+    "tint": 8884397,
+    "who": [],
+    "name": "door_close"
+   },
+   "events": [
+    {
+     "t": 143.15,
+     "plate": "art/bg_door_close_full.png"
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.3,
+     "aim": [
+      0.45,
+      0.72
+     ]
+    },
+    "b": {
+     "zoom": 1.9,
+     "aim": [
+      0.45,
+      0.82
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.97,
+     "rx": 38,
+     "ry": 14,
+     "glow": 0.18,
+     "color": "255,220,160",
+     "dark": 0.4,
+     "t0": 142.17,
+     "t1": 143.15,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.97,
+     "rx": 38,
+     "ry": 14,
+     "glow": 0.18,
+     "color": "255,220,160",
+     "dark": 0.4,
+     "t0": 143.15,
+     "t1": 144.67,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 144.67,
+   "t1": 148.61,
+   "room": {
+    "plate": {
+     "img": "art/bg_handle_inside_lv0.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 5199470
+    },
+    "who": []
+   },
+   "plateTint": 5199470,
+   "events": [
+    {
+     "t": 145.13,
+     "plate": "art/bg_handle_inside_lv-2.png"
+    },
+    {
+     "t": 145.246,
+     "plate": "art/bg_handle_inside_lv-4.png"
+    },
+    {
+     "t": 145.362,
+     "plate": "art/bg_handle_inside_lv-6.png"
+    },
+    {
+     "t": 145.478,
+     "plate": "art/bg_handle_inside_lv-8.png"
+    },
+    {
+     "t": 145.594,
+     "plate": "art/bg_handle_inside_lv-10.png"
+    },
+    {
+     "t": 145.711,
+     "plate": "art/bg_handle_inside_lv-12.png"
+    },
+    {
+     "t": 145.827,
+     "plate": "art/bg_handle_inside_lv-14.png"
+    },
+    {
+     "t": 145.943,
+     "plate": "art/bg_handle_inside_lv-16.png"
+    },
+    {
+     "t": 146.059,
+     "plate": "art/bg_handle_inside_lv-18.png"
+    },
+    {
+     "t": 146.175,
+     "plate": "art/bg_handle_inside_lv-20.png"
+    },
+    {
+     "t": 146.291,
+     "plate": "art/bg_handle_inside_lv-22.png"
+    },
+    {
+     "t": 146.407,
+     "plate": "art/bg_handle_inside_lv-24.png"
+    },
+    {
+     "t": 146.523,
+     "plate": "art/bg_handle_inside_lv-26.png"
+    },
+    {
+     "t": 146.639,
+     "plate": "art/bg_handle_inside_lv-28.png"
+    },
+    {
+     "t": 146.756,
+     "plate": "art/bg_handle_inside_lv-30.png"
+    },
+    {
+     "t": 146.872,
+     "plate": "art/bg_handle_inside_lv-32.png"
+    },
+    {
+     "t": 146.988,
+     "plate": "art/bg_handle_inside_lv-34.png"
+    },
+    {
+     "t": 147.104,
+     "plate": "art/bg_handle_inside_lv-36.png"
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.3,
+     "aim": [
+      0.6,
+      0.6
+     ]
+    },
+    "b": {
+     "zoom": 1.55,
+     "aim": [
+      0.62,
+      0.66
+     ]
+    },
+    "ease": "linear"
+   },
+   "overlays": []
+  },
+  {
+   "t0": 148.61,
+   "t1": 149.92,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 2.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "terror"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "still"
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.02
+    },
+    "b": {
+     "zoom": 1.04
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 148.61,
+     "t1": 149.92,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 149.92,
+   "t1": 152.13,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "card": "hands_mouth",
+     "clip": "huddle",
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.4
+     }
+    },
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "terror"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.4,
+     "aim": [
+      0.25,
+      0.49
+     ]
+    },
+    "b": {
+     "zoom": 2.7,
+     "aim": [
+      0.25,
+      0.49
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 149.92,
+     "t1": 152.13,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 152.13,
+   "t1": 155.8,
+   "room": {
+    "plate": {
+     "img": "art/bg_door_close_full.png",
+     "fov": 40,
+     "h": 0.92,
+     "pitch": 0,
+     "horizon": 0.83,
+     "holdouts": [
+      {
+       "mask": "masks/door_close_8.png",
+       "base": 0.8535,
+       "u": 0.9451
+      },
+      {
+       "mask": "masks/door_close_9.png",
+       "base": 0.9932,
+       "u": 0.1063
+      }
+     ]
+    },
+    "tint": 8884397,
+    "who": [],
+    "name": "door_close"
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.2,
+     "aim": [
+      0.45,
+      0.48
+     ]
+    },
+    "b": {
+     "zoom": 1.35,
+     "aim": [
+      0.45,
+      0.48
+     ]
+    },
+    "kicks": [
+     152.97,
+     153.51,
+     154.1
+    ],
+    "kick": 0.9
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.97,
+     "rx": 38,
+     "ry": 14,
+     "glow": 0.18,
+     "color": "255,220,160",
+     "dark": 0.4,
+     "t0": 152.13,
+     "t1": 155.8,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 155.8,
+   "t1": 158.47,
+   "room": {
+    "plate": {
+     "img": "art/bg_door_close_full.png",
+     "fov": 40,
+     "h": 0.92,
+     "pitch": 0,
+     "horizon": 0.83,
+     "holdouts": [
+      {
+       "mask": "masks/door_close_8.png",
+       "base": 0.8535,
+       "u": 0.9451
+      },
+      {
+       "mask": "masks/door_close_9.png",
+       "base": 0.9932,
+       "u": 0.1063
+      }
+     ]
+    },
+    "tint": 8884397,
+    "who": [],
+    "name": "door_close"
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.35,
+     "aim": [
+      0.45,
+      0.45
+     ]
+    },
+    "b": {
+     "zoom": 1.8,
+     "aim": [
+      0.45,
+      0.42
+     ]
+    },
+    "ease": "linear"
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.97,
+     "rx": 38,
+     "ry": 14,
+     "glow": 0.18,
+     "color": "255,220,160",
+     "dark": 0.4,
+     "t0": 155.8,
+     "t1": 158.47,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 158.47,
+   "t1": 160.38,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "glance"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     },
+     "face": {
+      "brows": "up"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "glance"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookup"
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.1,
+     "aim": [
+      0.5,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 1.25,
+     "aim": [
+      0.55,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 158.47,
+     "t1": 160.38,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 160.38,
+   "t1": 162.68,
+   "room": {
+    "plate": {
+     "img": "art/bg_door_close_full.png",
+     "fov": 40,
+     "h": 0.92,
+     "pitch": 0,
+     "horizon": 0.83,
+     "holdouts": [
+      {
+       "mask": "masks/door_close_8.png",
+       "base": 0.8535,
+       "u": 0.9451
+      },
+      {
+       "mask": "masks/door_close_9.png",
+       "base": 0.9932,
+       "u": 0.1063
+      }
+     ]
+    },
+    "tint": 8884397,
+    "who": [],
+    "name": "door_close"
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.5,
+     "aim": [
+      0.45,
+      0.45
+     ]
+    },
+    "b": {
+     "zoom": 1.7,
+     "aim": [
+      0.45,
+      0.44
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.97,
+     "rx": 38,
+     "ry": 14,
+     "glow": 0.18,
+     "color": "255,220,160",
+     "dark": 0.4,
+     "t0": 160.38,
+     "t1": 162.68,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 162.68,
+   "t1": 163.84,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "glance"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     },
+     "face": {
+      "brows": "up"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "glance"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookup"
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.6,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.8,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 162.68,
+     "t1": 163.84,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 163.84,
+   "t1": 169.54,
+   "room": {
+    "plate": {
+     "img": "art/bg_office.png",
+     "fov": 40,
+     "h": 1.14,
+     "pitch": 0,
+     "horizon": 0.765,
+     "holdouts": [
+      {
+       "mask": "masks/office_3.png",
+       "base": 0.8496,
+       "u": 0.5167
+      }
+     ]
+    },
+    "tint": 16777215,
+    "who": [
+     {
+      "n": "dawes",
+      "at": [
+       0.86,
+       0.87
+      ],
+      "card": "menu",
+      "clip": "huddle",
+      "opts": {
+       "mood": "still"
+      }
+     }
+    ],
+    "name": "office"
+   },
+   "filter": "sepia(0.45) saturate(1.25) brightness(1.06) contrast(0.95)",
+   "cam": {
+    "a": {
+     "zoom": 1.3,
+     "aim": [
+      0.75,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.0,
+     "aim": [
+      0.84,
+      0.42
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "flash",
+     "t0": 163.84,
+     "t1": 164.2,
+     "fadeIn": 0.01,
+     "fadeOut": 0.36,
+     "alpha": 0.8
+    },
+    {
+     "type": "flash",
+     "t0": 169.2,
+     "t1": 169.54,
+     "fadeIn": 0.3,
+     "fadeOut": 0.01,
+     "alpha": 0.8
+    }
+   ]
+  },
+  {
+   "t0": 169.54,
+   "t1": 172.94,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "relief"
+     }
+    },
+    {
+     "opts": {
+      "mood": "relief"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.6,
+     "aim": [
+      0.6,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 1.9,
+     "aim": [
+      0.61,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 169.54,
+     "t1": 172.94,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 172.94,
+   "t1": 176.48,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "relief"
+     }
+    },
+    {
+     "opts": {
+      "mood": "relief"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     },
+     "face": {
+      "eyes": "closed"
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "events": [
+    {
+     "t": 174.6,
+     "i": 6,
+     "face": {
+      "eyes": "open"
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.4,
+     "aim": [
+      0.79,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.6,
+     "aim": [
+      0.79,
+      0.52
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 172.94,
+     "t1": 176.48,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 176.48,
+   "t1": 182.56,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "relief"
+     }
+    },
+    {
+     "opts": {
+      "mood": "relief"
+     }
+    },
+    {
+     "card": null,
+     "view": "side",
+     "facing": 1,
+     "clip": "sit",
+     "opts": {
+      "dur": 0.01
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "events": [
+    {
+     "t": 176.82,
+     "i": 6,
+     "play": "stand"
+    },
+    {
+     "t": 177.41,
+     "i": 6,
+     "play": "smooth",
+     "opts": {
+      "dur": 1.6
+     }
+    },
+    {
+     "t": 179.1,
+     "i": 6,
+     "play": "idle"
+    },
+    {
+     "t": 180.4,
+     "i": 6,
+     "view": "side"
+    },
+    {
+     "t": 180.4,
+     "i": 6,
+     "facing": 1
+    },
+    {
+     "t": 180.45,
+     "i": 6,
+     "play": "walk",
+     "opts": {
+      "pace": 0.55
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.4,
+     "aim": [
+      0.78,
+      0.48
+     ]
+    },
+    "b": {
+     "zoom": 1.4,
+     "aim": [
+      0.9,
+      0.48
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 176.48,
+     "t1": 182.56,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 182.56,
+   "t1": 185.08,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.2
+     },
+     "lip": "c2_08",
+     "lipGain": 1.6
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "hidden": 1,
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.5,
+     "aim": [
+      0.45,
+      0.52
+     ]
+    },
+    "b": {
+     "zoom": 2.7,
+     "aim": [
+      0.45,
+      0.52
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 182.56,
+     "t1": 185.08,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 185.08,
+   "t1": 186.06,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "glance"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "card": "grab",
+     "clip": "huddle",
+     "opts": {
+      "mood": "still"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "card": null,
+     "view": "side",
+     "facing": -1,
+     "clip": "idle",
+     "face": {
+      "eyes": "wide",
+      "brows": "worried"
+     },
+     "pos": [
+      0.3,
+      0,
+      -2.9
+     ],
+     "wall": null
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.5,
+     "aim": [
+      0.5,
+      0.42
+     ]
+    },
+    "b": {
+     "zoom": 1.6,
+     "aim": [
+      0.5,
+      0.42
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 185.08,
+     "t1": 186.06,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 186.06,
+   "t1": 187.82,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.0
+     },
+     "lip": "c2_09",
+     "lipSpans": [
+      [
+       186.06,
+       186.95
+      ]
+     ],
+     "lipGain": 1.6
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "opts": {
+      "mood": "calm"
+     }
+    },
+    {
+     "hidden": 1,
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.8,
+     "aim": [
+      0.45,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 3.0,
+     "aim": [
+      0.45,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 186.06,
+     "t1": 187.82,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 187.82,
+   "t1": 191.32,
+   "room": {
+    "plate": {
+     "img": "art/bg_master_keys.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.0
+    },
+    "b": {
+     "zoom": 1.6,
+     "aim": [
+      0.62,
+      0.55
+     ]
+    },
+    "ease": "linear"
+   },
+   "overlays": []
+  },
+  {
+   "t0": 191.32,
+   "t1": 192.47,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.2
+     }
+    },
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.3
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookaround"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.3
+     }
+    },
+    {
+     "opts": {
+      "mood": "rock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.8
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.6,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.9,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 191.32,
+     "t1": 192.47,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 192.47,
+   "t1": 193.72,
+   "room": {
+    "plate": {
+     "img": "art/bg_door_close_full.png",
+     "fov": 40,
+     "h": 0.92,
+     "pitch": 0,
+     "horizon": 0.83,
+     "holdouts": [
+      {
+       "mask": "masks/door_close_8.png",
+       "base": 0.8535,
+       "u": 0.9451
+      },
+      {
+       "mask": "masks/door_close_9.png",
+       "base": 0.9932,
+       "u": 0.1063
+      }
+     ]
+    },
+    "tint": 8884397,
+    "who": [],
+    "name": "door_close"
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.5,
+     "aim": [
+      0.45,
+      0.6
+     ]
+    },
+    "b": {
+     "zoom": 1.9,
+     "aim": [
+      0.45,
+      0.75
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.97,
+     "rx": 38,
+     "ry": 14,
+     "glow": 0.18,
+     "color": "255,220,160",
+     "dark": 0.4,
+     "t0": 192.47,
+     "t1": 193.72,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 193.72,
+   "t1": 194.42,
+   "room": {
+    "plate": {
+     "img": "art/bg_intercom.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 2501434
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.9,
+     "aim": [
+      0.47,
+      0.47
+     ]
+    },
+    "b": {
+     "zoom": 2.1,
+     "aim": [
+      0.47,
+      0.47
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 194.42,
+   "t1": 197.82,
+   "room": {
+    "plate": {
+     "img": "art/bg_office.png",
+     "fov": 40,
+     "h": 1.14,
+     "pitch": 0,
+     "horizon": 0.765,
+     "holdouts": [
+      {
+       "mask": "masks/office_3.png",
+       "base": 0.8496,
+       "u": 0.5167
+      }
+     ]
+    },
+    "tint": 16777215,
+    "who": [
+     {
+      "n": "dawes",
+      "at": [
+       0.86,
+       0.87
+      ],
+      "clip": "standScared",
+      "opts": {
+       "mood": "shake",
+       "intensity": 1.6
+      },
+      "lip": "c2_10",
+      "lipGain": 2.2,
+      "face": {
+       "eyes": "wide",
+       "brows": "worried",
+       "sweat": 1
+      }
+     }
+    ],
+    "name": "office"
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.4,
+     "aim": [
+      0.76,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.1,
+     "aim": [
+      0.85,
+      0.4
+     ]
+    },
+    "shake": 1.2
+   },
+   "overlays": []
+  },
+  {
+   "t0": 197.82,
+   "t1": 199.64,
+   "room": {
+    "plate": {
+     "img": "art/bg_office.png",
+     "fov": 40,
+     "h": 1.14,
+     "pitch": 0,
+     "horizon": 0.765,
+     "holdouts": [
+      {
+       "mask": "masks/office_3.png",
+       "base": 0.8496,
+       "u": 0.5167
+      }
+     ]
+    },
+    "tint": 16777215,
+    "who": [
+     {
+      "n": "dawes",
+      "at": [
+       0.86,
+       0.87
+      ],
+      "clip": "standScared",
+      "opts": {
+       "mood": "shake",
+       "intensity": 1.6
+      },
+      "lip": "c2_10",
+      "lipGain": 2.2,
+      "face": {
+       "eyes": "wide",
+       "brows": "worried",
+       "sweat": 1
+      }
+     }
+    ],
+    "name": "office"
+   },
+   "cam": {
+    "a": {
+     "zoom": 2.6,
+     "aim": [
+      0.86,
+      0.36
+     ]
+    },
+    "b": {
+     "zoom": 2.9,
+     "aim": [
+      0.86,
+      0.35
+     ]
+    },
+    "shake": 1.5
+   },
+   "overlays": []
+  },
+  {
+   "t0": 199.64,
+   "t1": 200.41,
+   "room": {
+    "plate": {
+     "img": "art/bg_intercom.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 2501434
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.7,
+     "aim": [
+      0.47,
+      0.47
+     ]
+    },
+    "b": {
+     "zoom": 1.9,
+     "aim": [
+      0.47,
+      0.47
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 200.41,
+   "t1": 202.57,
+   "room": {
+    "plate": {
+     "img": "art/bg_office.png",
+     "fov": 40,
+     "h": 1.14,
+     "pitch": 0,
+     "horizon": 0.765,
+     "holdouts": [
+      {
+       "mask": "masks/office_3.png",
+       "base": 0.8496,
+       "u": 0.5167
+      }
+     ]
+    },
+    "tint": 16777215,
+    "who": [
+     {
+      "n": "dawes",
+      "at": [
+       0.86,
+       0.87
+      ],
+      "clip": "standScared",
+      "opts": {
+       "mood": "shake",
+       "intensity": 2.2
+      },
+      "face": {
+       "eyes": "wide",
+       "brows": "worried",
+       "mouth": "O",
+       "sweat": 1
+      }
+     }
+    ],
+    "name": "office"
+   },
+   "cam": {
+    "a": {
+     "zoom": 2.5,
+     "aim": [
+      0.86,
+      0.37
+     ]
+    },
+    "b": {
+     "zoom": 2.7,
+     "aim": [
+      0.86,
+      0.36
+     ]
+    },
+    "shake": 2
+   },
+   "overlays": []
+  },
+  {
+   "t0": 202.57,
+   "t1": 204.83,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "lookup"
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookup"
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookup"
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookup"
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookup"
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookup"
+     }
+    },
+    {
+     "opts": {
+      "mood": "lookup"
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.3,
+     "aim": [
+      0.5,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 1.9,
+     "aim": [
+      0.69,
+      0.18
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 202.57,
+     "t1": 204.83,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 204.83,
+   "t1": 205.77,
+   "room": {
+    "plate": {
+     "img": "art/bg_office.png",
+     "fov": 40,
+     "h": 1.14,
+     "pitch": 0,
+     "horizon": 0.765,
+     "holdouts": [
+      {
+       "mask": "masks/office_3.png",
+       "base": 0.8496,
+       "u": 0.5167
+      }
+     ]
+    },
+    "tint": 16777215,
+    "who": [
+     {
+      "n": "dawes",
+      "at": [
+       0.86,
+       0.87
+      ],
+      "clip": "standScared",
+      "opts": {
+       "mood": "shake",
+       "intensity": 1.6
+      },
+      "lip": null,
+      "lipGain": 2.2,
+      "face": {
+       "eyes": "wide",
+       "brows": "worried",
+       "sweat": 1
+      }
+     }
+    ],
+    "name": "office"
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.0
+    },
+    "b": {
+     "zoom": 1.1
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 205.77,
+   "t1": 207.81,
+   "room": {
+    "plate": {
+     "img": "art/bg_stairwell.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 3817556
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.8,
+     "aim": [
+      0.5,
+      0.2
+     ]
+    },
+    "b": {
+     "zoom": 1.8,
+     "aim": [
+      0.5,
+      0.8
+     ]
+    },
+    "ease": "inout"
+   },
+   "overlays": []
+  },
+  {
+   "t0": 207.81,
+   "t1": 209.69,
+   "room": {
+    "plate": {
+     "img": "art/bg_intercom.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 2501434
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 2.0,
+     "aim": [
+      0.47,
+      0.47
+     ]
+    },
+    "b": {
+     "zoom": 2.1,
+     "aim": [
+      0.47,
+      0.47
+     ]
+    },
+    "kicks": [
+     208.97
+    ],
+    "kick": 0.5
+   },
+   "overlays": []
+  },
+  {
+   "t0": 209.69,
+   "t1": 213.94,
+   "room": {
+    "plate": {
+     "img": "art/bg_door_close_full.png",
+     "fov": 40,
+     "h": 0.92,
+     "pitch": 0,
+     "horizon": 0.83,
+     "holdouts": [
+      {
+       "mask": "masks/door_close_8.png",
+       "base": 0.8535,
+       "u": 0.9451
+      },
+      {
+       "mask": "masks/door_close_9.png",
+       "base": 0.9932,
+       "u": 0.1063
+      }
+     ]
+    },
+    "tint": 8884397,
+    "who": [],
+    "name": "door_close"
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.0
+    },
+    "b": {
+     "zoom": 1.5,
+     "aim": [
+      0.45,
+      0.6
+     ]
+    },
+    "ease": "linear"
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.97,
+     "rx": 38,
+     "ry": 14,
+     "glow": 0.18,
+     "color": "255,220,160",
+     "dark": 0.4,
+     "t0": 209.69,
+     "t1": 213.94,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 213.94,
+   "t1": 215.92,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 2.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "terror"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "events": [
+    {
+     "t": 214.4,
+     "flinch": 1.0
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.1,
+     "aim": [
+      0.5,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 1.2,
+     "aim": [
+      0.5,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 213.94,
+     "t1": 215.92,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 215.92,
+   "t1": 217.56,
+   "room": {
+    "plate": {
+     "img": "art/bg_door_close_full.png",
+     "fov": 40,
+     "h": 0.92,
+     "pitch": 0,
+     "horizon": 0.83,
+     "holdouts": [
+      {
+       "mask": "masks/door_close_8.png",
+       "base": 0.8535,
+       "u": 0.9451
+      },
+      {
+       "mask": "masks/door_close_9.png",
+       "base": 0.9932,
+       "u": 0.1063
+      }
+     ]
+    },
+    "tint": 8884397,
+    "who": [],
+    "name": "door_close"
+   },
+   "filter": "saturate(1.3) sepia(0.3) hue-rotate(-25deg) brightness(0.85)",
+   "cam": {
+    "a": {
+     "zoom": 1.7,
+     "aim": [
+      0.45,
+      0.42
+     ]
+    },
+    "b": {
+     "zoom": 2.0,
+     "aim": [
+      0.45,
+      0.42
+     ]
+    },
+    "ease": "linear"
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.97,
+     "rx": 38,
+     "ry": 14,
+     "glow": 0.18,
+     "color": "255,220,160",
+     "dark": 0.4,
+     "t0": 215.92,
+     "t1": 217.56,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 217.56,
+   "t1": 219.17,
+   "room": {
+    "plate": {
+     "img": "art/bg_door_close_full.png",
+     "fov": 40,
+     "h": 0.92,
+     "pitch": 0,
+     "horizon": 0.83,
+     "holdouts": [
+      {
+       "mask": "masks/door_close_8.png",
+       "base": 0.8535,
+       "u": 0.9451
+      },
+      {
+       "mask": "masks/door_close_9.png",
+       "base": 0.9932,
+       "u": 0.1063
+      }
+     ]
+    },
+    "tint": 8884397,
+    "who": [],
+    "name": "door_close"
+   },
+   "filter": "saturate(1.3) sepia(0.3) hue-rotate(-25deg) brightness(0.85)",
+   "cam": {
+    "a": {
+     "zoom": 2.4,
+     "aim": [
+      0.45,
+      0.4
+     ]
+    },
+    "b": {
+     "zoom": 2.6,
+     "aim": [
+      0.45,
+      0.4
+     ]
+    },
+    "shake": 1.2
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.97,
+     "rx": 38,
+     "ry": 14,
+     "glow": 0.18,
+     "color": "255,220,160",
+     "dark": 0.4,
+     "t0": 217.56,
+     "t1": 219.17,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 219.17,
+   "t1": 220.88,
+   "room": {
+    "plate": {
+     "img": "art/bg_door_close_full.png",
+     "fov": 40,
+     "h": 0.92,
+     "pitch": 0,
+     "horizon": 0.83,
+     "holdouts": [
+      {
+       "mask": "masks/door_close_8.png",
+       "base": 0.8535,
+       "u": 0.9451
+      },
+      {
+       "mask": "masks/door_close_9.png",
+       "base": 0.9932,
+       "u": 0.1063
+      }
+     ]
+    },
+    "tint": 8884397,
+    "who": [],
+    "name": "door_close"
+   },
+   "events": [
+    {
+     "t": 219.7,
+     "plate": "art/plate_door_close_covered.png"
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.6,
+     "aim": [
+      0.45,
+      0.8
+     ]
+    },
+    "b": {
+     "zoom": 1.5,
+     "aim": [
+      0.45,
+      0.78
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.97,
+     "rx": 38,
+     "ry": 14,
+     "glow": 0.18,
+     "color": "255,220,160",
+     "dark": 0.4,
+     "t0": 219.17,
+     "t1": 219.7,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.97,
+     "rx": 38,
+     "ry": 14,
+     "glow": 0.18,
+     "color": "255,220,160",
+     "dark": 0.4,
+     "t0": 219.7,
+     "t1": 220.88,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 220.88,
+   "t1": 224.3,
+   "room": {
+    "plate": {
+     "img": "art/bg_hallway_side_dim.png",
+     "fov": 40,
+     "h": 0.887,
+     "pitch": 0,
+     "horizon": 0.69
+    },
+    "tint": 855829,
+    "who": [
+     {
+      "n": "deputy",
+      "view": "side",
+      "facing": 1,
+      "clip": "walk",
+      "opts": {
+       "pace": 0.45
+      },
+      "at": [
+       0.4,
+       0.8
+      ]
+     }
+    ],
+    "name": "hallway_side"
+   },
+   "cam": {
+    "a": {
+     "zoom": 2.4,
+     "aim": [
+      0.45,
+      0.7
+     ]
+    },
+    "b": {
+     "zoom": 2.4,
+     "aim": [
+      0.72,
+      0.7
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "tube",
+     "glow": 0.0,
+     "stable": 0.88,
+     "alpha": 0.4,
+     "t0": 220.88,
+     "t1": 224.3,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 224.3,
+   "t1": 228.64,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 2.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "terror"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.6
+     }
+    },
+    {
+     "card": null,
+     "view": "side",
+     "facing": -1,
+     "clip": "idle",
+     "face": {
+      "eyes": "wide",
+      "brows": "worried",
+      "mouth": "flat"
+     },
+     "sideHead": "scared",
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "events": [
+    {
+     "t": 224.9,
+     "i": 6,
+     "play": "sit",
+     "opts": {
+      "dur": 2.8
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.5,
+     "aim": [
+      0.75,
+      0.45
+     ]
+    },
+    "b": {
+     "zoom": 1.7,
+     "aim": [
+      0.78,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 224.3,
+     "t1": 228.64,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 228.64,
+   "t1": 230.91,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 2.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "terror"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "stare",
+      "look": 1,
+      "blank": 1
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.4,
+     "aim": [
+      0.79,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.8,
+     "aim": [
+      0.79,
+      0.48
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 228.64,
+     "t1": 230.91,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 230.91,
+   "t1": 233.67,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 2.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "terror"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "whisper"
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 3.2,
+     "aim": [
+      0.79,
+      0.44
+     ]
+    },
+    "b": {
+     "zoom": 3.6,
+     "aim": [
+      0.79,
+      0.44
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 230.91,
+     "t1": 233.67,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 233.67,
+   "t1": 235.42,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 2.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "terror"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "whisper"
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.9,
+     "aim": [
+      0.7,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 1.9,
+     "aim": [
+      0.15,
+      0.5
+     ]
+    },
+    "ease": "linear"
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 233.67,
+     "t1": 235.42,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 235.42,
+   "t1": 236.24,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 2.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "terror"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.2,
+     "aim": [
+      0.21,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.3,
+     "aim": [
+      0.21,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 235.42,
+     "t1": 236.24,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "text",
+     "cls": "faint",
+     "text": "23",
+     "x": 0.3,
+     "y": 0.3,
+     "size": 140,
+     "alpha": 0.35,
+     "t0": 235.42,
+     "t1": 239.0,
+     "fadeIn": 0.15,
+     "fadeOut": 0.5
+    }
+   ]
+  },
+  {
+   "t0": 236.24,
+   "t1": 236.9,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 2.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "terror"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.2,
+     "aim": [
+      0.5,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.3,
+     "aim": [
+      0.5,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 236.24,
+     "t1": 236.9,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "text",
+     "cls": "faint",
+     "text": "23",
+     "x": 0.3,
+     "y": 0.3,
+     "size": 140,
+     "alpha": 0.35,
+     "t0": 235.42,
+     "t1": 239.0,
+     "fadeIn": 0.15,
+     "fadeOut": 0.5
+    },
+    {
+     "type": "text",
+     "cls": "faint",
+     "text": "23",
+     "x": 0.72,
+     "y": 0.22,
+     "size": 160,
+     "alpha": 0.35,
+     "t0": 236.24,
+     "t1": 239.0,
+     "fadeIn": 0.15,
+     "fadeOut": 0.5
+    }
+   ]
+  },
+  {
+   "t0": 236.9,
+   "t1": 239.0,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 2.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shiver",
+      "intensity": 1.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shock"
+     }
+    },
+    {
+     "opts": {
+      "mood": "terror"
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 1.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "whisper"
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.6,
+     "aim": [
+      0.79,
+      0.47
+     ]
+    },
+    "b": {
+     "zoom": 3.0,
+     "aim": [
+      0.79,
+      0.46
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 236.9,
+     "t1": 239.0,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "text",
+     "cls": "faint",
+     "text": "23",
+     "x": 0.3,
+     "y": 0.3,
+     "size": 140,
+     "alpha": 0.35,
+     "t0": 235.42,
+     "t1": 239.0,
+     "fadeIn": 0.15,
+     "fadeOut": 0.5
+    },
+    {
+     "type": "text",
+     "cls": "faint",
+     "text": "23",
+     "x": 0.72,
+     "y": 0.22,
+     "size": 160,
+     "alpha": 0.35,
+     "t0": 236.24,
+     "t1": 239.0,
+     "fadeIn": 0.15,
+     "fadeOut": 0.5
+    },
+    {
+     "type": "text",
+     "cls": "faint",
+     "text": "23",
+     "x": 0.25,
+     "y": 0.78,
+     "size": 180,
+     "alpha": 0.35,
+     "t0": 236.9,
+     "t1": 239.0,
+     "fadeIn": 0.15,
+     "fadeOut": 0.5
+    },
+    {
+     "type": "black",
+     "t0": 238.2,
+     "t1": 239.1,
+     "fadeIn": 0.7,
+     "fadeOut": 0.01
+    }
+   ]
+  }
+ ]
+}

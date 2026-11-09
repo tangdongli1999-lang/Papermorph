@@ -1,0 +1,865 @@
+{
+ "t0": 574.3,
+ "t1": 694.39,
+ "shots": [
+  {
+   "t0": 574.3,
+   "t1": 579.6,
+   "room": "rooms/bedroom_evening.json",
+   "who": [
+    null,
+    {
+     "clip": "idle",
+     "at": [
+      0.3,
+      0.82
+     ],
+     "face": {
+      "brows": "worried",
+      "mouth": "flat"
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.0
+    },
+    "b": {
+     "zoom": 1.15,
+     "aim": [
+      0.35,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "black",
+     "t0": 574.3,
+     "t1": 574.9,
+     "fadeIn": 0.01,
+     "fadeOut": 0.5
+    }
+   ]
+  },
+  {
+   "t0": 579.6,
+   "t1": 585.2,
+   "room": "rooms/bedroom_evening.json",
+   "who": [
+    null,
+    {
+     "view": "side",
+     "facing": 1,
+     "clip": "walk",
+     "opts": {
+      "pace": 0.6
+     },
+     "at": [
+      0.32,
+      0.8
+     ]
+    }
+   ],
+   "events": [
+    {
+     "t": 582.6,
+     "i": 1,
+     "play": "idle"
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.0
+    },
+    "b": {
+     "zoom": 1.05,
+     "aim": [
+      0.55,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "t0": 585.2,
+   "t1": 587.0,
+   "room": "rooms/bedroom_evening.json",
+   "who": [
+    null,
+    {
+     "clip": "idle",
+     "lip": "c6_27",
+     "lipGain": 1.6,
+     "at": [
+      0.8,
+      0.76
+     ],
+     "face": {
+      "brows": "worried"
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.3,
+     "aim": [
+      0.8,
+      0.33
+     ]
+    },
+    "b": {
+     "zoom": 2.4,
+     "aim": [
+      0.8,
+      0.33
+     ]
+    }
+   }
+  },
+  {
+   "t0": 587.0,
+   "t1": 588.6,
+   "room": {
+    "plate": {
+     "img": "art/bg_bedroom_door_night.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.6,
+     "aim": [
+      0.72,
+      0.3
+     ]
+    },
+    "b": {
+     "zoom": 1.7,
+     "aim": [
+      0.72,
+      0.3
+     ]
+    },
+    "kicks": [
+     588.25
+    ],
+    "kick": 0.6
+   }
+  },
+  {
+   "t0": 588.6,
+   "t1": 593.0,
+   "room": "rooms/bedroom_night.json",
+   "events": [
+    {
+     "t": 590.75,
+     "i": 0,
+     "card": "bed_sit"
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.3,
+     "aim": [
+      0.25,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 1.5,
+     "aim": [
+      0.22,
+      0.5
+     ]
+    },
+    "kicks": [
+     590.45,
+     590.75,
+     591.05
+    ],
+    "kick": 0.7
+   }
+  },
+  {
+   "t0": 593.0,
+   "t1": 599.5,
+   "room": {
+    "plate": {
+     "img": "art/bg_bedroom_door_night.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "filter": "saturate(1.2) sepia(0.2) hue-rotate(-20deg) brightness(0.85)",
+   "cam": {
+    "a": {
+     "zoom": 1.0
+    },
+    "b": {
+     "zoom": 1.5,
+     "aim": [
+      0.5,
+      0.5
+     ]
+    },
+    "ease": "linear"
+   }
+  },
+  {
+   "t0": 599.5,
+   "t1": 605.0,
+   "room": "rooms/bedroom_night.json",
+   "who": [
+    {
+     "card": "bed_sit"
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.2,
+     "aim": [
+      0.18,
+      0.45
+     ]
+    },
+    "b": {
+     "zoom": 2.5,
+     "aim": [
+      0.18,
+      0.45
+     ]
+    }
+   }
+  },
+  {
+   "t0": 605.0,
+   "t1": 609.3,
+   "room": {
+    "plate": {
+     "img": "art/bg_bedroom_door_night.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.5,
+     "aim": [
+      0.72,
+      0.3
+     ]
+    },
+    "b": {
+     "zoom": 2.0,
+     "aim": [
+      0.72,
+      0.3
+     ]
+    },
+    "ease": "linear"
+   }
+  },
+  {
+   "t0": 609.3,
+   "t1": 617.0,
+   "room": "rooms/bedroom_night.json",
+   "who": [
+    {
+     "card": "bed_sit"
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.3,
+     "aim": [
+      0.3,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 1.6,
+     "aim": [
+      0.45,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "t0": 617.0,
+   "t1": 619.8,
+   "room": "rooms/bedroom_night.json",
+   "who": [
+    {
+     "card": "bed_sit"
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.0,
+     "aim": [
+      0.2,
+      0.47
+     ]
+    },
+    "b": {
+     "zoom": 2.1,
+     "aim": [
+      0.2,
+      0.47
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "glow",
+     "t0": 618.9,
+     "t1": 619.8,
+     "spots": [
+      [
+       0.2,
+       0.62,
+       520
+      ]
+     ],
+     "fadeIn": 0.1,
+     "fadeOut": 0.01
+    }
+   ]
+  },
+  {
+   "t0": 619.8,
+   "t1": 630.5,
+   "room": {
+    "plate": {
+     "img": "art/bg_car_night.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.0
+    },
+    "b": {
+     "zoom": 1.1,
+     "aim": [
+      0.6,
+      0.4
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "black",
+     "alpha": 0.45,
+     "t0": 619.8,
+     "t1": 630.5,
+     "fadeIn": 0.2,
+     "fadeOut": 0.1
+    },
+    {
+     "type": "chat",
+     "title": "Mom \u2764\ufe0f",
+     "t0": 619.8,
+     "t1": 630.5,
+     "fadeIn": 0.2,
+     "fadeOut": 0.1,
+     "msgs": [
+      {
+       "t": 620.6,
+       "text": "Don't open your door."
+      },
+      {
+       "t": 622.6,
+       "text": "I'm in the car outside."
+      },
+      {
+       "t": 623.9,
+       "text": "Somebody called me an hour ago from your number."
+      },
+      {
+       "t": 626.2,
+       "text": "It sounded exactly like you."
+      },
+      {
+       "t": 627.9,
+       "text": "It said you needed me to go and get you from school."
+      }
+     ],
+     "x": 0.32
+    }
+   ]
+  },
+  {
+   "t0": 630.5,
+   "t1": 641.4,
+   "room": {
+    "plate": {
+     "img": "art/bg_bedroom_door_night.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.0
+    },
+    "b": {
+     "zoom": 2.1,
+     "aim": [
+      0.4,
+      0.86
+     ]
+    },
+    "ease": "linear"
+   }
+  },
+  {
+   "t0": 641.4,
+   "t1": 643.8,
+   "room": {
+    "plate": {
+     "img": "art/bg_ext_midday.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "filter": "grayscale(0.8) contrast(1.2)",
+   "cam": {
+    "a": {
+     "zoom": 1.3,
+     "aim": [
+      0.5,
+      0.6
+     ]
+    },
+    "b": {
+     "zoom": 1.4,
+     "aim": [
+      0.5,
+      0.6
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "flash",
+     "t0": 641.4,
+     "t1": 641.8,
+     "fadeIn": 0.01,
+     "fadeOut": 0.35,
+     "alpha": 0.8
+    }
+   ]
+  },
+  {
+   "t0": 643.8,
+   "t1": 646.0,
+   "room": {
+    "plate": {
+     "img": "art/bg_door_close.png",
+     "fov": 40,
+     "h": 0.92,
+     "pitch": 0,
+     "horizon": 0.83,
+     "holdouts": [
+      {
+       "mask": "masks/door_close_8.png",
+       "base": 0.8535,
+       "u": 0.9451
+      },
+      {
+       "mask": "masks/door_close_9.png",
+       "base": 0.9932,
+       "u": 0.1063
+      }
+     ]
+    },
+    "tint": 8884397,
+    "who": [],
+    "name": "door_close"
+   },
+   "filter": "grayscale(0.8) contrast(1.2)",
+   "cam": {
+    "a": {
+     "zoom": 1.4,
+     "aim": [
+      0.5,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 1.6,
+     "aim": [
+      0.5,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "flash",
+     "t0": 645.6,
+     "t1": 646.0,
+     "fadeIn": 0.35,
+     "fadeOut": 0.01,
+     "alpha": 0.8
+    }
+   ]
+  },
+  {
+   "t0": 646.0,
+   "t1": 650.1,
+   "room": {
+    "plate": {
+     "img": "art/bg_house_night.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.0
+    },
+    "b": {
+     "zoom": 2.0,
+     "aim": [
+      0.51,
+      0.27
+     ]
+    },
+    "ease": "linear"
+   }
+  },
+  {
+   "t0": 650.1,
+   "t1": 653.8,
+   "room": "rooms/bedroom_night.json",
+   "who": [
+    {
+     "card": "bed_sit"
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.6,
+     "aim": [
+      0.18,
+      0.43
+     ]
+    },
+    "b": {
+     "zoom": 3.0,
+     "aim": [
+      0.18,
+      0.42
+     ]
+    }
+   }
+  },
+  {
+   "t0": 653.8,
+   "t1": 657.0,
+   "room": {
+    "plate": {
+     "img": "art/bg_bedroom_door_night.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "filter": "saturate(1.2) sepia(0.2) hue-rotate(-20deg) brightness(0.85)",
+   "cam": {
+    "a": {
+     "zoom": 1.4,
+     "aim": [
+      0.5,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.2,
+     "aim": [
+      0.5,
+      0.5
+     ]
+    },
+    "ease": "in"
+   }
+  },
+  {
+   "t0": 657.0,
+   "t1": 665.4,
+   "room": "rooms/bedroom_day.json",
+   "cam": {
+    "a": {
+     "zoom": 1.0
+    },
+    "b": {
+     "zoom": 1.5,
+     "aim": [
+      0.58,
+      0.55
+     ]
+    },
+    "ease": "linear"
+   }
+  },
+  {
+   "t0": 665.4,
+   "t1": 672.0,
+   "room": "rooms/bedroom_day.json",
+   "cam": {
+    "a": {
+     "zoom": 1.5,
+     "aim": [
+      0.58,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 1.6,
+     "aim": [
+      0.58,
+      0.55
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "black",
+     "alpha": 0.5,
+     "t0": 665.4,
+     "t1": 672.0,
+     "fadeIn": 0.2,
+     "fadeOut": 0.2
+    },
+    {
+     "type": "chat",
+     "title": "Mom \u2764\ufe0f",
+     "t0": 665.4,
+     "t1": 672.0,
+     "fadeIn": 0.2,
+     "fadeOut": 0.2,
+     "msgs": [
+      {
+       "t": 665.6,
+       "text": "goodnight. code word:"
+      },
+      {
+       "t": 666.6,
+       "text": "<span style=\"filter:blur(10px)\">blueberry pancakes</span>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "t0": 672.0,
+   "t1": 683.6,
+   "room": {
+    "plate": {
+     "img": "art/bg_bedroom_door_night.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "filter": "brightness(0.8)",
+   "cam": {
+    "a": {
+     "zoom": 1.2,
+     "aim": [
+      0.5,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 1.6,
+     "aim": [
+      0.5,
+      0.5
+     ]
+    },
+    "ease": "linear",
+    "kicks": [
+     674.3,
+     674.65,
+     675.0
+    ],
+    "kick": 0.8
+   },
+   "overlays": [
+    {
+     "type": "text",
+     "text": "MS. HARLOW",
+     "x": 0.25,
+     "y": 0.25,
+     "size": 84,
+     "color": "#ff3b3b",
+     "alpha": 0.85,
+     "t0": 677.4,
+     "t1": 683.3,
+     "fadeIn": 0.15,
+     "fadeOut": 0.4
+    },
+    {
+     "type": "text",
+     "text": "TYLER",
+     "x": 0.72,
+     "y": 0.3,
+     "size": 84,
+     "color": "#ff3b3b",
+     "alpha": 0.85,
+     "t0": 678.1,
+     "t1": 683.3,
+     "fadeIn": 0.15,
+     "fadeOut": 0.4
+    },
+    {
+     "type": "text",
+     "text": "PRINCIPAL DAWES",
+     "x": 0.3,
+     "y": 0.7,
+     "size": 84,
+     "color": "#ff3b3b",
+     "alpha": 0.85,
+     "t0": 678.6,
+     "t1": 683.3,
+     "fadeIn": 0.15,
+     "fadeOut": 0.4
+    },
+    {
+     "type": "text",
+     "text": "MOM",
+     "x": 0.75,
+     "y": 0.68,
+     "size": 84,
+     "color": "#ff3b3b",
+     "alpha": 0.85,
+     "t0": 679.5,
+     "t1": 683.3,
+     "fadeIn": 0.15,
+     "fadeOut": 0.4
+    },
+    {
+     "type": "text",
+     "text": "ME",
+     "x": 0.5,
+     "y": 0.48,
+     "size": 84,
+     "color": "#ff3b3b",
+     "alpha": 0.85,
+     "t0": 680.1,
+     "t1": 683.3,
+     "fadeIn": 0.15,
+     "fadeOut": 0.4
+    }
+   ]
+  },
+  {
+   "t0": 683.6,
+   "t1": 688.8,
+   "room": "rooms/bedroom_night_walk.json",
+   "who": [
+    {
+     "view": "front",
+     "clip": "idle",
+     "at": [
+      0.5,
+      0.9
+     ],
+     "lip": "c6_33",
+     "lipGain": 1.3,
+     "face": {
+      "brows": "worried",
+      "eyes": "wide"
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.9,
+     "aim": [
+      0.5,
+      0.2
+     ]
+    },
+    "b": {
+     "zoom": 2.2,
+     "aim": [
+      0.5,
+      0.18
+     ]
+    }
+   }
+  },
+  {
+   "t0": 688.8,
+   "t1": 694.39,
+   "room": "rooms/home_hall_night.json",
+   "who": [
+    {
+     "clip": "idle",
+     "lip": "c6_34",
+     "lipGain": 1.2,
+     "face": {
+      "eyes": "creepy",
+      "mouth": "grin",
+      "brows": "up"
+     }
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.0
+    },
+    "b": {
+     "zoom": 2.6,
+     "aim": [
+      0.5,
+      0.42
+     ]
+    },
+    "ease": "in"
+   },
+   "overlays": [
+    {
+     "type": "black",
+     "t0": 692.6,
+     "t1": 694.5,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01
+    }
+   ]
+  }
+ ]
+}

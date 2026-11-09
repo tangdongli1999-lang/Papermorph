@@ -1,0 +1,95 @@
+{
+ "plate": {
+  "img": "art/plate_class_students_empty.png",
+  "fov": 40,
+  "h": 1.146,
+  "pitch": 0,
+  "horizon": 0.703
+ },
+ "tint": 16777215,
+ "who": [
+  {
+   "n": "marcus",
+   "card": "sit_desk",
+   "clip": "huddle",
+   "opts": {
+    "mood": "still"
+   },
+   "at": [
+    0.33,
+    0.775
+   ]
+  },
+  {
+   "n": "kid_a",
+   "card": "sit_desk",
+   "clip": "huddle",
+   "opts": {
+    "mood": "still"
+   },
+   "at": [
+    0.67,
+    0.775
+   ]
+  },
+  {
+   "n": "kid_b",
+   "card": "sit_desk",
+   "clip": "huddle",
+   "opts": {
+    "mood": "still"
+   },
+   "at": [
+    0.93,
+    0.775
+   ]
+  },
+  {
+   "n": "tyler",
+   "card": "sit_desk",
+   "clip": "huddle",
+   "opts": {
+    "mood": "still"
+   },
+   "at": [
+    0.15,
+    0.91
+   ]
+  },
+  {
+   "n": "dong",
+   "card": "sit_desk",
+   "clip": "huddle",
+   "opts": {
+    "mood": "still"
+   },
+   "at": [
+    0.5,
+    0.91
+   ]
+  },
+  {
+   "n": "priya",
+   "card": "sit_desk",
+   "clip": "huddle",
+   "opts": {
+    "mood": "still"
+   },
+   "at": [
+    0.85,
+    0.91
+   ]
+  }
+ ],
+ "props": [
+  {
+   "img": "props/desk.png",
+   "height": 0.78,
+   "at": [
+    0.06,
+    0.775
+   ]
+  }
+ ],
+ "name": "class_students"
+}

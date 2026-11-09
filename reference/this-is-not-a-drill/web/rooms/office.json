@@ -1,0 +1,28 @@
+{
+ "plate": {
+  "img": "art/bg_office.png",
+  "fov": 40,
+  "h": 1.14,
+  "pitch": 0,
+  "horizon": 0.765,
+  "holdouts": [
+   {
+    "mask": "masks/office_3.png",
+    "base": 0.8496,
+    "u": 0.5167
+   }
+  ]
+ },
+ "tint": 16777215,
+ "who": [
+  {
+   "n": "dawes",
+   "clip": "talk",
+   "at": [
+    0.52,
+    0.79
+   ]
+  }
+ ],
+ "name": "office"
+}

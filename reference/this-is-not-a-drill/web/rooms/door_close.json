@@ -1,0 +1,35 @@
+{
+ "plate": {
+  "img": "art/bg_door_close.png",
+  "fov": 40,
+  "h": 0.92,
+  "pitch": 0,
+  "horizon": 0.83,
+  "holdouts": [
+   {
+    "mask": "masks/door_close_8.png",
+    "base": 0.8535,
+    "u": 0.9451
+   },
+   {
+    "mask": "masks/door_close_9.png",
+    "base": 0.9932,
+    "u": 0.1063
+   }
+  ]
+ },
+ "tint": 8884397,
+ "who": [
+  {
+   "n": "priya",
+   "view": "side",
+   "facing": -1,
+   "clip": "idle",
+   "at": [
+    0.66,
+    0.86
+   ]
+  }
+ ],
+ "name": "door_close"
+}

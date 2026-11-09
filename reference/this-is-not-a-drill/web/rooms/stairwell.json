@@ -1,0 +1,40 @@
+{
+ "plate": {
+  "img": "art/bg_stairwell.png",
+  "fov": 40,
+  "h": 1.05,
+  "pitch": 0,
+  "horizon": 0.74,
+  "holdouts": [
+   {
+    "mask": "masks/stairwell_0.png",
+    "base": 0.8086,
+    "u": 0.1729
+   }
+  ]
+ },
+ "tint": 16777215,
+ "who": [
+  {
+   "n": "priya",
+   "view": "side",
+   "facing": 1,
+   "clip": "walk",
+   "at": [
+    0.4,
+    0.8
+   ]
+  },
+  {
+   "n": "dong",
+   "view": "side",
+   "facing": -1,
+   "clip": "idle",
+   "at": [
+    0.78,
+    0.84
+   ]
+  }
+ ],
+ "name": "stairwell"
+}

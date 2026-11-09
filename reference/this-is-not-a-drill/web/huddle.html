@@ -1,0 +1,14 @@
+<!doctype html><html><head><meta charset="utf-8"><style>body{margin:0;background:#000}</style></head><body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="dong.js"></script>
+<script>
+const W=1280,H=720,r=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});r.setSize(W,H);r.outputEncoding=THREE.sRGBEncoding;document.body.appendChild(r.domElement);
+const sc=new THREE.Scene();const cam=new THREE.PerspectiveCamera(30,W/H,0.1,80);
+const tl=new THREE.TextureLoader();
+function backdrop(file,w=12){const t=tl.load(file);t.encoding=THREE.sRGBEncoding;const m=new THREE.Mesh(new THREE.PlaneGeometry(w,w*1024/1536),new THREE.MeshBasicMaterial({map:t}));m.position.set(0,w*1024/1536*(0.5-0.28),-3);sc.add(m);return m;}
+window.setup=async(cfg)=>{while(sc.children.length)sc.remove(sc.children[0]);backdrop(cfg.bg,cfg.bgw||12);cam.position.set(...cfg.cam);cam.lookAt(...cfg.look);
+ window.P=await Promise.all(cfg.who.map(w=>Dong.load('cast/'+w.n+'/',{shared:'shared/'})));
+ for(let i=0;i<P.length;i++){const p=P[i],w=cfg.who[i];p.root.position.set(...w.pos);sc.add(p.root);if(w.card){await p.showCard(w.card);} if(w.view)p.setView(w.view);if(w.facing)p.setFacing(w.facing);p.play(w.clip,w.opts||{});if(w.face)p.face={...p.face,...w.face};if(cfg.tint)p.setTint(cfg.tint);}
+};
+window.step=(t,dt=1/30)=>{for(let x=0;x<t;x+=dt)P.forEach(p=>p.update(dt));r.render(sc,cam);};
+</script></body></html>

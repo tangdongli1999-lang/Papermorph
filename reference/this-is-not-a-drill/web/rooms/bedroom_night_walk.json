@@ -1,0 +1,26 @@
+{
+ "plate": {
+  "img": "art/plate_bedroom_night_nobed.png",
+  "fov": 40,
+  "h": 0.752,
+  "pitch": 0,
+  "horizon": 0.74
+ },
+ "tint": 7306408,
+ "who": [
+  {
+   "n": "dong_home",
+   "view": "side",
+   "facing": 1,
+   "clip": "walk",
+   "opts": {
+    "pace": 0.5
+   },
+   "at": [
+    0.56,
+    0.775
+   ]
+  }
+ ],
+ "name": "bedroom_night_walk"
+}
