@@ -4,36 +4,10 @@
  "shots": [
   {
    "t0": 239.0,
-   "t1": 240.9,
+   "t1": 240.14,
    "room": {
     "plate": {
-     "img": "art/bg_ext_midday.png",
-     "fov": 40,
-     "h": 1.0,
-     "pitch": 0,
-     "horizon": 0.97
-    },
-    "who": []
-   },
-   "cam": {
-    "a": {
-     "zoom": 1.0
-    },
-    "b": {
-     "zoom": 1.15,
-     "aim": [
-      0.6,
-      0.45
-     ]
-    }
-   }
-  },
-  {
-   "t0": 240.9,
-   "t1": 242.3,
-   "room": {
-    "plate": {
-     "img": "art/bg_ext_midday.png",
+     "img": "art/bg_intercom.png",
      "fov": 40,
      "h": 1.0,
      "pitch": 0,
@@ -44,60 +18,459 @@
    "overlays": [
     {
      "type": "clock",
-     "t0": 240.9,
-     "t1": 242.3,
+     "t0": 239.0,
+     "t1": 240.14,
      "h": 10,
      "m": 20,
      "h2": 11,
      "m2": 20,
-     "t2": 241.05,
+     "t2": 239.3,
+     "dur": 0.8,
      "label": "11:20 AM",
+     "dark": true,
      "fadeIn": 0.01,
      "fadeOut": 0.01
     }
    ]
   },
   {
-   "t0": 242.3,
-   "t1": 249.4,
+   "t0": 240.14,
+   "t1": 241.16,
    "room": "rooms/corner_dark.json",
    "who": [
     {
      "opts": {
-      "mood": "shake",
-      "intensity": 0.8
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 0.4
      }
     },
     {
      "opts": {
-      "mood": "shiver",
-      "intensity": 1.0
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 0.4
      }
     },
     {
      "opts": {
-      "mood": "lookaround"
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 0.4
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 0.4
      }
     },
     {
      "opts": {
-      "mood": "sob"
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 0.4
      }
     },
     {
      "opts": {
-      "mood": "rock"
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 0.4
      }
     },
     {
      "opts": {
       "mood": "still"
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.02
+    },
+    "b": {
+     "zoom": 1.05
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 240.14,
+     "t1": 241.16,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 241.16,
+   "t1": 242.66,
+   "room": {
+    "plate": {
+     "img": "art/bg_phone_lap2.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.05,
+     "aim": [
+      0.55,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 1.2,
+     "aim": [
+      0.6,
+      0.45
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "black",
+     "alpha": 0.85,
+     "t0": 241.16,
+     "t1": 241.6,
+     "fadeIn": 0.01,
+     "fadeOut": 0.3
+    }
+   ]
+  },
+  {
+   "t0": 242.66,
+   "t1": 244.49,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
      }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.6,
+     "aim": [
+      0.45,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 1.7,
+     "aim": [
+      0.45,
+      0.55
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 242.66,
+     "t1": 244.49,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "black",
+     "alpha": 0.5,
+     "t0": 242.66,
+     "t1": 244.49,
+     "fadeIn": 0.2,
+     "fadeOut": 0.1
+    },
+    {
+     "type": "phone",
+     "t0": 242.66,
+     "t1": 244.49,
+     "flip": 242.7,
+     "time": "11:20",
+     "fadeIn": 0.12,
+     "fadeOut": 0.1
+    }
+   ]
+  },
+  {
+   "t0": 244.49,
+   "t1": 245.81,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
     }
    ],
    "cam": {
@@ -105,15 +478,29 @@
      "zoom": 1.0
     },
     "b": {
-     "zoom": 1.08,
-     "dz": 0.2
+     "zoom": 1.06
     }
    },
    "overlays": [
     {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 244.49,
+     "t1": 245.81,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
      "type": "glow",
-     "t0": 242.6,
-     "t1": 249.4,
+     "t0": 244.49,
+     "t1": 245.81,
      "spots": [
       [
        0.25,
@@ -146,368 +533,17 @@
        230
       ]
      ],
-     "fadeIn": 0.6
-    }
-   ]
-  },
-  {
-   "t0": 249.4,
-   "t1": 264.9,
-   "room": "rooms/corner_dark.json",
-   "who": [
-    {
-     "opts": {
-      "mood": "shake",
-      "intensity": 0.8
-     }
-    },
-    {
-     "opts": {
-      "mood": "shiver",
-      "intensity": 1.0
-     }
-    },
-    {
-     "opts": {
-      "mood": "lookaround"
-     }
-    },
-    {
-     "opts": {
-      "mood": "shock"
-     }
-    },
-    {
-     "opts": {
-      "mood": "sob"
-     }
-    },
-    {
-     "opts": {
-      "mood": "rock"
-     }
-    },
-    {
-     "opts": {
-      "mood": "still"
-     }
-    }
-   ],
-   "cam": {
-    "a": {
-     "zoom": 1.6,
-     "aim": [
-      0.45,
-      0.55
-     ]
-    },
-    "b": {
-     "zoom": 1.7,
-     "aim": [
-      0.45,
-      0.55
-     ]
-    }
-   },
-   "overlays": [
-    {
-     "type": "black",
-     "alpha": 0.55,
-     "t0": 249.4,
-     "t1": 264.9,
-     "fadeIn": 0.25,
+     "fadeIn": 0.4,
      "fadeOut": 0.1
-    },
-    {
-     "type": "chat",
-     "t0": 249.4,
-     "t1": 264.9,
-     "fadeIn": 0.25,
-     "fadeOut": 0.1,
-     "msgs": [
-      {
-       "t": 249.7,
-       "name": "Jayden",
-       "text": "is anyone else hearing knocking??",
-       "color": "#ffb86b"
-      },
-      {
-       "t": 251.8,
-       "name": "Mia",
-       "text": "it's in the science wing",
-       "color": "#7ee0a3"
-      },
-      {
-       "t": 253.2,
-       "name": "Ethan",
-       "text": "it said it was the nurse",
-       "color": "#c79bff"
-      },
-      {
-       "t": 257.4,
-       "name": "Kayla \u00b7 Room 208",
-       "text": "Coach Reyes is outside. He says it's clear. We're opening.",
-       "color": "#ff8fb1",
-       "seen": 261.4
-      }
-     ]
     }
    ]
   },
   {
-   "t0": 264.9,
-   "t1": 269.3,
-   "room": "rooms/corner_dark.json",
-   "who": [
-    {
-     "opts": {
-      "mood": "shake",
-      "intensity": 0.8
-     }
-    },
-    {
-     "opts": {
-      "mood": "shiver",
-      "intensity": 1.0
-     }
-    },
-    {
-     "opts": {
-      "mood": "lookaround"
-     }
-    },
-    {
-     "opts": {
-      "mood": "shock"
-     }
-    },
-    {
-     "opts": {
-      "mood": "sob"
-     }
-    },
-    {
-     "opts": {
-      "mood": "rock"
-     }
-    },
-    {
-     "opts": {
-      "mood": "still"
-     }
-    }
-   ],
-   "cam": {
-    "a": {
-     "zoom": 2.2,
-     "aim": [
-      0.86,
-      0.49
-     ]
-    },
-    "b": {
-     "zoom": 2.4,
-     "aim": [
-      0.86,
-      0.49
-     ]
-    }
-   }
-  },
-  {
-   "t0": 269.3,
-   "t1": 270.6,
-   "room": "rooms/corner_dark.json",
-   "who": [
-    {
-     "opts": {
-      "mood": "shake",
-      "intensity": 0.8
-     }
-    },
-    {
-     "opts": {
-      "mood": "shiver",
-      "intensity": 1.0
-     }
-    },
-    {
-     "opts": {
-      "mood": "lookaround"
-     }
-    },
-    {
-     "opts": {
-      "mood": "shock"
-     }
-    },
-    {
-     "opts": {
-      "mood": "sob"
-     }
-    },
-    {
-     "opts": {
-      "mood": "rock"
-     }
-    },
-    {
-     "card": "phone",
-     "clip": "idle"
-    }
-   ],
-   "cam": {
-    "a": {
-     "zoom": 2.2,
-     "aim": [
-      0.86,
-      0.53
-     ]
-    },
-    "b": {
-     "zoom": 2.3,
-     "aim": [
-      0.86,
-      0.53
-     ]
-    }
-   }
-  },
-  {
-   "t0": 270.6,
-   "t1": 287.4,
-   "room": "rooms/corner_dark.json",
-   "who": [
-    {
-     "opts": {
-      "mood": "shake",
-      "intensity": 0.8
-     }
-    },
-    {
-     "opts": {
-      "mood": "shiver",
-      "intensity": 1.0
-     }
-    },
-    {
-     "opts": {
-      "mood": "lookaround"
-     }
-    },
-    {
-     "opts": {
-      "mood": "shock"
-     }
-    },
-    {
-     "opts": {
-      "mood": "sob"
-     }
-    },
-    {
-     "opts": {
-      "mood": "rock"
-     }
-    },
-    {
-     "card": "phone",
-     "clip": "idle"
-    }
-   ],
-   "cam": {
-    "a": {
-     "zoom": 1.6,
-     "aim": [
-      0.55,
-      0.55
-     ]
-    },
-    "b": {
-     "zoom": 1.7,
-     "aim": [
-      0.55,
-      0.55
-     ]
-    }
-   },
-   "overlays": [
-    {
-     "type": "black",
-     "alpha": 0.55,
-     "t0": 270.6,
-     "t1": 287.4,
-     "fadeIn": 0.25,
-     "fadeOut": 0.1
-    },
-    {
-     "type": "chat",
-     "t0": 270.6,
-     "t1": 287.4,
-     "fadeIn": 0.25,
-     "fadeOut": 0.1,
-     "msgs": [
-      {
-       "t": 249.7,
-       "name": "Jayden",
-       "text": "is anyone else hearing knocking??",
-       "color": "#ffb86b"
-      },
-      {
-       "t": 251.8,
-       "name": "Mia",
-       "text": "it's in the science wing",
-       "color": "#7ee0a3"
-      },
-      {
-       "t": 253.2,
-       "name": "Ethan",
-       "text": "it said it was the nurse",
-       "color": "#c79bff"
-      },
-      {
-       "t": 257.4,
-       "name": "Kayla \u00b7 Room 208",
-       "text": "Coach Reyes is outside. He says it's clear. We're opening.",
-       "color": "#ff8fb1",
-       "seen": 261.4
-      },
-      {
-       "t": 272.4,
-       "name": "Sofia",
-       "text": "something knocked on 204 in Mr. Kim's voice. Mr. Kim is IN 204",
-       "color": "#ffd36b"
-      },
-      {
-       "t": 276.7,
-       "name": "Ethan",
-       "text": "it knows our names",
-       "color": "#c79bff"
-      },
-      {
-       "t": 278.5,
-       "name": "Jayden",
-       "text": "why is nobody coming",
-       "color": "#ffb86b"
-      },
-      {
-       "t": 281.7,
-       "name": "Room 210",
-       "text": "Don't talk. It's listening. It only knows voices it's heard.",
-       "color": "#ff6b6b",
-       "alert": true
-      }
-     ],
-     "keep": 5
-    }
-   ]
-  },
-  {
-   "t0": 287.4,
-   "t1": 297.3,
+   "t0": 245.81,
+   "t1": 246.55,
    "room": {
     "plate": {
-     "img": "art/bg_hallway_dim.png",
+     "img": "art/bg_phone_lap2.png",
      "fov": 40,
      "h": 1.0,
      "pitch": 0,
@@ -517,247 +553,2740 @@
    },
    "cam": {
     "a": {
-     "zoom": 1.0
-    },
-    "b": {
-     "zoom": 1.6,
+     "zoom": 1.15,
      "aim": [
-      0.5,
+      0.6,
       0.45
      ]
     },
-    "ease": "linear"
-   },
-   "overlays": [
-    {
-     "type": "flicker",
-     "t0": 287.4,
-     "t1": 297.3,
-     "fadeIn": 0.01,
-     "fadeOut": 0.01,
-     "rate": 7,
-     "on": 0.85,
-     "alpha": 0.7
+    "b": {
+     "zoom": 1.25,
+     "aim": [
+      0.62,
+      0.45
+     ]
     }
-   ]
+   },
+   "overlays": []
   },
   {
-   "t0": 297.3,
-   "t1": 303.2,
+   "t0": 246.55,
+   "t1": 247.35,
+   "room": {
+    "plate": {
+     "img": "art/bg_phone_sleeve.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.1,
+     "aim": [
+      0.6,
+      0.6
+     ]
+    },
+    "b": {
+     "zoom": 1.25,
+     "aim": [
+      0.65,
+      0.62
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 247.35,
+   "t1": 254.63,
    "room": "rooms/corner_dark.json",
    "who": [
-    null,
     {
      "opts": {
-      "mood": "shiver",
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
       "intensity": 1.0
      }
     },
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
-   "cam": {
-    "a": {
-     "zoom": 2.3,
-     "aim": [
-      0.165,
-      0.5
-     ]
-    },
-    "b": {
-     "zoom": 2.6,
-     "aim": [
-      0.165,
-      0.5
-     ]
-    }
-   },
-   "overlays": [
     {
-     "type": "glow",
-     "t0": 297.3,
-     "t1": 303.2,
-     "spots": [
-      [
-       0.47,
-       0.9,
-       520
-      ]
-     ],
-     "fadeIn": 0.6
-    }
-   ]
-  },
-  {
-   "t0": 303.2,
-   "t1": 307.4,
-   "room": "rooms/corner_dark.json",
-   "who": [
-    null,
-    {
-     "card": "floor_phone",
-     "clip": "idle"
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 1.0
+     }
     },
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
-   "cam": {
-    "a": {
-     "zoom": 2.4,
-     "aim": [
-      0.165,
-      0.54
-     ]
-    },
-    "b": {
-     "zoom": 2.6,
-     "aim": [
-      0.165,
-      0.54
-     ]
-    }
-   },
-   "overlays": [
     {
-     "type": "glow",
-     "t0": 303.2,
-     "t1": 307.4,
-     "spots": [
-      [
-       0.52,
-       0.42,
-       440
-      ]
-     ],
-     "fadeIn": 0.6
-    }
-   ]
-  },
-  {
-   "t0": 307.4,
-   "t1": 312.3,
-   "room": "rooms/corner_dark.json",
-   "who": [
-    null,
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
     {
      "opts": {
       "mood": "shake",
       "intensity": 0.7
      },
-     "lip": "c3_15",
-     "lipGain": 1.1
-    },
-    null,
-    null,
-    null,
-    null,
-    null
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
    ],
    "cam": {
     "a": {
-     "zoom": 2.9,
+     "zoom": 1.5,
      "aim": [
-      0.165,
+      0.45,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 1.6,
+     "aim": [
+      0.45,
+      0.55
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 247.35,
+     "t1": 254.63,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "black",
+     "alpha": 0.6,
+     "t0": 247.35,
+     "t1": 254.63,
+     "fadeIn": 0.2,
+     "fadeOut": 0.1
+    },
+    {
+     "type": "chat",
+     "t0": 247.35,
+     "t1": 254.63,
+     "msgs": [
+      {
+       "t": 247.5,
+       "name": "Marcus",
+       "text": "is this real??",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 247.8,
+       "name": "Jayden",
+       "text": "my mom is texting me",
+       "color": "#ffb86b"
+      },
+      {
+       "t": 248.1,
+       "name": "Ava",
+       "text": "is anyone hurt",
+       "color": "#c79bff"
+      },
+      {
+       "t": 248.4,
+       "name": "Leo",
+       "text": "pls someone say something",
+       "color": "#ffd36b"
+      },
+      {
+       "t": 248.7,
+       "name": "Mia",
+       "text": "we're in the gym closet",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 249.0,
+       "name": "Ethan",
+       "text": "omg omg omg",
+       "color": "#c79bff"
+      },
+      {
+       "t": 249.73,
+       "name": "Jayden",
+       "text": "Is anyone else hearing knocking?",
+       "color": "#ffb86b"
+      },
+      {
+       "t": 251.79,
+       "name": "Mia",
+       "text": "It's in the science wing.",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 253.22,
+       "name": "Ethan",
+       "text": "It said it was the nurse.",
+       "color": "#c79bff"
+      }
+     ],
+     "title": "Room 214 \ud83e\udd85",
+     "keep": 5,
+     "fadeIn": 0.2,
+     "fadeOut": 0.1
+    }
+   ]
+  },
+  {
+   "t0": 254.63,
+   "t1": 257.49,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_hall_208_lv0.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 3159626
+    },
+    "who": [],
+    "tint": 3159626
+   },
+   "plateTint": 3159626,
+   "cam": {
+    "a": {
+     "zoom": 1.0,
+     "aim": [
+      0.6,
+      0.45
+     ]
+    },
+    "b": {
+     "zoom": 1.4,
+     "aim": [
+      0.72,
+      0.35
+     ]
+    }
+   },
+   "events": [],
+   "overlays": []
+  },
+  {
+   "t0": 257.49,
+   "t1": 260.08,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.5,
+     "aim": [
+      0.45,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 1.55,
+     "aim": [
+      0.45,
+      0.55
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 257.49,
+     "t1": 260.08,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "black",
+     "alpha": 0.6,
+     "t0": 257.49,
+     "t1": 260.08,
+     "fadeIn": 0.2,
+     "fadeOut": 0.1
+    },
+    {
+     "type": "chat",
+     "t0": 257.49,
+     "t1": 260.08,
+     "msgs": [
+      {
+       "t": 247.5,
+       "name": "Marcus",
+       "text": "is this real??",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 247.8,
+       "name": "Jayden",
+       "text": "my mom is texting me",
+       "color": "#ffb86b"
+      },
+      {
+       "t": 248.1,
+       "name": "Ava",
+       "text": "is anyone hurt",
+       "color": "#c79bff"
+      },
+      {
+       "t": 248.4,
+       "name": "Leo",
+       "text": "pls someone say something",
+       "color": "#ffd36b"
+      },
+      {
+       "t": 248.7,
+       "name": "Mia",
+       "text": "we're in the gym closet",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 249.0,
+       "name": "Ethan",
+       "text": "omg omg omg",
+       "color": "#c79bff"
+      },
+      {
+       "t": 249.73,
+       "name": "Jayden",
+       "text": "Is anyone else hearing knocking?",
+       "color": "#ffb86b"
+      },
+      {
+       "t": 251.79,
+       "name": "Mia",
+       "text": "It's in the science wing.",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 253.22,
+       "name": "Ethan",
+       "text": "It said it was the nurse.",
+       "color": "#c79bff"
+      },
+      {
+       "t": 257.49,
+       "name": "Kayla \u00b7 Room 208",
+       "text": "Coach Reyes is outside. He says it's clear. We're opening.",
+       "color": "#ff8fb1",
+       "seen": 261.5
+      }
+     ],
+     "title": "Room 214 \ud83e\udd85",
+     "keep": 3,
+     "fadeIn": 0.2,
+     "fadeOut": 0.1
+    }
+   ]
+  },
+  {
+   "t0": 260.08,
+   "t1": 260.84,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_hall_208_lv0.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 3159626
+    },
+    "who": [],
+    "tint": 3159626
+   },
+   "plateTint": 3159626,
+   "cam": {
+    "a": {
+     "zoom": 1.3,
+     "aim": [
+      0.62,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 1.2,
+     "aim": [
+      0.6,
+      0.5
+     ]
+    }
+   },
+   "events": [
+    {
+     "t": 260.12,
+     "plate": "art/plate_door_hall_208_lv12.png"
+    },
+    {
+     "t": 260.2,
+     "plate": "art/plate_door_hall_208_lv18.png"
+    },
+    {
+     "t": 260.45,
+     "plate": "art/plate_door_hall_208_open.png"
+    }
+   ],
+   "overlays": []
+  },
+  {
+   "t0": 260.84,
+   "t1": 262.73,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.5,
+     "aim": [
+      0.45,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 1.55,
+     "aim": [
+      0.45,
+      0.55
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 260.84,
+     "t1": 262.73,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "black",
+     "alpha": 0.6,
+     "t0": 260.84,
+     "t1": 262.73,
+     "fadeIn": 0.2,
+     "fadeOut": 0.1
+    },
+    {
+     "type": "chat",
+     "t0": 260.84,
+     "t1": 262.73,
+     "msgs": [
+      {
+       "t": 247.5,
+       "name": "Marcus",
+       "text": "is this real??",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 247.8,
+       "name": "Jayden",
+       "text": "my mom is texting me",
+       "color": "#ffb86b"
+      },
+      {
+       "t": 248.1,
+       "name": "Ava",
+       "text": "is anyone hurt",
+       "color": "#c79bff"
+      },
+      {
+       "t": 248.4,
+       "name": "Leo",
+       "text": "pls someone say something",
+       "color": "#ffd36b"
+      },
+      {
+       "t": 248.7,
+       "name": "Mia",
+       "text": "we're in the gym closet",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 249.0,
+       "name": "Ethan",
+       "text": "omg omg omg",
+       "color": "#c79bff"
+      },
+      {
+       "t": 249.73,
+       "name": "Jayden",
+       "text": "Is anyone else hearing knocking?",
+       "color": "#ffb86b"
+      },
+      {
+       "t": 251.79,
+       "name": "Mia",
+       "text": "It's in the science wing.",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 253.22,
+       "name": "Ethan",
+       "text": "It said it was the nurse.",
+       "color": "#c79bff"
+      },
+      {
+       "t": 257.49,
+       "name": "Kayla \u00b7 Room 208",
+       "text": "Coach Reyes is outside. He says it's clear. We're opening.",
+       "color": "#ff8fb1",
+       "seen": 261.5
+      }
+     ],
+     "title": "Room 214 \ud83e\udd85",
+     "keep": 3,
+     "fadeIn": 0.2,
+     "fadeOut": 0.1
+    }
+   ]
+  },
+  {
+   "t0": 262.73,
+   "t1": 265.17,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_hall_208_open.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 3159626
+    },
+    "who": [],
+    "tint": 3159626
+   },
+   "plateTint": 3159626,
+   "cam": {
+    "a": {
+     "zoom": 1.1,
+     "aim": [
+      0.6,
       0.5
      ]
     },
     "b": {
-     "zoom": 3.1,
+     "zoom": 1.9,
      "aim": [
-      0.165,
+      0.82,
+      0.5
+     ]
+    },
+    "ease": "linear"
+   },
+   "events": [],
+   "overlays": []
+  },
+  {
+   "t0": 265.17,
+   "t1": 266.55,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "glance"
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.4,
+     "aim": [
+      0.79,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.5,
+     "aim": [
+      0.79,
       0.5
      ]
     }
    },
    "overlays": [
     {
-     "type": "glow",
-     "t0": 307.4,
-     "t1": 312.3,
-     "spots": [
-      [
-       0.47,
-       0.92,
-       560
-      ]
-     ],
-     "fadeIn": 0.6
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 265.17,
+     "t1": 266.55,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
     }
    ]
   },
   {
-   "t0": 312.3,
-   "t1": 324.6,
-   "room": "rooms/kitchen_mom.json",
+   "t0": 266.55,
+   "t1": 267.87,
+   "room": {
+    "plate": {
+     "img": "art/bg_classroom_day.png",
+     "fov": 40,
+     "h": 0.929,
+     "pitch": 0,
+     "horizon": 0.74,
+     "holdouts": [
+      {
+       "mask": "masks/classroom_day_0.png",
+       "base": 0.9961,
+       "u": 0.075
+      },
+      {
+       "mask": "masks/classroom_day_1.png",
+       "base": 0.9961,
+       "u": 0.9602
+      },
+      {
+       "mask": "masks/classroom_day_2.png",
+       "base": 0.9971,
+       "u": 0.5221
+      },
+      {
+       "mask": "masks/classroom_day_teacher.png",
+       "base": 0.83,
+       "u": 0.51
+      }
+     ]
+    },
+    "tint": 16777215,
+    "who": [
+     {
+      "n": "harlow",
+      "card": "confiscate",
+      "clip": "huddle",
+      "opts": {
+       "mood": "still"
+      },
+      "at": [
+       0.4,
+       0.93
+      ]
+     }
+    ],
+    "name": "classroom_day"
+   },
+   "filter": "sepia(0.45) saturate(1.25) brightness(1.06) contrast(0.95)",
    "cam": {
     "a": {
-     "zoom": 1.2,
+     "zoom": 1.3,
+     "aim": [
+      0.42,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 1.5,
+     "aim": [
+      0.4,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "flash",
+     "t0": 266.55,
+     "t1": 266.9,
+     "fadeIn": 0.01,
+     "fadeOut": 0.35,
+     "alpha": 0.8
+    }
+   ]
+  },
+  {
+   "t0": 267.87,
+   "t1": 269.0,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "stare",
+      "look": -1,
+      "blank": 1
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.4,
+     "aim": [
+      0.79,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.6,
+     "aim": [
+      0.79,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 267.87,
+     "t1": 269.0,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 269.0,
+   "t1": 270.68,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "card": "floor_phone",
+     "clip": "huddle",
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.6
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.2,
+     "aim": [
+      0.79,
+      0.52
+     ]
+    },
+    "b": {
+     "zoom": 2.4,
+     "aim": [
+      0.79,
+      0.52
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 269.0,
+     "t1": 270.68,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "glow",
+     "t0": 269.0,
+     "t1": 270.68,
+     "spots": [
+      [
+       0.5,
+       0.45,
+       520
+      ]
+     ],
+     "fadeIn": 0.3,
+     "fadeOut": 0.1
+    }
+   ]
+  },
+  {
+   "t0": 270.68,
+   "t1": 272.38,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.5,
+     "aim": [
+      0.45,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 1.55,
+     "aim": [
+      0.45,
+      0.55
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 270.68,
+     "t1": 272.38,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "black",
+     "alpha": 0.6,
+     "t0": 270.68,
+     "t1": 272.38,
+     "fadeIn": 0.2,
+     "fadeOut": 0.1
+    },
+    {
+     "type": "chat",
+     "t0": 270.68,
+     "t1": 272.38,
+     "msgs": [
+      {
+       "t": 247.5,
+       "name": "Marcus",
+       "text": "is this real??",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 247.8,
+       "name": "Jayden",
+       "text": "my mom is texting me",
+       "color": "#ffb86b"
+      },
+      {
+       "t": 248.1,
+       "name": "Ava",
+       "text": "is anyone hurt",
+       "color": "#c79bff"
+      },
+      {
+       "t": 248.4,
+       "name": "Leo",
+       "text": "pls someone say something",
+       "color": "#ffd36b"
+      },
+      {
+       "t": 248.7,
+       "name": "Mia",
+       "text": "we're in the gym closet",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 249.0,
+       "name": "Ethan",
+       "text": "omg omg omg",
+       "color": "#c79bff"
+      },
+      {
+       "t": 249.73,
+       "name": "Jayden",
+       "text": "Is anyone else hearing knocking?",
+       "color": "#ffb86b"
+      },
+      {
+       "t": 251.79,
+       "name": "Mia",
+       "text": "It's in the science wing.",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 253.22,
+       "name": "Ethan",
+       "text": "It said it was the nurse.",
+       "color": "#c79bff"
+      },
+      {
+       "t": 257.49,
+       "name": "Kayla \u00b7 Room 208",
+       "text": "Coach Reyes is outside. He says it's clear. We're opening.",
+       "color": "#ff8fb1",
+       "seen": 261.5
+      },
+      {
+       "t": 270.9,
+       "name": "Leo",
+       "text": "anyone??",
+       "color": "#ffd36b"
+      },
+      {
+       "t": 271.3,
+       "name": "Ava",
+       "text": "kayla answer",
+       "color": "#c79bff"
+      },
+      {
+       "t": 271.7,
+       "name": "Marcus",
+       "text": "KAYLA",
+       "color": "#7ee0a3"
+      }
+     ],
+     "title": "Room 214 \ud83e\udd85",
+     "keep": 5,
+     "fadeIn": 0.2,
+     "fadeOut": 0.1
+    }
+   ]
+  },
+  {
+   "t0": 272.38,
+   "t1": 275.61,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_hall_204.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 3159626
+    },
+    "who": [],
+    "tint": 3159626
+   },
+   "plateTint": 3159626,
+   "cam": {
+    "a": {
+     "zoom": 1.0,
+     "aim": [
+      0.55,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 1.3,
+     "aim": [
+      0.6,
+      0.5
+     ]
+    },
+    "kicks": [
+     273.18,
+     273.5,
+     273.82
+    ],
+    "kick": 0.8
+   },
+   "events": [],
+   "overlays": []
+  },
+  {
+   "t0": 275.61,
+   "t1": 279.4,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.5,
+     "aim": [
+      0.45,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 1.6,
+     "aim": [
+      0.45,
+      0.55
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 275.61,
+     "t1": 279.4,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "black",
+     "alpha": 0.6,
+     "t0": 275.61,
+     "t1": 279.4,
+     "fadeIn": 0.2,
+     "fadeOut": 0.1
+    },
+    {
+     "type": "chat",
+     "t0": 275.61,
+     "t1": 279.4,
+     "msgs": [
+      {
+       "t": 247.5,
+       "name": "Marcus",
+       "text": "is this real??",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 247.8,
+       "name": "Jayden",
+       "text": "my mom is texting me",
+       "color": "#ffb86b"
+      },
+      {
+       "t": 248.1,
+       "name": "Ava",
+       "text": "is anyone hurt",
+       "color": "#c79bff"
+      },
+      {
+       "t": 248.4,
+       "name": "Leo",
+       "text": "pls someone say something",
+       "color": "#ffd36b"
+      },
+      {
+       "t": 248.7,
+       "name": "Mia",
+       "text": "we're in the gym closet",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 249.0,
+       "name": "Ethan",
+       "text": "omg omg omg",
+       "color": "#c79bff"
+      },
+      {
+       "t": 249.73,
+       "name": "Jayden",
+       "text": "Is anyone else hearing knocking?",
+       "color": "#ffb86b"
+      },
+      {
+       "t": 251.79,
+       "name": "Mia",
+       "text": "It's in the science wing.",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 253.22,
+       "name": "Ethan",
+       "text": "It said it was the nurse.",
+       "color": "#c79bff"
+      },
+      {
+       "t": 257.49,
+       "name": "Kayla \u00b7 Room 208",
+       "text": "Coach Reyes is outside. He says it's clear. We're opening.",
+       "color": "#ff8fb1",
+       "seen": 261.5
+      },
+      {
+       "t": 270.9,
+       "name": "Leo",
+       "text": "anyone??",
+       "color": "#ffd36b"
+      },
+      {
+       "t": 271.3,
+       "name": "Ava",
+       "text": "kayla answer",
+       "color": "#c79bff"
+      },
+      {
+       "t": 271.7,
+       "name": "Marcus",
+       "text": "KAYLA",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 272.38,
+       "name": "Sofia",
+       "text": "Something knocked on 204 in Mr. Kim's voice. Mr. Kim is IN 204.",
+       "color": "#ffd36b"
+      },
+      {
+       "t": 276.68,
+       "name": "Ethan",
+       "text": "It knows our names.",
+       "color": "#c79bff"
+      },
+      {
+       "t": 278.47,
+       "name": "Jayden",
+       "text": "Why is nobody coming?",
+       "color": "#ffb86b"
+      }
+     ],
+     "title": "Room 214 \ud83e\udd85",
+     "keep": 4,
+     "fadeIn": 0.2,
+     "fadeOut": 0.1
+    }
+   ]
+  },
+  {
+   "t0": 279.4,
+   "t1": 281.09,
+   "room": {
+    "plate": {
+     "img": "art/bg_window_view_dark.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.1,
      "aim": [
       0.5,
       0.45
      ]
     },
     "b": {
-     "zoom": 2.0,
+     "zoom": 1.3,
      "aim": [
       0.5,
       0.42
      ]
     },
     "ease": "linear"
-   }
+   },
+   "overlays": []
   },
   {
-   "t0": 324.6,
-   "t1": 327.4,
+   "t0": 281.09,
+   "t1": 283.35,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_hall_210_lv0.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 3159626
+    },
+    "who": [],
+    "tint": 3159626
+   },
+   "plateTint": 3159626,
+   "cam": {
+    "a": {
+     "zoom": 1.0,
+     "aim": [
+      0.6,
+      0.45
+     ]
+    },
+    "b": {
+     "zoom": 1.3,
+     "aim": [
+      0.7,
+      0.4
+     ]
+    }
+   },
+   "events": [],
+   "overlays": []
+  },
+  {
+   "t0": 283.35,
+   "t1": 284.75,
    "room": "rooms/corner_dark.json",
    "who": [
-    null,
     {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.5,
+     "aim": [
+      0.45,
+      0.55
+     ]
+    },
+    "b": {
+     "zoom": 1.55,
+     "aim": [
+      0.45,
+      0.55
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 283.35,
+     "t1": 284.75,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "black",
+     "alpha": 0.6,
+     "t0": 283.35,
+     "t1": 284.75,
+     "fadeIn": 0.2,
+     "fadeOut": 0.1
+    },
+    {
+     "type": "chat",
+     "t0": 283.35,
+     "t1": 284.75,
+     "msgs": [
+      {
+       "t": 247.5,
+       "name": "Marcus",
+       "text": "is this real??",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 247.8,
+       "name": "Jayden",
+       "text": "my mom is texting me",
+       "color": "#ffb86b"
+      },
+      {
+       "t": 248.1,
+       "name": "Ava",
+       "text": "is anyone hurt",
+       "color": "#c79bff"
+      },
+      {
+       "t": 248.4,
+       "name": "Leo",
+       "text": "pls someone say something",
+       "color": "#ffd36b"
+      },
+      {
+       "t": 248.7,
+       "name": "Mia",
+       "text": "we're in the gym closet",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 249.0,
+       "name": "Ethan",
+       "text": "omg omg omg",
+       "color": "#c79bff"
+      },
+      {
+       "t": 249.73,
+       "name": "Jayden",
+       "text": "Is anyone else hearing knocking?",
+       "color": "#ffb86b"
+      },
+      {
+       "t": 251.79,
+       "name": "Mia",
+       "text": "It's in the science wing.",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 253.22,
+       "name": "Ethan",
+       "text": "It said it was the nurse.",
+       "color": "#c79bff"
+      },
+      {
+       "t": 257.49,
+       "name": "Kayla \u00b7 Room 208",
+       "text": "Coach Reyes is outside. He says it's clear. We're opening.",
+       "color": "#ff8fb1",
+       "seen": 261.5
+      },
+      {
+       "t": 270.9,
+       "name": "Leo",
+       "text": "anyone??",
+       "color": "#ffd36b"
+      },
+      {
+       "t": 271.3,
+       "name": "Ava",
+       "text": "kayla answer",
+       "color": "#c79bff"
+      },
+      {
+       "t": 271.7,
+       "name": "Marcus",
+       "text": "KAYLA",
+       "color": "#7ee0a3"
+      },
+      {
+       "t": 272.38,
+       "name": "Sofia",
+       "text": "Something knocked on 204 in Mr. Kim's voice. Mr. Kim is IN 204.",
+       "color": "#ffd36b"
+      },
+      {
+       "t": 276.68,
+       "name": "Ethan",
+       "text": "It knows our names.",
+       "color": "#c79bff"
+      },
+      {
+       "t": 278.47,
+       "name": "Jayden",
+       "text": "Why is nobody coming?",
+       "color": "#ffb86b"
+      },
+      {
+       "t": 283.35,
+       "name": "Room 210",
+       "text": "Don't talk. It's listening. It only knows voices it's heard.",
+       "color": "#ff6b6b",
+       "alert": true
+      }
+     ],
+     "title": "Room 214 \ud83e\udd85",
+     "keep": 2,
+     "fadeIn": 0.2,
+     "fadeOut": 0.1
+    }
+   ]
+  },
+  {
+   "t0": 284.75,
+   "t1": 285.93,
+   "room": {
+    "plate": {
+     "img": "art/bg_hallway_side_dim.png",
+     "fov": 40,
+     "h": 0.887,
+     "pitch": 0,
+     "horizon": 0.69
+    },
+    "tint": 855829,
+    "who": [
+     {
+      "n": "deputy",
+      "view": "side",
+      "facing": -1,
+      "clip": "idle",
+      "at": [
+       0.4,
+       0.8
+      ]
+     }
+    ],
+    "name": "hallway_side"
+   },
+   "cam": {
+    "a": {
+     "zoom": 2.8,
+     "aim": [
+      0.4,
+      0.73
+     ]
+    },
+    "b": {
+     "zoom": 3.0,
+     "aim": [
+      0.4,
+      0.74
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "tube",
+     "glow": 0.0,
+     "stable": 0.88,
+     "alpha": 0.4,
+     "t0": 284.75,
+     "t1": 285.93,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 285.93,
+   "t1": 287.43,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "card": "hands_mouth",
+     "clip": "huddle",
      "opts": {
       "mood": "shiver",
       "intensity": 1.2
      }
     },
-    null,
     {
      "opts": {
-      "mood": "stare"
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 1.0
      }
     },
-    null,
-    null,
-    null
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "card": "shush",
+     "clip": "huddle",
+     "opts": {
+      "mood": "still"
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
    ],
    "cam": {
     "a": {
-     "zoom": 2.5,
-     "aim": [
-      0.45,
-      0.52
-     ]
+     "zoom": 1.05
     },
     "b": {
-     "zoom": 2.7,
+     "zoom": 1.12,
      "aim": [
-      0.45,
+      0.5,
       0.52
      ]
     }
-   }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 285.93,
+     "t1": 287.43,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "glow",
+     "t0": 285.93,
+     "t1": 287.43,
+     "spots": [
+      [
+       0.25,
+       0.64,
+       230
+      ],
+      [
+       0.165,
+       0.64,
+       230
+      ],
+      [
+       0.34,
+       0.64,
+       230
+      ],
+      [
+       0.45,
+       0.66,
+       230
+      ],
+      [
+       0.555,
+       0.66,
+       230
+      ],
+      [
+       0.66,
+       0.66,
+       230
+      ]
+     ],
+     "fadeIn": 0.4,
+     "fadeOut": 0.1
+    }
+   ]
   },
   {
-   "t0": 327.4,
-   "t1": 336.2,
+   "t0": 287.43,
+   "t1": 288.99,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "glance"
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.6,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.9,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 287.43,
+     "t1": 288.99,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 288.99,
+   "t1": 289.4,
    "room": {
     "plate": {
-     "img": "art/bg_door_close.png",
+     "img": "art/plate_door_hall_214.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 15262940
+    },
+    "who": [
+     {
+      "n": "parent_b",
+      "view": "side",
+      "facing": 1,
+      "clip": "knock",
+      "at": [
+       0.215,
+       0.985
+      ],
+      "face": {
+       "eyes": "open",
+       "mouth": "grin"
+      }
+     }
+    ],
+    "tint": 15262940
+   },
+   "filter": "saturate(1.3) sepia(0.3) hue-rotate(-25deg) brightness(0.85)",
+   "warm": 0.35,
+   "cam": {
+    "a": {
+     "zoom": 1.0
+    },
+    "b": {
+     "zoom": 1.04
+    }
+   },
+   "overlays": [
+    {
+     "type": "flash",
+     "t0": 288.99,
+     "t1": 289.11,
+     "fadeIn": 0.01,
+     "fadeOut": 0.1,
+     "alpha": 0.6
+    }
+   ]
+  },
+  {
+   "t0": 289.4,
+   "t1": 289.8,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_hall_214.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 15262940
+    },
+    "who": [
+     {
+      "n": "kid_b",
+      "view": "side",
+      "facing": 1,
+      "clip": "knock",
+      "at": [
+       0.215,
+       0.985
+      ],
+      "face": {
+       "eyes": "open",
+       "mouth": "grin"
+      }
+     }
+    ],
+    "tint": 15262940
+   },
+   "filter": "saturate(1.3) sepia(0.3) hue-rotate(-25deg) brightness(0.85)",
+   "warm": 0.35,
+   "cam": {
+    "a": {
+     "zoom": 1.0
+    },
+    "b": {
+     "zoom": 1.04
+    }
+   },
+   "overlays": [
+    {
+     "type": "flash",
+     "t0": 289.4,
+     "t1": 289.52,
+     "fadeIn": 0.01,
+     "fadeOut": 0.1,
+     "alpha": 0.6
+    }
+   ]
+  },
+  {
+   "t0": 289.8,
+   "t1": 290.15,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_hall_214.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 15262940
+    },
+    "who": [
+     {
+      "n": "mom",
+      "view": "side",
+      "facing": 1,
+      "clip": "knock",
+      "at": [
+       0.215,
+       0.985
+      ],
+      "face": {
+       "eyes": "open",
+       "mouth": "grin"
+      }
+     }
+    ],
+    "tint": 15262940
+   },
+   "filter": "saturate(1.3) sepia(0.3) hue-rotate(-25deg) brightness(0.85)",
+   "warm": 0.35,
+   "cam": {
+    "a": {
+     "zoom": 1.0
+    },
+    "b": {
+     "zoom": 1.04
+    }
+   },
+   "overlays": [
+    {
+     "type": "flash",
+     "t0": 289.8,
+     "t1": 289.92,
+     "fadeIn": 0.01,
+     "fadeOut": 0.1,
+     "alpha": 0.6
+    }
+   ]
+  },
+  {
+   "t0": 290.15,
+   "t1": 292.71,
+   "room": {
+    "plate": {
+     "img": "art/bg_door_close_full.png",
      "fov": 40,
      "h": 0.92,
      "pitch": 0,
@@ -784,53 +3313,849 @@
      "zoom": 1.2,
      "aim": [
       0.45,
-      0.7
+      0.6
      ]
     },
     "b": {
-     "zoom": 2.1,
+     "zoom": 1.6,
      "aim": [
       0.45,
-      0.84
+      0.72
      ]
     },
-    "ease": "linear",
-    "kicks": [
-     333.1
-    ],
-    "kick": 0.4
-   }
+    "ease": "linear"
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.97,
+     "rx": 38,
+     "ry": 14,
+     "glow": 0.18,
+     "color": "255,220,160",
+     "dark": 0.4,
+     "t0": 290.15,
+     "t1": 292.71,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
   },
   {
-   "t0": 336.2,
-   "t1": 342.0,
+   "t0": 292.71,
+   "t1": 294.15,
+   "room": {
+    "plate": {
+     "img": "art/bg_intercom.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 2501434
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.8,
+     "aim": [
+      0.47,
+      0.47
+     ]
+    },
+    "b": {
+     "zoom": 2.2,
+     "aim": [
+      0.47,
+      0.47
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 294.15,
+   "t1": 296.17,
+   "room": {
+    "plate": {
+     "img": "art/bg_hallway_side_dim.png",
+     "fov": 40,
+     "h": 0.887,
+     "pitch": 0,
+     "horizon": 0.69
+    },
+    "tint": 855829,
+    "who": [
+     {
+      "n": "deputy",
+      "view": "side",
+      "facing": -1,
+      "clip": "idle",
+      "at": [
+       0.4,
+       0.8
+      ]
+     }
+    ],
+    "name": "hallway_side"
+   },
+   "cam": {
+    "a": {
+     "zoom": 2.6,
+     "aim": [
+      0.42,
+      0.72
+     ]
+    },
+    "b": {
+     "zoom": 3.1,
+     "aim": [
+      0.4,
+      0.74
+     ]
+    },
+    "ease": "linear"
+   },
+   "overlays": [
+    {
+     "type": "tube",
+     "glow": 0.0,
+     "stable": 0.88,
+     "alpha": 0.4,
+     "t0": 294.15,
+     "t1": 296.17,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 296.17,
+   "t1": 297.47,
    "room": "rooms/corner_dark.json",
    "who": [
     {
      "opts": {
-      "mood": "shake",
-      "intensity": 1.2
+      "mood": "whisper"
      }
     },
     {
      "opts": {
-      "mood": "terror",
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
       "intensity": 1.0
      }
     },
     {
      "opts": {
-      "mood": "shock"
+      "mood": "whisper"
      }
     },
-    null,
-    null,
-    null,
-    null
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "whisper"
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.3,
+     "aim": [
+      0.35,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 1.4,
+     "aim": [
+      0.4,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 296.17,
+     "t1": 297.47,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 297.47,
+   "t1": 300.1,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "sob",
+      "intensity": 0.6
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
    ],
    "cam": {
     "a": {
      "zoom": 2.5,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.9,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 297.47,
+     "t1": 300.1,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 300.1,
+   "t1": 302.35,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.4,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.5,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 300.1,
+     "t1": 302.35,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "black",
+     "alpha": 0.6,
+     "t0": 300.1,
+     "t1": 302.35,
+     "fadeIn": 0.2,
+     "fadeOut": 0.1
+    },
+    {
+     "type": "chat",
+     "t0": 300.1,
+     "t1": 302.35,
+     "msgs": [
+      {
+       "t": 300.2,
+       "text": "are you ok"
+      },
+      {
+       "t": 300.37,
+       "text": "baby answer me"
+      },
+      {
+       "t": 300.53999999999996,
+       "text": "i saw the news"
+      },
+      {
+       "t": 300.71,
+       "text": "is it your school"
+      },
+      {
+       "t": 300.88,
+       "text": "please answer"
+      },
+      {
+       "t": 301.05,
+       "text": "Dong??"
+      },
+      {
+       "t": 301.21999999999997,
+       "text": "are you safe"
+      },
+      {
+       "t": 301.39,
+       "text": "call me"
+      },
+      {
+       "t": 301.56,
+       "text": "im coming"
+      },
+      {
+       "t": 301.72999999999996,
+       "text": "they wont let us in"
+      },
+      {
+       "t": 301.9,
+       "text": "please"
+      },
+      {
+       "t": 302.07,
+       "text": "i love you"
+      }
+     ],
+     "title": "Mom \u2764\ufe0f  (12)",
+     "keep": 8,
+     "fadeIn": 0.2,
+     "fadeOut": 0.1
+    }
+   ]
+  },
+  {
+   "t0": 302.35,
+   "t1": 303.34,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.4,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.5,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 302.35,
+     "t1": 303.34,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "black",
+     "alpha": 0.6,
+     "t0": 302.35,
+     "t1": 303.34,
+     "fadeIn": 0.2,
+     "fadeOut": 0.1
+    },
+    {
+     "type": "call",
+     "t0": 302.35,
+     "t1": 303.34,
+     "name": "Mom",
+     "initial": "M",
+     "fadeIn": 0.15,
+     "fadeOut": 0.1
+    }
+   ]
+  },
+  {
+   "t0": 303.34,
+   "t1": 304.03,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "intensity": 0.5,
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ]
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.9,
      "aim": [
       0.165,
       0.5
@@ -846,10 +4171,1513 @@
    },
    "overlays": [
     {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 303.34,
+     "t1": 304.03,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 304.03,
+   "t1": 307.54,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "card": "phone_whisper",
+     "clip": "huddle",
+     "opts": {
+      "mood": "shiver",
+      "intensity": 0.5
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.4,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.8,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 304.03,
+     "t1": 307.54,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 307.54,
+   "t1": 310.22,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.4
+     },
+     "lip": "c3_15",
+     "lipGain": 1.5
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 3.6,
+     "aim": [
+      0.165,
+      0.53
+     ]
+    },
+    "b": {
+     "zoom": 3.8,
+     "aim": [
+      0.165,
+      0.53
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 307.54,
+     "t1": 310.22,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "glow",
+     "t0": 307.54,
+     "t1": 310.22,
+     "spots": [
+      [
+       0.36,
+       0.62,
+       420
+      ]
+     ],
+     "fadeIn": 0.2,
+     "fadeOut": 0.1
+    }
+   ]
+  },
+  {
+   "t0": 310.22,
+   "t1": 312.49,
+   "room": {
+    "plate": {
+     "img": "art/bg_kitchen_mom.png",
+     "fov": 40,
+     "h": 1.017,
+     "pitch": 0,
+     "horizon": 0.76
+    },
+    "tint": 16777215,
+    "who": [
+     {
+      "n": "mom",
+      "at": [
+       0.5,
+       0.8
+      ],
+      "card": "phone_live",
+      "clip": "huddle",
+      "opts": {
+       "mood": "holdcry"
+      }
+     }
+    ],
+    "name": "kitchen_mom"
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.6,
+     "aim": [
+      0.5,
+      0.4
+     ]
+    },
+    "b": {
+     "zoom": 1.9,
+     "aim": [
+      0.5,
+      0.38
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 312.49,
+   "t1": 319.79,
+   "room": {
+    "plate": {
+     "img": "art/bg_kitchen_mom.png",
+     "fov": 40,
+     "h": 1.017,
+     "pitch": 0,
+     "horizon": 0.76
+    },
+    "tint": 16777215,
+    "who": [
+     {
+      "n": "mom",
+      "at": [
+       0.5,
+       0.8
+      ],
+      "card": "phone_live",
+      "clip": "huddle",
+      "opts": {
+       "mood": "holdcry"
+      }
+     }
+    ],
+    "name": "kitchen_mom"
+   },
+   "cam": {
+    "a": {
+     "zoom": 2.0,
+     "aim": [
+      0.5,
+      0.38
+     ]
+    },
+    "b": {
+     "zoom": 2.6,
+     "aim": [
+      0.5,
+      0.34
+     ]
+    },
+    "ease": "linear"
+   },
+   "overlays": []
+  },
+  {
+   "t0": 319.79,
+   "t1": 321.96,
+   "room": {
+    "plate": {
+     "img": "art/bg_kitchen_mom.png",
+     "fov": 40,
+     "h": 1.017,
+     "pitch": 0,
+     "horizon": 0.76
+    },
+    "tint": 16777215,
+    "who": [
+     {
+      "n": "mom",
+      "at": [
+       0.5,
+       0.8
+      ],
+      "card": "phone_live",
+      "clip": "huddle",
+      "opts": {
+       "mood": "holdcry"
+      },
+      "lip": "c3_16",
+      "lipSpans": [
+       [
+        320.92,
+        321.96
+       ]
+      ],
+      "lipGain": 1.4
+     }
+    ],
+    "name": "kitchen_mom"
+   },
+   "cam": {
+    "a": {
+     "zoom": 2.7,
+     "aim": [
+      0.5,
+      0.33
+     ]
+    },
+    "b": {
+     "zoom": 2.8,
+     "aim": [
+      0.5,
+      0.33
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 321.96,
+   "t1": 322.9,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.4,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.5,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 321.96,
+     "t1": 322.9,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
      "type": "black",
-     "t0": 341.3,
+     "alpha": 0.6,
+     "t0": 321.96,
+     "t1": 322.9,
+     "fadeIn": 0.2,
+     "fadeOut": 0.1
+    },
+    {
+     "type": "call",
+     "t0": 321.96,
+     "t1": 322.9,
+     "name": "Mom",
+     "initial": "M",
+     "answer": 307.4,
+     "end": 322.46,
+     "fadeIn": 0.05,
+     "fadeOut": 0.1
+    }
+   ]
+  },
+  {
+   "t0": 322.9,
+   "t1": 324.79,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "sob",
+      "intensity": 1.2
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.6,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.9,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 322.9,
+     "t1": 324.79,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 324.79,
+   "t1": 327.5,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "stare",
+      "look": -1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.0,
+     "aim": [
+      0.32,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.2,
+     "aim": [
+      0.34,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 324.79,
+     "t1": 327.5,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 327.5,
+   "t1": 329.13,
+   "room": {
+    "plate": {
+     "img": "art/bg_hallway_dim.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97
+    },
+    "who": []
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.0
+    },
+    "b": {
+     "zoom": 1.5,
+     "aim": [
+      0.75,
+      0.45
+     ]
+    },
+    "ease": "in"
+   },
+   "overlays": [
+    {
+     "type": "tube",
+     "glow": 0.0,
+     "stable": 0.88,
+     "alpha": 0.4,
+     "t0": 327.5,
+     "t1": 329.13,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    },
+    {
+     "type": "pool",
+     "x": 0.5,
+     "y": 0.33,
+     "rx": 6,
+     "ry": 8,
+     "glow": 0.22,
+     "color": "255,70,60",
+     "t0": 327.5,
+     "t1": 329.13,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 329.13,
+   "t1": 330.32,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_hall_214.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 329224
+    },
+    "who": [
+     {
+      "n": "deputy",
+      "view": "side",
+      "facing": 1,
+      "clip": "idle",
+      "at": [
+       0.2,
+       0.985
+      ]
+     }
+    ],
+    "tint": 329224
+   },
+   "plateTint": 3159626,
+   "cam": {
+    "a": {
+     "zoom": 2.4,
+     "aim": [
+      0.32,
+      0.82
+     ]
+    },
+    "b": {
+     "zoom": 2.5,
+     "aim": [
+      0.32,
+      0.82
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 330.32,
+   "t1": 333.03,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_shift_0.png",
+     "fov": 40,
+     "h": 0.92,
+     "pitch": 0,
+     "horizon": 0.83,
+     "holdouts": [
+      {
+       "mask": "masks/door_close_8.png",
+       "base": 0.8535,
+       "u": 0.9451
+      },
+      {
+       "mask": "masks/door_close_9.png",
+       "base": 0.9932,
+       "u": 0.1063
+      }
+     ]
+    },
+    "tint": 8884397,
+    "who": [],
+    "name": "door_close"
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.4,
+     "aim": [
+      0.45,
+      0.74
+     ]
+    },
+    "b": {
+     "zoom": 1.9,
+     "aim": [
+      0.45,
+      0.82
+     ]
+    },
+    "ease": "linear"
+   },
+   "overlays": []
+  },
+  {
+   "t0": 333.03,
+   "t1": 334.18,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_shift_0.png",
+     "fov": 40,
+     "h": 0.92,
+     "pitch": 0,
+     "horizon": 0.83,
+     "holdouts": [
+      {
+       "mask": "masks/door_close_8.png",
+       "base": 0.8535,
+       "u": 0.9451
+      },
+      {
+       "mask": "masks/door_close_9.png",
+       "base": 0.9932,
+       "u": 0.1063
+      }
+     ]
+    },
+    "tint": 8884397,
+    "who": [],
+    "name": "door_close"
+   },
+   "events": [
+    {
+     "t": 333.1,
+     "plate": "art/plate_door_shift_1.png"
+    },
+    {
+     "t": 333.19,
+     "plate": "art/plate_door_shift_2.png"
+    },
+    {
+     "t": 333.28,
+     "plate": "art/plate_door_shift_3.png"
+    },
+    {
+     "t": 333.37,
+     "plate": "art/plate_door_shift_4.png"
+    },
+    {
+     "t": 333.46,
+     "plate": "art/plate_door_shift_5.png"
+    },
+    {
+     "t": 333.55,
+     "plate": "art/plate_door_shift_6.png"
+    },
+    {
+     "t": 333.64,
+     "plate": "art/plate_door_shift_7.png"
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 1.9,
+     "aim": [
+      0.45,
+      0.82
+     ]
+    },
+    "b": {
+     "zoom": 1.95,
+     "aim": [
+      0.45,
+      0.82
+     ]
+    },
+    "kicks": [
+     333.1
+    ],
+    "kick": 0.5
+   },
+   "overlays": []
+  },
+  {
+   "t0": 334.18,
+   "t1": 336.33,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_shift_7.png",
+     "fov": 40,
+     "h": 0.92,
+     "pitch": 0,
+     "horizon": 0.83,
+     "holdouts": [
+      {
+       "mask": "masks/door_close_8.png",
+       "base": 0.8535,
+       "u": 0.9451
+      },
+      {
+       "mask": "masks/door_close_9.png",
+       "base": 0.9932,
+       "u": 0.1063
+      }
+     ]
+    },
+    "tint": 8884397,
+    "who": [],
+    "name": "door_close"
+   },
+   "cam": {
+    "a": {
+     "zoom": 1.5,
+     "aim": [
+      0.45,
+      0.7
+     ]
+    },
+    "b": {
+     "zoom": 1.2,
+     "aim": [
+      0.45,
+      0.6
+     ]
+    },
+    "ease": "linear"
+   },
+   "overlays": []
+  },
+  {
+   "t0": 336.33,
+   "t1": 338.09,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "intensity": 1.2,
+      "list": [
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver"
+      ]
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "cam": {
+    "a": {
+     "zoom": 2.6,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 3.1,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 336.33,
+     "t1": 338.09,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 338.09,
+   "t1": 338.97,
+   "room": "rooms/corner_dark.json",
+   "who": [
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "card": "phone_whisper",
+     "clip": "huddle",
+     "opts": {
+      "mood": "shiver",
+      "intensity": 0.5
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "shock",
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "sob",
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "lookaround",
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob"
+      ],
+      "intensity": 1.1
+     }
+    },
+    {
+     "opts": {
+      "mood": "fear",
+      "list": [
+       "headshake",
+       "shake",
+       "shiver",
+       "terror",
+       "shock",
+       "sob",
+       "lookaround"
+      ],
+      "intensity": 1.0
+     }
+    },
+    {
+     "opts": {
+      "mood": "shake",
+      "intensity": 0.7
+     },
+     "pos": [
+      1.45,
+      0,
+      0
+     ],
+     "wall": 1.5
+    }
+   ],
+   "filter": "saturate(1.3) sepia(0.3) hue-rotate(-25deg) brightness(0.85)",
+   "cam": {
+    "a": {
+     "zoom": 2.6,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    },
+    "b": {
+     "zoom": 2.7,
+     "aim": [
+      0.165,
+      0.5
+     ]
+    }
+   },
+   "overlays": [
+    {
+     "type": "pool",
+     "x": 0.45,
+     "y": 0.55,
+     "rx": 60,
+     "ry": 65,
+     "glow": 0.0,
+     "dark": 0.5,
+     "blue": 25,
+     "t0": 338.09,
+     "t1": 338.97,
+     "fadeIn": 0.01,
+     "fadeOut": 0.01,
+     "follow": true
+    }
+   ]
+  },
+  {
+   "t0": 338.97,
+   "t1": 339.77,
+   "room": {
+    "plate": {
+     "img": "art/bg_kitchen_mom.png",
+     "fov": 40,
+     "h": 1.017,
+     "pitch": 0,
+     "horizon": 0.76
+    },
+    "tint": 16777215,
+    "who": [
+     {
+      "n": "mom",
+      "at": [
+       0.5,
+       0.8
+      ],
+      "card": "phone_live",
+      "clip": "huddle",
+      "opts": {
+       "mood": "holdcry"
+      }
+     }
+    ],
+    "name": "kitchen_mom"
+   },
+   "filter": "saturate(1.3) sepia(0.3) hue-rotate(-25deg) brightness(0.85)",
+   "cam": {
+    "a": {
+     "zoom": 2.4,
+     "aim": [
+      0.5,
+      0.35
+     ]
+    },
+    "b": {
+     "zoom": 2.5,
+     "aim": [
+      0.5,
+      0.35
+     ]
+    }
+   },
+   "overlays": []
+  },
+  {
+   "t0": 339.77,
+   "t1": 342.0,
+   "room": {
+    "plate": {
+     "img": "art/plate_door_hall_214.png",
+     "fov": 40,
+     "h": 1.0,
+     "pitch": 0,
+     "horizon": 0.97,
+     "tint": 3159626
+    },
+    "who": []
+   },
+   "filter": "saturate(1.3) sepia(0.3) hue-rotate(-25deg) brightness(0.85)",
+   "cam": {
+    "a": {
+     "zoom": 1.8,
+     "aim": [
+      0.76,
+      0.29
+     ]
+    },
+    "b": {
+     "zoom": 2.6,
+     "aim": [
+      0.76,
+      0.29
+     ]
+    },
+    "ease": "in"
+   },
+   "overlays": [
+    {
+     "type": "black",
+     "t0": 341.2,
      "t1": 342.1,
-     "fadeIn": 0.6,
+     "fadeIn": 0.7,
      "fadeOut": 0.01
     }
    ]

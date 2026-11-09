@@ -1,4 +1,17 @@
 {
+ "phone_live": {
+  "file": "cards/phone_live.webp",
+  "w": 337,
+  "h": 1128,
+  "height_m": 1.37,
+  "head": {
+   "at": [
+    43.0,
+    14
+   ],
+   "behind": true
+  }
+ },
  "phone_ear": {
   "file": "cards/phone_ear.webp",
   "w": 398,

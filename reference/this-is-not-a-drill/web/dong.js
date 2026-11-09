@@ -188,7 +188,7 @@
       this.cardMesh = cardMesh(t, c.w, c.h, 1, k); this.cardMesh.position.y = c.h * k / 2; this.cardBody.add(this.cardMesh); if (this.tint) this.cardMesh.material.color.copy(this.tint);
       this.cardHead = null;
       if (c.head && this.front) {   // a headless pose: the live head goes back on at the collar, so the face can still act
-        const s = 370 / 380, pv = new THREE.Object3D(); pv.position.set((c.head.at[0] - c.w / 2) * k, (c.h - c.head.at[1]) * k, 0.006);
+        const s = 370 / 380, pv = new THREE.Object3D(); pv.position.set((c.head.at[0] - c.w / 2) * k, (c.h - c.head.at[1]) * k, c.head.behind ? -0.006 : 0.006);   // head.behind: hands and phone held up to the face stay in front of it
         const hm = cardMesh(this.front.tex, 512 * s, 512 * s, 1, k); hm.position.set(0, (452 - 256) * s * k, 0); pv.add(hm); this.cardBody.add(pv); this.cardHead = pv;
         pv.userData.x0 = pv.position.x; pv.userData.y0 = pv.position.y;
         if (this.tint) hm.material.color.copy(this.tint);
@@ -493,6 +493,9 @@
           const list = o.list || ['shiver', 'terror', 'shock', 'sob', 'lookaround', 'headshake', 'shake'];
           const idx = Math.floor(t / (o.every || 2)) % list.length;
           return CLIPS.huddle.fn(t, { ...o, mood: list[idx] }); }
+        case 'holdcry': {   // trying not to cry: fast shallow breaths, eyes welling, lips pressed tight, a wobble now and then
+          const br = S(t * 9.5), wob = S(t * 0.9) > 0.75 ? 1 : 0;
+          return { body: { sy: 1 + 0.012 * br, y: 0.002 * br, x: j(0.001, 50) }, head: { rz: 1.5 * S(t * 1.1) + 2 * wob * S(t * 30) }, face: { eyes: wob ? 'cry' : 'open', brows: 'worried', mouth: 'flat', tears: 1, tearT: tear } }; }
         case 'calm': return { body: { sy: 1 + 0.008 * S(t * 1.6) }, head: { rz: 2 * S(t * 0.5) }, face: { eyes: 'open', mouth: null, look: 0.4 * S(t * 0.3) } };
         case 'spooky': return { body: { rz: 2 * S(t * 1.4) }, head: { rz: -6 }, face: { eyes: 'creepy', brows: 'up', mouth: 'grin', open: 0.2 + 0.3 * Math.abs(S(t * 9)) } };
         case 'stare': { const lk = o.look ?? -1; return { body: { x: 0.0008 * S(t * 50) }, head: { rz: 4 * lk }, face: { eyes: o.blank ? 'open' : 'angry', brows: o.blank ? 'worried' : 'angry', mouth: 'flat', look: lk } }; }

@@ -71,6 +71,19 @@
    ]
   }
  },
+ "phone_live": {
+  "file": "cards/phone_live.webp",
+  "w": 436,
+  "h": 691,
+  "height_m": 0.839,
+  "head": {
+   "at": [
+    39.0,
+    14
+   ],
+   "behind": true
+  }
+ },
  "sit_desk": {
   "file": "cards/sit_desk.webp",
   "w": 610,
@@ -82,6 +95,12 @@
   "w": 440,
   "h": 931,
   "height_m": 1.131
+ },
+ "phone_whisper": {
+  "file": "cards/phone_whisper.webp",
+  "w": 457,
+  "h": 944,
+  "height_m": 1.146
  },
  "crawl": {
   "file": "cards/crawl.webp",

@@ -59,6 +59,18 @@
   "h": 942,
   "height_m": 1.144
  },
+ "floor_phone": {
+  "file": "cards/floor_phone.webp",
+  "w": 420,
+  "h": 922,
+  "height_m": 1.12
+ },
+ "confiscate": {
+  "file": "cards/confiscate.webp",
+  "w": 474,
+  "h": 1351,
+  "height_m": 1.64
+ },
  "sit_floor_knees": {
   "file": "cards/sit_floor_knees.webp",
   "w": 421,

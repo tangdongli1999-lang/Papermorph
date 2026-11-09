@@ -1526,5 +1526,72 @@
    "/home/claude/lockdown/art/out/dawes.png"
   ],
   "1536x1024"
+ ],
+ "dong_uni_phone_whisper": [
+  "Edit image 1 so it shows the same boy sitting on the floor with his knees up, hunched, holding a smartphone to his right ear, and his LEFT hand cupped around the bottom end of the phone beside his cheek to muffle it \u2014 the hand is next to his jaw, NOT covering his mouth, so his mouth stays fully visible. Scared, eyes wide and teary. The character must look EXACTLY like image 1 (same face, hair, clothes, colours, proportions, same size on the canvas). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_sit_floor.png"
+  ],
+  "1024x1536"
+ ],
+ "mom_phone_ear_headless": [
+  "Edit image 1. Keep EVERYTHING exactly the same \u2014 the same pose, size, position, body, arms, hands, phone, legs, clothes and shoes \u2014 but REMOVE the head, hair and neck completely, so the shirt collar is empty at the top. Nothing above the collar. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/mom_phone_ear.png"
+  ],
+  "1024x1536"
+ ],
+ "harlow_floor_phone": [
+  "Edit image 1 so it shows the same teacher crouched low on the floor (same crouch as image 1), holding her own smartphone in both hands at chest height, looking down at the glowing screen, worried. The character must look EXACTLY like image 1 (same face, hair, clothes, colours, proportions, same size on the canvas). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/harlow_sit_floor.png"
+  ],
+  "1024x1536"
+ ],
+ "bg_phone_lap": [
+  "Create a new image, wide 16:9. A close-up inside a DARK classroom (lights off, grey-blue): a student sitting on the floor in a navy and white school uniform, knees pulled up; tucked UNDER the knees, between the shins, a smartphone screen glows bright white-blue, the light spilling on the hands holding it and the inside of the knees. Only knees, shins, hands and the phone in frame, no face. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, slightly muted colours.",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/plate_corner_dark.png",
+   "/home/claude/lockdown/art/out/dong_uni_sit_floor.png"
+  ],
+  "1536x1024"
+ ],
+ "bg_phone_sleeve": [
+  "Create a new image, wide 16:9. A close-up inside a DARK classroom (lights off, grey-blue): a student's forearm in a navy school cardigan sleeve pulled down over the hand, and a smartphone hidden inside the sleeve, its screen glowing through the cuff opening, lighting the knit of the sleeve white-blue. The arm rests on bent knees in navy uniform trousers. No face. Draw it in EXACTLY the flat handmade felt and paper cut-out craft style of the reference images: soft felt and paper textures, simple flat shapes, layered paper pieces, no outlines, slightly muted colours.",
+  [
+   "/home/claude/dong/ref/style_dani.jpg",
+   "/home/claude/lockdown/art/out/plate_corner_dark.png",
+   "/home/claude/lockdown/art/out/dong_uni_sit_floor.png"
+  ],
+  "1536x1024"
+ ],
+ "plate_door_hall_208_open": [
+  "Edit image 1. Keep EXACTLY the same picture, camera, framing, wall, lockers, door frame, the '208' plaque, colours and felt paper style. Change ONLY the door: it now stands half OPEN, swung inward into the classroom, showing a dark gap of black-blue shadow inside the room; the lever handle is on the open edge. The room beyond is dark and empty-looking. Nothing else changes.",
+  [
+   "/home/claude/lockdown/art/out/plate_door_hall_208.png"
+  ],
+  "1536x1024"
+ ],
+ "dong_uni_phone_whisper_headless": [
+  "Edit image 1. Keep EVERYTHING exactly the same \u2014 the same pose, size, position, body, arms, both hands, the phone, legs, clothes and shoes \u2014 but REMOVE the head, beanie, glasses, hair and neck completely, so the shirt collar is empty at the top. Keep the hand holding the phone and the cupped hand exactly where they are, floating beside where the head was. Nothing else above the collar. Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/dong_uni_phone_whisper.png"
+  ],
+  "1024x1536"
+ ],
+ "bg_phone_lap2": [
+  "Edit image 1 (keep its exact felt and paper cut-out style, colours and dark lights-off classroom lighting). Make a CLOSE-UP insert, wide 16:9: we see ONLY a student's two bent knees in navy uniform trousers filling the frame, from the side, and between the knees and the chest, hidden under the knees, two hands holding a SMARTPHONE whose screen glows bright white-blue, the glow lighting the inside of the knees and the fingers. No face, no head, no full body. The dark classroom floor behind.",
+  [
+   "/home/claude/lockdown/art/out/bg_phone_sleeve.png"
+  ],
+  "1536x1024"
+ ],
+ "harlow_confiscate": [
+  "Edit image 1 so it shows the same teacher standing, front view, a stern but kind 'hand it over' look, one hand held out palm-up asking for a phone, the other hand holding up a confiscated student smartphone at shoulder height. The character must look EXACTLY like image 1 (same face, hair, clothes, colours, proportions, same size on the canvas). Keep EXACTLY the same flat handmade felt paper cut-out style, felt texture, flat even lighting, plain cream background (#f3ecdf), no shadows, no outlines, no text. ",
+  [
+   "/home/claude/lockdown/art/out/harlow.png"
+  ],
+  "1024x1536"
  ]
 }

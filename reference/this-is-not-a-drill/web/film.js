@@ -115,7 +115,7 @@
       const a = Math.min(1, (t - o.t0) / (o.fadeIn ?? 0.4), (o.t1 - t) / (o.fadeOut ?? 0.4));
       if (o.type === 'title') html += `<div class="title" style="opacity:${a}">${o.text}</div>`;
       if (o.type === 'type') { const n = Math.floor((t - o.t0) * (o.cps || 14)); html += `<div class="typed" style="opacity:${a}">${o.text.slice(0, n)}<span class="cur">${n < o.text.length || Math.floor(t * 2) % 2 ? '▌' : ''}</span></div>`; }
-      if (o.type === 'phone') { const on = t > (o.flip ?? o.t0); html += `<div class="phone" style="opacity:${a}"><div class="ph-time">10:14</div><div class="ph-toggle ${on ? 'on' : ''}"><span>🔕</span> ${on ? 'Silent mode on' : 'Ring'}</div></div>`; }
+      if (o.type === 'phone') { const on = t > (o.flip ?? o.t0); html += `<div class="phone" style="opacity:${a}"><div class="ph-time">${o.time || '10:14'}</div><div class="ph-toggle ${on ? 'on' : ''}"><span>🔕</span> ${on ? 'Silent mode on' : 'Ring'}</div></div>`; }
       const X = v => (v * 1920).toFixed(0) + 'px', Y = v => (v * 1080).toFixed(0) + 'px';
       if (o.follow && cur.view) { const z = cur.view.zoom; o = { ...o, x: 0.5 + ((o.x ?? 0.5) - cur.view.aim[0]) * z, y: 0.5 + ((o.y ?? 0.5) - cur.view.aim[1]) * z, size: (o.size || 64) * z, rx: o.rx != null ? o.rx * z : o.rx, ry: o.ry != null ? o.ry * z : o.ry }; }
       if (o.type === 'text') html += `<div class="otext ${o.cls || ''}" style="opacity:${a * (o.alpha ?? 1)};left:${X(o.x ?? 0.5)};top:${Y(o.y ?? 0.5)};font-size:${o.size || 64}px;color:${o.color || '#fff'};transform:translate(-50%,-50%) ${o.rot ? 'rotate(' + o.rot + 'deg)' : ''}">${o.text}</div>`;
@@ -155,6 +155,9 @@
           const html2 = cur.map(w => t >= w[0] ? `<span style="opacity:${Math.min(1, (t - w[0]) / 0.08)};${w === said[said.length - 1] ? 'color:' + (o.hot || '#ff2a2a') + ';text-shadow:0 0 18px rgba(255,0,0,.75),0 3px 0 #000' : ''}">${w[1]}</span>` : '').join(' ');
           html += `<div class="words" style="opacity:${a};left:${X(o.x ?? 0.5)};top:${Y(o.y ?? 0.5)};font-size:${o.size || 84}px;color:${o.color || '#c4161c'}">${html2}</div>`;
         } }
+      if (o.type === 'call') {   // a phone held up: 'Calling <name>…', then a running call timer once answered (o.answer), 'Call ended' after o.end
+        const st = o.end && t >= o.end ? 'Call ended' : o.answer && t >= o.answer ? (() => { const s2 = Math.floor(t - o.answer); return `0:${String(s2).padStart(2, '0')}`; })() : 'Calling' + '.'.repeat(1 + Math.floor(t * 2) % 3);
+        html += `<div class="call" style="opacity:${a}"><div class="call-av">${o.initial || 'M'}</div><div class="call-name">${o.name || 'Mom'}</div><div class="call-st">${st}</div><div class="call-red"></div></div>`; }
       if (o.type === 'black') html += `<div class="black" style="opacity:${a * (o.alpha ?? 1)}"></div>`;
       if (o.type === 'flash') html += `<div class="flash" style="opacity:${a * (o.alpha ?? 0.8)}"></div>`;
     }
