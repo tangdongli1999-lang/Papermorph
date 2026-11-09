@@ -102,6 +102,12 @@
   "h": 944,
   "height_m": 1.146
  },
+ "phone_discreet": {
+  "file": "cards/phone_discreet.webp",
+  "w": 454,
+  "h": 811,
+  "height_m": 0.985
+ },
  "crawl": {
   "file": "cards/crawl.webp",
   "w": 732,

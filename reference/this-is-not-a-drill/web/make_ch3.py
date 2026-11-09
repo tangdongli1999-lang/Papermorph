@@ -118,16 +118,14 @@ for t in (275.62, 276.68, 278.47): sfx(t, 'buzz', 0.5)
 F.shot(279.4, 281.09, flat('bg_window_view_dark'), cam={'a': {'zoom': 1.1, 'aim': [0.5, 0.45]}, 'b': {'zoom': 1.3, 'aim': [0.5, 0.42]}, 'ease': 'linear'})
 # 281.09 "Then a message from someone in 210."
 hdoor('210', 281.09, 283.35, {'a': {'zoom': 1.0, 'aim': [0.6, 0.45]}, 'b': {'zoom': 1.3, 'aim': [0.7, 0.4]}})
-# 283.35 "Don't talk."
-F.shot(283.35, 284.75, CORNER, who=huddle(**AFRAID), cam={'a': {'zoom': 1.5, 'aim': [0.45, 0.55]}, 'b': {'zoom': 1.55, 'aim': [0.45, 0.55]}},
-       overlays=[DIM(283.35, 284.75), chat(283.35, 284.75, MSG3 + [R210], keep=2)])
-sfx(283.36, 'buzz', 0.6)
-# 284.75 "It's listening." - out in the hallway, the dark legs standing perfectly still
-F.shot(284.75, 285.93, legs_standing(0.4), cam={'a': {'zoom': 2.8, 'aim': [0.4, 0.73]}, 'b': {'zoom': 3.0, 'aim': [0.4, 0.74]}})
-# 285.93 "It only knows voices it's heard." - everyone in the corner shuts their mouth; Ms. Harlow's finger on her lips
-SH = huddle(**AFRAID); SH[0] = {'card': 'hands_mouth', 'clip': 'huddle', 'opts': {'mood': 'shiver', 'intensity': 1.2}}; SH[6] = {'card': 'shush', 'clip': 'huddle', 'opts': {'mood': 'still'}, **HFRONT}
-F.shot(285.93, 287.43, CORNER, who=SH, cam={'a': {'zoom': 1.05}, 'b': {'zoom': 1.12, 'aim': [0.5, 0.52]}}, overlays=[GLOW(285.93, 287.43)])
-sfx(286.6, 'shh', 0.3)
+# 283.35 Room 210: "Don't talk. It's listening. It only knows voices it's heard." - the message full screen, each word appearing as it is said
+W3 = json.load(open('/home/claude/lockdown/vo/words.json'))['c3_14']
+MSG210 = [[w[0], w[2].strip('"')] for w in W3 if 283.3 <= w[0] < 287.4]
+F.shot(283.35, 287.43, CORNER, who=huddle(**AFRAID), cam={'a': {'zoom': 1.2, 'aim': [0.45, 0.55]}, 'b': {'zoom': 1.3, 'aim': [0.45, 0.55]}},
+       overlays=[DIM(283.35, 287.43, 0.88),
+                 {'type': 'text', 'text': '⚠ Room 210', 'x': 0.5, 'y': 0.28, 'size': 46, 'color': '#ff6b6b', 't0': 283.35, 't1': 287.43, 'fadeIn': 0.15, 'fadeOut': 0.1},
+                 {'type': 'words', 'words': MSG210, 'max': 4, 'x': 0.5, 'y': 0.5, 'size': 96, 'color': '#f2f2f2', 'hot': '#ff3b3b', 't0': 283.35, 't1': 287.43, 'fadeIn': 0.05, 'fadeOut': 0.1}])
+sfx(283.36, 'buzz', 0.7); sfx(286.6, 'shh', 0.25)
 # 287.43 "And I remembered that every time someone knocks," - Dong, putting it together
 F.shot(287.43, 288.99, CORNER, who=huddle(**{**AFRAID, 'dong': {'opts': {'mood': 'glance'}}}), cam=close('dong', 2.6, 2.9))
 # 288.99 "...someone knocks" - the knocks from before, flashing past: a teacher, a friend, Mom
@@ -161,12 +159,14 @@ sfx(302.4, 'ringback', 1.0)
 F.shot(303.34, 304.03, CORNER, who=huddle(**{**AFRAID, 'dong': {'opts': {'mood': 'rock', 'intensity': 0.5}}}), cam=close('dong', 2.9, 3.0))
 # 304.03 "I put my hand over the phone and I whispered so quietly." - phone to his ear, hand cupped round it
 PHONE = lambda **o: huddle(**{**AFRAID, 'dong': {'card': 'phone_live', 'clip': 'huddle', **o}})
-WHISPER = huddle(**{**AFRAID, 'dong': {'card': 'phone_whisper', 'clip': 'huddle', 'opts': {'mood': 'shiver', 'intensity': 0.5}}})
-F.shot(304.03, 307.54, CORNER, who=WHISPER, cam=close('dong', 2.4, 2.8))
+WHISPER = huddle(**{**AFRAID, 'dong': {'card': 'phone_discreet', 'clip': 'huddle', 'opts': {'mood': 'shiver', 'intensity': 0.5}}})
+F.shot(304.03, 307.54, CORNER, who=WHISPER, cam=close('dong', 2.8, 3.2, dy=0.06),
+       overlays=[{'type': 'glow', 't0': 304.03, 't1': 307.54, 'spots': [[0.44, 0.72, 200]], 'fadeIn': 0.2, 'fadeOut': 0.1}])
 # 307.54 Dong (whispering): "Mom, I'm okay. We're in 214. I love you. I'll call you after." - mouthed, word for word
-# (a tight close-up on his face so every word is visible; the phone's light on his cheek)
-F.shot(307.54, 310.22, CORNER, who=huddle(**{**AFRAID, 'dong': {'opts': {'mood': 'shake', 'intensity': 0.4}, 'lip': 'c3_15', 'lipGain': 1.5}}), cam=close('dong', 3.6, 3.8, dy=0.03),
-       overlays=[{'type': 'glow', 't0': 307.54, 't1': 310.22, 'spots': [[0.36, 0.62, 420]], 'fadeIn': 0.2, 'fadeOut': 0.1}])
+# 307.54 Dong (whispering into the hidden phone): "Mom, I'm okay. We're in 214." - still hunched over it, hand over his mouth, glancing at the door
+F.shot(307.54, 310.22, CORNER, who=WHISPER, cam=close('dong', 3.4, 3.7, dy=0.07),
+       overlays=[{'type': 'glow', 't0': 307.54, 't1': 310.22, 'spots': [[0.47, 0.74, 240]], 'fadeIn': 0.1, 'fadeOut': 0.1}])
+sfx(307.6, 'whispers', 0.25)
 # 310.22 "I love you. I'll call you after." - Mom, in her kitchen, phone to her ear, hearing it
 MOMK = lambda **o: room('kitchen_mom', who=[{'n': 'mom', 'at': [0.5, 0.8], 'card': 'phone_live', 'clip': 'huddle', **o}])
 F.shot(310.22, 312.49, MOMK(opts={'mood': 'holdcry'}), cam={'a': {'zoom': 1.6, 'aim': [0.5, 0.49]}, 'b': {'zoom': 1.9, 'aim': [0.5, 0.48]}})
@@ -203,7 +203,7 @@ for k in range(3): sfx(334.4 + k * 0.62, 'heart', 0.55)
 F.shot(336.33, 338.09, CORNER, who=huddle(**{**AFRAID, 'dong': {'opts': {'mood': 'terror', 'intensity': 1.2}}}), cam=close('dong', 2.6, 3.1))
 sfx(337.29, 'hit', 0.7)
 # 338.09 "My name." - Dong on the phone, saying it; 338.97 "My mom." - Mom; 339.77 "And our room number." - 214
-F.shot(338.09, 338.97, CORNER, who=WHISPER, filter=RED, cam=close('dong', 2.6, 2.7))
+F.shot(338.09, 338.97, CORNER, who=WHISPER, filter=RED, cam=close('dong', 3.2, 3.3, dy=0.06))
 F.shot(338.97, 339.77, MOMK(opts={'mood': 'holdcry'}), filter=RED, cam={'a': {'zoom': 2.4, 'aim': [0.5, 0.46]}, 'b': {'zoom': 2.5, 'aim': [0.5, 0.46]}})
 F.shot(339.77, 342.0, flat('plate_door_hall_214', tint=HALL), filter=RED, cam={'a': {'zoom': 1.8, 'aim': [0.76, 0.29]}, 'b': {'zoom': 2.6, 'aim': [0.76, 0.29]}, 'ease': 'in'},
        overlays=[{'type': 'black', 't0': 341.2, 't1': 342.1, 'fadeIn': 0.7, 'fadeOut': 0.01}])
