@@ -2,7 +2,7 @@
 Writes film/ch6.json (picture) and film/ch6_sfx.json (sound cues [time, sound, volume] and beds)."""
 import json
 from film_lib import *
-F = Film(574.3, 694.39); SFX = []
+F = Film(574.3, 697.68); SFX = []   # the voice-over ends later now: 'it... isn't... me.' is spoken slowly, with silences
 def sfx(t, name, vol=0.6): SFX.append([round(t, 3), name, vol])
 def room(n, **k): r = R(n); r.update(k); return r
 def withplate(n, img, who=None, **k):
@@ -183,17 +183,21 @@ F.shot(686.38, 687.53, CORNER, who=[AFRAID[0], {'card': 'phone_discreet', 'clip'
 F.shot(687.53, 688.91, CORNER, who=[{'opts': {'mood': 'stare', 'look': 1, 'blank': 1}}] * 7, cam={'a': {'zoom': 1.3, 'aim': [0.45, 0.5]}, 'b': {'zoom': 1.35, 'aim': [0.45, 0.5]}})
 # 688.91 "And if you ever hear my voice outside your door..." - outside a door at night: Dong, as he was that day, standing too still
 ME = [{'n': 'dong', 'view': 'front', 'clip': 'idle', 'at': [0.5, 0.68], 'face': {'eyes': 'creepy', 'mouth': 'flat', 'brows': 'up'}}]
-F.shot(688.91, 691.96, withplate('home_hall_night', 'bg_home_hall_night', who=ME, tint=MIMIC), cam={'a': {'zoom': 1.0}, 'b': {'zoom': 1.8, 'aim': [0.5, 0.42]}, 'ease': 'in'})
+F.shot(688.91, 691.955, withplate('home_hall_night', 'bg_home_hall_night', who=ME, tint=MIMIC), cam={'a': {'zoom': 1.0}, 'b': {'zoom': 1.8, 'aim': [0.5, 0.42]}, 'ease': 'in'})
 sfx(689.0, 'riser', 0.4)
-# 691.96 "it isn't me." - it says it, with his mouth; then it smiles; black
-F.shot(691.96, 694.39, withplate('home_hall_night', 'bg_home_hall_night', who=[{**ME[0], 'lip': 'c6_34', 'lipSpans': [[691.96, 692.86]], 'lipGain': 1.3}], tint=MIMIC),
-       events=[{'t': 692.9, 'i': 0, 'face': {'eyes': 'creepy', 'mouth': 'grin', 'brows': 'up'}}], cam={'a': {'zoom': 2.4, 'aim': [0.5, 0.36]}, 'b': {'zoom': 2.9, 'aim': [0.5, 0.34]}, 'ease': 'in'},
-       overlays=[{'type': 'black', 't0': 693.35, 't1': 694.5, 'fadeIn': 0.01, 'fadeOut': 0.01}])
-sfx(693.35, 'hit', 1.0)
+# 691.985 "it..." 693.565 "...isn't..." 695.035 "...me." (whispered) - said slowly, a silence between each word: the camera creeps in on its face on every word, its head tilting in the silences; then it smiles; black
+LIPS = [[691.985, 692.405], [693.565, 694.095], [695.035, 695.245]]   # the whispered ElevenLabs take (vo/c6_34_tail_el.mp3)
+F.shot(691.955, 697.68, withplate('home_hall_night', 'bg_home_hall_night', who=[{**ME[0], 'lip': 'c6_34', 'lipSpans': LIPS, 'lipGain': 1.5}], tint=MIMIC),
+       events=[{'t': 692.7, 'i': 0, 'lean': -7, 'dur': 0.6}, {'t': 694.35, 'i': 0, 'lean': 5, 'dur': 0.6}, {'t': 695.5, 'i': 0, 'face': {'eyes': 'creepy', 'mouth': 'grin', 'brows': 'up'}}],
+       cam={'keys': [[691.955, {'zoom': 1.9, 'aim': [0.5, 0.4]}], [692.45, {'zoom': 2.05, 'aim': [0.5, 0.39]}], [693.56, {'zoom': 2.1, 'aim': [0.5, 0.38]}], [694.1, {'zoom': 2.55, 'aim': [0.5, 0.36]}],
+                     [695.03, {'zoom': 2.65, 'aim': [0.5, 0.35]}], [695.5, {'zoom': 3.3, 'aim': [0.5, 0.34]}], [696.2, {'zoom': 3.4, 'aim': [0.5, 0.34]}]]},
+       overlays=[{'type': 'black', 't0': 696.2, 't1': 697.8, 'fadeIn': 0.01, 'fadeOut': 0.01}])
+for t in (692.75, 693.25, 694.35, 694.8): sfx(t, 'heart', 0.3)
+sfx(694.2, 'riser', 0.15); sfx(696.2, 'hit', 1.1)
 add_lighting(F)
 F.save('ch6')
 BEDS = [[574.3, 587.94, 'room_dark', 0.1], [588.62, 601.42, 'room_dark', 0.18], [593.24, 657.33, 'dread_bed', 0.24], [605.12, 683.78, 'room_dark', 0.16],
-        [657.33, 672.07, 'room_dark', 0.12], [672.07, 683.78, 'dread_bed', 0.28], [683.78, 687.53, 'huddle_cry', 0.12], [688.91, 693.35, 'dread_bed', 0.3]]
+        [657.33, 672.07, 'room_dark', 0.12], [672.07, 683.78, 'dread_bed', 0.28], [683.78, 687.53, 'huddle_cry', 0.12], [688.91, 691.9, 'dread_bed', 0.3], [691.9, 696.2, 'dread_bed', 0.07]]
 SFX += [[599.7, 'breath', 0.35], [631.0, 'breath', 0.4], [663.0, 'breath', 0.2]]
 json.dump({'sfx': SFX, 'beds': BEDS}, open('/home/claude/lockdown/web/film/ch6_sfx.json', 'w'), indent=1)
 print(len(F.S), 'shots,', len(SFX), 'sound cues,', len(BEDS), 'beds')

@@ -1776,5 +1776,12 @@
    "/home/claude/lockdown/art/out/bg_bedroom_door_night.png"
   ],
   "1536x1024"
+ ],
+ "dong_tee_floor_door_g": [
+  "Edit image 1: the SAME boy in EXACTLY the same pose, size and position (sitting on the floor hugging his knees, tired, hollow-eyed, black beanie, round glasses, white pajama tee, blue pajama pants, white socks). Change ONLY the background: make it a flat pure green screen (#00ff00) everywhere around him, nothing else. Keep his white T-shirt fully drawn, both shoulders and the collar complete. Same flat handmade felt paper cut-out style, no shadows, no outlines, no text.",
+  [
+   "/home/claude/lockdown/art/out/dong_tee_floor_door.png"
+  ],
+  "1024x1536"
  ]
 }

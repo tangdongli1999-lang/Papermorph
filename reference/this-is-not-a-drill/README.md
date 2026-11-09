@@ -62,3 +62,13 @@ For a whole chapter on two workers, run `tools/render_all.sh 1`. Then:
 
 - `web/check_ch.py` checks duration, audio and black frames.
 - `web/board.py N frames_dir out` makes the storyboard sheet (one frame per shot, with its narration and sound cues).
+
+## The finished video (all chapters, with captions)
+
+When `out/ch1_final.mp4` … `out/ch6_final.mp4` are rendered (each one rendered from the current `web/film/chN.json`):
+
+```
+python tools/merge.py        # -> out/this-is-not-a-drill_final.mp4
+```
+
+It checks each chapter's length against its shot list, joins them, burns in the captions from `tools/captions.py` (at most 10 words on screen, the spoken word in yellow, Dong white, every other voice red, timed from `vo/words.json`) and does one loudness pass to −14 LUFS, −1.5 dBTP. It uses the GPU encoder (`h264_nvenc`) when ffmpeg has it.

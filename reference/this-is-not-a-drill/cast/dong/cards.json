@@ -146,8 +146,8 @@
  },
  "floor_tired": {
   "file": "cards/floor_tired.webp",
-  "w": 536,
-  "h": 1176,
+  "w": 551,
+  "h": 1191,
   "height_m": 1.0
  }
 }

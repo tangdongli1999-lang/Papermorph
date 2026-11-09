@@ -66,9 +66,7 @@ def gcut(path):
     gness = G - np.maximum(R, B)
     alpha = np.clip(1 - (gness - 25) / 50, 0, 1)                      # >75 above the others: background; <25: subject
     m = alpha > 0.5; lab, n = nd.label(m)
-    if n > 1 and group_m:   # a group picture: keep every figure, drop only specks
-        sz = nd.sum(m, lab, range(1, n + 1)); m = np.isin(lab, 1 + np.where(sz > 0.02 * sz.max())[0])
-    elif n > 1: m = lab == (1 + int(np.argmax(nd.sum(m, lab, range(1, n + 1)))))
+    if n > 1: m = lab == (1 + int(np.argmax(nd.sum(m, lab, range(1, n + 1)))))
     m = nd.binary_fill_holes(m); alpha = np.where(m, np.maximum(alpha, nd.binary_erosion(m, iterations=2)), 0)
     G2 = np.where(gness > 0, np.maximum(R, B) + 0.3 * np.maximum(0, gness) * 0, G)   # despill: green never above red/blue
     out = np.dstack([R, np.minimum(G, np.maximum(R, B) + 6), B, alpha * 255]).astype(np.uint8)
@@ -286,7 +284,12 @@ def headless_card(path, name, d, cards):
 def card(path, name, d, cards, target_h=None, ref_w=None, group_m=None):
     """A drawn pose, cut and scaled like Dong's cards (standing poses: frame height; floor poses: beanie/head width)."""
     import scipy.ndimage as nd
-    im = cut(path); a = np.asarray(im).copy(); m = nd.binary_opening(a[..., 3] > 128, iterations=3); lab, n = nd.label(m)
+    if path.endswith('_g.png'):   # drawn on a green screen: key the green, so white shirts and socks keep every pixel
+        rgb = np.asarray(Image.open(path).convert('RGB')).astype(np.float32); gness = rgb[..., 1] - np.maximum(rgb[..., 0], rgb[..., 2])
+        al = np.clip(1 - (gness - 25) / 50, 0, 1); rgb[..., 1] = np.minimum(rgb[..., 1], np.maximum(rgb[..., 0], rgb[..., 2]) + 6)
+        im = Image.fromarray(np.dstack([rgb, al * 255]).astype(np.uint8))
+    else: im = cut(path)
+    a = np.asarray(im).copy(); m = nd.binary_opening(a[..., 3] > 128, iterations=3); lab, n = nd.label(m)
     if n > 1 and group_m:   # a group picture: keep every figure, drop only specks
         sz = nd.sum(m, lab, range(1, n + 1)); m = np.isin(lab, 1 + np.where(sz > 0.02 * sz.max())[0])
     elif n > 1: m = lab == (1 + int(np.argmax(nd.sum(m, lab, range(1, n + 1)))))
@@ -332,7 +335,7 @@ def build(name):
             card(f'{ART}/{f}.png', n, d, cards, ref_w=1.0)
     if os.path.exists(f'{ART}/{src}_sit_floor_headless.png'): headless_card(f'{ART}/{src}_sit_floor_headless.png', 'huddle', d, cards)
     EXTRA = {'dong': [('sit_desk', 'dong_uni_sit_desk', 1.0), ('floor_phone', 'dong_uni_floor_phone', 1.0), ('phone_whisper', 'dong_uni_phone_whisper', 1.0), ('phone_discreet', 'dong_uni_phone_discreet', 1.0), ('crawl', 'dong_uni_crawl', 1 / 1.45),
-                      ('bed_asleep', 'dong_tee_bed_asleep', 1.0), ('bed_sit', 'dong_tee_bed_sit', 1.0), ('bed_reach', 'dong_tee_bed_reach', 1.0), ('bed_halfway', 'dong_tee_bed_halfway', 1.0), ('bed_phone', 'dong_tee_bed_phone', 1.0), ('floor_tired', 'dong_tee_floor_door', 1.0)],
+                      ('bed_asleep', 'dong_tee_bed_asleep', 1.0), ('bed_sit', 'dong_tee_bed_sit', 1.0), ('bed_reach', 'dong_tee_bed_reach', 1.0), ('bed_halfway', 'dong_tee_bed_halfway', 1.0), ('bed_phone', 'dong_tee_bed_phone', 1.0), ('floor_tired', 'dong_tee_floor_door_g', 1.0)],
              'tyler': [('sit_desk', 'tyler_sit_desk', 1.0), ('hands_mouth', 'tyler_hands_mouth', 1.0), ('face_knees', 'tyler_face_knees', 1.0)], 'priya': [('sit_desk', 'priya_sit_desk', 1.0), ('grab', 'priya_grab', 1.0)], 'dawes': [('menu', 'dawes_menu', 1.0)], 'marcus': [('sit_desk', 'marcus_sit_desk', 1.0), ('asleep', 'marcus_asleep', 1.0), ('comfort', 'marcus_comfort', 1.0)],
              'kid_a': [('sit_desk', 'kid_a_sit_desk', 1.0)], 'kid_b': [('sit_desk', 'kid_b_sit_desk', 1.0)],
              'mom': [('phone_ear', 'mom_phone_ear', 1.0), ('phone_text', 'mom_phone_hold', 1 / 1.34), ('hug', 'mom_hug', 1.0), ('lift', 'mom_lift_hug', 1.0), ('bed_cheese', 'dong_tee_bed_mom_cheese', 1.0), ('bed_sleepy', 'dong_tee_bed_mom_sleepy', 1.0)],
